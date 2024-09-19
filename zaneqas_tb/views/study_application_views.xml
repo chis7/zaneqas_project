@@ -1,0 +1,161 @@
+<odoo>
+
+    <record id="training_plan_tree_study" model="ir.ui.view">
+        <field name="name">training.plan.lines.tree</field>
+        <field name="model">training.plan.lines</field>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0" decoration-bf="True" edit="0">
+                <field name="is_current_user_supervisor" column_invisible="True"/>
+                <field name="is_current_user_owner" column_invisible="True"/>
+                <field name="is_due_for_supervisor_evaluation" column_invisible="True"/>
+                <field name="is_current_user_self_evaluating" column_invisible="True"/>
+                <field name="is_current_user_self_evaluated" column_invisible="True"/>
+                <field name="name" readonly="1"/>
+                <field name="employee_id" readonly="1"/>
+                <field name="level_of_training_proposed" readonly="1"/>
+                <field name="location_of_programme_proposed" readonly="1"/>
+                <field name="sponsor_id" readonly="1"/>
+                <field name="state" readonly="1"/>
+                <button name="action_self_evaluate_training"
+                        confirm="Are you sure you want to evaluate?"
+                        string="Self Evaluate" class="btn-primary"
+                        type="object"
+                        context="{'validate_analytic': True}"
+                        invisible="is_current_user_self_evaluating == False"
+                />
+                <button name="action_apply_for_authority_to_study"
+                        string="Self Evaluated" class="btn-warning"
+                        type="object"
+                        context="{'validate_analytic': True}"
+                        invisible="is_current_user_self_evaluated == False"
+                        disabled="1"/>
+                <button name="action_supervisor_evaluate_training"
+                        confirm="Are you sure you want to evaluate as supervisor?"
+                        string="Evaluate Employee Here" class="btn-primary"
+                        type="object"
+                        context="{'validate_analytic': True}"
+                        invisible="is_due_for_supervisor_evaluation == False"
+                />
+                <button name="action_apply_for_authority_to_study"
+                        string="Supervisor Evaluated" class="btn-warning"
+                        type="object"
+                        context="{'validate_analytic': True}"
+                        invisible="state != 'training_supervisor_evaluated'"
+                        disabled="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_create_application_for_authority_to_study_form" model="ir.ui.view">
+        <field name="name">training.plan.lines.form</field>
+        <field name="model">training.plan.lines</field>
+        <field name="arch" type="xml">
+            <form string="Application for Authority To Study">
+                <header>
+                    <button name="action_save_application_as_draft" data-hotkey="v"
+                            confirm="Are you sure you want to save as draft?"
+                            string="Save as Draft" class="btn-primary" type="object"
+                            context="{'validate_analytic': True}"
+                            invisible="state != 'draft' "/>
+                    <button name="action_submit_application_to_supervisor" data-hotkey="v"
+                            confirm="Are you sure you want to make this submission?"
+                            string="Save and Submit" class="btn-primary" type="object"
+                            context="{'validate_analytic': True}"
+                            invisible="state != 'draft' "/>
+                    <button name="action_supervisor_approve_application" data-hotkey="v"
+                            groups="hrms_training.group_PS_approve_training_plan"
+                            confirm="Are you sure you want to make this approval?"
+                            string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'supervisor' "/>
+                    <button name="action_ps_send_back_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PS_approve_training_plan"
+                            confirm="Are you sure you want to send back?"
+                            string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'supervisor' "/>
+                    <button name="action_psmd_approve_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PSMD_approve_training_plan"
+                            confirm="Are you sure you want to make this approval?"
+                            string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'hod' "/>
+                    <button name="action_psmd_send_back_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PSMD_approve_training_plan"
+                            confirm="Are you sure you want to send back?"
+                            string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'hod' "/>
+                    <button name="action_psmd_approve_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PSMD_approve_training_plan"
+                            confirm="Are you sure you want to make this approval?"
+                            string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'ps' "/>
+                    <button name="action_psmd_send_back_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PSMD_approve_training_plan"
+                            confirm="Are you sure you want to send back?"
+                            string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'ps' "/>
+                    <button name="action_psmd_approve_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PSMD_approve_training_plan"
+                            confirm="Are you sure you want to make this approval?"
+                            string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'approved' "/>
+                    <button name="action_psmd_send_back_training_plan" data-hotkey="v"
+                            groups="hrms_training.group_PSMD_approve_training_plan"
+                            confirm="Are you sure you want to send back?"
+                            string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'approved' "/>
+                    <field name="state" context="{'validate_analytic': True}" widget="statusbar"
+                           statusbar_visible="draft,hod,supervisor,ps,approved,bonded,training_in_progress,training_completed"
+                           options="{'clickable':'1'}"
+                    />
+
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1"/>
+                                <field name="employee_id" readonly="1"/>
+                                <field name="priorityRanking" readonly="1"/>
+                                <field name="priorityArea" readonly="1"/>
+                                <field name="level_of_training_proposed" readonly="1"/>
+                                <field name="location_of_programme_proposed" readonly="1"/>
+                                <field name="proposed_date_of_programme" readonly="1"/>
+                                <field name="sponsor_id" readonly="1"/>
+                                <field name="justification_of_training" readonly="1"/>
+                                <field name="estimated_cost_per_year" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="institution" readonly="state != 'draft'"/>
+                                <field name="start_date" string="Training Start Date" readonly="state != 'draft'"/>
+                                <field name="end_date" string="Training End Date" readonly="state != 'draft'"/>
+                                <field name="duration" string="Training Duration" readonly="state != 'draft'"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="employee_type"/>
+                            <field name="confirmation_status" readonly="state != 'supervisor'"/>
+                            <field name="hod_comment" readonly="state != 'hod'"/>
+                            <field name="ps_comment" readonly="state != 'ps'"/>
+                            <field name="bonding_start_date" readonly="state != 'approved'"
+                                   invisible="state != 'approved'"/>
+                            <field name="bonding_end_date" readonly="state != 'approved'"
+                                   invisible="state != 'approved'"/>
+                        </group>
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="action_training" model="ir.actions.act_window">
+        <field name="name">Authority To Study</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">training.plan.lines</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new training application.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_who_cadre_tree" model="ir.ui.view">
+            <field name="name">hrms.who.cadre.tree</field>
+            <field name="model">hrms.who.cadre</field>
+            <field name="arch" type="xml">
+                <tree string="Cadres" editable="bottom">
+                    <field name="occupation_group"/>
+                    <field name="isco_08_id"/>
+                    <field name="who_cadre_category_id"/>
+                    <field name="definition"/>
+                    <field name="notes"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_who_cadre_form" model="ir.ui.view">
+            <field name="name">hrms.who.cadre.form</field>
+            <field name="model">hrms.who.cadre</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="occupation_group" string="Occupation Group"/>
+                            <h1>
+                                <field name="occupation_group" required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="isco_08_id"/>
+                            <field name="who_cadre_category_id"/>
+                            <field name="definition"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_who_cadre" model="ir.actions.act_window">
+            <field name="name">WHO Cadre</field>
+            <field name="res_model">hrms.who.cadre</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

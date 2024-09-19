@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="level_1" model="hrms.qualification.level">
+            <field name="name">Level 1</field>
+            <field name="typical_qualification_type">Primary Education Certificate (Grade 7)</field>
+            <field name="zqf_sub_framework">general_education</field>
+            <field name="standard_duration">7 years</field>
+        </record>
+        <record id="level_2a" model="hrms.qualification.level">
+            <field name="name">Level 2A</field>
+            <field name="typical_qualification_type">Junior Secondary Education Certificate Grade 9</field>
+            <field name="zqf_sub_framework">general_education</field>
+            <field name="standard_duration">2 years from previous level</field>
+        </record>
+        <record id="level_2b" model="hrms.qualification.level">
+            <field name="name">Level 2B</field>
+            <field name="typical_qualification_type">Senior Secondary Education Certificate (Grade 12)</field>
+            <field name="zqf_sub_framework">general_education</field>
+            <field name="standard_duration">3 years from previous level</field>
+        </record>
+        <record id="level_3" model="hrms.qualification.level">
+            <field name="name">Level 3</field>
+            <field name="typical_qualification_type">Level 3 Certificate</field>
+            <field name="zqf_sub_framework">tevet</field>
+            <field name="standard_duration">At least 1 year</field>
+        </record>
+        <record id="level_4" model="hrms.qualification.level">
+            <field name="name">Level 4</field>
+            <field name="typical_qualification_type">Level 4 Certificate</field>
+            <field name="zqf_sub_framework">tevet</field>
+            <field name="standard_duration">2 years after Level 2 B or 1 year after Level 3</field>
+        </record>
+        <record id="level_5" model="hrms.qualification.level">
+            <field name="name">Level 5</field>
+            <field name="typical_qualification_type">Level 5 Certificate</field>
+            <field name="zqf_sub_framework">tevet</field>
+            <field name="standard_duration">2 ½ years after Level 2 B or 1½ year after Level 4</field>
+        </record>
+        <record id="level_6" model="hrms.qualification.level">
+            <field name="name">Level 6</field>
+            <field name="typical_qualification_type">Diploma</field>
+            <field name="zqf_sub_framework">tevet</field>
+            <field name="standard_duration">3 years after Level 2 B or 2 years after Level 4 or 1½ year after Level 5</field>
+        </record>
+        <record id="level_7" model="hrms.qualification.level">
+            <field name="name">Level 7</field>
+            <field name="typical_qualification_type">Bachelor’s Degree (Honours or Ordinary)</field>
+            <field name="zqf_sub_framework">higher_education</field>
+            <field name="standard_duration">4 - 7 years after Level 2B</field>
+        </record>
+        <record id="level_8" model="hrms.qualification.level">
+            <field name="name">Level 8</field>
+            <field name="typical_qualification_type">Post Graduate Diploma</field>
+            <field name="zqf_sub_framework">higher_education</field>
+            <field name="standard_duration">1 year after level 7</field>
+        </record>
+        <record id="level_9" model="hrms.qualification.level">
+            <field name="name">Level 9</field>
+            <field name="typical_qualification_type">Master’s Degree</field>
+            <field name="zqf_sub_framework">higher_education</field>
+            <field name="standard_duration">1½ to 2 years after Level 7</field>
+        </record>
+        <record id="level_10" model="hrms.qualification.level">
+            <field name="name">Level 10</field>
+            <field name="typical_qualification_type">Doctorate Degree</field>
+            <field name="zqf_sub_framework">higher_education</field>
+            <field name="standard_duration">A minimum of 3 years</field>
+        </record>
+    </data>
+</odoo>

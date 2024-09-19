@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="custom_header">
+            <div class="header" style="text-align: center; width: 100%;">
+                <span>Custom Header Content</span>
+            </div>
+        </template>
+    </data>
+</odoo>

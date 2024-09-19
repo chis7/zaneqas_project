@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="report_gene_xpert_eqa_results_temp">
+            <t t-foreach="docs" t-as="lab">
+                <style>
+                    .header {
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    }
+                    .small-font {
+                    font-size: 6px;
+                    }
+
+                </style>
+
+                <div class="header">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th rowspan="3">
+                                    <img t-att-src="'/zaneqas_tb/static/src/img/coa.png'" alt="coa"/>
+                                </th>
+                                <th rowspan="3">Ministry of Health
+                                    <br/>
+                                    <br/>
+                                    Chest Diseases
+                                    <br/>
+                                    <br/>
+                                    Laboratory
+                                </th>
+                                <th colspan="3">Xpert MTB/RIF-Ultra
+                                    Individual Performance Report Form
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Effective Date</td>
+                                <td>30/10/2022</td>
+                                <td>DOC No: TF-CDL-011</td>
+                            </tr>
+                            <tr>
+                                <td>Review Date</td>
+                                <td>30/10/2025</td>
+                                <td>Version: 01</td>
+                            </tr>
+
+                        </thead>
+                    </table>
+                </div>
+                <div class="small-font">
+                    <t t-call="web.basic_layout">
+
+                        <!--                    <t t-call="web.external_layout">-->
+                        <div class="page">
+                            <div class="row" id="hash_header" style="text-size:10">
+                                <div class="col-12" style="text-align:center;">
+
+                                    <span>INDIVIDUAL PERFORMANCE REPORT - GENEXPERT PROFICIENCY TESTING SCHEME</span>
+                                    <br/>
+                                    <span>National Tuberculosis and Leprosy Program</span>
+                                    <br/>
+<!--                                    <span>CHEST DISEASE Laboratory</span>-->
+                                    <br/>
+                                    <span>Round No:</span>
+                                    <span t-field="lab.name"/>
+                                    <br/>
+                                    <table class="table table-bordered" style="table-layout: fixed"
+                                           id="hash_config_table">
+                                        <thead style="display: table-row-group">
+                                            <tr>
+                                                <th class="text-center" style="width: 33%" scope="col">Date PT Shipped:
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Date PT received:
+                                                    <span></span>
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Closing Date:
+                                                    <span t-field="lab.due_date"/>
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col"/>
+
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center" style="width: 33%" scope="col">Results return
+                                                    date
+                                                    to CDL:
+                                                    <span t-field="lab.write_date"/>
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Shipment TAT:
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Results TAT:</th>
+                                                <th class="text-center" style="width: 33%" scope="col">Report Issue
+                                                    date:
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <table class="table table-bordered" style="table-layout: flex"
+                                           id="hash_config_table">
+                                        <thead style="display: table-row-group">
+                                            <tr>
+                                                <th class="text-center" style="width: 33%" scope="col">Country/Region
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Site Name:
+                                                    <span t-field="lab.company_name"/>
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Site No.</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-12" id="hash_config_review" style="text-align:center;">
+                                            <span>Results</span>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered" style="table-layout: Flex">
+                                        <thead>
+                                            <tr>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t>
+                                                <tr>
+                                                    <td>Sample ID
+                                                    </td>
+                                                    <td/>
+                                                    <td>MTB Detected
+                                                    </td>
+                                                    <td>Rif
+                                                        Resistance
+                                                    </td>
+                                                    <td>Score</td>
+
+                                                </tr>
+                                                <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
+                                                    <tr>
+                                                        <td>
+                                                            <span t-field="result.sample_id"/>
+                                                        </td>
+                                                        <td style="text-align:left;">
+                                                            <span>Site's Results</span>
+                                                            <br/>
+                                                            <span>Expected Results</span>
+                                                            <br/>
+                                                            <span>All Participants’ Consensus Results</span>
+                                                        </td>
+                                                        <td>
+                                                            <t t-if="result.tb_detection_not_detected">
+                                                                <span>Not Detected</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.tb_detection_trace">
+                                                                <span>Trace</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.tb_detection_very_low">
+                                                                <span>Very Low</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.tb_detection_low">
+                                                                <span>Low</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.tb_detection_medium">
+                                                                <span>Medium</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.tb_detection_high">
+                                                                <span>High</span>
+                                                                <br/>
+                                                            </t>
+                                                            <!--                                                        <t t-foreach="result.expected_result_ids"-->
+                                                            <!--                                                           t-as="expected_result">-->
+                                                            <t t-foreach="lab.expected_result_lines_ids" t-as="line">
+                                                                <span t-field="line.tb_detection_not_detected"/>
+                                                                <span t-field="line.tb_detection_trace"/>
+                                                                <span t-field="line.tb_detection_very_low"/>
+                                                                <span t-field="line.tb_detection_low"/>
+                                                                <span t-field="line.tb_detection_medium"/>
+                                                                <span t-field="line.tb_detection_high"/>
+                                                                <span>here</span>
+                                                            </t>
+                                                            <span>here</span>
+                                                        </td>
+                                                        <td>
+                                                            <t t-if="result.rif_na">
+                                                                <span>N/A</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.rif_not_detected">
+                                                                <span>Not Detected</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.rif_detected">
+                                                                <span>Detected</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.rif_indeterminate">
+                                                                <span>Indeterminate</span>
+                                                                <br/>
+                                                            </t>
+                                                        </td>
+                                                        <td>
+                                                            <span t-att-style="result.score == 20 and 'color: green;' or result.score == 10 and 'color: orange;' or result.score == 0 and 'color: red;'">
+                                                                <span t-field="result.score"/>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                                <!--                                            <t t-foreach="result.expected_result_ids" t-as="expected_result">-->
+                                                <!--                                                <tr>-->
+                                                <!--                                                    <td>-->
+                                                <!--                                                        <span t-field="expected_result.sample_id"/>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td style="text-align:left;">-->
+                                                <!--                                                        <span>Expected Results</span>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td>-->
+                                                <!--                                                        <t t-if="expected_result.tb_detection_not_detected">-->
+                                                <!--                                                            <span>Not Detected</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.tb_detection_trace">-->
+                                                <!--                                                            <span>Trace</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.tb_detection_very_low">-->
+                                                <!--                                                            <span>Very Low</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.tb_detection_low">-->
+                                                <!--                                                            <span>Low</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.tb_detection_medium">-->
+                                                <!--                                                            <span>Medium</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.tb_detection_high">-->
+                                                <!--                                                            <span>High</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td>-->
+                                                <!--                                                        <t t-if="expected_result.rif_na">-->
+                                                <!--                                                            <span>N/A</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.rif_not_detected">-->
+                                                <!--                                                            <span>Not Detected</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                        <t t-if="expected_result.rif_detected">-->
+                                                <!--                                                            <span>Detected</span>-->
+                                                <!--                                                            <br/>-->
+                                                <!--                                                        </t>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                </tr>-->
+                                                <!--                                            </t>-->
+                                            </t>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="hash_config_review">
+                                    <table class="table table-bordered" style="table-layout: flex"
+                                           id="hash_config_table">
+                                        <thead style="display: table-row-group">
+                                            <tr>
+                                                <th class="text-center" style="width: 33%" scope="col">
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Percentage</th>
+                                                <th class="text-center" style="width: 33%" scope="col">
+                                                    Satisfactory/Unsatisfactory
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    FINAL SCORE
+                                                </td>
+                                                <td style="text-align:center;">100</td>
+                                                <td style="text-align:center;">Satisfactory</td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+
+                                    <br/>
+                                    <span>Satisfactory, greater or equal to 80 Marks, Unsatisfactory performance, less
+                                        than
+                                        80 marks.
+                                    </span>
+                                    <br/>
+                                    <hr/>
+                                    <span>Laboratory Specific Comment:
+                                        <u></u>
+                                    </span>
+                                    <br/>
+                                    <span>General Scheme Expert Comment:
+                                        <u>
+                                            <b>WELL DONE KEEP IT UP</b>
+                                        </u>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="hash_config_review" style="text-align:center;">
+                                    <span>
+                                        <b>Summary of All Reporting Sites</b>
+                                    </span>
+                                </div>
+                            </div>
+                            <table class="table table-bordered" style="table-layout: Flex">
+                                <thead>
+                                    <tr>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t>
+                                        <tr style="text-align:center;">
+                                            <td/>
+                                            <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
+
+
+                                                <td>
+                                                    <span t-field="result.sample_id"/>
+                                                </td>
+
+                                            </t>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Total number of participating sites</td>
+                                            <td class="text-center">81</td>
+                                            <td class="text-center">81</td>
+                                            <td class="text-center">81</td>
+                                            <td class="text-center">81</td>
+                                            <td class="text-center">81</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites detecting TB (%)</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites not detecting TB (%)</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites reporting an uninterpretable TB result</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites with TB detection result missing</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr>
+                                            <td>Sites detecting RIF resistance (%)</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites not detecting RIF resistance (%)</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites reporting indeterminate RIF (%)</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sites with RIF detection results missing</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total number of enrolled sites</td>
+                                            <td class="text-center">11%</td>
+                                            <td class="text-center">99%</td>
+                                            <td class="text-center">96.3%</td>
+                                            <td class="text-center">0%</td>
+                                            <td class="text-center">100%</td>
+                                        </tr>
+
+
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer" style="text-align: center; position: fixed; bottom: 0; width: 100%;">
+                            <span>Page
+                                <t t-esc="0" t-options='{"widget": "page_number"}'/>
+                                of
+                                <t t-esc="0" t-options='{"widget": "page_count"}'/>
+                            </span>
+                        </div>
+
+
+                        <!--                    </t>-->
+                    </t>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

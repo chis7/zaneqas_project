@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo data for hr.employee -->
+        <record id="hrms_employee_1" model="hr.employee">
+            <field name="name">Chilufya Mwansa</field>
+            <field name="job_title">Software Developer</field>
+            <field name="department_id" ref="hr.dep_it"/>
+        </record>
+
+        <record id="hrms_employee_2" model="hr.employee">
+            <field name="name">Mutinta Banda</field>
+            <field name="job_title">HR Manager</field>
+            <field name="department_id" ref="hr.dep_hr"/>
+        </record>
+
+        <record id="hrms_employee_3" model="hr.employee">
+            <field name="name">Mukuka Mumba</field>
+            <field name="job_title">Accountant</field>
+            <field name="department_id" ref="hr.dep_accounting"/>
+        </record>
+
+        <record id="hrms_employee_4" model="hr.employee">
+            <field name="name">Mwape Phiri</field>
+            <field name="job_title">Marketing Specialist</field>
+            <field name="department_id" ref="hr.dep_marketing"/>
+        </record>
+
+        <record id="hrms_employee_5" model="hr.employee">
+            <field name="name">Nchimunya Chanda</field>
+            <field name="job_title">Sales Executive</field>
+            <field name="department_id" ref="hr.dep_sales"/>
+        </record>
+
+        <record id="hrms_employee_6" model="hr.employee">
+            <field name="name">Mubanga Zulu</field>
+            <field name="job_title">Operations Manager</field>
+            <field name="department_id" ref="hr.dep_operations"/>
+        </record>
+
+        <record id="hrms_employee_7" model="hr.employee">
+            <field name="name">Mutale Njobvu</field>
+            <field name="job_title">Project Manager</field>
+            <field name="department_id" ref="hr.dep_projects"/>
+        </record>
+
+        <record id="hrms_employee_8" model="hr.employee">
+            <field name="name">Tafadzwa Tembo</field>
+            <field name="job_title">Customer Support</field>
+            <field name="department_id" ref="hr.dep_support"/>
+        </record>
+
+        <record id="hrms_employee_9" model="hr.employee">
+            <field name="name">Namwinga Lungu</field>
+            <field name="job_title">Network Engineer</field>
+            <field name="department_id" ref="hr.dep_it"/>
+        </record>
+
+        <record id="hrms_employee_10" model="hr.employee">
+            <field name="name">Bwalya Mwila</field>
+            <field name="job_title">Legal Advisor</field>
+            <field name="department_id" ref="hr.dep_legal"/>
+        </record>
+
+        <record id="hrms_employee_11" model="hr.employee">
+            <field name="name">Ahmed Kaluba</field>
+            <field name="job_title">Financial Analyst</field>
+            <field name="department_id" ref="hr.dep_finance"/>
+        </record>
+
+        <record id="hrms_employee_12" model="hr.employee">
+            <field name="name">Lombe Chileshe</field>
+            <field name="job_title">Research Analyst</field>
+            <field name="department_id" ref="hr.dep_research"/>
+        </record>
+
+        <record id="hrms_employee_13" model="hr.employee">
+            <field name="name">Mulenga Mulenga</field>
+            <field name="job_title">Graphic Designer</field>
+            <field name="department_id" ref="hr.dep_marketing"/>
+        </record>
+
+        <record id="hrms_employee_14" model="hr.employee">
+            <field name="name">Kabwe Bwalya</field>
+            <field name="job_title">Data Scientist</field>
+            <field name="department_id" ref="hr.dep_it"/>
+        </record>
+
+        <record id="hrms_employee_15" model="hr.employee">
+            <field name="name">Nyambe Nyambe</field>
+            <field name="job_title">Content Writer</field>
+            <field name="department_id" ref="hr.dep_marketing"/>
+        </record>
+
+        <record id="hrms_employee_16" model="hr.employee">
+            <field name="name">Sitali Mudenda</field>
+            <field name="job_title">Quality Assurance</field>
+            <field name="department_id" ref="hr.dep_it"/>
+        </record>
+
+        <record id="employee_17" model="hr.employee">
+            <field name="name">Sophia Nkandu</field>
+            <field name="job_title">Business Analyst</field>
+            <field name="department_id" ref="hr.dep_projects"/>
+        </record>
+
+        <record id="hrms_employee_18" model="hr.employee">
+            <field name="name">Chibamba Katongo</field>
+            <field name="job_title">Supply Chain Manager</field>
+            <field name="department_id" ref="hr.dep_operations"/>
+        </record>
+
+        <record id="hrms_employee_19" model="hr.employee">
+            <field name="name">Mutinta Simutowe</field>
+            <field name="job_title">IT Support</field>
+            <field name="department_id" ref="hr.dep_it"/>
+        </record>
+
+        <record id="hrms_employee_20" model="hr.employee">
+            <field name="name">Nkandu Chisanga</field>
+            <field name="job_title">Administrative Assistant</field>
+            <field name="department_id" ref="hr.dep_admin"/>
+        </record>
+    </data>
+</odoo>

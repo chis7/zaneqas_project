@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="salary_grade_1" model="hrms.salary.grade">
+            <field name="name">A</field>
+        </record>
+        <record id="salary_grade_2" model="hrms.salary.grade">
+            <field name="name">B</field>
+        </record>
+        <record id="salary_grade_3" model="hrms.salary.grade">
+            <field name="name">C</field>
+        </record>
+        <record id="salary_grade_4" model="hrms.salary.grade">
+            <field name="name">D</field>
+        </record>
+        <record id="salary_grade_5" model="hrms.salary.grade">
+            <field name="name">E</field>
+        </record>
+        <record id="salary_grade_6" model="hrms.salary.grade">
+            <field name="name">F</field>
+        </record>
+        <record id="salary_grade_7" model="hrms.salary.grade">
+            <field name="name">H</field>
+        </record>
+        <record id="salary_grade_8" model="hrms.salary.grade">
+            <field name="name">I</field>
+        </record>
+        <record id="salary_grade_9" model="hrms.salary.grade">
+            <field name="name">J</field>
+        </record>
+        <record id="salary_grade_10" model="hrms.salary.grade">
+            <field name="name">K</field>
+        </record>
+        <record id="salary_grade_11" model="hrms.salary.grade">
+            <field name="name">L</field>
+        </record>
+        <record id="salary_grade_12" model="hrms.salary.grade">
+            <field name="name">M</field>
+        </record>
+        <record id="salary_grade_13" model="hrms.salary.grade">
+            <field name="name">N</field>
+        </record>
+        <record id="salary_grade_14" model="hrms.salary.grade">
+            <field name="name">O</field>
+        </record>
+        <record id="salary_grade_15" model="hrms.salary.grade">
+            <field name="name">Fixed</field>
+        </record>
+    </data>
+</odoo>

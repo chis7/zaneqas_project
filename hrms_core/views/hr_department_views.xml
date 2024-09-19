@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Department Form View Extension -->
+        <record id="view_hr_department_form_inherit_hrms_core" model="ir.ui.view">
+            <field name="name">hr.department.form.inherit.hrms.core</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+                <sheet position="inside">
+                    <field name="company_id" invisible="1"/>
+                    <notebook>
+                        <page name="objectives" string="Objectives">
+                            <field name="objectives">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                </tree>
+                                <form string="department">
+                                    <sheet>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page name="work_plans" string="Work Plans">
+                            <field name="work_plan_ids">
+                                <tree>
+                                    <field name="sequence"/>
+                                    <field name="name"/>
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                </tree>
+                                <form string="work_plan">
+                                    <sheet>
+                                        <div class="oe_title">
+                                            <h3>
+                                                <field name="sequence"/>
+                                            </h3>
+                                        </div>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                            <field name="start_date"/>
+                                            <field name="end_date"/>
+                                            <field name="department_id" options="{'no_create_edit': True, 'no_open': True}"/>
+                                        </group>
+                                        <notebook>
+                                            <page name="activities" string="Activities">
+                                                <field name="activity_ids">
+                                                    <tree>
+                                                        <field name="sequence"/>
+                                                        <field name="name"/>
+                                                        <field name="description"/>
+                                                        <field name="start_date"/>
+                                                        <field name="end_date"/>
+                                                        <field name="status"/>
+                                                    </tree>
+                                                    <form string="activity">
+                                                        <sheet>
+                                                            <div class="oe_title">
+                                                                <h3>
+                                                                    <field name="sequence"/>
+                                                                </h3>
+                                                            </div>
+                                                            <group>
+                                                                <field name="name"/>
+                                                                <field name="description"/>
+                                                                <field name="start_date"/>
+                                                                <field name="end_date"/>
+                                                                <field name="status"/>
+                                                                <field name="responsible_id"/>
+                                                            </group>
+                                                        </sheet>
+                                                    </form>
+                                                </field>
+                                            </page>
+                                        </notebook>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -13,6 +13,13 @@
                     .small-font {
                     font-size: 6px;
                     }
+                    .footer {
+                    text-align: center;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    font-size: 8px;
+                    }
 
                 </style>
 
@@ -57,29 +64,20 @@
                         <div class="page">
                             <div class="row" id="hash_header" style="text-size:10">
                                 <div class="col-12" style="text-align:center;">
-
-                                    <span>INDIVIDUAL PERFORMANCE REPORT - GENEXPERT PROFICIENCY TESTING SCHEME</span>
-                                    <br/>
-                                    <span>National Tuberculosis and Leprosy Program</span>
-                                    <br/>
-<!--                                    <span>CHEST DISEASE Laboratory</span>-->
-                                    <br/>
-                                    <span>Round No:</span>
-                                    <span t-field="lab.name"/>
-                                    <br/>
                                     <table class="table table-bordered" style="table-layout: fixed"
                                            id="hash_config_table">
                                         <thead style="display: table-row-group">
                                             <tr>
-                                                <th class="text-center" style="width: 33%" scope="col">Date PT Shipped:
+                                                <th class="text-center" style="width: 33%" scope="col">PT Cycle No:
+                                                    <span t-field="lab.name"/>
                                                 </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Date PT received:
-                                                    <span></span>
+                                                <th class="text-center" style="width: 33%" scope="col">Date PT Shipped: 05/06/2024
                                                 </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Closing Date:
+                                                <th class="text-center" style="width: 33%" scope="col">Date PT received:07/06/2024
+                                                </th>
+                                                <th class="text-center" style="width: 33%" scope="col">Closing Date:30/06/2024
                                                     <span t-field="lab.due_date"/>
                                                 </th>
-                                                <th class="text-center" style="width: 33%" scope="col"/>
 
                                             </tr>
                                             <tr>
@@ -101,12 +99,12 @@
                                            id="hash_config_table">
                                         <thead style="display: table-row-group">
                                             <tr>
-                                                <th class="text-center" style="width: 33%" scope="col">Country/Region
+                                                <th class="text-center" style="width: 33%" scope="col">Province
                                                 </th>
                                                 <th class="text-center" style="width: 33%" scope="col">Site Name:
                                                     <span t-field="lab.company_name"/>
                                                 </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Site No.</th>
+                                                <th class="text-center" style="width: 33%" scope="col">Participant Lab Code</th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -209,56 +207,6 @@
                                                         </td>
                                                     </tr>
                                                 </t>
-                                                <!--                                            <t t-foreach="result.expected_result_ids" t-as="expected_result">-->
-                                                <!--                                                <tr>-->
-                                                <!--                                                    <td>-->
-                                                <!--                                                        <span t-field="expected_result.sample_id"/>-->
-                                                <!--                                                    </td>-->
-                                                <!--                                                    <td style="text-align:left;">-->
-                                                <!--                                                        <span>Expected Results</span>-->
-                                                <!--                                                    </td>-->
-                                                <!--                                                    <td>-->
-                                                <!--                                                        <t t-if="expected_result.tb_detection_not_detected">-->
-                                                <!--                                                            <span>Not Detected</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.tb_detection_trace">-->
-                                                <!--                                                            <span>Trace</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.tb_detection_very_low">-->
-                                                <!--                                                            <span>Very Low</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.tb_detection_low">-->
-                                                <!--                                                            <span>Low</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.tb_detection_medium">-->
-                                                <!--                                                            <span>Medium</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.tb_detection_high">-->
-                                                <!--                                                            <span>High</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                    </td>-->
-                                                <!--                                                    <td>-->
-                                                <!--                                                        <t t-if="expected_result.rif_na">-->
-                                                <!--                                                            <span>N/A</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.rif_not_detected">-->
-                                                <!--                                                            <span>Not Detected</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                        <t t-if="expected_result.rif_detected">-->
-                                                <!--                                                            <span>Detected</span>-->
-                                                <!--                                                            <br/>-->
-                                                <!--                                                        </t>-->
-                                                <!--                                                    </td>-->
-                                                <!--                                                </tr>-->
-                                                <!--                                            </t>-->
                                             </t>
                                         </tbody>
                                     </table>
@@ -266,9 +214,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12" id="hash_config_review">
-                                    <table class="table table-bordered" style="table-layout: flex"
-                                           id="hash_config_table">
+                                <div class="col-sm-12">
+                                    <table class="table" style="table-layout: flex">
                                         <thead style="display: table-row-group">
                                             <tr>
                                                 <th class="text-center" style="width: 33%" scope="col">
@@ -418,8 +365,51 @@
                                     </t>
                                 </tbody>
                             </table>
+                            <b>* Uninterpretable result = invalid, error, or no result</b>
+                            <br/>
+                            <br/>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Scheme Coordinator:
+                                            <b>John Muzyamba</b>
+                                        </th>
+                                        <th>Report Reviewed By:
+                                            <b>Beene Muleza Manchishi</b>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Authorized by:
+                                            <b>Mutende Mwamba</b>
+                                        </th>
+                                        <th>Date:
+                                            <b>01/10/2024</b>
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <br/>
+                            <b>INFORMATION NOTE: ISO 17043 requirements:
+                                <br/>
+                                a) The name and contact details for the proficiency testing provider;
+                            </b>
+                            <br/>
+                            Chest Disease Laboratory
+                            <br/>
+                            P.O.BOX 34566,
+                            <br/>
+                            Lusaka.
+                            <br/>
+                            Email:chestlab2016@gmail.com
+                            <br/>
+                            Tel: :021-128 2306
+                            <br/>
+                            <b>
+                                The name and contact details for the coordinator and PT manager are as follows;
+                            </b>
+
                         </div>
-                        <div class="footer" style="text-align: center; position: fixed; bottom: 0; width: 100%;">
+                        <div class="footer">
                             <span>Page
                                 <t t-esc="0" t-options='{"widget": "page_number"}'/>
                                 of
@@ -427,8 +417,6 @@
                             </span>
                         </div>
 
-
-                        <!--                    </t>-->
                     </t>
                 </div>
             </t>

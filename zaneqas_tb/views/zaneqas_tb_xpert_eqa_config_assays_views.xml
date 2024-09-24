@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="zaneqas_tb_xpert_eqa_config_assays_tree" model="ir.ui.view">
+        <field name="name">zaneqas_tb_xpert_eqa_config_assays_tree</field>
+        <field name="model">zaneqas.tb.xpert.eqa.config.assays</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="zaneqas_tb_xpert_eqa_config_assays_form" model="ir.ui.view">
+        <field name="name">zaneqas_tb_xpert_eqa_config_assays_form</field>
+        <field name="model">zaneqas.tb.xpert.eqa.config.assays</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_save_eqa_config_assay_as_draft" data-hotkey="v"
+                            confirm="Are you sure you want to save as draft?"
+                            string="Save as Draft" class="btn-primary" type="object"
+                            context="{'validate_analytic': True}"
+                            invisible="state != 'draft' "/>
+                    <button name="action_submit_eqa_config_assay_to_supervisor" data-hotkey="v"
+                            confirm="Are you sure you want to make this submission?"
+                            string="Save and Submit" class="btn-primary" type="object"
+                            context="{'validate_analytic': True}"
+                            invisible="state != 'draft' "/>
+                    <button name="action_supervisor_approve_eqa_config_assay" data-hotkey="v"
+                            confirm="Are you sure you want to make this approval?"
+                            string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'supervisor' "/>
+                    <button name="action_supervisor_send_back_eqa_config_assay" data-hotkey="v"
+                            confirm="Are you sure you want to send back?"
+                            string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
+                            invisible="state != 'supervisor' "/>
+
+
+                    <field name="state" context="{'validate_analytic': True}" widget="statusbar"
+                           statusbar_visible="draft,supervisor,approved"
+                           options="{'clickable':'1'}"/>
+
+                </header>
+
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+
+
+                </sheet>
+                <div class="oe_chatter" context="{'validate_analytic': True}">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="zaneqas_tb_xpert_eqa_config_assays_search" model="ir.ui.view">
+        <field name="name">zaneqas_tb_xpert_eqa_config_assays_search</field>
+        <field name="model">zaneqas.tb.xpert.eqa.config.assays</field>
+        <field name="arch" type="xml">
+            <search string="TB Xpert EQA Assays">
+
+                <separator/>
+            </search>
+        </field>
+    </record>
+
+    <!-- training plan action-->
+    <record id="action_zaneqas_tb_xpert_eqa_config_assays" model="ir.actions.act_window">
+        <field name="name">GeneXpert EQA Assays</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">zaneqas.tb.xpert.eqa.config.assays</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create a zaneqas tb xpert eqa assay configuration
+            </p>
+        </field>
+    </record>
+
+</odoo>

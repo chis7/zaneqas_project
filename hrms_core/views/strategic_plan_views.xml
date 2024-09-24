@@ -89,11 +89,11 @@
     </record>
 
     <!-- Menu Items -->
-    <menuitem id="menu_hrms_strategic_plan_root"
-              name="Strategic Plan"
-              sequence="10"/>
-    <menuitem id="menu_hrms_strategic_plan"
-              name="Strategic Plans"
-              parent="menu_hrms_strategic_plan_root"
-              action="action_hrms_strategic_plan"/>
+<!--    <menuitem id="menu_hrms_strategic_plan_root"-->
+<!--              name="Strategic Plan"-->
+<!--              sequence="10"/>-->
+<!--    <menuitem id="menu_hrms_strategic_plan"-->
+<!--              name="Strategic Plans"-->
+<!--              parent="menu_hrms_strategic_plan_root"-->
+<!--              action="action_hrms_strategic_plan"/>-->
 </odoo>

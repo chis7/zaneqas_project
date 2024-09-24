@@ -16,3 +16,4 @@ from . import zaneqasTbXpertEqaExpectedResults
 from . import zaneqasTbXpertEqaExpectedResultsLines
 from . import zaneqas_tb_xpert_eqa_results_report
 from . import zaneqasTbXpertEqaConfigRounds
+from . import zaneqasTbXpertEqaConfigAssays

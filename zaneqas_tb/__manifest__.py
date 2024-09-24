@@ -51,6 +51,8 @@
         'views/zaneqas_tb_xpert_eqa_results_views.xml',
         'views/zaneqas_tb_xpert_eqa_expected_results_views.xml',
         'views/zaneqas_tb_xpert_eqa_config_rounds_views.xml',
+        'views/zaneqas_tb_xpert_eqa_config_assays_views.xml',
+        'views/zaneqas_tb_actions.xml',
         'views/zaneqas_tb_menus.xml',
         'report/zaneqas_tb_xpert_eqa_results_report.xml',
         'report/gene_xpert_eqa_results_template.xml',

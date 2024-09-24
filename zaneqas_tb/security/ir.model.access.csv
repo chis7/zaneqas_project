@@ -21,6 +21,6 @@ access_zaneqas_tb_xpert_eqa_expected_result,access.zaneqas.tb.xpert.eqa.expected
 access_zaneqas_tb_xpert_eqa_expected_result_lines,access.zaneqas.tb.xpert.eqa.expected.result.lines,model_zaneqas_tb_xpert_eqa_expected_result_lines,,1,1,1,1
 access_report_zaneqas_tb_report_zaneqas_tb_xpert_eqa_results,access.report.zaneqas.tb.report.zaneqas.tb.xpert.eqa.results,model_report_zaneqas_tb_report_zaneqas_tb_xpert_eqa_results,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_config_rounds,access.zaneqas.tb.xpert.eqa.config.rounds,model_zaneqas_tb_xpert_eqa_config_rounds,,1,1,1,1
-
+access_zaneqas_tb_xpert_eqa_config_assays,access.zaneqas.tb.xpert.eqa.config.assays,model_zaneqas_tb_xpert_eqa_config_assays,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result,zaneqas.tb.xpert.eqa.expected.result,model_zaneqas_tb_xpert_eqa_expected_result,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result_lines,zaneqas.tb.xpert.eqa.expected.result.lines,model_zaneqas_tb_xpert_eqa_expected_result_lines,,1,1,1,1

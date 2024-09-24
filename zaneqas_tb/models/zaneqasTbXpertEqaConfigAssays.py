@@ -6,10 +6,10 @@ from odoo.exceptions import UserError, ValidationError
 import random
 
 
-class ZaneqasTbXpertEqaConfigRounds(models.Model):
-    _name = "zaneqas.tb.xpert.eqa.config.rounds"
+class ZaneqasTbXpertEqaConfigAssays(models.Model):
+    _name = "zaneqas.tb.xpert.eqa.config.assays"
     _inherit = ["mail.thread"]
-    _description = "zaneqas tb xpert eqa config rounds"
+    _description = "zaneqas tb xpert eqa config assays"
 
     name = fields.Char(string="Name", required=True)
     state = fields.Selection(
@@ -24,19 +24,15 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
         tracking=True
     )
 
-    def action_save_eqa_config_round_as_draft(self):
+    def action_save_eqa_config_assay_as_draft(self):
         self.write({
-            'state': 'draft'
-        })
+            'state': 'draft'})
 
-    def action_submit_eqa_config_round_to_supervisor(self):
+    def action_submit_eqa_config_assay_to_supervisor(self):
         self.write({'state': 'supervisor'})
 
-    def action_supervisor_approve_eqa_config_round(self):
-        current_year = datetime.now().year
-        self.write({'state': 'approved',
-                    'name': f"{current_year} {self.name}"
-                    })
+    def action_supervisor_approve_eqa_config_assay(self):
+        self.write({'state': 'approved'})
 
-    def action_supervisor_send_back_eqa_config_round(self):
+    def action_supervisor_send_back_eqa_config_assay(self):
         self.write({'state': 'draft'})

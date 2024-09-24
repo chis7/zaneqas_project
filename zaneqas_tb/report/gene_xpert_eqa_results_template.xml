@@ -10,9 +10,9 @@
                     font-weight: bold;
                     margin-bottom: 20px;
                     }
-                    .small-font {
-                    font-size: 6px;
-                    }
+                    <!--                    .small-font {-->
+                    <!--                    font-size: 6px;-->
+                    <!--                    }-->
                     .footer {
                     text-align: center;
                     position: fixed;
@@ -21,16 +21,26 @@
                     font-size: 8px;
                     }
 
+                    .watermark {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('/zaneqas_tb/static/src/img/tb_icon.png');
+                    background-repeat: repeat;
+                    opacity: 0.1;
+                    z-index: -1;
+                    }
                 </style>
-
-                <div class="header">
+                <div t-if="report_type == 'qweb-pdf'" class="header">
                     <table class="table table-bordered">
                         <thead>
-                            <tr>
-                                <th rowspan="3">
-                                    <img t-att-src="'/zaneqas_tb/static/src/img/coa.png'" alt="coa"/>
+                            <tr style="text-align:center;">
+                                <th rowspan="4">
+                                    <img t-att-src="'/zaneqas_tb/static/src/img/coa.png'" alt="logo"/>
                                 </th>
-                                <th rowspan="3">Ministry of Health
+                                <th rowspan="4">Ministry of Health
                                     <br/>
                                     <br/>
                                     Chest Diseases
@@ -38,22 +48,34 @@
                                     <br/>
                                     Laboratory
                                 </th>
-                                <th colspan="3">Xpert MTB/RIF-Ultra
+                                <th colspan="4">Xpert MTB/RIF-Ultra
                                     Individual Performance Report Form
-
                                 </th>
                             </tr>
                             <tr>
-                                <td>Effective Date</td>
-                                <td>30/10/2022</td>
-                                <td>DOC No: TF-CDL-011</td>
+                                <td>Effective Date:
+                                    <b>30/10/2022</b>
+                                </td>
+                                <td>DOC No:
+                                    <b>TF-CDL-011</b>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Review Date</td>
-                                <td>30/10/2025</td>
-                                <td>Version: 01</td>
+                                <td>Review Date:
+                                    <b>30/10/2025</b>
+                                </td>
+                                <td>Version:
+                                    <b>01</b>
+                                </td>
                             </tr>
-
+                            <tr>
+                                <td>Site Name:
+                                    <b>Matero Ref</b>
+                                </td>
+                                <td>Participant Lab Code:
+                                    <b>CDL-011</b>
+                                </td>
+                            </tr>
                         </thead>
                     </table>
                 </div>
@@ -62,65 +84,59 @@
 
                         <!--                    <t t-call="web.external_layout">-->
                         <div class="page">
-                            <div class="row" id="hash_header" style="text-size:10">
-                                <div class="col-12" style="text-align:center;">
-                                    <table class="table table-bordered" style="table-layout: fixed"
-                                           id="hash_config_table">
-                                        <thead style="display: table-row-group">
-                                            <tr>
-                                                <th class="text-center" style="width: 33%" scope="col">PT Cycle No:
-                                                    <span t-field="lab.name"/>
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Date PT Shipped: 05/06/2024
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Date PT received:07/06/2024
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Closing Date:30/06/2024
-                                                    <span t-field="lab.due_date"/>
-                                                </th>
+                            <div class="row" style="text-size:10">
+                                <div class="col-12">
+                                    <div t-if="report_type == 'qweb-html'" class="text-center">
+                                        <span>PT Cycle No:
 
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center" style="width: 33%" scope="col">Results return
-                                                    date
-                                                    to CDL:
-                                                    <span t-field="lab.write_date"/>
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Shipment TAT:
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Results TAT:</th>
-                                                <th class="text-center" style="width: 33%" scope="col">Report Issue
-                                                    date:
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                    <table class="table table-bordered" style="table-layout: flex"
-                                           id="hash_config_table">
-                                        <thead style="display: table-row-group">
-                                            <tr>
-                                                <th class="text-center" style="width: 33%" scope="col">Province
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Site Name:
-                                                    <span t-field="lab.company_name"/>
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Participant Lab Code</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                    <div class="row">
-                                        <div class="col-12" id="hash_config_review" style="text-align:center;">
-                                            <span>Results</span>
-                                        </div>
+                                            <span t-field="lab.name"/>
+                                            |
+                                        </span>
+                                        <span>Date PT Shipped:
+
+                                            05/06/2024 |
+                                        </span>
+                                        <span>Date PT
+                                            received:
+
+                                            07/06/2024 |
+                                        </span>
+                                        <span>Closing
+                                            Date:
+
+                                            <span t-field="lab.due_date"/>
+                                            |
+                                        </span>
+                                        <span>Results return
+                                            date
+                                            to CDL:
+
+                                            <span t-field="lab.write_date"/>
+                                            |
+                                        </span>
+
+                                        <span>Shipment TAT:
+                                            7 days |
+                                        </span>
+                                        <span>Results TAT:
+
+                                            0 days |
+                                        </span>
+                                        <span>Report Issue
+                                            date:
+
+                                            30/11/2024
+                                        </span>
                                     </div>
+                                    <br/>
                                     <table class="table table-bordered" style="table-layout: Flex">
                                         <thead>
                                             <tr>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody style="text-align:center;">
                                             <t>
-                                                <tr>
+                                                <tr style="font-weight:bold;">
                                                     <td>Sample ID
                                                     </td>
                                                     <td/>
@@ -135,7 +151,7 @@
                                                 <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
                                                     <tr>
                                                         <td>
-                                                            <span t-field="result.sample_id"/>
+                                                            <span style="font-weight:bold;" t-field="result.sample_id"/>
                                                         </td>
                                                         <td style="text-align:left;">
                                                             <span>Site's Results</span>
@@ -169,8 +185,6 @@
                                                                 <span>High</span>
                                                                 <br/>
                                                             </t>
-                                                            <!--                                                        <t t-foreach="result.expected_result_ids"-->
-                                                            <!--                                                           t-as="expected_result">-->
                                                             <t t-foreach="lab.expected_result_lines_ids" t-as="line">
                                                                 <span t-field="line.tb_detection_not_detected"/>
                                                                 <span t-field="line.tb_detection_trace"/>
@@ -178,9 +192,7 @@
                                                                 <span t-field="line.tb_detection_low"/>
                                                                 <span t-field="line.tb_detection_medium"/>
                                                                 <span t-field="line.tb_detection_high"/>
-                                                                <span>here</span>
                                                             </t>
-                                                            <span>here</span>
                                                         </td>
                                                         <td>
                                                             <t t-if="result.rif_na">
@@ -206,61 +218,34 @@
                                                             </span>
                                                         </td>
                                                     </tr>
+
                                                 </t>
+                                                <tr style="text-align:center; font-weight:bold;">
+                                                    <td colspan="2">
+                                                        <b>FINAL SCORE</b>
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <b>Satisfactory</b>
+                                                    </td>
+                                                    <td>
+                                                        <b>100</b>
+                                                    </td>
+                                                </tr>
                                             </t>
                                         </tbody>
                                     </table>
+                                    <br/>
 
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <table class="table" style="table-layout: flex">
-                                        <thead style="display: table-row-group">
-                                            <tr>
-                                                <th class="text-center" style="width: 33%" scope="col">
-                                                </th>
-                                                <th class="text-center" style="width: 33%" scope="col">Percentage</th>
-                                                <th class="text-center" style="width: 33%" scope="col">
-                                                    Satisfactory/Unsatisfactory
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    FINAL SCORE
-                                                </td>
-                                                <td style="text-align:center;">100</td>
-                                                <td style="text-align:center;">Satisfactory</td>
-                                            </tr>
-                                        </thead>
-                                    </table>
-
-                                    <br/>
-                                    <span>Satisfactory, greater or equal to 80 Marks, Unsatisfactory performance, less
-                                        than
-                                        80 marks.
-                                    </span>
-                                    <br/>
-                                    <hr/>
-                                    <span>Laboratory Specific Comment:
-                                        <u></u>
-                                    </span>
-                                    <br/>
-                                    <span>General Scheme Expert Comment:
-                                        <u>
-                                            <b>WELL DONE KEEP IT UP</b>
-                                        </u>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="row">
+                            <div t-if="report_type == 'qweb-html'" class="row">
                                 <div class="col-12" id="hash_config_review" style="text-align:center;">
                                     <span>
                                         <b>Summary of All Reporting Sites</b>
                                     </span>
                                 </div>
                             </div>
-                            <table class="table table-bordered" style="table-layout: Flex">
+                            <table t-if="report_type == 'qweb-html'" class="table" style="table-layout: Flex">
                                 <thead>
                                     <tr>
                                     </tr>
@@ -273,7 +258,9 @@
 
 
                                                 <td>
-                                                    <span t-field="result.sample_id"/>
+                                                    <b>
+                                                        <span t-field="result.sample_id"/>
+                                                    </b>
                                                 </td>
 
                                             </t>
@@ -360,15 +347,14 @@
                                             <td class="text-center">0%</td>
                                             <td class="text-center">100%</td>
                                         </tr>
-
-
                                     </t>
                                 </tbody>
                             </table>
-                            <b>* Uninterpretable result = invalid, error, or no result</b>
+                            <br/>
+                            <span t-if="report_type == 'qweb-html'"><b>* Uninterpretable result = invalid, error, or no result</b></span>
                             <br/>
                             <br/>
-                            <table class="table">
+                            <table t-if="report_type == 'qweb-html'" class="table">
                                 <thead>
                                     <tr>
                                         <th>Scheme Coordinator:
@@ -388,32 +374,101 @@
                                     </tr>
                                 </thead>
                             </table>
-                            <br/>
-                            <b>INFORMATION NOTE: ISO 17043 requirements:
+                            <div t-if="report_type == 'qweb-html'" class="row">
                                 <br/>
-                                a) The name and contact details for the proficiency testing provider;
-                            </b>
-                            <br/>
-                            Chest Disease Laboratory
-                            <br/>
-                            P.O.BOX 34566,
-                            <br/>
-                            Lusaka.
-                            <br/>
-                            Email:chestlab2016@gmail.com
-                            <br/>
-                            Tel: :021-128 2306
-                            <br/>
-                            <b>
-                                The name and contact details for the coordinator and PT manager are as follows;
-                            </b>
-
-                        </div>
-                        <div class="footer">
-                            <span>Page
-                                <t t-esc="0" t-options='{"widget": "page_number"}'/>
+                                <b>
+                                    <u>INFORMATION NOTE: ISO 17043 requirements:</u>
+                                    <br/>
+                                    a) &#160;The name and contact details for the proficiency testing provider;
+                                </b>
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;Chest Disease Laboratory
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;P.O.BOX 34566,
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;Lusaka.
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;Email:chestlab2016@gmail.com
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;Tel: :021-128 2306
+                                <br/>
+                                <b>
+                                    (b) &#160;The name and contact details for the coordinator and PT manager are as
+                                    follows;
+                                </b>
+                                <br/>
+                                (c) &#160;The name(s), function(s), and signature(s) or equivalent identification of
+                                person(s) authorizing PT reports; Quality officer;
+                                <br/>
+                                (d) &#160;<i>Performance Criteria: The correct result consists of two aspects 1) MTB
+                                Detection, 2) Rifampin status. 20 Marks are allocated for a single sample if the correct
+                                result is reported for both MTB and Rifampicin detection. 10 marks are awarded for; I)
+                                correct reporting of MTB with rifampicin getting recorded as indeterminate for a
+                                positive sample. II) correct reporting of MTB but Rifampicin results missing. Incorrect
+                                result are scored 0 Marks. Error. Invalid or No result are allocated 5 marks.
+                            </i>
+                                <br/>
+                                (e) &#160; Only courier services are sub-contracted.
+                                <br/>
+                                (f) &#160;<b>Confidentiality</b>
+                                <br/>
+                                All participant information including details, results, performance among others is
+                                treated
+                                confidential by the PT provider unless otherwise stated. All individual participant and
+                                summary reports don’t bear the identity of Laboratories participating in the CDL PT
+                                Scheme.
+                                Identity of the participant can only be disclosed on the individual participant report
+                                if a
+                                “waiver of confidentiality” is granted. Identity of participants is disclosed in the
+                                summary
+                                round reports disseminated to PT round funders WHO etc. for purposes of performance
+                                improvement. Identities of participants within the CDL-Zambia TB Laboratory names are
+                                disclosed to the National TB and Leprosy Control Program/NTRL laboratory Coordinators,
+                                regional implementing partners laboratory coordinators for purposes of improving
+                                performance
+                                and implementation of the PT Scheme. In circumstances, when a regulatory authority
+                                requires
+                                proficiency testing results to be directly provided to the authority by the proficiency
+                                testing provider, the affected participants shall be notified of this action in writing.
+                                <br/>
+                                (g) &#160; The report number is the PT Scheme round number.
+                                <br/>
+                                (h) &#160; All items used in the PT preparation have been carefully selected. Internal
+                                Quality control processes have been done to ensure homogeneity and stability assessment;
+                                <br/>
+                                (i) &#160; Assigned value are determined through reference materials. The PT provider
+                                allows
+                                the participant to use internal procedures approved by WHO for TB diagnosis and
+                                methods/techniques are identified on individual and all participants’ summary reports.
+                                Where
+                                different methods are used by PT providers, the same scoring system shall be applied as
+                                indicated on the instructions and results forms for each PT scheme. The PT provider has
+                                established procedures for statistical analysis of the PT results. Summaries of results
                                 of
-                                <t t-esc="0" t-options='{"widget": "page_count"}'/>
+                                all participants is described in the PT round summary report disseminated at the end of
+                                each
+                                PT round. Comments and recommendations on individual and all participants’ performance
+                                is
+                                described on PT round scheme reports.
+                                <br/>
+                                (j) &#160; Advisory services at the CDL-Zambia PT schemes is provided internally by the
+                                Proficiency testing team (PT team) that comprises of personnel with the necessary
+                                technical
+                                expertise and experience in the relevant field of testing, calibration, sampling or
+                                inspection, as well as statistics for PT scheme analysis and reporting. Where it is
+                                required, the CDL-Zambia will seek for external advisory services.
+                                <br/>
+                                (k) &#160; More information and details on the CDL-Zambia PT Scheme can be obtained from
+                                each round PT Scheme Instructions to participants forms on +260977708424 and email:
+                                chestlab2016@gmail.com
+                                <br/>
+                            </div>
+                        </div>
+                        <div t-if="report_type == 'qweb-html'" class="footer">
+                            <span>Page
+                                <span class="page"/>
+                                of
+                                <span class="topage"/>
                             </span>
                         </div>
 

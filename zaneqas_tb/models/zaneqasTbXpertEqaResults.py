@@ -22,7 +22,7 @@ class ZaneqasTbXpertEqaResults(models.Model):
     date_panel_reported = fields.Date(string='Date Results Reported', required=True)
     date_of_last_gene_xpert_instrument_calibration_or_installation = fields.Date(
         string="Date of Last GeneXpert Instrument Calibration or Installation", required=True)
-    xpert_assay_used = fields.Char(string='Xpert Assay Used', required=True)
+    xpert_assay_used = fields.Many2one('zaneqas.tb.xpert.eqa.config.assays', required=True)
     catridge_lot_number = fields.Char(string='Xpert MTB/RIF or Ultra Cartridge or Pouch Lot No:', required=True)
     expiry_date = fields.Date(string='Xpert MTB/RIF or Ultra Cartridge or Pouch Expiry Date', required=True)
     comments = fields.Text(string='Comments')

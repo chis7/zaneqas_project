@@ -51,7 +51,6 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         selection=[
             ("draft", "Draft"),
             ("supervisor", "Supervisor"),
-            ("lab_incharge", "Lab Incharge"),
             ("approved", "Approved"),
             ("published", "Published"),
         ],

@@ -32,13 +32,13 @@
     <menuitem id="zaneqas_tb_eqa_mtb_rif_expert_reports"
               name="MTB/RIF GeneXpert Assay Performance Reports"
               parent="zaneqas_tb_eqa_reports"
-              action="action_zaneqas_tb_xpert_eqa_results"/>
+              action="action_zaneqas_tb_xpert_eqa_results_form"/>
     <menuitem id="zaneqas_tb_eqa_sputum_smear_microscopy_performance_reports"
               name="Sputum Smear Microscopy Performance Reports"
               parent="zaneqas_tb_eqa_reports"
               action="action_zaneqas_tb_xpert_eqa_results"/>
 
-     <menuitem id="zaneqas_tb_eqa_configs_rounds"
+    <menuitem id="zaneqas_tb_eqa_configs_rounds"
               name="EQA Rounds"
               parent="zaneqas_tb_eqa_configs"
               action="action_zaneqas_tb_xpert_eqa_config_rounds"/>
@@ -52,4 +52,9 @@
               name="Xpert EQA Expected Results"
               parent="zaneqas_tb_eqa_configs_xpert"
               action="action_zaneqas_tb_xpert_eqa_expected_results"/>
+
+    <menuitem id="zaneqas_tb_eqa_configs_xpert_assays"
+              name="Xpert Assays"
+              parent="zaneqas_tb_eqa_configs_xpert"
+              action="action_zaneqas_tb_xpert_eqa_config_assays"/>
 </odoo>

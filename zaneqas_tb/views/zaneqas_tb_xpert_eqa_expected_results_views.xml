@@ -47,7 +47,7 @@
                             invisible="state != 'lab_incharge' "/>
 
                     <field name="state" context="{'validate_analytic': True}" widget="statusbar"
-                           statusbar_visible="draft,supervisor,lab_incharge,approved"
+                           statusbar_visible="draft,supervisor,approved"
                            options="{'clickable':'1'}"/>
 
                 </header>
@@ -83,7 +83,7 @@
                         <page string="Rif Detection Result" id="rif_detection_result">
                             <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
                                 <tree editable="top" create="0" delete="0">
-                                    <field name="sample_id" readonly="1"/>
+                                    <field name="sample_id" readonly="1" force_save="1"/>
                                     <field name="rif_na"/>
                                     <field name="rif_not_detected"/>
                                     <field name="rif_detected"/>
@@ -94,7 +94,7 @@
                         <page string="Uninterpretable Result" id="rif_detection_result">
                             <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
                                 <tree editable="top" create="0" delete="0">
-                                    <field name="sample_id" readonly="1"/>
+                                    <field name="sample_id" readonly="1" force_save="1"/>
                                     <field name="uninterpretable_invalid"/>
                                     <field name="uninterpretable_no_result"/>
                                     <field name="uninterpretable_error"/>
@@ -106,7 +106,7 @@
                         <page string="TB Detection Result" id="tb_detection_result">
                             <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
                                 <tree editable="top" create="0" delete="0">
-                                    <field name="sample_id" readonly="1"/>
+                                    <field name="sample_id" readonly="1" force_save="1"/>
                                     <field name="ct_probe_d_ultra_spsc"/>
                                     <field name="ct_probe_c_is1081_is6110"/>
                                     <field name="ct_probe_e_rpob2"/>

@@ -29,10 +29,12 @@
                             context="{'validate_analytic': True}"
                             invisible="state != 'draft' "/>
                     <button name="action_supervisor_approve_eqa_config_round" data-hotkey="v"
+                            groups="zaneqas_tb.group_cdl_supervisor_approve_site_eqa_expected_results"
                             confirm="Are you sure you want to make this approval?"
                             string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>
                     <button name="action_supervisor_send_back_eqa_config_round" data-hotkey="v"
+                            groups="zaneqas_tb.group_cdl_supervisor_approve_site_eqa_expected_results"
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>

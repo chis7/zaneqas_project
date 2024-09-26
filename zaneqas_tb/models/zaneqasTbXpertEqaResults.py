@@ -52,6 +52,7 @@ class ZaneqasTbXpertEqaResults(models.Model):
     declaration_laboratory_in_charge_date = fields.Date(string="Date", required=True, store=True)
     declaration_testing_personnel = fields.Char(string="Testing Personnel", store=True)
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
+    company_id = fields.Many2one('res.company', string="Company", required=True, default=lambda self: self.env.company)
 
     zaneqas_tb_xpert_eqa_result_error_code_ids = fields.One2many('zaneqas.tb.xpert.eqa.result.error.code.lines',
                                                                  'zaneqas_tb_xpert_eqa_result_error_code_id',
@@ -86,7 +87,12 @@ class ZaneqasTbXpertEqaResults(models.Model):
     supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
     lab_incharge_comment = fields.Text(string="Lab Incharge Comment", tracking=True)
     results_status = fields.Char(string="Results Status", compute="_compute_results_status")
-    company_name = fields.Integer(string="Company Name", store=True)
+    company_name = fields.Char(string='Company Name', compute='_compute_company_name')
+
+    @api.depends('create_uid')
+    def _compute_company_name(self):
+        for record in self:
+            record.company_name = record.create_uid.company_id.name if record.create_uid.company_id else ''
 
     tb_detection_not_detected = fields.Boolean(
         related='zaneqas_tb_xpert_eqa_result_ids.tb_detection_not_detected',

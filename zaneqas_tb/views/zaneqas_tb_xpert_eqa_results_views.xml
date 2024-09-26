@@ -12,6 +12,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="company_name"/>
                 <field name="date_results_received_at_CDL"/>
                 <field name="date_panel_received"/>
                 <field name="date_panel_reported"/>
@@ -39,18 +40,22 @@
                             context="{'validate_analytic': True}"
                             invisible="state != 'draft' "/>
                     <button name="action_supervisor_approve_eqa_result" data-hotkey="v"
+                            groups="zaneqas_tb.group_supervisor_approve_site_eqa_results"
                             confirm="Are you sure you want to make this approval?"
                             string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>
                     <button name="action_supervisor_send_back_eqa_result" data-hotkey="v"
+                            groups="zaneqas_tb.group_supervisor_approve_site_eqa_results"
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>
                     <button name="action_LabIncharge_approve_eqa_result" data-hotkey="v"
+                            groups="zaneqas_tb.group_labIncharge_approve_site_eqa_results"
                             confirm="Are you sure you want to make this approval?"
                             string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'lab_incharge' "/>
                     <button name="action_LabIncharge_send_back_eqa_result" data-hotkey="v"
+                            groups="zaneqas_tb.group_labIncharge_approve_site_eqa_results"
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'lab_incharge' "/>

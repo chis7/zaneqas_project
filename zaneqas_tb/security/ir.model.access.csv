@@ -24,3 +24,4 @@ access_zaneqas_tb_xpert_eqa_config_rounds,access.zaneqas.tb.xpert.eqa.config.rou
 access_zaneqas_tb_xpert_eqa_config_assays,access.zaneqas.tb.xpert.eqa.config.assays,model_zaneqas_tb_xpert_eqa_config_assays,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result,zaneqas.tb.xpert.eqa.expected.result,model_zaneqas_tb_xpert_eqa_expected_result,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result_lines,zaneqas.tb.xpert.eqa.expected.result.lines,model_zaneqas_tb_xpert_eqa_expected_result_lines,,1,1,1,1
+access_mail_mail_admin,access_mail_mail_admin,mail.model_mail_mail,,1,1,1,1

@@ -23,6 +23,7 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
         required=True,
         tracking=True
     )
+    supervisor_id = fields.Many2one('res.users', string="Assigned Supervisor")
 
     def action_save_eqa_config_round_as_draft(self):
         self.write({
@@ -31,12 +32,44 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
 
     def action_submit_eqa_config_round_to_supervisor(self):
         self.write({'state': 'supervisor'})
+        group = self.env.ref("zaneqas_tb.group_cdl_supervisor_approve_site_eqa_expected_results")
+        users = group.users
+
+        if users:
+            selected_user = random.choice(users)
+            self.supervisor_id = selected_user.id
+            if selected_user.email:
+                mail_values = {
+                    'subject': 'Request for Approval',
+                    'body_html': """<p>You have received a request for approval of an EQA configuration. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
+                    'email_to': selected_user.email,
+                }
+                mail = self.env['mail.mail'].create(mail_values)
+                mail.send()
 
     def action_supervisor_approve_eqa_config_round(self):
+        if self.env.user != self.supervisor_id:
+            raise models.ValidationError("You are not authorized to approve this EQA configuration round.")
         current_year = datetime.now().year
-        self.write({'state': 'approved',
-                    'name': f"{current_year} {self.name}"
-                    })
+        self.write({'state': 'approved', 'name': f"{current_year} {self.name}"})
+        user = self.create_uid.email
+        if user:
+            mail_values = {
+                'subject': 'Your Request for Approval',
+                'body_html': """<p>Your EQA configuration has been approved. Click <a href='http://localhost:8069'>here</a> to log in and check the status.</p>""",
+                'email_to': user,
+            }
+            mail = self.env['mail.mail'].create(mail_values)
+            mail.send()
 
     def action_supervisor_send_back_eqa_config_round(self):
         self.write({'state': 'draft'})
+        user = self.create_uid.email
+        if user:
+            mail_values = {
+                'subject': 'Your Request for Approval',
+                'body_html': """<p>Your EQA configuration has been sent back for your review. Click <a href='http://localhost:8069'>here</a> to log in and check the status.</p>""",
+                'email_to': user,
+            }
+            mail = self.env['mail.mail'].create(mail_values)
+            mail.send()

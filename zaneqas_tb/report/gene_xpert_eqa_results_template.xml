@@ -33,7 +33,7 @@
                     z-index: -1;
                     }
                 </style>
-                <div t-if="report_type == 'qweb-pdf'" class="header">
+                <div class="header">
                     <table class="table table-bordered">
                         <thead>
                             <tr style="text-align:center;">
@@ -70,7 +70,7 @@
                             </tr>
                             <tr>
                                 <td>Site Name:
-                                    <b>Matero Ref</b>
+                                    <b><span t-field="lab.company_name"/></b>
                                 </td>
                                 <td>Participant Lab Code:
                                     <b>CDL-011</b>
@@ -86,7 +86,7 @@
                         <div class="page">
                             <div class="row" style="text-size:10">
                                 <div class="col-12">
-                                    <div t-if="report_type == 'qweb-html'" class="text-center">
+                                    <div  class="text-center">
                                         <span>PT Cycle No:
 
                                             <span t-field="lab.name"/>
@@ -238,14 +238,14 @@
 
                                 </div>
                             </div>
-                            <div t-if="report_type == 'qweb-html'" class="row">
+                            <div  class="row">
                                 <div class="col-12" id="hash_config_review" style="text-align:center;">
                                     <span>
                                         <b>Summary of All Reporting Sites</b>
                                     </span>
                                 </div>
                             </div>
-                            <table t-if="report_type == 'qweb-html'" class="table" style="table-layout: Flex">
+                            <table  class="table" style="table-layout: Flex">
                                 <thead>
                                     <tr>
                                     </tr>
@@ -351,10 +351,10 @@
                                 </tbody>
                             </table>
                             <br/>
-                            <span t-if="report_type == 'qweb-html'"><b>* Uninterpretable result = invalid, error, or no result</b></span>
+                            <span ><b>* Uninterpretable result = invalid, error, or no result</b></span>
                             <br/>
                             <br/>
-                            <table t-if="report_type == 'qweb-html'" class="table">
+                            <table  class="table">
                                 <thead>
                                     <tr>
                                         <th>Scheme Coordinator:
@@ -374,7 +374,7 @@
                                     </tr>
                                 </thead>
                             </table>
-                            <div t-if="report_type == 'qweb-html'" class="row">
+                            <div  class="row">
                                 <br/>
                                 <b>
                                     <u>INFORMATION NOTE: ISO 17043 requirements:</u>
@@ -464,7 +464,7 @@
                                 <br/>
                             </div>
                         </div>
-                        <div t-if="report_type == 'qweb-html'" class="footer">
+                        <div  class="footer">
                             <span>Page
                                 <span class="page"/>
                                 of

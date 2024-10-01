@@ -3,7 +3,7 @@
     <record id="report_gene_xpert_eqa_results" model="ir.actions.report">
         <field name="name">GeneXpert EQA Performance Report</field>
         <field name="model">zaneqas.tb.xpert.eqa.result</field>
-        <field name="report_type">qweb-html</field>
+        <field name="report_type">qweb-pdf</field>
         <field name="report_name">zaneqas_tb.report_gene_xpert_eqa_results_temp</field>
         <field name="report_file">zaneqas_tb.report_gene_xpert_eqa_results_temp</field>
         <field name="print_report_name">'GeneXpert EQA Performance Report'</field>

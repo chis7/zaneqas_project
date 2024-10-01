@@ -63,6 +63,18 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     supervisor_comment = fields.Char(string="Supervisor Comment", tracking=True)
     lab_incharge_comment = fields.Char(string="Lab Incharge Comment", tracking=True)
 
+    is_supervisor = fields.Boolean(compute='_compute_is_supervisor', store=False)
+    is_LabIncharge = fields.Boolean(compute='_compute_is_labIncharge', store=False)
+
+    @api.depends('create_uid')
+    def _compute_is_supervisor(self):
+        for record in self:
+            record.is_supervisor = self.env.user == record.create_uid.parent_id and record.state == 'supervisor'
+
+    @api.depends('create_uid')
+    def _compute_is_labIncharge(self):
+        for record in self:
+            record.is_LabIncharge = self.env.user == record.create_uid.parent_id.parent_id and record.state == 'lab_incharge'
 
     def action_save_eqa_result_as_draft(self):
         self.write({'state': 'draft'})

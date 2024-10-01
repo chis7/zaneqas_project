@@ -3,7 +3,7 @@
     <!-- Top menu item -->
     <menuitem name="zaneqas tb"
               id="zaneqas_tb_root"
-              web_icon="zaneqas_tb/static/description/icon.png"/>
+              web_icon="zaneqas_tb,static/description/TBpNG.png"/>
 
     <menuitem id="zaneqas_tb_eqa_root"
               name="EQA Schemes"

@@ -48,15 +48,16 @@
 
                 <sheet>
                     <group>
-                        <!--                        <widget name="web_ribbon" title="Approved" bg_color="bg-success"/>-->
                         <group>
-                            <field name="name"/>
-                            <field name="due_date" />
+                            <field name="name" domain="[('state', '=', 'approved')]"/>
+                            <field name="due_date"/>
                         </group>
 
-                         <group>
-                            <field name="supervisor_comment"/>
-                            <field name="lab_incharge_comment"/>
+                        <group>
+                            <field name="is_supervisor" column_invisible="True"/>
+                            <field name="is_LabIncharge" column_invisible="True"/>
+                            <field name="supervisor_comment" readonly="is_supervisor == False"/>
+                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>
                         </group>
                     </group>
 

@@ -70,7 +70,9 @@
                             </tr>
                             <tr>
                                 <td>Site Name:
-                                    <b><span t-field="lab.company_name"/></b>
+                                    <b>
+                                        <span t-field="lab.company_name"/>
+                                    </b>
                                 </td>
                                 <td>Participant Lab Code:
                                     <b>CDL-011</b>
@@ -86,7 +88,7 @@
                         <div class="page">
                             <div class="row" style="text-size:10">
                                 <div class="col-12">
-                                    <div  class="text-center">
+                                    <div class="text-center">
                                         <span>PT Cycle No:
 
                                             <span t-field="lab.name"/>
@@ -238,14 +240,14 @@
 
                                 </div>
                             </div>
-                            <div  class="row">
+                            <div class="row">
                                 <div class="col-12" id="hash_config_review" style="text-align:center;">
                                     <span>
                                         <b>Summary of All Reporting Sites</b>
                                     </span>
                                 </div>
                             </div>
-                            <table  class="table" style="table-layout: Flex">
+                            <table class="table" style="table-layout: Flex">
                                 <thead>
                                     <tr>
                                     </tr>
@@ -351,10 +353,12 @@
                                 </tbody>
                             </table>
                             <br/>
-                            <span ><b>* Uninterpretable result = invalid, error, or no result</b></span>
+                            <span>
+                                <b>* Uninterpretable result = invalid, error, or no result</b>
+                            </span>
                             <br/>
                             <br/>
-                            <table  class="table">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>Scheme Coordinator:
@@ -374,7 +378,7 @@
                                     </tr>
                                 </thead>
                             </table>
-                            <div  class="row">
+                            <div class="row">
                                 <br/>
                                 <b>
                                     <u>INFORMATION NOTE: ISO 17043 requirements:</u>
@@ -400,10 +404,14 @@
                                 (c) &#160;The name(s), function(s), and signature(s) or equivalent identification of
                                 person(s) authorizing PT reports; Quality officer;
                                 <br/>
-                                (d) &#160;<i>Performance Criteria: The correct result consists of two aspects 1) MTB
-                                Detection, 2) Rifampin status. 20 Marks are allocated for a single sample if the correct
-                                result is reported for both MTB and Rifampicin detection. 10 marks are awarded for; I)
-                                correct reporting of MTB with rifampicin getting recorded as indeterminate for a
+                                (d) &#160;<i>Performance Criteria: The correct result consists of two aspects
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;1) MTB Detection,
+                                <br/>
+                                &#160;&#160;&#160;&#160;&#160;&#160;2) Rifampin status. 20 Marks are allocated for a
+                                single sample if the correct result is reported for both MTB and Rifampicin detection. 10   marks are awarded for;
+                                <br/> &#160;&#160;&#160;&#160;&#160;&#160;I) correct reporting of MTB with rifampicin
+                                getting recorded as indeterminate for a
                                 positive sample. II) correct reporting of MTB but Rifampicin results missing. Incorrect
                                 result are scored 0 Marks. Error. Invalid or No result are allocated 5 marks.
                             </i>
@@ -464,7 +472,7 @@
                                 <br/>
                             </div>
                         </div>
-                        <div  class="footer">
+                        <div class="footer">
                             <span>Page
                                 <span class="page"/>
                                 of

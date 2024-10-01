@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//div[contains(@class, 'oe_title') and contains(@class, 'mb24')]" position="inside">
-                    <field name="is_training_institution" invisible="1"/>
+<!--                    <field name="is_training_institution" invisible="1"/>-->
                 </xpath>
             </field>
         </record>
@@ -20,7 +20,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//filter[@name='type_person']" position="replace"/>
                 <xpath expr="//filter[@name='type_company']" position="after">
-                    <filter string="Training Institutions" name="type_company" domain="[('is_training_institution', '=', True)]"/>
+<!--                    <filter string="Training Institutions" name="type_company" domain="[('is_training_institution', '=', True)]"/>-->
                 </xpath>
             </field>
         </record>

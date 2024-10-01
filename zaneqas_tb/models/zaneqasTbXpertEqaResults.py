@@ -19,7 +19,7 @@ class ZaneqasTbXpertEqaResults(models.Model):
     site_contact_person = fields.Char(string='Site Contact Person')
     contact_email = fields.Char(string='Contact Email')
     date_panel_received = fields.Date(string='Date Panel Received', required=True)
-    date_panel_reported = fields.Date(string='Date Results Reported', required=True)
+    # date_panel_reported = fields.Date(string='Date Results Reported', required=True)
     date_of_last_gene_xpert_instrument_calibration_or_installation = fields.Date(
         string="Date of Last GeneXpert Instrument Calibration or Installation", required=True)
     xpert_assay_used = fields.Many2one('zaneqas.tb.xpert.eqa.config.assays', required=True)
@@ -44,12 +44,12 @@ class ZaneqasTbXpertEqaResults(models.Model):
     add_infor_date_gene_xpert_instrument_installed = fields.Date(string="Date GeneXpert Instrument Installed",
                                                                  required=True, store=True)
     add_infor_instrument_user = fields.Char(string="Instrument User (Tester)", required=True, store=True)
-    add_infor_supervisor_review_panel_results = fields.Selection(selection=[('yes', 'Yes'),
-                                                                            ('no', 'No')],
-                                                                 string="Did Supervisor Review Panel Results?",
-                                                                 required=True, store=True)
-    declaration_laboratory_in_charge = fields.Char(string="Laboratory In-Charge", required=True, store=True)
-    declaration_laboratory_in_charge_date = fields.Date(string="Date", required=True, store=True)
+    # add_infor_supervisor_review_panel_results = fields.Selection(selection=[('yes', 'Yes'),
+    #                                                                         ('no', 'No')],
+    #                                                              string="Did Supervisor Review Panel Results?",
+    #                                                              required=True, store=True)
+    # declaration_laboratory_in_charge = fields.Char(string="Laboratory In-Charge", required=True, store=True)
+    # declaration_laboratory_in_charge_date = fields.Date(string="Date", required=True, store=True)
     declaration_testing_personnel = fields.Char(string="Testing Personnel", store=True)
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
     company_id = fields.Many2one('res.company', string="Company", required=True, default=lambda self: self.env.company)
@@ -84,10 +84,26 @@ class ZaneqasTbXpertEqaResults(models.Model):
         required=True,
         tracking=True
     )
+    expected_result_lines_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.expected.result.lines', 'zaneqas_tb_xpert_eqa_expected_result_id',
+        string='Expected Results'
+    )
     supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
     lab_incharge_comment = fields.Text(string="Lab Incharge Comment", tracking=True)
     results_status = fields.Char(string="Results Status", compute="_compute_results_status")
     company_name = fields.Char(string='Company Name', compute='_compute_company_name')
+    state_of_cycle = fields.Selection(
+        related='name.state',
+        string="State of Cycle",
+        readonly=True,
+        store=True
+    )
+
+    # Define the print_report method
+
+    def print_report(self):
+        report = self.env.ref('zaneqas_tb.report_gene_xpert_eqa_results')
+        return self.env['ir.actions.report'].sudo()._get_report_from_name(report.report_name).report_action(self)
 
     @api.depends('create_uid')
     def _compute_company_name(self):
@@ -167,9 +183,38 @@ class ZaneqasTbXpertEqaResults(models.Model):
 
     def action_submit_eqa_result_to_supervisor(self):
         self.write({'state': 'supervisor'})
+        group = self.env.ref("zaneqas_tb.group_supervisor_approve_site_eqa_results")
+        users = group.users
+
+        if users:
+            selected_user = random.choice(users)
+            # supervisor_id = selected_user.id
+            if selected_user.email:
+                mail_values = {
+                    'subject': 'Request for Approval',
+                    'body_html': """<p>You have received a request for approval of EQA Site results as supervisor. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
+                    'email_to': selected_user.email,
+                }
+                mail = self.env['mail.mail'].create(mail_values)
+                mail.send()
+
 
     def action_supervisor_approve_eqa_result(self):
         self.write({'state': 'lab_incharge'})
+        group = self.env.ref("zaneqas_tb.group_labIncharge_approve_site_eqa_results")
+        users = group.users
+
+        if users:
+            selected_user = random.choice(users)
+            # self.supervisor_id = selected_user.id
+            if selected_user.email:
+                mail_values = {
+                    'subject': 'Request for Approval',
+                    'body_html': """<p>You have received a request for approval of EQA Site results as lab in-charge. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
+                    'email_to': selected_user.email,
+                }
+                mail = self.env['mail.mail'].create(mail_values)
+                mail.send()
 
     def action_supervisor_send_back_eqa_result(self):
         self.write({'state': 'draft'})
@@ -180,3 +225,4 @@ class ZaneqasTbXpertEqaResults(models.Model):
     def action_LabIncharge_approve_eqa_result(self):
         self.write({'state': 'approved',
                     'date_results_received_at_CDL': fields.Date.today()})
+

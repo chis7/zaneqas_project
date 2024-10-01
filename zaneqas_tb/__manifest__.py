@@ -39,6 +39,7 @@
         'security/training_security.xml',
         'security/ir.model.access.csv',
         # 'data/data.xml',
+        'views/zaneqas_web_page_title.xml',
         'wizard/createTrainingPlanView.xml',
         'views/training_plan_views.xml',
         'views/training_type_views.xml',
@@ -56,11 +57,12 @@
         'views/zaneqas_tb_menus.xml',
         'report/zaneqas_tb_xpert_eqa_results_report.xml',
         'report/gene_xpert_eqa_results_template.xml',
+        # 'static/description/icon.svg',
 
     ],
     'assets': {
         'web.assets_backend': [
-            'zaneqas_addons/zaneqas_tb/static/src/js/restrict_selection.js',
+            'zaneqas_tb/static/description/icon.svg',
         ],
     },
 

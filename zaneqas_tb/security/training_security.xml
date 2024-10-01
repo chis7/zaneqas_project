@@ -24,6 +24,18 @@
             <field name="category_id" ref="zaneqas_tb.module_category_training"/>
         </record>
 
+        <!-- Record Rule to allow admin to view all records -->
+        <record id="zaneqas_tb_xpert_eqa_result_admin_rule" model="ir.rule">
+            <field name="name">Admin access to all records</field>
+            <field name="model_id" ref="model_zaneqas_tb_xpert_eqa_result"/>
+            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+            <field name="domain_force">[('state', '=', 'approved')]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
         <!-- Record Rule to restrict access to records based on the user's company -->
         <record id="zaneqas_tb_xpert_eqa_result_rule" model="ir.rule">
             <field name="name">Access to own company records</field>
@@ -33,39 +45,20 @@
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
-            <field name="perm_unlink" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
         </record>
 
-         <!-- Record Rule to allow admin to view all records -->
-        <record id="zaneqas_tb_xpert_eqa_result_admin_rule" model="ir.rule">
-            <field name="name">Admin access to all records</field>
+        <!-- Record Rule to allow printing the report only when the state of the corresponding expected results record is published -->
+        <record id="zaneqas_tb_report_print_rule" model="ir.rule">
+            <field name="name">Report Printable When Expected Results Published</field>
             <field name="model_id" ref="model_zaneqas_tb_xpert_eqa_result"/>
-            <field name="groups" eval="[(4, ref('base.group_system'))]"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="domain_force">[('state_of_cycle', '=', 'published')]</field>
             <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_unlink" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
         </record>
-
-
-<!--        <record id="rule_see_own_company_records" model="ir.rule">-->
-<!--            <field name="name">See Own Company Records</field>-->
-<!--            <field name="model_id" ref="base.model_res_company"/>-->
-<!--            <field name="domain_force">[('id', '=', user.company_id.id)]</field>-->
-<!--            <field name="global" eval="True"/>-->
-<!--        </record>-->
-<!--        <record id="approved_training_plan_view_rule" model="ir.rule">-->
-<!--            <field name="name">View only entries for logged in user</field>-->
-<!--            <field name="model_id" ref="model_training_plan_lines"/>-->
-<!--            <field name="domain_force">[('employee_id.user_id', '=',user.id)]</field>-->
-<!--        </record>-->
-<!--        <record id="approved_training_plan_view_rule" model="ir.rule">-->
-<!--            <field name="name">View only entries for logged in user</field>-->
-<!--            <field name="model_id" ref="model_training_plan_lines"/>-->
-<!--            <field name="domain_force">[]</field>-->
-<!--            <field name="groups" eval="[(4, ref('zaneqas_tb.group_PSMD_approve_training_plan'))]"/>-->
-<!--        </record>-->
 
     </data>
 </odoo>

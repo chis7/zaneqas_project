@@ -15,11 +15,25 @@
                 <field name="company_name"/>
                 <field name="date_results_received_at_CDL"/>
                 <field name="date_panel_received"/>
-                <field name="date_panel_reported"/>
+                <!--                <field name="date_panel_reported"/>-->
                 <field name="xpert_assay_used"/>
                 <field name="state"/>
             </tree>
 
+        </field>
+    </record>
+    <record id="zaneqas_tb_xpert_eqa_results_tree_non_admin" model="ir.ui.view">
+        <field name="name">zaneqas.tb.xpert.eqa.result.tree.non.admin</field>
+        <field name="model">zaneqas.tb.xpert.eqa.result</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="company_name"/>
+                <field name="date_results_received_at_CDL"/>
+                <field name="date_panel_received"/>
+                <field name="xpert_assay_used"/>
+                <field name="state"/>
+            </tree>
         </field>
     </record>
 
@@ -59,6 +73,13 @@
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'lab_incharge' "/>
+                    <field name="state_of_cycle" invisible="1"/>
+                    <!-- Print Button -->
+                    <button name="print_report" type="object" string="Print"
+                            class="oe_highlight"
+                            invisible="state != 'approved'"/>
+
+                    <!-- Other form fields -->
 
                     <field name="state" context="{'validate_analytic': True}" widget="statusbar"
                            statusbar_visible="draft,supervisor,lab_incharge,approved"
@@ -77,19 +98,19 @@
 
                         </h3>
                     </div>
-<!--<widget name="web_ribbon" title="Approved" bg_color="bg-success"/>-->
+                    <!--<widget name="web_ribbon" title="Approved" bg_color="bg-success"/>-->
                     <group>
                         <group>
-                            <field name="name"/>
+                            <field name="name" domain="[('state', '=', 'approved')]"/>
                             <field name="date_panel_received"/>
-                            <field name="date_panel_reported"/>
-                            <field name="xpert_assay_used"/>
+                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
                         </group>
                         <group>
-                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
-                            <field name="catridge_lot_number"/>
+                            <field name="xpert_assay_used" domain="[('state', '=', 'approved')]"/>
                             <field name="expiry_date"/>
+                            <field name="catridge_lot_number"/>
                         </group>
+
                         <br/>
                         <br/>
                     </group>
@@ -173,9 +194,6 @@
                             <field name="add_infor_gene_xpert_serial_number"/>
                             <field name="add_infor_date_gene_xpert_instrument_installed"/>
                             <field name="add_infor_instrument_user"/>
-                            <field name="add_infor_supervisor_review_panel_results"/>
-                            <field name="declaration_laboratory_in_charge"/>
-                            <field name="declaration_laboratory_in_charge_date"/>
                         </group>
                     </group>
                     <notebook>

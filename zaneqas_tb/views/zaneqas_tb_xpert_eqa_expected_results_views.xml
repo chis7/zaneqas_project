@@ -11,6 +11,7 @@
                 <field name="due_date"/>
                 <field name="state"/>
                 <button name="action_submit_results"
+                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"
                         string="Submit Results"
                         type="object"
                         class="btn-primary"
@@ -128,7 +129,7 @@
                         </page>
                     </notebook>
                     <notebook>
-                        <page string="Add Participating Facilities For This PT Cycle">
+                        <page string="Participant(s)">
                             <group>
                                 <a name="download_csv_template"
                                    type="object"

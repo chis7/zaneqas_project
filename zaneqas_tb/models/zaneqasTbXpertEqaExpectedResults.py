@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
+import base64
+import csv
 from datetime import datetime, date
+from io import StringIO
 
 from odoo import api, fields, models, _, SUPERUSER_ID
 from odoo.exceptions import UserError, ValidationError
@@ -12,6 +15,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     _description = "zaneqas tb xpert eqa expected results"
     name = fields.Many2one("zaneqas.tb.xpert.eqa.config.rounds", required=True)
     due_date = fields.Date(string="Due Date", required=True)
+    supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
     zaneqas_tb_xpert_eqa_expected_result_ids = fields.One2many(
         'zaneqas.tb.xpert.eqa.expected.result.lines',
         'zaneqas_tb_xpert_eqa_expected_result_id',
@@ -21,6 +25,16 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         'zaneqas.tb.xpert.eqa.expected.result.lines',
         'zaneqas_tb_xpert_eqa_expected_result_id',
         string="Expected Result Lines"
+    )
+
+    facility_result_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.result',
+        'facility_eqa_result_id',
+        string="Facility Result Lines"
+    )
+    company_ids = fields.Many2many(
+        'res.company',
+        string='Facilities'
     )
 
     @api.onchange('name')
@@ -52,7 +66,10 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             ("draft", "Draft"),
             ("supervisor", "Supervisor"),
             ("approved", "Approved"),
-            ("published", "Published"),
+            ("open", "Open"),
+            ("closed", "Closed"),
+            ("extended", "Extended"),
+            ("resultsPublished", "Results Published"),
         ],
         default='draft',
         string="Status",
@@ -60,11 +77,107 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         tracking=True
 
     )
-    supervisor_comment = fields.Char(string="Supervisor Comment", tracking=True)
     lab_incharge_comment = fields.Char(string="Lab Incharge Comment", tracking=True)
 
     is_supervisor = fields.Boolean(compute='_compute_is_supervisor', store=False)
     is_LabIncharge = fields.Boolean(compute='_compute_is_labIncharge', store=False)
+    current_state = fields.Char(compute='_compute_current_state')
+    csv_file = fields.Binary(string="CSV File")
+    csv_filename = fields.Char(string="CSV Filename")
+    user_in_assigned_company_and_open = fields.Boolean(
+        string="User in Assigned Company and Open",
+        compute='_compute_user_in_assigned_company_and_open'
+    )
+
+    company_count = fields.Integer(string='Company Count', compute='_compute_company_count', store=True)
+
+    def validate_csv_file(self, csv_content):
+        csv_reader = csv.reader(StringIO(csv_content))
+        headers = next(csv_reader, None)
+        if headers != ['Company Name']:
+            raise UserError("Invalid CSV format. The header should be 'Company Name'.")
+
+        for row in csv_reader:
+            if len(row) != 1:
+                raise UserError("Invalid CSV format. Each row should have exactly one column.")
+            if not row[0].strip():
+                raise UserError("Invalid CSV format. Company name cannot be empty.")
+
+    def action_test_upload(self):
+        if not self.csv_file:
+            raise UserError("Please upload a CSV file first.")
+
+        csv_content = base64.b64decode(self.csv_file).decode('utf-8')
+        self.validate_csv_file(csv_content)
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'CSV Validation',
+                'message': 'The CSV file is valid.',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
+
+    @api.depends('company_ids')
+    def _compute_company_count(self):
+        for record in self:
+            record.company_count = len(record.company_ids)
+
+    def _compute_user_in_assigned_company_and_open(self):
+        for record in self:
+            user_company = self.env.user.company_id
+            record.user_in_assigned_company_and_open = user_company in record.company_ids and record.state == 'open'
+
+    def download_csv_template(self):
+        csv_content = StringIO()
+        csv_writer = csv.writer(csv_content)
+        csv_writer.writerow(['Company Name'])  # Add more headers if needed
+
+        # Fetch all companies and write to CSV
+        companies = self.env['res.company'].search([])
+        for company in companies:
+            csv_writer.writerow([company.name])
+
+        csv_data = base64.b64encode(csv_content.getvalue().encode('utf-8'))
+        csv_content.close()
+
+        attachment = self.env['ir.attachment'].create({
+            'name': 'company_template.csv',
+            'datas': csv_data,
+            'type': 'binary',
+            'res_model': self._name,
+            'res_id': self.id,
+        })
+
+        return {
+            'type': 'ir.actions.act_url',
+            'url': f'/web/content/{attachment.id}?download=true',
+            'target': 'self',
+        }
+
+    def import_companies_from_csv(self):
+        if not self.csv_file:
+            raise UserError("Please upload a CSV file first.")
+
+        csv_content = base64.b64decode(self.csv_file).decode('utf-8')
+        csv_reader = csv.reader(StringIO(csv_content))
+        next(csv_reader)  # Skip headers
+        company_ids = []
+        for row in csv_reader:
+            company_name = row[0]
+            company = self.env['res.company'].search([('name', '=', company_name)], limit=1)
+            if company:
+                company_ids.append(company.id)
+            else:
+                raise UserError(f"Company '{company_name}' not found.")
+        self.company_ids = [(6, 0, company_ids)]
+
+    @api.depends('state')
+    def _compute_current_state(self):
+        for record in self:
+            record.current_state = record.state
 
     @api.depends('create_uid')
     def _compute_is_supervisor(self):
@@ -93,3 +206,24 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
 
     def action_LabIncharge_approve_eqa_result(self):
         self.write({'state': 'approved'})
+
+    def action_open_eqa_result(self):
+        self.write({'state': 'open'})
+        self.action_send_email_to_companies()
+
+    def action_submit_results(self):
+        # Implement the logic for submitting results
+        pass
+
+    def action_send_email_to_companies(self):
+        for company in self.company_ids:
+            if company.email:
+                mail_values = {
+                    'subject': 'Notification of TB Gene Xpert EQA',
+                    'body_html': """<p>Dear {company_name},</p>
+                                    <p>Please be informed that you have been selected to participate in the TB Gene Xpert EQA.</p>
+                                    <p>Thank you.</p>""".format(company_name=company.name),
+                    'email_to': company.email,
+                }
+                mail = self.env['mail.mail'].create(mail_values)
+                mail.send()

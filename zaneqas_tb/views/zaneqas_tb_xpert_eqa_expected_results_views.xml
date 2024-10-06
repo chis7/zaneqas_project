@@ -6,9 +6,15 @@
         <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="user_in_assigned_company_and_open" column_invisible="True"/>
                 <field name="name"/>
                 <field name="due_date"/>
                 <field name="state"/>
+                <button name="action_submit_results"
+                        string="Submit Results"
+                        type="object"
+                        class="btn-primary"
+                        invisible="user_in_assigned_company_and_open == False"/>
             </tree>
         </field>
     </record>
@@ -19,6 +25,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+
                     <button name="action_save_eqa_result_as_draft" data-hotkey="v"
                             confirm="Are you sure you want to save as draft?"
                             string="Save as Draft" class="btn-primary" type="object"
@@ -39,9 +46,15 @@
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>
+                    <button name="action_open_eqa_result" data-hotkey="v"
+                            groups="zaneqas_tb.group_cdl_supervisor_approve_site_eqa_expected_results"
+                            confirm="Are you sure you want to open this PT cycle?"
+                            string="Open PT Cycle" class="btn-primary" type="object"
+                            context="{'validate_analytic': True}"
+                            invisible="state != 'supervisor' "/>
 
                     <field name="state" context="{'validate_analytic': True}" widget="statusbar"
-                           statusbar_visible="draft,supervisor,approved"
+                           statusbar_visible="draft,supervisor,approved,open,closed,extended,resultsPublished"
                            options="{'clickable':'1'}"/>
 
                 </header>
@@ -54,10 +67,11 @@
                         </group>
 
                         <group>
-                            <field name="is_supervisor" column_invisible="True"/>
-                            <field name="is_LabIncharge" column_invisible="True"/>
-                            <field name="supervisor_comment" readonly="is_supervisor == False"/>
-                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>
+                            <field name='supervisor_comment'/>
+                            <!--                            <field name="is_supervisor" column_invisible="True"/>-->
+                            <!--                            <field name="is_LabIncharge" column_invisible="True"/>-->
+                            <!--                            <field name="supervisor_comment" readonly="is_supervisor == False"/>-->
+                            <!--                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>-->
                         </group>
                     </group>
 
@@ -111,6 +125,36 @@
                                     <field name="ct_xpert_module_number"/>
                                 </tree>
                             </field>
+                        </page>
+                    </notebook>
+                    <notebook>
+                        <page string="Add Participating Facilities For This PT Cycle">
+                            <group>
+                                <a name="download_csv_template"
+                                   type="object"
+                                   invisible="state != 'draft' and company_ids">
+                                    Download Template
+                                </a>
+                                <field name="csv_file" filename="csv_filename"
+                                       invisible="state != 'draft' or company_ids"/>
+                                <a name="action_test_upload"
+                                   type="object"
+                                   string="Test Upload"
+                                   invisible="state != 'draft' or not csv_file">
+                                    Test Upload
+                                </a>
+                                <a name="import_companies_from_csv"
+                                   confirm="Are you sure you want to import companies from the attached file?"
+                                   type="object"
+                                   invisible="state != 'draft' and company_ids">
+                                    Import Participating Facilities
+                                </a>
+                            </group>
+
+                            <field name="company_ids" widget="many2many_tags"
+                                   readonly="state != 'draft' and company_ids"/>
+
+                            <!--                            <field name="company_ids" widget="many2many_tags"/>-->
                         </page>
                     </notebook>
                 </sheet>

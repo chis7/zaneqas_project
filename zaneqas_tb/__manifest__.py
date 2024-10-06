@@ -57,7 +57,6 @@
         'views/zaneqas_tb_menus.xml',
         'report/zaneqas_tb_xpert_eqa_results_report.xml',
         'report/gene_xpert_eqa_results_template.xml',
-        # 'static/description/icon.svg',
 
     ],
     'assets': {

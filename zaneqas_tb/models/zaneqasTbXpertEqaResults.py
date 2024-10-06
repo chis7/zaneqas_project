@@ -63,6 +63,9 @@ class ZaneqasTbXpertEqaResults(models.Model):
         string="ZANEQAS TB Xpert EQA Results Lines"
     )
 
+    facility_eqa_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.result', string="facility eqa result", store=True)
+
+
     @api.onchange('name')
     def _onchange_name(self):
         if self.name:

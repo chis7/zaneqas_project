@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="hrms_core_employee_form_view_inherit" model="ir.ui.view">
+            <field name="name">hrms.core.employee.form.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before"/>
+
+                <!--                Hide Pages and Fields               -->
+<!--                <xpath expr="//field[@name='name']" position="attributes">-->
+<!--                    <attribute name="readonly">1</attribute>-->
+<!--                </xpath>-->
+                <xpath expr="//field[@name='job_title']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="replace"/>
+                <xpath expr="//page[@name='personal_information']" position="replace"/>
+
+                <!--                Main Page Information Addition              -->
+                <xpath expr="//field[@name='mobile_phone']" position="before">
+<!--                    <field name="last_name"/>-->
+<!--                    <field name="first_name"/>-->
+<!--                    <field name="other_names"/>-->
+<!--                    <field name="gender"/>-->
+<!--                    <field name="marital_status"/>-->
+<!--                    <field name="birthday"/>-->
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="identification_id" string="NRC Number" placeholder="123456/78/9"/>
+<!--                    <field name="passport_id"/>-->
+<!--                    <field name="employee_number"/>-->
+<!--                    <field name="mpsa_file_number"/>-->
+<!--                    <field name="psmd_file_number"/>-->
+                </xpath>
+
+                <!--                Employee Contact Information                -->
+<!--                <xpath expr="//page[@name='public']" position="before">-->
+<!--                    <page string="Contact Information" name="contact_information">-->
+<!--                        <group>-->
+<!--                            <group string="Private Contact">-->
+<!--                                <label for="private_street" string="Private Address"/>-->
+<!--                                <div class="o_address_format">-->
+<!--                                    <field name="private_street" placeholder="Street..." class="o_address_street"/>-->
+<!--                                    <field name="private_street2" placeholder="Street 2..." class="o_address_street"/>-->
+<!--                                    <field name="private_city" placeholder="City" class="o_address_city"/>-->
+<!--                                    <field name="private_state_id" class="o_address_state" placeholder="State" options="{'no_open': True, 'no_quick_create': True}" context="{'default_country_id': private_country_id}"/>-->
+<!--                                    <field name="private_zip" placeholder="ZIP" class="o_address_zip"/>-->
+<!--                                    <field name="private_country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>-->
+<!--                                </div>-->
+<!--                                <field name="private_phone" string="Personal Phone"/>-->
+<!--                                <field name="private_email" string="Personal Email"/>-->
+<!--                                <field name="lang" string="Language"/>-->
+<!--                                <label for="km_home_work"/>-->
+<!--                                <div class="o_row" name="div_km_home_work">-->
+<!--                                    <field name="km_home_work" class="o_hr_narrow_field"/>-->
+<!--                                    <span>Km</span>-->
+<!--                                </div>-->
+<!--                            </group>-->
+<!--                            <group string="Next of Kin" name="emergency">-->
+<!--                                <field name="emergency_contact"/>-->
+<!--                                <field name="emergency_phone" class="o_force_ltr"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+
+                <!--                Demographic Information             -->
+<!--                <xpath expr="//page[@name='contact_information']" position="after">-->
+<!--                    <page string="Demographic Information" name="demographic_information">-->
+<!--                        <group>-->
+<!--                            <group string="Family Status">-->
+<!--                                <field name="marital_status"/>-->
+<!--                                <field name="spouse_complete_name" invisible="marital_status not in ['married', 'cohabitant']"/>-->
+<!--                                <field name="spouse_birthdate" invisible="marital_status not in ['married', 'cohabitant']"/>-->
+<!--                                <field name="children"/>-->
+<!--                            </group>-->
+
+<!--                            <group string="Citizenship">-->
+<!--                                <field name="country_id" options='{"no_open": True, "no_create": True}'/>-->
+<!--                                <field name="place_of_birth"/>-->
+<!--                                <field name="country_of_birth"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+
+                <!--                Qualifications              -->
+<!--                <xpath expr="//page[@name='demographic_information']" position="after">-->
+<!--                    <page string="Qualifications">-->
+<!--                        <field name="qualification_lines">-->
+<!--                            <tree>-->
+<!--                                <field name="qualification_id"/>-->
+<!--                                <field name="training_institution_id" domain="[('is_training_institution', '=', True)]"/>-->
+<!--                                <field name="start_date"/>-->
+<!--                                <field name="end_date"/>-->
+<!--                            </tree>-->
+<!--                            <form>-->
+<!--                                <sheet>-->
+<!--                                    <group>-->
+<!--                                        <field name="qualification_id"/>-->
+<!--                                        <field name="training_institution_id" widget="res_partner_many2one"/>-->
+<!--                                        <field name="start_date"/>-->
+<!--                                        <field name="end_date"/>-->
+<!--                                    </group>-->
+<!--                                </sheet>-->
+<!--                            </form>-->
+<!--                        </field>-->
+<!--                    </page>-->
+<!--                    <page string="Competencies">-->
+<!--                        <field name="competence_lines">-->
+<!--                            <tree>-->
+<!--                                <field name="competency_id"/>-->
+<!--                            </tree>-->
+<!--                            <form>-->
+<!--                                <sheet>-->
+<!--                                    <group>-->
+<!--                                        <field name="competency_id"/>-->
+<!--                                        <field name="competency_evaluation"/>-->
+<!--                                    </group>-->
+<!--                                </sheet>-->
+<!--                            </form>-->
+<!--                        </field>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+
+                <!--                Work Permit             -->
+<!--                <xpath expr="//group[@name='managers']" position="after">-->
+<!--                    <group name="has_work_permit" string="Work Permit">-->
+<!--                        <field name="visa_no"/>-->
+<!--                        <field name="permit_no"/>-->
+<!--                        <field name="visa_expire"/>-->
+<!--                        <field name="work_permit_expiration_date"/>-->
+<!--                        <field name="work_permit_name" invisible="1"/>-->
+<!--                        <field name="has_work_permit" widget="work_permit_upload" filename="work_permit_name"/>-->
+<!--                    </group>-->
+
+<!--                </xpath>-->
+
+                <!--         Other Modifications and  Additions              -->
+                <!--                Change Field Labels               -->
+<!--                <xpath expr="//field[@name='identification_id']" position="attributes">-->
+<!--&lt;!&ndash;                    <attribute name="string">NRC Number</attribute>&ndash;&gt;-->
+<!--                </xpath>-->
+
+<!--                <xpath expr="//field[@name='parent_id']" position="attributes">-->
+<!--                    <attribute name="string">Supervisor</attribute>-->
+<!--                </xpath>-->
+
+<!--                <xpath expr="//group[@name='emergency']" position="attributes">-->
+<!--                    <attribute name="string">Next of Kin</attribute>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+
+        <record id="hrms_core_employee_skills_view_form_inherit" model="ir.ui.view">
+            <field name="name">hrms.core.employee.skills.view.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_skills.hr_employee_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='skills_resume']" position="attributes">
+<!--                    <attribute name="string">Curriculum Vitae</attribute>-->
+                </xpath>
+                <xpath expr="//page[@name='skills_resume']/div[@class='row']/div[@class='o_hr_skills_editable o_hr_skills_group o_group_resume col-lg-7 d-flex flex-column']/separator" position="attributes">
+<!--                    <attribute name="string">Curriculum Vitae</attribute>-->
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hrms_core_employee_tree_view_inherit" model="ir.ui.view">
+            <field name="name">hrms.core.employee.tree.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="employee_number"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hrms_core_employee_filter_inherit" model="ir.ui.view">
+            <field name="name">hrms.core.employee.filter.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="filter_domain">['|', '|', ('work_email', 'ilike', self), ('name', 'ilike', self), ('employee_number', 'ilike', self)]</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Code to hide "Recruitment" menu under configurations in the HR module-->
+        <record id="hr.menu_config_recruitment" model="ir.ui.menu" >
+            <field name="action" eval="False"/>
+        </record>
+    </data>
+</odoo>

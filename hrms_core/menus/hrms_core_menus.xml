@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_hrms_qualification"
+                  name="Qualifications"
+                  parent="hr.menu_human_resources_configuration"
+                  groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_qualification_action"
+                      parent="menu_hrms_qualification"
+                      action="action_hrms_qualification"
+                      groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_qualification_level_action"
+                      parent="menu_hrms_qualification"
+                      action="action_hrms_qualification_level"
+                      groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_competence_action"
+                      parent="menu_hrms_qualification"
+                      action="action_hrms_competence"
+                      groups="group_hrms_hr_staff"/>
+
+        <menuitem id="menu_hrms_job_structure"
+                  name="Job Structure"
+                  parent="hr.menu_human_resources_configuration"
+                  groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_cadre_action"
+                      parent="menu_hrms_job_structure"
+                      action="action_hrms_cadre"
+                      groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_job_classification_action"
+                      parent="menu_hrms_job_structure"
+                      action="action_hrms_job_classification"
+                      groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_salary_grade_action"
+                      parent="menu_hrms_job_structure"
+                      action="action_hrms_salary_grade"
+                      groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_job_action"
+                      parent="menu_hrms_job_structure"
+                      action="action_hrms_job"
+                      groups="group_hrms_hr_staff"/>
+
+            <menuitem id="menu_hrms_job_description_action"
+                      parent="menu_hrms_job_structure"
+                      action="action_hrms_job_description"
+                      groups="group_hrms_hr_staff"/>
+
+        <menuitem id="menu_hrms_manage_positions"
+                  name="Manage Positions"
+                  parent="hr.menu_human_resources_configuration"
+                  groups="group_hrms_hr_staff"/>
+
+            <!--Code change parent for "Job Positions" menu under configurations in the HR module-->
+            <menuitem id="hr.menu_view_hr_job"
+                      name="Job Positions"
+                      parent="menu_hrms_job_structure" />
+
+            <menuitem id="menu_hrms_salary_source_action"
+                      parent="menu_hrms_manage_positions"
+                      action="action_hrms_funder"
+                      groups="group_hrms_hr_staff"/>
+
+            <!--Code change parent for "Job Positions" menu under configurations in the HR module-->
+            <menuitem id="hr.menu_view_hr_contract_type"
+                      name="Employment Types"
+                      parent="menu_hrms_manage_positions"
+                      groups="group_hrms_hr_staff"/>
+    </data>
+</odoo>

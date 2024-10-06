@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="cadre_10" model="hrms.cadre">
+      <field name="name">Nutritionist</field>
+    </record>
+    <record id="cadre_104" model="hrms.cadre">
+      <field name="name">Dental Surgeon Interns</field>
+    </record>
+    <record id="cadre_107" model="hrms.cadre">
+      <field name="name">Laboratory Attendants</field>
+    </record>
+    <record id="cadre_108" model="hrms.cadre">
+      <field name="name">Dental Attendants</field>
+    </record>
+    <record id="cadre_11" model="hrms.cadre">
+      <field name="name">Optometry</field>
+    </record>
+    <record id="cadre_12" model="hrms.cadre">
+      <field name="name">Orthopaedics</field>
+    </record>
+    <record id="cadre_14" model="hrms.cadre">
+      <field name="name">Pharmacist</field>
+    </record>
+    <record id="cadre_15" model="hrms.cadre">
+      <field name="name">Physiotherapist</field>
+    </record>
+    <record id="cadre_16" model="hrms.cadre">
+      <field name="name">Radiologist</field>
+    </record>
+    <record id="cadre_18" model="hrms.cadre">
+      <field name="name">Nurses</field>
+    </record>
+    <record id="cadre_19" model="hrms.cadre">
+      <field name="name">Driver/Mechanic</field>
+    </record>
+    <record id="cadre_2" model="hrms.cadre">
+      <field name="name">Allied Health Professionals</field>
+    </record>
+    <record id="cadre_20" model="hrms.cadre">
+      <field name="name">Medical Licentiates</field>
+    </record>
+    <record id="cadre_21" model="hrms.cadre">
+      <field name="name">Counselors</field>
+    </record>
+    <record id="cadre_22" model="hrms.cadre">
+      <field name="name">Demantologist</field>
+    </record>
+    <record id="cadre_23" model="hrms.cadre">
+      <field name="name">Anaesthetist</field>
+    </record>
+    <record id="cadre_24" model="hrms.cadre">
+      <field name="name">Anaesthesiologist</field>
+    </record>
+    <record id="cadre_25" model="hrms.cadre">
+      <field name="name">Psychiatrist</field>
+    </record>
+    <record id="cadre_26" model="hrms.cadre">
+      <field name="name">Opthamologist</field>
+    </record>
+    <record id="cadre_27" model="hrms.cadre">
+      <field name="name">Biomedical Engineers</field>
+    </record>
+    <record id="cadre_28" model="hrms.cadre">
+      <field name="name">Health Service Managers</field>
+    </record>
+    <record id="cadre_29" model="hrms.cadre">
+      <field name="name">Microbiologist</field>
+    </record>
+    <record id="cadre_30" model="hrms.cadre">
+      <field name="name">Prosthetist Orthotist</field>
+    </record>
+    <record id="cadre_31" model="hrms.cadre">
+      <field name="name">Surgeon</field>
+    </record>
+    <record id="cadre_32" model="hrms.cadre">
+      <field name="name">Consultant - Medicine</field>
+    </record>
+    <record id="cadre_33" model="hrms.cadre">
+      <field name="name">Occupational Health Professionals</field>
+    </record>
+    <record id="cadre_34" model="hrms.cadre">
+      <field name="name">Audiologist</field>
+    </record>
+    <record id="cadre_35" model="hrms.cadre">
+      <field name="name">Consultant - Ophthalmologist</field>
+    </record>
+    <record id="cadre_36" model="hrms.cadre">
+      <field name="name">Consultant - Orthopaedics</field>
+    </record>
+    <record id="cadre_37" model="hrms.cadre">
+      <field name="name">Occupational Therapist</field>
+    </record>
+    <record id="cadre_38" model="hrms.cadre">
+      <field name="name">Consultant - Psychiatrist</field>
+    </record>
+    <record id="cadre_39" model="hrms.cadre">
+      <field name="name">Consultant - Radiologist</field>
+    </record>
+    <record id="cadre_4" model="hrms.cadre">
+      <field name="name">Dentist</field>
+    </record>
+    <record id="cadre_40" model="hrms.cadre">
+      <field name="name">Consultant - Paedodontist</field>
+    </record>
+    <record id="cadre_41" model="hrms.cadre">
+      <field name="name">Sonographers</field>
+    </record>
+    <record id="cadre_42" model="hrms.cadre">
+      <field name="name">Social Workers</field>
+    </record>
+    <record id="cadre_43" model="hrms.cadre">
+      <field name="name"> Consultant - Clinical Oncologist</field>
+    </record>
+    <record id="cadre_44" model="hrms.cadre">
+      <field name="name">Consultant - Clinical and Radiation Oncologist</field>
+    </record>
+    <record id="cadre_45" model="hrms.cadre">
+      <field name="name">Consultant  - Radiation Oncologist</field>
+    </record>
+    <record id="cadre_46" model="hrms.cadre">
+      <field name="name">Medical Physicist</field>
+    </record>
+    <record id="cadre_47" model="hrms.cadre">
+      <field name="name">Radiographer</field>
+    </record>
+    <record id="cadre_48" model="hrms.cadre">
+      <field name="name">Radio-Pharmacist</field>
+    </record>
+    <record id="cadre_49" model="hrms.cadre">
+      <field name="name">Cancer Epidemiologist</field>
+    </record>
+    <record id="cadre_5" model="hrms.cadre">
+      <field name="name">Environmental Health</field>
+    </record>
+    <record id="cadre_50" model="hrms.cadre">
+      <field name="name">Surveillance Officers</field>
+    </record>
+    <record id="cadre_51" model="hrms.cadre">
+      <field name="name">Consultant - Pathologist</field>
+    </record>
+    <record id="cadre_52" model="hrms.cadre">
+      <field name="name">Consultant - Haematologist</field>
+    </record>
+    <record id="cadre_53" model="hrms.cadre">
+      <field name="name">Cytologist</field>
+    </record>
+    <record id="cadre_54" model="hrms.cadre">
+      <field name="name">Consultant - Surgical Oncologist</field>
+    </record>
+    <record id="cadre_55" model="hrms.cadre">
+      <field name="name">Consultant - Gynaecologic Oncologist</field>
+    </record>
+    <record id="cadre_56" model="hrms.cadre">
+      <field name="name">Consultant - Anaesthesiologist</field>
+    </record>
+    <record id="cadre_57" model="hrms.cadre">
+      <field name="name">Consultant - Paediatric Oncologist</field>
+    </record>
+    <record id="cadre_58" model="hrms.cadre">
+      <field name="name">Consultant - Cardiology</field>
+    </record>
+    <record id="cadre_59" model="hrms.cadre">
+      <field name="name">Consultant - Emergency Paediatric</field>
+    </record>
+    <record id="cadre_6" model="hrms.cadre">
+      <field name="name">Laboratory Technicians</field>
+    </record>
+    <record id="cadre_60" model="hrms.cadre">
+      <field name="name">Consultant - Gastroenterology</field>
+    </record>
+    <record id="cadre_61" model="hrms.cadre">
+      <field name="name">Consultant - General Paediatric</field>
+    </record>
+    <record id="cadre_62" model="hrms.cadre">
+      <field name="name">Consultant - Hematology</field>
+    </record>
+    <record id="cadre_63" model="hrms.cadre">
+      <field name="name">Consultant - Infectious Diseases and HIV Medicine</field>
+    </record>
+    <record id="cadre_64" model="hrms.cadre">
+      <field name="name">Consultant - Malnutrition</field>
+    </record>
+    <record id="cadre_65" model="hrms.cadre">
+      <field name="name">Consultant - Neonatology</field>
+    </record>
+    <record id="cadre_66" model="hrms.cadre">
+      <field name="name">Consultant - Nephrology and Rheumatology</field>
+    </record>
+    <record id="cadre_67" model="hrms.cadre">
+      <field name="name">Consultant - Neurology</field>
+    </record>
+    <record id="cadre_68" model="hrms.cadre">
+      <field name="name">Consultant - Paediatric Intensive Care</field>
+    </record>
+    <record id="cadre_69" model="hrms.cadre">
+      <field name="name">Consultant - Pulmonology</field>
+    </record>
+    <record id="cadre_7" model="hrms.cadre">
+      <field name="name">Medical Doctors</field>
+    </record>
+    <record id="cadre_70" model="hrms.cadre">
+      <field name="name">Ophthalmologist - Cornea Specialist</field>
+    </record>
+    <record id="cadre_71" model="hrms.cadre">
+      <field name="name">Consultant - Cornea and Refractive Surgery</field>
+    </record>
+    <record id="cadre_72" model="hrms.cadre">
+      <field name="name">Consultant - Vitreoretinal Specialist</field>
+    </record>
+    <record id="cadre_73" model="hrms.cadre">
+      <field name="name">Consultant - Surgical Retina Specialist</field>
+    </record>
+    <record id="cadre_74" model="hrms.cadre">
+      <field name="name">Consultant - Medical Retina</field>
+    </record>
+    <record id="cadre_75" model="hrms.cadre">
+      <field name="name">Consultant - Uveitis Specialist</field>
+    </record>
+    <record id="cadre_76" model="hrms.cadre">
+      <field name="name">Consultant - Paediatric Ophthalmologist</field>
+    </record>
+    <record id="cadre_77" model="hrms.cadre">
+      <field name="name">Paediatric Ophthalmologist</field>
+    </record>
+    <record id="cadre_78" model="hrms.cadre">
+      <field name="name">Optometrist</field>
+    </record>
+    <record id="cadre_79" model="hrms.cadre">
+      <field name="name">Orthoptist</field>
+    </record>
+    <record id="cadre_80" model="hrms.cadre">
+      <field name="name">Optometry Technologist</field>
+    </record>
+    <record id="cadre_81" model="hrms.cadre">
+      <field name="name">Oculoplastic Surgeon</field>
+    </record>
+    <record id="cadre_82" model="hrms.cadre">
+      <field name="name">Consultant - Oculoplastic Surgeon</field>
+    </record>
+    <record id="cadre_83" model="hrms.cadre">
+      <field name="name">Consultant - Oculoplastic Surgery and Oncology</field>
+    </record>
+    <record id="cadre_84" model="hrms.cadre">
+      <field name="name">Consultant - Neuro Ophthalmologist</field>
+    </record>
+    <record id="cadre_86" model="hrms.cadre">
+      <field name="name">Community Health Assistants</field>
+    </record>
+    <record id="cadre_87" model="hrms.cadre">
+      <field name="name">Strategic Information Officers</field>
+    </record>
+    <record id="cadre_89" model="hrms.cadre">
+      <field name="name">Medical Mentors</field>
+    </record>
+    <record id="cadre_9" model="hrms.cadre">
+      <field name="name">Midwives</field>
+    </record>
+    <record id="cadre_90" model="hrms.cadre">
+      <field name="name">Registered Nurses</field>
+    </record>
+    <record id="cadre_91" model="hrms.cadre">
+      <field name="name">Clinical Officers</field>
+    </record>
+    <record id="cadre_93" model="hrms.cadre">
+      <field name="name">Physiotherapy</field>
+    </record>
+    <record id="cadre_98" model="hrms.cadre">
+      <field name="name">Physiotherapists</field>
+    </record>
+    <record id="cadre_99" model="hrms.cadre">
+      <field name="name">Registered Midwives</field>
+    </record>
+  </data>
+</odoo>

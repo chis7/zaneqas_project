@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_hrms_job_description_tree" model="ir.ui.view">
+            <field name="name">hrms.job.description.tree</field>
+            <field name="model">hrms.job.description</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="hrms_job_id"/>
+                    <field name="department_id"/>
+                    <field name="job_level"/>
+                    <field name="reports_to"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_job_description_form" model="ir.ui.view">
+            <field name="name">hrms.job.description.form</field>
+            <field name="model">hrms.job.description</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Title"/>
+                            <h1>
+                                <field name="name" placeholder="e.g. Registered Midwife" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="hrms_job_id"/>
+                                <field name="department_id"/>
+                                <field name="job_purpose"/>
+                                <field name="experience"/>
+                            </group>
+                            <group>
+                                <field name="job_level"/>
+                                <field name="reports_to"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Principal Accountability" name="principal_accountability">
+                                <field name="principal_accountability_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="key_result_area_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Responsibilities" name="responsibility">
+                                <field name="responsibility_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Qualifications">
+                                <field name="qualification_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence"/>
+                                        <field name="name"/>
+                                        <field name="qualification_level_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_job_description" model="ir.actions.act_window">
+            <field name="name">Job Descriptions</field>
+            <field name="res_model">hrms.job.description</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

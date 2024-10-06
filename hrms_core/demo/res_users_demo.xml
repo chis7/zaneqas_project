@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hrms_hr_staff_user_1" model="res.users" context="{'no_reset_password': True}">
+            <field name="name">Chilufya Mwansa</field>
+            <field name="password">hrms_hr_staff_user</field>
+            <field name="login">Chilufya.Mwansa@moh.gov.zm</field>
+            <field name="tz">Africa/Lusaka</field>
+            <field name="partner_id" ref="hrms_core.hrms_res_partner_1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id"
+                   eval="[(4,ref('hrms_core.group_hrms_hr_staff'))]"/>
+            <field name="dept_id" ref="hrms_core.department_135"/>
+            <field name="department_ids"
+                   eval="[(4,ref('hrms_core.department_135'))]"/>
+        </record>
+
+        <record id="hrms_hr_staff_user_2" model="res.users">
+            <field name="name">Mubanga Zulu</field>
+            <field name="login">Mubanga.Zulu@moh.gov.zm</field>
+            <field name="password">hrms_hr_staff_user</field>
+            <field name="partner_id" ref="hrms_core.hrms_res_partner_6"/>
+            <field name="company_id" ref="hrms_core.organisation_unit_central"/>
+            <field name="groups_id"
+                   eval="[(4,ref('hrms_core.group_hrms_hr_staff'))]"/>
+            <field name="dept_id" ref="hrms_core.op_department_3"/>
+            <field name="department_ids"
+                   eval="[(4,ref('hrms_core.op_department_3'))]"/>
+        </record>
+
+        <record id="base.user_demo" model="res.users">
+            <field name="department_ids"
+                   eval="[(4,ref('openeducat_core.op_department_3'))]"/>
+        </record>
+
+        <record id="op_user_bo" model="res.users">
+            <field name="login">backoffice@openeducat.com</field>
+            <field name="password">backoffice</field>
+            <field name="partner_id" ref="openeducat_core.op_res_partner_31"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_back_office_admin'))]"/>
+            <field name="dept_id" ref="openeducat_core.op_department_3"/>
+            <field name="department_ids"
+                   eval="[(4,ref('openeducat_core.op_department_3'))]"/>
+        </record>
+
+        <record id="op_user_boa" model="res.users">
+            <field name="login">backofficeadmin@openeducat.com</field>
+            <field name="password">backofficeadmin</field>
+            <field name="partner_id" ref="openeducat_core.op_res_partner_32"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_back_office_admin'))]"/>
+            <field name="dept_id" ref="openeducat_core.op_department_3"/>
+            <field name="department_ids"
+                   eval="[(4,ref('openeducat_core.op_department_3'))]"/>
+        </record>
+
+        <record id="base.user_admin" model="res.users">
+            <field name="dept_id" ref="openeducat_core.op_department_3"/>
+            <field name="department_ids"
+                   eval="[(4,ref('openeducat_core.op_department_1')),
+                   (4,ref('openeducat_core.op_department_2')),
+                   (4,ref('openeducat_core.op_department_3')),
+                   (4,ref('openeducat_core.op_department_4'))]"/>
+        </record>
+
+        <record id="openeducat_core.op_res_partner_1" model="res.partner">
+            <field name="user_id" ref="openeducat_core.op_user_student"/>
+        </record>
+
+        <record id="openeducat_core.op_res_partner_21" model="res.partner">
+            <field name="user_id" ref="openeducat_core.op_user_faculty"/>
+        </record>
+
+        <record id="openeducat_core.op_res_partner_31" model="res.partner">
+            <field name="user_id" ref="openeducat_core.op_user_bo"/>
+        </record>
+
+        <record id="openeducat_core.op_res_partner_32" model="res.partner">
+            <field name="user_id" ref="openeducat_core.op_user_boa"/>
+        </record>
+    </data>
+</odoo>

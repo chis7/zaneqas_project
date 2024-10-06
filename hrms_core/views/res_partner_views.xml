@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Partner Form View Extension -->
+        <record id="view_res_partner_form_inherit_hrms_core" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.hrms.core</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[contains(@class, 'oe_title') and contains(@class, 'mb24')]" position="inside">
+<!--                    <field name="is_training_institution" invisible="1"/>-->
+                </xpath>
+            </field>
+        </record>
+        <!-- Partner Filter View Extension -->
+        <record id="view_res_partner_filter_inherit_hrms_core" model="ir.ui.view">
+            <field name="name">res.partner.filter.inherit.hrms.core</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='type_person']" position="replace"/>
+                <xpath expr="//filter[@name='type_company']" position="after">
+<!--                    <filter string="Training Institutions" name="type_company" domain="[('is_training_institution', '=', True)]"/>-->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

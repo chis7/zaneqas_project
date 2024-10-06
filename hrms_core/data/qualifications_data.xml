@@ -1,0 +1,2570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="qualification_1" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ABE Level 5 Diploma in Business Management</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_2" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ABE Level 5 Diploma in Business Management and Marketing</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_3" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ABE Level 5 Diploma in Business Management and Human Resources</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_4" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ABE Level 6 Diploma in Business Management</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_5" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ABE Level 6 Diploma in Business Management and Marketing</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_6" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ABE Level 6 Diploma in Business Management and Human Resources</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_7" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Advanced Diploma in Accounting and Business</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_8" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">ACCA Professional</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_9" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Accounting</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_10" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Arts in Economics</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_11" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Arts in Mass Communication and Public Relations</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_12" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Arts in Purchasing and Supply</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_14" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Business Administration</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_15" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Business Administration in Finance</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_16" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Computing</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_17" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Development Studies</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_18" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Information Technology</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_19" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Laws</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_20" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Project Management</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_22" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Business Administration</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_23" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Business Administration in Human Resource</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_24" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Development Studies</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_25" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Science in Project Management</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_26" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Management Accounting</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_27" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Advanced Diploma in Management Accounting</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_28" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Chartered Global Management Accounting</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_29" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Business Administration in Finance and Accounting</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_30" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Business Administration in Human Resource Management</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_31" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Business Administration in Project Management</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_34" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Education</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_35" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Primary School Certificate</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_36" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Junior Secondary School Certificate</field>
+      <field name="qualification_level_id" ref="level_2a"/>
+    </record>
+    <record id="qualification_37" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Senior Secondary School Certificate</field>
+      <field name="qualification_level_id" ref="level_2b"/>
+    </record>
+    <record id="qualification_38" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Early Childhood Teacher�s Diploma</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_39" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Primary School Teacher�s Diploma</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_40" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Agricultural Science</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_41" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Arts in Public Administration and Development</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_42" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Arts in Social Work Practice and Development</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_43" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Middle Years Programme</field>
+      <field name="qualification_level_id" ref="level_2a"/>
+    </record>
+    <record id="qualification_44" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma Programme</field>
+      <field name="qualification_level_id" ref="level_2b"/>
+    </record>
+    <record id="qualification_45" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma Programme Courses</field>
+      <field name="qualification_level_id" ref="level_2b"/>
+    </record>
+    <record id="qualification_46" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Career Related Programme</field>
+      <field name="qualification_level_id" ref="level_2b"/>
+    </record>
+    <record id="qualification_47" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Nursing</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_48" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Nursing</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_49" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Medicine and Bachelor of Surgery</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_50" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Pharmacy</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_51" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Environmental Health</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_52" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Nutrition and Dietetics</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_53" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Public Health</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_54" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Public Health</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_55" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Mathematics and ICT with Education</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_57" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Physics</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_58" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Climatology</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_59" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Master of Social Work</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_60" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Level 3 Certificate in Prosecutions</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_61" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Level 5 Certificate in Prosecutions</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_62" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Accounting and Government Accounting</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_63" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Business Administration</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_64" model="hrms.qualification">
+      <field name="name">Diploma in Health Service Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_66" model="hrms.qualification">
+      <field name="name">Diploma in Information Systems and Programming</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_67" model="hrms.qualification">
+      <field name="name">Diploma in Law</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_68" model="hrms.qualification">
+      <field name="name">Diploma in Management Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_69" model="hrms.qualification">
+      <field name="name">Diploma in Public Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_70" model="hrms.qualification">
+      <field name="name">Diploma in Public Relations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_72" model="hrms.qualification">
+      <field name="name">Diploma in Social Work</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_73" model="hrms.qualification">
+      <field name="name">Bachelor of Accounting and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_74" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in Defence and Security</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_76" model="hrms.qualification">
+      <field name="name">Bachelor of Business Studies with Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_77" model="hrms.qualification">
+      <field name="name">Bachelor of Computer Science with Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_79" model="hrms.qualification">
+      <field name="name">Bachelor of Economics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_80" model="hrms.qualification">
+      <field name="name">Bachelor of Human Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_81" model="hrms.qualification">
+      <field name="name">Bachelor of International Relations and Diplomacy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_83" model="hrms.qualification">
+      <field name="name">Bachelor of Marketing and Creative Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_84" model="hrms.qualification">
+      <field name="name">Bachelor of Public Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_85" model="hrms.qualification">
+      <field name="name">Bachelor of Public Relations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_86" model="hrms.qualification">
+      <field name="name">Bachelor of Records and Archives Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_87" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Climatology and Meteorology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_88" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Computer Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_89" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Disaster Studies and Sustainable Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_90" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Information Systems</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_91" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Procurement and Supply Chain Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_92" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Water and Land Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_94" model="hrms.qualification">
+      <field name="name">Postgraduate Diploma in Management and Leadership for Health Care Professionals</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_8"/>
+    </record>
+    <record id="qualification_95" model="hrms.qualification">
+      <field name="name">Postgraduate Diploma in Management Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_8"/>
+    </record>
+    <record id="qualification_96" model="hrms.qualification">
+      <field name="name">Master of Arts in Climate Change and Global Sustainability</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_97" model="hrms.qualification">
+      <field name="name">Master of Arts in Human Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_98" model="hrms.qualification">
+      <field name="name">Master of Laws in General</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_99" model="hrms.qualification">
+      <field name="name">Master of Laws in Constitutional and Administrative Law</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_100" model="hrms.qualification">
+      <field name="name">Master of Laws in Corporate and Commercial Law</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_101" model="hrms.qualification">
+      <field name="name">Master of Laws in Criminal Law and Criminal Justice</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_102" model="hrms.qualification">
+      <field name="name">Master of Laws in Labour and Employment Relations </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_103" model="hrms.qualification">
+      <field name="name">Master of Business Administration in Entrepreneurship</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_104" model="hrms.qualification">
+      <field name="name">Master of Business Administration in Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_106" model="hrms.qualification">
+      <field name="name">Master of International Relations and Diplomacy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_107" model="hrms.qualification">
+      <field name="name">Master of Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_109" model="hrms.qualification">
+      <field name="name">Master of Public Relations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_110" model="hrms.qualification">
+      <field name="name">Diploma in Human Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_112" model="hrms.qualification">
+      <field name="name">Bachelor of Theology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_116" model="hrms.qualification">
+      <field name="name">Bachelor of Finance and Accounting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_119" model="hrms.qualification">
+      <field name="name">Postgraduate Diploma in Teaching Methodology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_8"/>
+    </record>
+    <record id="qualification_120" model="hrms.qualification">
+      <field name="name">Executive Master of Business Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_121" model="hrms.qualification">
+      <field name="name">Advanced Diploma in Registered Clinical Nursing Instructor</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_122" model="hrms.qualification">
+      <field name="name">Diploma in Neonatal Nursing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_123" model="hrms.qualification">
+      <field name="name">Diploma in Paediatric Nursing (formerly Paediatric Nursing)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_124" model="hrms.qualification">
+      <field name="name">Diploma in Midwifery (merger of formerly Registered Nurse Midwifery, Registered Nurse-Midwife (Pre-service) and Midwifery Bridging)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_125" model="hrms.qualification">
+      <field name="name">Diploma in Nursing (formerly registered and accredited as Registered Nursing)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_126" model="hrms.qualification">
+      <field name="name">Diploma in Public Health Nursing (formerly Registered Nurse Public Health)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_127" model="hrms.qualification">
+      <field name="name">Diploma in Oncology Nursing (formerly Registered Oncology Nursing)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_128" model="hrms.qualification">
+      <field name="name">Advanced Diploma in Critical Care Nursing (formerly Registered Critical Care Nursing)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_129" model="hrms.qualification">
+      <field name="name">Advanced Diploma in Emergency and Trauma Nursing (formerly Emergency and Trauma Nursing)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_130" model="hrms.qualification">
+      <field name="name">Diploma in Psychiatry and Mental Health Nursing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_131" model="hrms.qualification">
+      <field name="name">Advanced Diploma in Operating Theatre Nursing (formerly Registered Operating Theatre Nursing)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_133" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Automotive Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_134" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Fashion Design and Textile Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_135" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Automotive Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_136" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Bricklaying and Masonry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_137" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Carpentry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_138" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Heavy Equipment Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_139" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Joinery</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_140" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Plastering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_141" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Refractory Masonry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_142" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Translation and Interpretation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_143" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Science Laboratory Technology </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_144" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Automotive Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_145" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Heavy Equipment Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_146" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Metal Fabrication and Welding</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_147" model="hrms.qualification">
+      <field name="name">Diploma in Animal Health Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_148" model="hrms.qualification">
+      <field name="name">Diploma in Architecture</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_149" model="hrms.qualification">
+      <field name="name">Diploma in Automotive Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_150" model="hrms.qualification">
+      <field name="name">Diploma in Biomedical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_151" model="hrms.qualification">
+      <field name="name">Diploma in Bricklaying and Masonry </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_153" model="hrms.qualification">
+      <field name="name">Diploma in Community Based Work with Children and Youth</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_154" model="hrms.qualification">
+      <field name="name">Diploma in Community Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_155" model="hrms.qualification">
+      <field name="name">Diploma in Computer Networks and Data Communication</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_156" model="hrms.qualification">
+      <field name="name">Diploma in Creative Digital Media</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_157" model="hrms.qualification">
+      <field name="name">Diploma in Electrical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_158" model="hrms.qualification">
+      <field name="name">Diploma in Forestry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_159" model="hrms.qualification">
+      <field name="name">Diploma in Heavy Equipment Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_160" model="hrms.qualification">
+      <field name="name">Diploma in Highway Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_161" model="hrms.qualification">
+      <field name="name">Diploma in Hospitality Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_162" model="hrms.qualification">
+      <field name="name">Diploma in Journalism and Public Relations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_163" model="hrms.qualification">
+      <field name="name">Diploma in Library and Information Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_164" model="hrms.qualification">
+      <field name="name">Diploma in Local Government Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_165" model="hrms.qualification">
+      <field name="name">Diploma in Local Government Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_166" model="hrms.qualification">
+      <field name="name">Diploma in Natural Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_167" model="hrms.qualification">
+      <field name="name">Diploma in Records Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_168" model="hrms.qualification">
+      <field name="name">Diploma in Science Laboratory Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_169" model="hrms.qualification">
+      <field name="name">Diploma in Secretarial Studies and Office Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_170" model="hrms.qualification">
+      <field name="name">Diploma in Translation and Interpretation </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_171" model="hrms.qualification">
+      <field name="name">Diploma in Woodwork Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_172" model="hrms.qualification">
+      <field name="name">Teacher's Diploma in Art and English </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_173" model="hrms.qualification">
+      <field name="name">Teacher's Diploma in Music and English</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_174" model="hrms.qualification">
+      <field name="name">Diploma in Aircraft Maintenance Engineering � Electronics and Armament</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_175" model="hrms.qualification">
+      <field name="name">Diploma in Radiation Therapy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_179" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Artificial Intelligence</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_180" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Cyber Security</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_181" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Data Management and Warehousing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_182" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Digital Forensics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_183" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Software Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_185" model="hrms.qualification">
+      <field name="name">Master of Arts in Education Leadership and Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_186" model="hrms.qualification">
+      <field name="name">Master of Arts in English Language and Literature</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_188" model="hrms.qualification">
+      <field name="name">Master of Business Administration in Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_190" model="hrms.qualification">
+      <field name="name">Master of Business Administration in Health Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_191" model="hrms.qualification">
+      <field name="name">Master of Business Administration in Management Information Systems</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_192" model="hrms.qualification">
+      <field name="name">Master of Business Administration in Oil, Gas and Energy Management  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_193" model="hrms.qualification">
+      <field name="name">Master of Education </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_194" model="hrms.qualification">
+      <field name="name">Master of Laws</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_195" model="hrms.qualification">
+      <field name="name">Master of Public Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_196" model="hrms.qualification">
+      <field name="name">Master of Science in Computer Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_197" model="hrms.qualification">
+      <field name="name">Master of Science in Healthcare Management </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_198" model="hrms.qualification">
+      <field name="name">Master of Science in Managerial Psychology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_199" model="hrms.qualification">
+      <field name="name">Master of Science in Sustainable Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_200" model="hrms.qualification">
+      <field name="name">Master of Science in Web Design and Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_201" model="hrms.qualification">
+      <field name="name">Doctor of Philosophy � Law and Politics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_202" model="hrms.qualification">
+      <field name="name">Doctor of Philosophy � Public Health</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_204" model="hrms.qualification">
+      <field name="name">Bachelor of Business Administration with Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_206" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Real Estate Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_207" model="hrms.qualification">
+      <field name="name">Bachelor of Accountancy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_209" model="hrms.qualification">
+      <field name="name">Bachelor of Banking and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_210" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Information Systems and Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_211" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Purchasing and Supply Chain Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_212" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_213" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Human Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_215" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Public Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_217" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Politics and International Relations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_218" model="hrms.qualification">
+      <field name="name">Postgraduate Diploma in Teaching/Lecturing Methodology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_8"/>
+    </record>
+    <record id="qualification_219" model="hrms.qualification">
+      <field name="name">Master of Arts in Peace and Security Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_220" model="hrms.qualification">
+      <field name="name">Master of Science in Auditing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_222" model="hrms.qualification">
+      <field name="name">Master of Science in Economics and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_223" model="hrms.qualification">
+      <field name="name">Master of Science in Environmental Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_224" model="hrms.qualification">
+      <field name="name">Master of Science in Public Finance and Taxation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_8"/>
+    </record>
+    <record id="qualification_225" model="hrms.qualification">
+      <field name="name">Master of Science in Procurement and Supply Chain Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_226" model="hrms.qualification">
+      <field name="name">Master of Science in Accounting and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_228" model="hrms.qualification">
+      <field name="name">Bachelor of Education in Environmental Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_229" model="hrms.qualification">
+      <field name="name">Bachelor of Education with Social Sciences</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_230" model="hrms.qualification">
+      <field name="name">Bachelor of Electrical and Electronic Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_231" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Engineering in Agricultural Engineering</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_232" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Engineering in Civil and Environmental Engineering</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_233" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Engineering in Mechanical Engineering</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_234" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Biomedical Sciences</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_236" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Food Science and Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_237" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Human Nutrition</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_238" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Mathematics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_240" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Statistics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_241" model="hrms.qualification">
+      <field name="name">Master of Education in Science Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_242" model="hrms.qualification">
+      <field name="name">Master of Science in Human Nutrition</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_243" model="hrms.qualification">
+      <field name="name">Master of Science in One Health Analytical Epidemiology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_244" model="hrms.qualification">
+      <field name="name">Master of Science in One Health Food Safety</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_245" model="hrms.qualification">
+      <field name="name">Master of Education in Mathematics Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_246" model="hrms.qualification">
+      <field name="name">Master of Science in Public Health</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_247" model="hrms.qualification">
+      <field name="name">Master of Science in Mental Health and Psychiatric Nursing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_248" model="hrms.qualification">
+      <field name="name">Master of Science in Midwifery and Women�s Health</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_249" model="hrms.qualification">
+      <field name="name">Master of Science in Clinical Nursing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_250" model="hrms.qualification">
+      <field name="name">Certificate in Taxation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_251" model="hrms.qualification">
+      <field name="name">Diploma in Taxation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_252" model="hrms.qualification">
+      <field name="name">Diploma in Accountancy  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_253" model="hrms.qualification">
+      <field name="name">Diploma in Public Sector Financial Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_254" model="hrms.qualification">
+      <field name="name">CA Application Advanced Diploma in Accountancy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_255" model="hrms.qualification">
+      <field name="name">CA Advisory Professional in Accountancy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_256" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Marketing </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_257" model="hrms.qualification">
+      <field name="name">Certified Marketer (to be phased out in 202level_3) </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_258" model="hrms.qualification">
+      <field name="name">Diploma in Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_259" model="hrms.qualification">
+      <field name="name">Postgraduate Diploma in Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_8"/>
+    </record>
+    <record id="qualification_260" model="hrms.qualification">
+      <field name="name">Diploma in Procurement and Supplies </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_261" model="hrms.qualification">
+      <field name="name">Skills Certificate in Hospitality Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_262" model="hrms.qualification">
+      <field name="name">Certificate in Food Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_263" model="hrms.qualification">
+      <field name="name">Certificate in Travel and Tourism Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_264" model="hrms.qualification">
+      <field name="name">Advanced Certificate in Food Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_265" model="hrms.qualification">
+      <field name="name">Advanced Certificate in Front Office Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_266" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Advanced Certificate in Hospitality Management</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_268" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Tourism and Travel Management</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_269" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Food Production and Management</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_270" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Diploma in Food and Beverage Management</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_271" model="hrms.qualification">
+      <field name="sequence">New</field>
+      <field name="name">Bachelor of Science in Hospitality Management with Education</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_272" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Travel and Tourism</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_273" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Hospitality Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_274" model="hrms.qualification">
+      <field name="name">Bachelor of Education in Early Childhood Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_275" model="hrms.qualification">
+      <field name="name">Bachelor of Education (Primary Education)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_279" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in Human Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_281" model="hrms.qualification">
+      <field name="name">Bachelor of Management Accounting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_282" model="hrms.qualification">
+      <field name="name">Bachelor of Network Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_283" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Accounting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_284" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Accountancy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_285" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Banking and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_288" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Development Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_289" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Finance and Investment Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_290" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Information Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_291" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Marketing Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_292" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Monitoring and Evaluation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_293" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Software Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_295" model="hrms.qualification">
+      <field name="name">Bachelor of Accounting with Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_296" model="hrms.qualification">
+      <field name="name">Bachelor of Economics and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_299" model="hrms.qualification">
+      <field name="name">Master of Science in Accounting and Finance </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_300" model="hrms.qualification">
+      <field name="name">Master of Commerce</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_301" model="hrms.qualification">
+      <field name="name">Master of Science in Computing Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_303" model="hrms.qualification">
+      <field name="name">Master of Science in Financial Services</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_304" model="hrms.qualification">
+      <field name="name">Master  of  Science  in  Financial  Risk Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_305" model="hrms.qualification">
+      <field name="name">Master of Science in Digital Marketing Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_306" model="hrms.qualification">
+      <field name="name">Master of Science in Information Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_307" model="hrms.qualification">
+      <field name="name">Master of Science in International Trade and Trade Policy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_308" model="hrms.qualification">
+      <field name="name">Master of Science in Procurement and Logistics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_310" model="hrms.qualification">
+      <field name="name">Doctor of Philosophy in Computing and Data Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_311" model="hrms.qualification">
+      <field name="name">Doctor of Philosophy in Computer Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_312" model="hrms.qualification">
+      <field name="name">Doctor of Philosophy in Information Systems</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_313" model="hrms.qualification">
+      <field name="name">Doctor  of  Philosophy  in  Information Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_314" model="hrms.qualification">
+      <field name="name">Certificate in Mining Engineering </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_315" model="hrms.qualification">
+      <field name="name">Certificate in Metallurgy </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_316" model="hrms.qualification">
+      <field name="name">Diploma in Accounting  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_317" model="hrms.qualification">
+      <field name="name">Diploma in Chemical Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_318" model="hrms.qualification">
+      <field name="name">Diploma in Civil Engineering   </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_319" model="hrms.qualification">
+      <field name="name">Diploma in Construction</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_320" model="hrms.qualification">
+      <field name="name">Diploma in Environmental Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_321" model="hrms.qualification">
+      <field name="name">Diploma in Information Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_322" model="hrms.qualification">
+      <field name="name">Diploma in Metallurgy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_323" model="hrms.qualification">
+      <field name="name">Diploma in Mining</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_324" model="hrms.qualification">
+      <field name="name">Diploma in Surveying</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_326" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in Public Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_327" model="hrms.qualification">
+      <field name="name">Bachelor of Insurance and Pensions</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_328" model="hrms.qualification">
+      <field name="name">Bachelor of Music (Performance)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_329" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Occupational Safety and Health</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_332" model="hrms.qualification">
+      <field name="name">Bachelor of Aeronautical Engineering  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_333" model="hrms.qualification">
+      <field name="name">Bachelor of Architecture</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_334" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in Peace and Conflict Studies  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_335" model="hrms.qualification">
+      <field name="name">Bachelor of Civil Engineering  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_336" model="hrms.qualification">
+      <field name="name">Bachelor of Computer Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_337" model="hrms.qualification">
+      <field name="name">Bachelor of Electrical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_338" model="hrms.qualification">
+      <field name="name">Bachelor of Electromechanical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_339" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering in Mechatronics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_340" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering  Telecommunications</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_341" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering in Chemical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_342" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering in Environmental Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_343" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering in Geomatics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_344" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering in Mining Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_346" model="hrms.qualification">
+      <field name="name">Bachelor of Mechanical and Railway Systems Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_347" model="hrms.qualification">
+      <field name="name">Bachelor of Mechanical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_348" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Bioenergy Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_349" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Biology Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_351" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Chemistry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_352" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Chemistry Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_354" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Economics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_355" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Forestry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_358" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Mathematics Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_359" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Mining and Exploration Geology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_360" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Physics Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_361" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Plant and Environmental Sciences</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_362" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Purchasing and Supply</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_363" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Pure Physics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_364" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Sustainable Natural Resources Management and Climate Change</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_365" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Wildlife Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_366" model="hrms.qualification">
+      <field name="name">Bachelor of Transport and Logistics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_367" model="hrms.qualification">
+      <field name="name">Master of Philosophy in Geology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_368" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Demography</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_369" model="hrms.qualification">
+      <field name="name">Bachelor of Arts with Education: English and History</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_370" model="hrms.qualification">
+      <field name="name">Bachelor of Arts with Education: English and Geography</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_371" model="hrms.qualification">
+      <field name="name">Bachelor of Arts with Education: English and Zambian Language</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_372" model="hrms.qualification">
+      <field name="name">Bachelor of Arts with Education: Geography and Civic Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_373" model="hrms.qualification">
+      <field name="name">Bachelor of Arts with Education: History and Civic Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_374" model="hrms.qualification">
+      <field name="name">Bachelor of ICT with Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_375" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Biological Sciences</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_377" model="hrms.qualification">
+      <field name="name">Bachelor of Engineering in Electrical and Electronics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_378" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Environmental Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_379" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Agriculture</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_380" model="hrms.qualification">
+      <field name="name">Bachelor of Science Land and Water Resources Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_381" model="hrms.qualification">
+      <field name="name">Bachelor of Science Agricultural Business</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_382" model="hrms.qualification">
+      <field name="name">Bachelor of International Relations and Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_383" model="hrms.qualification">
+      <field name="name">Bachelor of Advertising and Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_384" model="hrms.qualification">
+      <field name="name">Bachelor of Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_386" model="hrms.qualification">
+      <field name="name">Bachelor of Industrial Psychology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_387" model="hrms.qualification">
+      <field name="name">Bachelor  of  Purchasing  and  Supply Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_388" model="hrms.qualification">
+      <field name="name">Bachelor of Social Work</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_389" model="hrms.qualification">
+      <field name="name">Bachelor of Psychology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_390" model="hrms.qualification">
+      <field name="name">Bachelor  of  Local  Government Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_392" model="hrms.qualification">
+      <field name="name">Master of Arts in History</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_393" model="hrms.qualification">
+      <field name="name">Master of Science in Agriculture Risk Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_394" model="hrms.qualification">
+      <field name="name">Master of Climate Change and Sustainable Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_395" model="hrms.qualification">
+      <field name="name">Master of Science in Agribusiness</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_396" model="hrms.qualification">
+      <field name="name">Master of Marketing  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_398" model="hrms.qualification">
+      <field name="name">Master  of  International  Relations  and Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_399" model="hrms.qualification">
+      <field name="name">Advanced Diploma in Midwifery (formerly Registered Nurse Midwifery (In-Service))</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_400" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Band Leadership</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_401" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Basic Sports Coaching</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_402" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Electronic Systems Maintenance and Repair</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_403" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Sign Writing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_404" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Wildlife Safari Driving Guide</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_405" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Fabric Printing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_406" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Home Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_407" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in House Keeping</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_408" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Piano/Keyboard Playing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_409" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Tour Guiding</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_410" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Automotive Body Repair and Refinishing Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_411" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Automotive Electrical and Electronics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_412" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Bricklaying and Masonry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_413" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Clerical Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_414" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Heavy Equipment Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_415" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Joinery</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_416" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Leather Footwear Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_417" model="hrms.qualification">
+      <field name="name">Certificate in Occupational Safety, Health and Environment</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_418" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Plastering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_419" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Plumbing and Pipe Fitting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_420" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Radio Communication Systems Operation and Maintenance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_421" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Rigging Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_422" model="hrms.qualification">
+      <field name="name">Craft Certificate in Welding</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_423" model="hrms.qualification">
+      <field name="name">Certificate in Front Office Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_424" model="hrms.qualification">
+      <field name="name">Certificate in House Keeping and Laundry Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_425" model="hrms.qualification">
+      <field name="name">Certificate in Information Communication Technology for Visually Impaired</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_426" model="hrms.qualification">
+      <field name="name">Certificate in Livestock Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_427" model="hrms.qualification">
+      <field name="name">Certificate in Photo Journalism</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_428" model="hrms.qualification">
+      <field name="name">Craft Certificate in Electronic Systems Maintenance and Repair</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_429" model="hrms.qualification">
+      <field name="name">Craft Certificate in Electronics and Telecommunications</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_430" model="hrms.qualification">
+      <field name="name">Craft Certificate in Fitting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_431" model="hrms.qualification">
+      <field name="name">Craft Certificate in Gemstone Cutting and Processing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_432" model="hrms.qualification">
+      <field name="name">Craft Certificate in Instrumentation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_433" model="hrms.qualification">
+      <field name="name">Craft Certificate in Jewelry Manufacturing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_434" model="hrms.qualification">
+      <field name="name">Craft Certificate in Machining</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_435" model="hrms.qualification">
+      <field name="name">Craft Certificate in Painting Decoration and Graphics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_436" model="hrms.qualification">
+      <field name="name">Craft Certificate in Refrigeration and Air Conditioning</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_437" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Automotive Body Repair and Refinishing Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_438" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Automotive Electrical and Electronics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_439" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Computer Networks and Data Communication</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_440" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Food and Beverages Services and Sales</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_441" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Metallurgical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_442" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Office Management and Secretarial Practice</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_443" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Rigging Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_444" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Social Work</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_445" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in House Keeping and Laundry Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_446" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Electrical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_447" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Instrumentation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_448" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Mechanical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_449" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Mechanical Engineering for Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_450" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Printing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_451" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Refrigeration and Air Conditioning</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_452" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Automotive Electrical and Electronics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_453" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Metallurgical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_454" model="hrms.qualification">
+      <field name="name">Diploma in Agribusiness Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_455" model="hrms.qualification">
+      <field name="name">Diploma in Aircraft Maintenance Engineering � Airframes and Engines</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_456" model="hrms.qualification">
+      <field name="name">Diploma in Audio and Music Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_457" model="hrms.qualification">
+      <field name="name">Diploma in Automation and Information Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_458" model="hrms.qualification">
+      <field name="name">Diploma in Automotive Body and Comfort Systems</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_459" model="hrms.qualification">
+      <field name="name">Diploma in Automotive Electrical and Electronics Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_460" model="hrms.qualification">
+      <field name="name">Diploma in Avionics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_461" model="hrms.qualification">
+      <field name="name">Diploma in Child Adolescent and Mental Health</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_462" model="hrms.qualification">
+      <field name="name">Diploma in Diagnostic Ultrasound Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_463" model="hrms.qualification">
+      <field name="name">Diploma in Fashion Design and Textile Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_464" model="hrms.qualification">
+      <field name="name">Diploma in Human Resources Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_465" model="hrms.qualification">
+      <field name="name">Diploma in Hydro Power Technology and Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_466" model="hrms.qualification">
+      <field name="name">Diploma in Instrumentation</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_467" model="hrms.qualification">
+      <field name="name">Diploma in Legal and Industrial Metrology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_468" model="hrms.qualification">
+      <field name="name">Diploma in Maintenance Management of Electrical and Mechanical Equipment</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_469" model="hrms.qualification">
+      <field name="name">Diploma in Mechanical Engineering Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_470" model="hrms.qualification">
+      <field name="name">Diploma in Mechatronics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_471" model="hrms.qualification">
+      <field name="name">Diploma in Metal and Non-Metal Mining Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_472" model="hrms.qualification">
+      <field name="name">Diploma in Metallurgical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_473" model="hrms.qualification">
+      <field name="name">Diploma in Physiotherapy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_474" model="hrms.qualification">
+      <field name="name">Diploma in Plumbing and Pipe Fitting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_475" model="hrms.qualification">
+      <field name="name">Diploma in Production and Operations Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_476" model="hrms.qualification">
+      <field name="name">Diploma in Psychosocial Support for Early Childhood Development</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_477" model="hrms.qualification">
+      <field name="name">Diploma in Radiography</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_478" model="hrms.qualification">
+      <field name="name">Diploma in Rigging Technology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_480" model="hrms.qualification">
+      <field name="name">Diploma in Technical and Vocational Training</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_481" model="hrms.qualification">
+      <field name="name">Diploma in Travel and Tourism</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_482" model="hrms.qualification">
+      <field name="name">Diploma in Urban and Regional Planning</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_483" model="hrms.qualification">
+      <field name="name">Diploma in Urban and Rural Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_484" model="hrms.qualification">
+      <field name="name">Vocational Secondary School Teacher's Diploma (Design and Technology)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_486" model="hrms.qualification">
+      <field name="name">Bachelor of Agriculture Science in Plant Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_487" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in English Language and Linguistics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_488" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in French</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_489" model="hrms.qualification">
+      <field name="name">Bachelor of Education in Literacy and Language</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_490" model="hrms.qualification">
+      <field name="name">Bachelor of Education with Sociology of Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_491" model="hrms.qualification">
+      <field name="name">Bachelor of Education with Special Education</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_492" model="hrms.qualification">
+      <field name="name">Bachelor of Mass Communication</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_493" model="hrms.qualification">
+      <field name="name">Bachelor of Media and Journalism Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_495" model="hrms.qualification">
+      <field name="name">Bachelor of Mineral Sciences in Geology</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_496" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Agricultural Economics</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_497" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Agricultural Extension</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_498" model="hrms.qualification">
+      <field name="name">Bachelor of Science in Animal Science</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_499" model="hrms.qualification">
+      <field name="name">Bachelor of Veterinary Medicine</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_500" model="hrms.qualification">
+      <field name="name">Bachelor of Arts in Financial Services</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_501" model="hrms.qualification">
+      <field name="name">Zambia Institute of Logistics and Transport Certificate</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_502" model="hrms.qualification">
+      <field name="name">Zambia Institute of Logistics and Transport Diploma</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_505" model="hrms.qualification">
+      <field name="name">Enrolled Nursing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_506" model="hrms.qualification">
+      <field name="name">Master of Philosophy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_507" model="hrms.qualification">
+      <field name="name">Doctor of Philosophy in Business Leadership and Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_10"/>
+    </record>
+    <record id="qualification_508" model="hrms.qualification">
+      <field name="name">Level I Trade Certificate in Grinding Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_509" model="hrms.qualification">
+      <field name="name">Level I Trade Test Certificate in Earth Moving Equipment Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_510" model="hrms.qualification">
+      <field name="name">Level I Trade Test Certificate in Professional (Class BE/CE/BIE) Driving</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_511" model="hrms.qualification">
+      <field name="name">Level I Trade Test Certificate in Sports and Events Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_512" model="hrms.qualification">
+      <field name="name">Level I Trade Test Certificate in Surface Mining Drill and Operations</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_513" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Assaying</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_514" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Basic Printing Media Journalism</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_515" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Child and Youth Care</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_516" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Community Based Natural Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_517" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Cooperative and Agri-Business Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_518" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Dairy Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_519" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Retail Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_520" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Specialised News Writing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_521" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Television Journalism</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_522" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Mineral Processing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_523" model="hrms.qualification">
+      <field name="name">Level 4  Certificate in Mechanical Transport Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_524" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Building Construction</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_525" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Hospitality Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_526" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Land Surveying</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_527" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Legal Secretarial and Office Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_528" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Mechanical Draughting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_529" model="hrms.qualification">
+      <field name="name">Level 5 Certificate in Mining</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_530" model="hrms.qualification">
+      <field name="name">Level 5 Certificate Bridging Course from Automotive Engineering to Heavy Equipment Repair</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_531" model="hrms.qualification">
+      <field name="name">Diploma in Agricultural Journalism</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_532" model="hrms.qualification">
+      <field name="name">Diploma in Air Traffic Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_533" model="hrms.qualification">
+      <field name="name">Diploma in Building Construction Works Monitoring and Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_534" model="hrms.qualification">
+      <field name="name">Diploma in Dairy Production</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_535" model="hrms.qualification">
+      <field name="name">Diploma in Fire Rescue Services</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_536" model="hrms.qualification">
+      <field name="name">Diploma in Paralegal Work</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_537" model="hrms.qualification">
+      <field name="name">Diploma in Pharmacy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_538" model="hrms.qualification">
+      <field name="name">Teacher's Diploma in Psychosocial Care and Protection</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_539" model="hrms.qualification">
+      <field name="name">Bachelor of Education Administration and Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_540" model="hrms.qualification">
+      <field name="name">Bachelor of Science Honours in Accounting and Finance</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_541" model="hrms.qualification">
+      <field name="name">Technician  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_542" model="hrms.qualification">
+      <field name="name">National Accounting Technician Programme (NATech)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_543" model="hrms.qualification">
+      <field name="name">Licentiate  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_7"/>
+    </record>
+    <record id="qualification_544" model="hrms.qualification">
+      <field name="name">Professional</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_9"/>
+    </record>
+    <record id="qualification_545" model="hrms.qualification">
+      <field name="name">Certificate in Marketing (phased out in 2022)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_546" model="hrms.qualification">
+      <field name="name">Professional Advanced Certificate in Marketing (phased out 2022)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_547" model="hrms.qualification">
+      <field name="name">Professional Diploma in Marketing (phased out in 2022)</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_6"/>
+    </record>
+    <record id="qualification_548" model="hrms.qualification">
+      <field name="name">ABE Level 4 Diploma in Business Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_549" model="hrms.qualification">
+      <field name="name">ABE Level 4 Diploma in Business Management and Marketing</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_550" model="hrms.qualification">
+      <field name="name">ABE Level 4 Diploma in Business Management and Human Resources</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_551" model="hrms.qualification">
+      <field name="name">Intermediate Certificate in Financial and Management Accounting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_552" model="hrms.qualification">
+      <field name="name">Diploma in Accounting and Business</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_553" model="hrms.qualification">
+      <field name="name">Certified Accounting Technician</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_5"/>
+    </record>
+    <record id="qualification_554" model="hrms.qualification">
+      <field name="name">Certificate in Business Accounting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_555" model="hrms.qualification">
+      <field name="name">Certificate in Business Administration</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_556" model="hrms.qualification">
+      <field name="name">Certificate in Information Systems and Programming</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_557" model="hrms.qualification">
+      <field name="name">Certificate in Human Resource Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_558" model="hrms.qualification">
+      <field name="name">Certificate in Accounting and Government Accounting</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_559" model="hrms.qualification">
+      <field name="name">Certificate in Management Studies</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_560" model="hrms.qualification">
+      <field name="name">Certificate in Records Management</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_561" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in General Hospitality   </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_562" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Designing, Cutting and Tailoring  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_563" model="hrms.qualification">
+      <field name="name">Level 3 in Certificate in Electrical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_564" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Library Studies and Information Science  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_566" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Carpentry</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_568" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Computer Networks and Data Communication</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_571" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Metal Fabrication  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+    <record id="qualification_572" model="hrms.qualification">
+      <field name="name">Certificate in Food and Beverage Service and Sales  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_573" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Community Based Work with Children and Youth  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_574" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Designing, Cutting and Tailoring  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_575" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in General Agriculture  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_576" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Science Laboratory Technology  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_577" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Wildlife Safari Canoe Guide</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_578" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Wildlife Safari Walking Guide</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_579" model="hrms.qualification">
+      <field name="name">Level 4 Certificate in Electrical Engineering</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_580" model="hrms.qualification">
+      <field name="name">Craft Certificate in Metal Fabrication  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_582" model="hrms.qualification">
+      <field name="name">CA Certificate in Accountancy</field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_4"/>
+    </record>
+    <record id="qualification_583" model="hrms.qualification">
+      <field name="name">Level 3 Certificate in Marketing  </field>
+      <field name="sequence">New</field>
+      <field name="qualification_level_id" ref="level_3"/>
+    </record>
+  </data>
+</odoo>

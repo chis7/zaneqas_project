@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+<!--    <record id="training_institution_1" model="res.partner">-->
+<!--      <field name="name">Association of Business Executives (ABE) </field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_2" model="res.partner">-->
+<!--      <field name="name">Association of Certified Chartered Accountants (ACCA)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_3" model="res.partner">-->
+<!--      <field name="name">Cavendish University </field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_4" model="res.partner">-->
+<!--      <field name="name">Chartered Institute of Management Accountants (CIMA)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_5" model="res.partner">-->
+<!--      <field name="name">Chreso University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_6" model="res.partner">-->
+<!--      <field name="name">Eden University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_7" model="res.partner">-->
+<!--      <field name="name">Edenberg University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_8" model="res.partner">-->
+<!--      <field name="name">Examinations Council of Zambia (ECZ)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_9" model="res.partner">-->
+<!--      <field name="name">International Baccalaurate Organisation (IBO)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_10" model="res.partner">-->
+<!--      <field name="name">Lusaka Apex Medical University (LAMU)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_11" model="res.partner">-->
+<!--      <field name="name">Mulungushi University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_12" model="res.partner">-->
+<!--      <field name="name">National Institute of Public Administration (NIPA)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_13" model="res.partner">-->
+<!--      <field name="name">Northrise University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_14" model="res.partner">-->
+<!--      <field name="name">Nursing and Midwifery Council of Zambia (NMCZ) </field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_15" model="res.partner">-->
+<!--      <field name="name">Rockview University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_16" model="res.partner">-->
+<!--      <field name="name">Technical Education Vocational and Entrepreneurship Authority (TEVETA) </field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_17" model="res.partner">-->
+<!--      <field name="name">Texila American University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_18" model="res.partner">-->
+<!--      <field name="name">UNICAF University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_19" model="res.partner">-->
+<!--      <field name="name">University of Africa</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_20" model="res.partner">-->
+<!--      <field name="name">University of Lusaka (UNILUS)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_21" model="res.partner">-->
+<!--      <field name="name">University of Zambia (UNZA)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_22" model="res.partner">-->
+<!--      <field name="name">Zambia Institute of  Chartered Accountants (ZiCA)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_23" model="res.partner">-->
+<!--      <field name="name">Zambia Institute of Marketing (ZIM)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_24" model="res.partner">-->
+<!--      <field name="name">Zambia Institute of Purchasing and Supply (ZIPS)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_25" model="res.partner">-->
+<!--      <field name="name">Zambia Institute of Tourism  and Hospitality Studies (ZITHS)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_26" model="res.partner">-->
+<!--      <field name="name">Zambian Open University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_27" model="res.partner">-->
+<!--      <field name="name">ZCAS University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_28" model="res.partner">-->
+<!--      <field name="name">Copperbelt University (CBU)</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_29" model="res.partner">-->
+<!--      <field name="name">Mulungushi University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_30" model="res.partner">-->
+<!--      <field name="name">Zambia Chartered Institute of Logistics and Transport</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_31" model="res.partner">-->
+<!--      <field name="name">Zambian Open University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+<!--    <record id="training_institution_32" model="res.partner">-->
+<!--      <field name="name">South Valley University</field>-->
+<!--      <field name="is_training_institution" eval="True"/>-->
+<!--    </record>-->
+  </data>
+</odoo>

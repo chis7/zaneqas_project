@@ -21,17 +21,21 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         'zaneqas_tb_xpert_eqa_expected_result_id',
         string="ZANEQAS TB Xpert EQA Results Lines"
     )
+    eqa_round_id = fields.Many2one('zaneqas.tb.xpert.eqa.config.rounds', string='EQA Round', required=True)
+
+
+    facility_result_lines_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.result',
+        'zaneqas_tb_xpert_eqa_facility_result_id',
+        string="Facility Result Lines"
+    )
+
     expected_result_lines_ids = fields.One2many(
         'zaneqas.tb.xpert.eqa.expected.result.lines',
         'zaneqas_tb_xpert_eqa_expected_result_id',
         string="Expected Result Lines"
     )
 
-    facility_result_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.result',
-        'facility_eqa_result_id',
-        string="Facility Result Lines"
-    )
     company_ids = fields.Many2many(
         'res.company',
         string='Facilities'
@@ -46,19 +50,19 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             round_2 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 2')], limit=1)
             if self.name == round_1:
                 self.zaneqas_tb_xpert_eqa_expected_result_ids = [
-                    (0, 0, {'sample_id': 'A1'}),
-                    (0, 0, {'sample_id': 'A2'}),
-                    (0, 0, {'sample_id': 'A3'}),
-                    (0, 0, {'sample_id': 'A4'}),
-                    (0, 0, {'sample_id': 'A5'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-1'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-2'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-3'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-4'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-5'}),
                 ]
             elif self.name == round_2:
                 self.zaneqas_tb_xpert_eqa_expected_result_ids = [
-                    (0, 0, {'sample_id': 'B1'}),
-                    (0, 0, {'sample_id': 'B2'}),
-                    (0, 0, {'sample_id': 'B3'}),
-                    (0, 0, {'sample_id': 'B4'}),
-                    (0, 0, {'sample_id': 'B5'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-1'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-2'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-3'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-4'}),
+                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-5'}),
                 ]
 
     state = fields.Selection(

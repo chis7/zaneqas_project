@@ -41,6 +41,7 @@
         # 'data/data.xml',
         'views/zaneqas_web_page_title.xml',
         'wizard/createTrainingPlanView.xml',
+        'wizard/zaneqas_tb_xpert_results_wizard_views.xml',
         'views/training_plan_views.xml',
         'views/training_type_views.xml',
         'views/study_field_views.xml',

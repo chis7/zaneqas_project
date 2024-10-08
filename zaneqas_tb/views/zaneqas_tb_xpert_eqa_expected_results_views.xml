@@ -10,11 +10,12 @@
                 <field name="name"/>
                 <field name="due_date"/>
                 <field name="state"/>
-                <button name="action_submit_results"
+                <button name="%(action_zaneqas_tb_xpert_eqa_results_wizard)d"
                         confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"
                         string="Submit Results"
-                        type="object"
+                        type="action"
                         class="btn-primary"
+                        context="{'active_id': active_id}"
                         invisible="user_in_assigned_company_and_open == False"/>
             </tree>
         </field>
@@ -132,22 +133,22 @@
                         <page string="Participant(s)">
                             <group>
                                 <a name="download_csv_template"
-                                   type="object"
-                                   invisible="state != 'draft' and company_ids">
+                                   type="object">
+                                    <!--                                   invisible="state != 'draft' and company_ids">-->
                                     Download Template
                                 </a>
-                                <field name="csv_file" filename="csv_filename"
-                                       invisible="state != 'draft' or company_ids"/>
+                                <field name="csv_file" filename="csv_filename"/>
+                                <!--                                       invisible="state != 'draft' or company_ids"/>-->
                                 <a name="action_test_upload"
                                    type="object"
-                                   string="Test Upload"
-                                   invisible="state != 'draft' or not csv_file">
+                                   string="Test Upload">
+                                    <!--                                   invisible="state != 'draft' or not csv_file">-->
                                     Test Upload
                                 </a>
                                 <a name="import_companies_from_csv"
                                    confirm="Are you sure you want to import companies from the attached file?"
-                                   type="object"
-                                   invisible="state != 'draft' and company_ids">
+                                   type="object">
+                                    <!--                                   invisible="state != 'draft' and company_ids">-->
                                     Import Participating Facilities
                                 </a>
                             </group>

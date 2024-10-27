@@ -24,11 +24,39 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
         tracking=True
     )
     supervisor_id = fields.Many2one('res.users', string="Assigned Supervisor")
+    zaneqas_tb_xpert_eqa_sample_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.rounds.sample.lines', 'config_round_id', string="Expected Results"
+    )
+    sample_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.rounds.sample.lines', 'config_round_id', string="Sample IDs"
+    )
+
+    def generate_sample_ids(self):
+        if self.name:
+            year = datetime.now().year
+            round_1 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 1')], limit=1)
+            round_2 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 2')], limit=1)
+            if self.name == round_1.name:
+                self.zaneqas_tb_xpert_eqa_sample_ids = [
+                    (0, 0, {'sample_id': f'CDL PT ROUND 1 {year} A-{i}'}) for i in range(1, 6)
+                ]
+
+            elif self.name == round_2.name:
+                self.zaneqas_tb_xpert_eqa_sample_ids = [
+                    (0, 0, {'sample_id': f'CDL PT ROUND 2 {year} B-{i}'}) for i in range(1, 6)
+                ]
+            self.write({'sample_ids': self.zaneqas_tb_xpert_eqa_sample_ids})
 
     def action_save_eqa_config_round_as_draft(self):
+        current_year = datetime.now().year
+        # record = super(ZaneqasTbXpertEqaConfigRounds, self).create(vals)
+
         self.write({
-            'state': 'draft'
+            'state': 'draft',
+            'name': f"{current_year} {self.name}"
         })
+        self.generate_sample_ids()
+        # return record
 
     def action_submit_eqa_config_round_to_supervisor(self):
         self.write({'state': 'supervisor'})

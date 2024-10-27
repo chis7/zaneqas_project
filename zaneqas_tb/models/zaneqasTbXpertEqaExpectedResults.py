@@ -13,57 +13,116 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     _name = "zaneqas.tb.xpert.eqa.expected.result"
     _inherit = ["mail.thread"]
     _description = "zaneqas tb xpert eqa expected results"
-    name = fields.Many2one("zaneqas.tb.xpert.eqa.config.rounds", required=True)
-    due_date = fields.Date(string="Due Date", required=True)
+    name = fields.Many2one("zaneqas.tb.xpert.eqa.config.rounds", required=True, default="NULL")
+    due_date = fields.Date(string="Due Date", required=True, default=date.today())
     supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
     zaneqas_tb_xpert_eqa_expected_result_ids = fields.One2many(
         'zaneqas.tb.xpert.eqa.expected.result.lines',
         'zaneqas_tb_xpert_eqa_expected_result_id',
         string="ZANEQAS TB Xpert EQA Results Lines"
     )
-    eqa_round_id = fields.Many2one('zaneqas.tb.xpert.eqa.config.rounds', string='EQA Round', required=True)
+    # eqa_round_id = fields.Many2one('zaneqas.tb.xpert.eqa.config.rounds', string='EQA Round', required=True)
 
+    # facility_result_lines_ids = fields.One2many(
+    #     'zaneqas.tb.xpert.eqa.result',
+    #     'zaneqas_tb_xpert_eqa_facility_result_id',
+    #     string="Facility Result Lines"
+    # )
 
-    facility_result_lines_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.result',
-        'zaneqas_tb_xpert_eqa_facility_result_id',
-        string="Facility Result Lines"
-    )
-
-    expected_result_lines_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.expected.result.lines',
-        'zaneqas_tb_xpert_eqa_expected_result_id',
-        string="Expected Result Lines"
-    )
+    # expected_result_lines_ids = fields.One2many(
+    #     'zaneqas.tb.xpert.eqa.expected.result.lines',
+    #     'zaneqas_tb_xpert_eqa_expected_result_id',
+    #     string="Expected Result Lines"
+    # )
 
     company_ids = fields.Many2many(
         'res.company',
         string='Facilities'
     )
+    sample_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.expected.result.lines',
+        'zaneqas_tb_xpert_eqa_expected_result_id',
+        string="Samples"
+    )
 
+    # @api.onchange('name')
+    # def _onchange_name(self):
+    #     self.sample_ids = [(5, 0, 0)]  # Clear existing values
+    #     if self.name:
+    #         samples = self.env['zaneqas.tb.xpert.eqa.rounds.sample.lines'].search(
+    #             [('config_round_id', '=', self.name.id)])
+    #         sampleMarkers = [
+    #             (0, 0, {
+    #                 'sample_id': sample.sample_id,
+    #                 'tb_detection_not_detected': False,  # Set a default value
+    #                 'tb_detection_trace': False,  # Set a default value
+    #                 'tb_detection_very_low': False,  # Set a default value
+    #                 'tb_detection_low': False,  # Set a default value
+    #                 'tb_detection_medium': False,  # Set a default value
+    #                 'tb_detection_high': False,  # Set a default value
+    #                 'rif_na': False,  # Set a default value
+    #                 'rif_not_detected': False,  # Set a default value
+    #                 'rif_detected': False,  # Set a default value
+    #                 'uninterpretable_invalid': False,  # Set a default value
+    #                 'uninterpretable_no_result': False,  # Set a default value
+    #                 'uninterpretable_error': False,  # Set a default value
+    #                 'uninterpretable_indeterminate': False,  # Set a default value
+    #                 'ct_probe_d_ultra_spsc': 0.0,  # Set a default value
+    #                 'ct_probe_c_is1081_is6110': 0.0,  # Set a default value
+    #                 'ct_probe_e_rpob2': 0.0,  # Set a default value
+    #                 'ct_probe_b_rpoB1': 0.0,  # Set a default value
+    #                 'ct_spc_rpoB3': 0.0,  # Set a default value
+    #                 'ct_probe_a_rpob4': 0.0  # Set a default value
+    #             }) for sample in samples
+    #         ]
+    #         self.sample_ids = sampleMarkers
     @api.onchange('name')
     def _onchange_name(self):
-        self.zaneqas_tb_xpert_eqa_expected_result_ids = [(5, 0, 0)]  # Clear existing values
+        self.sample_ids = [(5, 0, 0)]  # Clear existing values
         if self.name:
-            year = datetime.now().year
-            round_1 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 1')], limit=1)
-            round_2 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 2')], limit=1)
-            if self.name == round_1:
-                self.zaneqas_tb_xpert_eqa_expected_result_ids = [
-                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-1'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-2'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-3'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-4'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-5'}),
-                ]
-            elif self.name == round_2:
-                self.zaneqas_tb_xpert_eqa_expected_result_ids = [
-                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-1'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-2'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-3'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-4'}),
-                    (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-5'}),
-                ]
+            samples = self.env['zaneqas.tb.xpert.eqa.rounds.sample.lines'].search(
+                [('config_round_id', '=', self.name.id)])
+            sampleMarkers = [(0, 0, {'sample_id': sample.sample_id}) for sample in samples]
+            self.sample_ids = sampleMarkers
+
+    # @api.onchange('name')
+    # def _onchange_name(self):
+    #     self.zaneqas_tb_xpert_eqa_expected_result_ids = [(5, 0, 0)]  # Clear existing values
+    #     if self.name:
+    #         year = datetime.now().year
+    #         round_1 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 1')], limit=1)
+    #         round_2 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 2')], limit=1)
+    #         if self.name == round_1:
+    #             self.zaneqas_tb_xpert_eqa_expected_result_ids = [
+    #                 (0, 0, {'sample_id': f'CDL PT ROUND 1 {year} A-{i}'}) for i in range(1, 6)
+    #             ]
+    #         elif self.name == round_2:
+    #             self.zaneqas_tb_xpert_eqa_expected_result_ids = [
+    #                 (0, 0, {'sample_id': f'CDL PT ROUND 2 {year} B-{i}'}) for i in range(1, 6)
+    #             ]
+
+    # def _onchange_name(self):
+    #     self.zaneqas_tb_xpert_eqa_expected_result_ids = [(5, 0, 0)]  # Clear existing values
+    #     if self.name:
+    #         year = datetime.now().year
+    #         round_1 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 1')], limit=1)
+    #         round_2 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 2')], limit=1)
+    #         if self.name == round_1:
+    #             self.zaneqas_tb_xpert_eqa_expected_result_ids = [
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-1'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-2'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-3'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-4'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 1 {year} A-5'}),
+    #             ]
+    #         elif self.name == round_2:
+    #             self.zaneqas_tb_xpert_eqa_expected_result_ids = [
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-1'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-2'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-3'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-4'}),
+    #                 (0, 0, {'sample_id': f' CDL PT ROUND 2 {year} B-5'}),
+    #             ]
 
     state = fields.Selection(
         selection=[
@@ -71,8 +130,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             ("supervisor", "Supervisor"),
             ("approved", "Approved"),
             ("open", "Open"),
-            ("closed", "Closed"),
             ("extended", "Extended"),
+            ("closed", "Closed"),
             ("resultsPublished", "Results Published"),
         ],
         default='draft',

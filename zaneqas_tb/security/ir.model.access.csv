@@ -1,25 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_training_plan,access.training.plan,model_training_plan,,1,1,1,1
-access_type_of_training,access.type.of.training,model_type_of_training,,1,1,1,1
-access_field_of_study,access.field.of.study,model_field_of_study,,1,1,1,1
-access_level_of_study,access.level.of.study,model_level_of_study,,1,1,1,1
-access_training_plan_lines,access.training.plan.lines,model_training_plan_lines,,1,1,1,1
-access_create_training_plan_wizard_lines,access.create.training.plan.wizard.lines,model_create_training_plan_wizard_lines,,1,1,1,1
-access_training_application,access.training.application,model_training_application,,1,1,1,1
-access_training_course_evaluation,access.training.course.evaluation,model_training_course_evaluation,,1,1,1,1
-access_training_post_evaluation,access_training_post_evaluation,model_training_post_evaluation,,1,1,1,1
-access_training_supervisor_post_evaluation,access_training_supervisor_post_evaluation,model_training_supervisor_post_evaluation,,1,1,1,1
-access_training_province,access.training.province,model_training_province,,1,1,1,1
-access_training_sponsor,access.training.sponsor,model_training_sponsor,,1,1,1,1
-access_training_training_institution,access.training.training.institution,model_training_training_institution,,1,1,1,1
-access_create_trainee_post_training_evaluation_wizard_lines,access.create.trainee.post.training.evaluation.wizard.lines,model_create_trainee_post_training_evaluation_wizard_lines,,1,1,1,1
-access_create_supervisor_post_training_evaluation_wizard_lines,access.create.supervisor.post.training.evaluation.wizard.lines,model_create_supervisor_post_training_evaluation_wizard_lines,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result,access.zaneqas.tb.xpert.eqa.result,model_zaneqas_tb_xpert_eqa_result,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result_lines,access.zaneqas.tb.xpert.eqa.result.lines,model_zaneqas_tb_xpert_eqa_result_lines,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result_error_code_lines,access.zaneqas.tb.xpert.eqa.result.error.code.lines,model_zaneqas_tb_xpert_eqa_result_error_code_lines,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result,access.zaneqas.tb.xpert.eqa.expected.result,model_zaneqas_tb_xpert_eqa_expected_result,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result_lines,access.zaneqas.tb.xpert.eqa.expected.result.lines,model_zaneqas_tb_xpert_eqa_expected_result_lines,,1,1,1,1
-access_report_zaneqas_tb_report_zaneqas_tb_xpert_eqa_results,access.report.zaneqas.tb.report.zaneqas.tb.xpert.eqa.results,model_report_zaneqas_tb_report_zaneqas_tb_xpert_eqa_results,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_config_rounds,access.zaneqas.tb.xpert.eqa.config.rounds,model_zaneqas_tb_xpert_eqa_config_rounds,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_config_assays,access.zaneqas.tb.xpert.eqa.config.assays,model_zaneqas_tb_xpert_eqa_config_assays,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_expected_result,zaneqas.tb.xpert.eqa.expected.result,model_zaneqas_tb_xpert_eqa_expected_result,,1,1,1,1
@@ -28,5 +12,6 @@ access_mail_mail_admin,access_mail_mail_admin,mail.model_mail_mail,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result_wizard,access.zaneqas.tb.xpert.eqa.result.wizard,model_zaneqas_tb_xpert_eqa_result_wizard,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result_wizard_lines,access.zaneqas.tb.xpert.eqa.result.wizard.lines,model_zaneqas_tb_xpert_eqa_result_wizard_lines,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result_wizard_error_code_lines,access.zaneqas.tb.xpert.eqa.result.wizard.error.code.lines,model_zaneqas_tb_xpert_eqa_result_wizard_error_code_lines,,1,1,1,1
+access_zaneqas_tb_xpert_eqa_rounds_sample_lines,access.zaneqas.tb.xpert.eqa.rounds.sample.lines,model_zaneqas_tb_xpert_eqa_rounds_sample_lines,,1,1,1,1
 
 

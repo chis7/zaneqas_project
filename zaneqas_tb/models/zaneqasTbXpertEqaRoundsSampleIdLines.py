@@ -20,3 +20,9 @@ class ZaneqasTbXpertEqaRoundsSampleIdLines(models.Model):
         'zaneqas.tb.xpert.eqa.config.rounds', string="Config Round"
     )
 
+    # expected_result_lines_ids = fields.One2many(
+    #     'zaneqas.tb.xpert.eqa.expected.result.lines',
+    #     'rounds_sample_line_id',
+    #     string="Expected Result Lines"
+    # )
+

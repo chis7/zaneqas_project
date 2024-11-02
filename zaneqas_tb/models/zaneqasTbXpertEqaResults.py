@@ -82,10 +82,10 @@ class ZaneqasTbXpertEqaResults(models.Model):
         required=True,
         tracking=True
     )
-    expected_result_lines_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.expected.result.lines', 'zaneqas_tb_xpert_eqa_expected_result_id',
-        string='Expected Results'
-    )
+    # expected_result_lines_ids = fields.One2many(
+    #     'zaneqas.tb.xpert.eqa.expected.result.lines', 'zaneqas_tb_xpert_eqa_expected_result_id',
+    #     string='Expected Results'
+    # )
     supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
     lab_incharge_comment = fields.Text(string="Lab Incharge Comment", tracking=True)
     results_status = fields.Char(string="Results Status", compute="_compute_results_status")

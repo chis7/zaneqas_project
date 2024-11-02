@@ -9,10 +9,10 @@
               name="EQA Schemes"
               parent="zaneqas_tb_root"/>
 
-<!--    <menuitem id="zaneqas_tb_mtb_rif_assay"-->
-<!--              name="MTB/RIF GeneXpert Assay"-->
-<!--              parent="zaneqas_tb_eqa_root"-->
-<!--              action="action_zaneqas_tb_xpert_eqa_results"/>-->
+    <menuitem id="zaneqas_tb_mtb_rif_assay"
+              name="MTB/RIF GeneXpert Assay"
+              parent="zaneqas_tb_eqa_root"
+              action="action_zaneqas_tb_xpert_eqa_expected_results"/>
 
 <!--    <menuitem id="zaneqas_tb_microscopy"-->
 <!--              name="Sputum Smear Microscopy"-->

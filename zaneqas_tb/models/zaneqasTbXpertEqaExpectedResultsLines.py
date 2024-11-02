@@ -10,6 +10,15 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     _name = "zaneqas.tb.xpert.eqa.expected.result.lines"
     _description = "Zaneqas TB Xpert EQA Expected Results Lines"
 
+    zaneqas_tb_xpert_eqa_expected_result_id = fields.Many2one(
+        'zaneqas.tb.xpert.eqa.expected.result',
+        string="Expected Result"
+    )
+    # rounds_sample_line_id = fields.Many2one(
+    #     'zaneqas.tb.xpert.eqa.rounds.sample.lines',
+    #     string="Rounds Sample Line",
+    #     ondelete='cascade'
+    # )
     sample_id = fields.Char(string="Test Sample ID", store=True)
     tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
     tb_detection_trace = fields.Boolean(string="Trace", store=True)
@@ -33,10 +42,9 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     ct_spc_rpoB3 = fields.Float(string="SPC/rpoB3", store=True)
     ct_probe_a_rpob4 = fields.Float(string="Probe A/rpoB4", store=True)
     ct_xpert_module_number = fields.Char(string="Xpert Module Number", store=True)
-    zaneqas_tb_xpert_eqa_expected_result_ids = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
-                                                               string="zaneqas tb xpert eqa result", store=True)
-    zaneqas_tb_xpert_eqa_expected_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
-                                                              string="zaneqas tb xpert eqa result", store=True)
+
+    # zaneqas_tb_xpert_eqa_expected_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
+    #                                                           string="zaneqas tb xpert eqa result", store=True)
 
     facility_result_date_tested = fields.Date(string="Date Tested", store=True)
     facility_result_tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
@@ -61,3 +69,7 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     facility_result_ct_spc_rpoB3 = fields.Float(string="SPC/rpoB3", store=True)
     facility_result_ct_probe_a_rpob4 = fields.Float(string="Probe A/rpoB4", store=True)
     facility_result_ct_xpert_module_number = fields.Char(string="Xpert Module Number", store=True)
+
+    def action_submit_results(self):
+        # Implement the logic for submitting results
+        pass

@@ -47,7 +47,6 @@ class ZaneqasTbXpertEqaResults(models.Model):
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
     company_id = fields.Many2one('res.company', string="Company", required=True, default=lambda self: self.env.company)
 
-
     zaneqas_tb_xpert_eqa_result_error_code_ids = fields.One2many('zaneqas.tb.xpert.eqa.result.error.code.lines',
                                                                  'zaneqas_tb_xpert_eqa_result_error_code_id',
                                                                  string="ZANEQAS TB Xpert EQA Results Error Code Lines")
@@ -57,9 +56,8 @@ class ZaneqasTbXpertEqaResults(models.Model):
         string="ZANEQAS TB Xpert EQA Results Lines"
     )
 
-    zaneqas_tb_xpert_eqa_facility_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="facility eqa result", store=True)
-
-
+    zaneqas_tb_xpert_eqa_facility_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
+                                                              string="facility eqa result", store=True)
 
     @api.onchange('name')
     def _onchange_name(self):

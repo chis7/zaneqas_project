@@ -11,9 +11,11 @@
             'name': 'Submit EQA Results',
             'res_model': 'zaneqas.tb.xpert.eqa.expected.result',
             'view_mode': 'form',
+            'view_id': env.ref('zaneqas_tb.view_zaneqas_tb_xpert_eqa_expected_result_wizard_form').id,
             'res_id': record.id,
-            'target': 'new',
+            'target': 'new'
             }
+            <!--        record.save_wizard_data()-->
         </field>
     </record>
 
@@ -86,19 +88,10 @@
                             <field name="due_date"/>
                             <!--                            <field name="due_date" readonly="[('context.hide_participants_page', '=', True)]"/>-->
                         </group>
-
-                        <group>
-                            <field name='supervisor_comment'
-                                   invisible="[('context.hide_participants_page', '=', True)]"/>
-                            <!--                            <field name='supervisor_comment'  invisible="[('context.hide_participants_page', '=', True)]"/>-->
-                            <!--                            <field name="is_supervisor" column_invisible="True"/>-->
-                            <!--                            <field name="is_LabIncharge" column_invisible="True"/>-->
-                            <!--                            <field name="supervisor_comment" readonly="is_supervisor == False"/>-->
-                            <!--                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>-->
-                        </group>
                     </group>
 
-                    <notebook invisible="context.hide_participants_page == True">
+                    <!--                <notebook invisible="[('user_company_in_list', '=', False)]">-->
+                    <notebook groups="zaneqas_tb.group_cdl_staff">
                         <page string="TB Detection Result" id="tb_detection_result">
                             <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
@@ -150,7 +143,99 @@
                             </field>
                         </page>
                     </notebook>
-                    <notebook invisible="context.hide_participants_page == False">
+
+                    <notebook groups="zaneqas_tb.group_cdl_staff">
+                        <page string="Participant(s)" invisible="context.hide_participants_page == False">
+                            <group>
+                                <a name="download_csv_template"
+                                   type="object">
+                                    <!--                                   invisible="state != 'draft' and company_ids">-->
+                                    Download Template
+                                </a>
+                                <field name="csv_file" filename="csv_filename"/>
+                                <!--                                       invisible="state != 'draft' or company_ids"/>-->
+                                <a name="action_test_upload"
+                                   type="object"
+                                   string="Test Upload">
+                                    <!--                                   invisible="state != 'draft' or not csv_file">-->
+                                    Test Upload
+                                </a>
+                                <a name="import_companies_from_csv"
+                                   confirm="Are you sure you want to import companies from the attached file?"
+                                   type="object">
+                                    <!--                                   invisible="state != 'draft' and company_ids">-->
+                                    Import Participating Facilities
+                                </a>
+                            </group>
+
+                            <field name="company_ids" widget="many2many_tags"
+                                   readonly="state != 'draft' and company_ids"/>
+
+                            <!--                            <field name="company_ids" widget="many2many_tags"/>-->
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter" context="{'validate_analytic': True}">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="view_zaneqas_tb_xpert_eqa_expected_result_wizard_form" model="ir.ui.view">
+        <field name="name">zaneqas.tb.xpert.eqa.expected.result.wizard.form</field>
+        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <h3>
+                        <field name="name" readonly="1" nolabel="1" widget="statusbar" options="{'clickable':'0'}"/>
+                    </h3>
+
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="is_supervisor" invisible="1"/>
+                            <field name="is_LabIncharge" invisible="1"/>
+                            <field name="supervisor_comment" readonly="is_supervisor == False"/>
+                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>
+                        </group>
+                    </group>
+
+
+                    <div class="oe_title" style="text-align:center;">
+
+                    </div>
+                    <group>
+                        <group>
+                            <!--                            <field name="name" domain="[('state', '=', 'approved')]"/>-->
+                            <field name="date_panel_received"/>
+                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
+                        </group>
+                        <group>
+                            <field name="xpert_assay_used" domain="[('state', '=', 'approved')]"/>
+                            <field name="expiry_date"/>
+                            <field name="catridge_lot_number"/>
+                        </group>
+
+                        <br/>
+                        <br/>
+                    </group>
+                    <div>
+
+                        <br/>
+                        <br/>
+                        <h5>
+                            <b>Instructions:</b>
+                            Tick the appropriate checkboxes below corresponding to the
+                            results after testing each sample provided. Document the error code in the Error Code column
+                            for tests resulting in error. Record the cycle thresholds (Ct) in the cells provided for all
+                            successful tests.
+                        </h5>
+                    </div>
+                    <notebook>
                         <page string="TB Detection Result" id="tb_detection_result">
                             <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
@@ -204,41 +289,32 @@
                             </field>
                         </page>
                     </notebook>
+                    <br/>
+                    <group>
+                        <group>
+
+                            <field name="add_infor_was_monthly_maintenance_done_for_the_genexpert"/>
+                            <field name="add_infor_monthly_maintenance_done_by_date"/>
+                            <field name="add_infor_monthly_maintenance_done_by_technologist"/>
+                            <field name="add_infor_instrument_user"/>
+                        </group>
+                        <group>
+                            <field name="add_infor_number_of_tests_conducted_in_last_full_month"/>
+                            <field name="add_infor_number_of_errors_occurred"/>
+                            <field name="add_infor_gene_xpert_serial_number"/>
+                            <field name="add_infor_date_gene_xpert_instrument_installed"/>
+                        </group>
+                    </group>
                     <notebook>
-                        <page string="Participant(s)" invisible="context.hide_participants_page == False">
-                            <group>
-                                <a name="download_csv_template"
-                                   type="object">
-                                    <!--                                   invisible="state != 'draft' and company_ids">-->
-                                    Download Template
-                                </a>
-                                <field name="csv_file" filename="csv_filename"/>
-                                <!--                                       invisible="state != 'draft' or company_ids"/>-->
-                                <a name="action_test_upload"
-                                   type="object"
-                                   string="Test Upload">
-                                    <!--                                   invisible="state != 'draft' or not csv_file">-->
-                                    Test Upload
-                                </a>
-                                <a name="import_companies_from_csv"
-                                   confirm="Are you sure you want to import companies from the attached file?"
-                                   type="object">
-                                    <!--                                   invisible="state != 'draft' and company_ids">-->
-                                    Import Participating Facilities
-                                </a>
-                            </group>
-
-                            <field name="company_ids" widget="many2many_tags"
-                                   readonly="state != 'draft' and company_ids"/>
-
-                            <!--                            <field name="company_ids" widget="many2many_tags"/>-->
+                        <page string="What Are The Error Codes?" id="tb_detection_result_error_codes">
+                            <field name="zaneqas_tb_xpert_eqa_result_wizard_error_code_ids">
+                                <tree editable="top">
+                                    <field name="add_info_error_code"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter" context="{'validate_analytic': True}">
-                    <field name="message_follower_ids"/>
-                    <field name="message_ids"/>
-                </div>
             </form>
         </field>
     </record>

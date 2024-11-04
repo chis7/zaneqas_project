@@ -12,6 +12,6 @@ class ZaneqasTbXpertEqaResultsErrorCodeLines(models.Model):
 
     zaneqas_tb_xpert_eqa_result_error_code_id = fields.Many2one('zaneqas.tb.xpert.eqa.result',
                                                                 string="zaneqas tb xpert eqa result error code",
-                                                                store=True)
+                                                                )
 
     add_info_error_code = fields.Char(string="Error Codes", required=True, store=True)

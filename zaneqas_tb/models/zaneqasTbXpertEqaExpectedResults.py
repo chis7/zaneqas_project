@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 import base64
 import csv
-from datetime import datetime, date
+from datetime import date
 from io import StringIO
 
-from odoo import api, fields, models, _, SUPERUSER_ID
-from odoo.exceptions import UserError, ValidationError
-import random
+from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 
 class ZaneqasTbXpertEqaExpectedResults(models.Model):
@@ -16,50 +15,37 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     name = fields.Many2one("zaneqas.tb.xpert.eqa.config.rounds", required=True)
     due_date = fields.Date(string="Due Date", required=True)
     supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
-    zaneqas_tb_xpert_eqa_expected_result_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.expected.result.lines',
-        'zaneqas_tb_xpert_eqa_expected_result_id',
-        string="ZANEQAS TB Xpert EQA Results Lines"
-    )
-    expected_result_lines_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.expected.result.lines',
-        'zaneqas_tb_xpert_eqa_expected_result_id',
-        string="Expected Result Lines"
-    )
 
-    facility_result_ids = fields.One2many(
-        'zaneqas.tb.xpert.eqa.result',
-        'facility_eqa_result_id',
-        string="Facility Result Lines"
-    )
+    # expected_result_lines_ids = fields.One2many(
+    #     'zaneqas.tb.xpert.eqa.expected.result.lines',
+    #     'zaneqas_tb_xpert_eqa_expected_result_id',
+    #     string="Expected Result Lines"
+    # )
+
     company_ids = fields.Many2many(
         'res.company',
         string='Facilities'
     )
+    sample_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.expected.result.lines',
+        'zaneqas_tb_xpert_eqa_expected_result_id',
+        string="Samples"
+    )
+
+    zaneqas_tb_xpert_eqa_result_wizard_error_code_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.result.wizard.error.code.lines',
+        'zaneqas_tb_xpert_eqa_result_wizard_error_code_id',
+        string="Error Codes"
+    )
 
     @api.onchange('name')
     def _onchange_name(self):
-        self.zaneqas_tb_xpert_eqa_expected_result_ids = [(5, 0, 0)]  # Clear existing values
+        self.sample_ids = [(5, 0, 0)]  # Clear existing values
         if self.name:
-            year = datetime.now().year
-            round_1 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 1')], limit=1)
-            round_2 = self.env['zaneqas.tb.xpert.eqa.config.rounds'].search([('name', '=', f'{year} Round 2')], limit=1)
-            if self.name == round_1:
-                self.zaneqas_tb_xpert_eqa_expected_result_ids = [
-                    (0, 0, {'sample_id': 'A1'}),
-                    (0, 0, {'sample_id': 'A2'}),
-                    (0, 0, {'sample_id': 'A3'}),
-                    (0, 0, {'sample_id': 'A4'}),
-                    (0, 0, {'sample_id': 'A5'}),
-                ]
-            elif self.name == round_2:
-                self.zaneqas_tb_xpert_eqa_expected_result_ids = [
-                    (0, 0, {'sample_id': 'B1'}),
-                    (0, 0, {'sample_id': 'B2'}),
-                    (0, 0, {'sample_id': 'B3'}),
-                    (0, 0, {'sample_id': 'B4'}),
-                    (0, 0, {'sample_id': 'B5'}),
-                ]
+            samples = self.env['zaneqas.tb.xpert.eqa.rounds.sample.lines'].search(
+                [('config_round_id', '=', self.name.id)])
+            sample_markers = [(0, 0, {'sample_id': sample.sample_id}) for sample in samples]
+            self.sample_ids = sample_markers
 
     state = fields.Selection(
         selection=[
@@ -67,8 +53,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             ("supervisor", "Supervisor"),
             ("approved", "Approved"),
             ("open", "Open"),
-            ("closed", "Closed"),
             ("extended", "Extended"),
+            ("closed", "Closed"),
             ("resultsPublished", "Results Published"),
         ],
         default='draft',
@@ -90,6 +76,44 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     )
 
     company_count = fields.Integer(string='Company Count', compute='_compute_company_count', store=True)
+
+    # New field to check if the user belongs to a specific group
+    user_has_group = fields.Boolean(
+        string='User Has Group',
+        compute='_compute_user_has_group'
+    )
+
+    site_id = fields.Many2one('res.partner', string='Name of Site')
+    date_panel_received = fields.Date(string='Date Panel Received')
+    date_of_last_gene_xpert_instrument_calibration_or_installation = fields.Date(
+        string="Date of Last GeneXpert Instrument Calibration or Installation")
+    xpert_assay_used = fields.Many2one('zaneqas.tb.xpert.eqa.config.assays')
+    catridge_lot_number = fields.Char(string='Xpert MTB/RIF or Ultra Cartridge or Pouch Lot No:')
+    expiry_date = fields.Date(string='Xpert MTB/RIF or Ultra Cartridge or Pouch Expiry Date')
+    date_results_received_at_CDL = fields.Date(string='Date Results Received at CDL')
+    add_infor_number_of_tests_conducted_in_last_full_month = fields.Integer(
+        string="How many Xpert tests have been conducted in the last full month?", store=True)
+    add_infor_number_of_errors_occurred = fields.Integer(
+        string="How many errors occurred during testing in the past full month?", store=True)
+    add_infor_was_monthly_maintenance_done_for_the_genexpert = fields.Selection(selection=[
+        ('yes', 'Yes'),
+        ('no', 'No'),
+    ], string="Was monthly maintenance done for the GeneXpert?", store=True)
+    add_infor_monthly_maintenance_done_by_date = fields.Date(string="Monthly maintenance done by Date",
+                                                             store=True)
+    add_infor_monthly_maintenance_done_by_technologist = fields.Char(string="Monthly maintenance done by technologist",
+                                                                      store=True)
+    add_infor_gene_xpert_serial_number = fields.Char(string="GeneXpert Serial Number", store=True)
+    add_infor_date_gene_xpert_instrument_installed = fields.Date(string="Date GeneXpert Instrument Installed",
+                                                                 store=True)
+    add_infor_instrument_user = fields.Char(string="Instrument User (Tester)", store=True)
+    declaration_testing_personnel = fields.Char(string="Testing Personnel", store=True)
+    declaration_testing_personnel_date = fields.Date(string="Date", store=True)
+    company_id = fields.Many2one('res.company', string="Company", default=lambda self: self.env.company)
+
+    def save_wizard_data(self):
+        # Implement the save logic here
+        pass
 
     def validate_csv_file(self, csv_content):
         csv_reader = csv.reader(StringIO(csv_content))

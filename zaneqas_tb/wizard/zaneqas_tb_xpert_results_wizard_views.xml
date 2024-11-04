@@ -1,0 +1,151 @@
+<odoo>
+<!--    <record id="view_eqa_result_wizard_form" model="ir.ui.view">-->
+<!--        <field name="name">eqa.result.wizard.form</field>-->
+<!--&lt;!&ndash;        <field name="model">zaneqas.tb.xpert.eqa.result.wizard</field>&ndash;&gt;-->
+<!--        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <header>-->
+
+<!--                    <h3>-->
+
+<!--                    </h3>-->
+
+<!--                </header>-->
+
+<!--                <sheet>-->
+<!--                    <div class="oe_title" style="text-align:center;">-->
+
+<!--                    </div>-->
+<!--                    <group>-->
+<!--                        <group>-->
+<!--                            &lt;!&ndash;                            <field name="name" domain="[('state', '=', 'approved')]"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="date_panel_received"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>&ndash;&gt;-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--&lt;!&ndash;                            <field name="xpert_assay_used" domain="[('state', '=', 'approved')]"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="expiry_date"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="catridge_lot_number"/>&ndash;&gt;-->
+<!--                        </group>-->
+
+<!--                        <br/>-->
+<!--                        <br/>-->
+<!--                    </group>-->
+<!--                    <div>-->
+
+<!--                        <br/>-->
+<!--                        <br/>-->
+<!--                        <h5>-->
+<!--                            <b>Instructions:</b>-->
+<!--                            Tick the appropriate checkboxes below corresponding to the-->
+<!--                            results after testing each sample provided. Document the error code in the Error Code column-->
+<!--                            for tests resulting in error. Record the cycle thresholds (Ct) in the cells provided for all-->
+<!--                            successful tests.-->
+<!--                        </h5>-->
+<!--                    </div>-->
+<!--                    <notebook>-->
+<!--                        <page string="TB Detection Result" id="tb_detection_result">-->
+<!--                            <field name="expected_result_lines_ids">-->
+<!--                                <tree editable="top" create="0" delete="0">-->
+<!--                                    <field name="sample_id" readonly="1"/>-->
+<!--                                    <field name="facility_result_date_tested"/>-->
+<!--                                    <field name="facility_result_tb_detection_not_detected"/>-->
+<!--                                    <field name="facility_result_tb_detection_trace"/>-->
+<!--                                    <field name="facility_result_tb_detection_very_low"/>-->
+<!--                                    <field name="facility_result_tb_detection_low"/>-->
+<!--                                    <field name="facility_result_tb_detection_medium"/>-->
+<!--                                    <field name="facility_result_tb_detection_high"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </page>-->
+<!--                        <page string="Rif Detection Result" id="rif_detection_result">-->
+<!--                            <field name="expected_result_lines_ids">-->
+<!--                                <tree editable="top" create="0" delete="0">-->
+<!--                                    <field name="sample_id" readonly="1"/>-->
+<!--                                    <field name="facility_result_rif_na"/>-->
+<!--                                    <field name="facility_result_rif_not_detected"/>-->
+<!--                                    <field name="facility_result_rif_detected"/>-->
+<!--                                    <field name="facility_result_rif_indeterminate"/>-->
+
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </page>-->
+<!--                        <page string="Uninterpretable Result" id="rif_detection_result">-->
+<!--                            <field name="expected_result_lines_ids">-->
+<!--                                <tree editable="top" create="0" delete="0">-->
+<!--                                    <field name="sample_id" readonly="1"/>-->
+<!--                                    <field name="facility_result_uninterpretable_invalid"/>-->
+<!--                                    <field name="facility_result_uninterpretable_no_result"/>-->
+<!--                                    <field name="facility_result_uninterpretable_error"/>-->
+<!--                                    <field name="facility_result_uninterpretable_indeterminate"/>-->
+<!--                                    <field name="facility_result_uninterpretable_error_code"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </page>-->
+<!--                        <page string="TB Detection Result" id="tb_detection_result">-->
+<!--                            <field name="expected_result_lines_ids">-->
+<!--                                <tree editable="top" create="0" delete="0">-->
+<!--                                    <field name="sample_id" readonly="1"/>-->
+<!--                                    <field name="facility_result_ct_probe_d_ultra_spsc"/>-->
+<!--                                    <field name="facility_result_ct_probe_c_is1081_is6110"/>-->
+<!--                                    <field name="facility_result_ct_probe_e_rpob2"/>-->
+<!--                                    <field name="facility_result_ct_probe_b_rpoB1"/>-->
+<!--                                    <field name="facility_result_ct_spc_rpoB3"/>-->
+<!--                                    <field name="facility_result_ct_probe_a_rpob4"/>-->
+<!--                                    <field name="facility_result_ct_xpert_module_number"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
+<!--                    <br/>-->
+<!--&lt;!&ndash;                    <group>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <group>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_number_of_tests_conducted_in_last_full_month"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_number_of_errors_occurred"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_was_monthly_maintenance_done_for_the_genexpert"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_monthly_maintenance_done_by_date"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_monthly_maintenance_done_by_technologist"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <group>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_gene_xpert_serial_number"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_date_gene_xpert_instrument_installed"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="add_infor_instrument_user"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </group>&ndash;&gt;-->
+<!--                    <notebook>-->
+<!--&lt;!&ndash;                        <page string="What Are The Error Codes?" id="tb_detection_result_error_codes">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <field name="zaneqas_tb_xpert_eqa_result_wizard_error_code_ids">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <tree editable="top">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <field name="add_info_error_code"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </tree>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </field>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </page>&ndash;&gt;-->
+<!--                    </notebook>-->
+<!--                    <footer>-->
+<!--                        <button string="Submit" type="object" name="action_submit_results" class="btn-primary"/>-->
+<!--                        <button string="Cancel" class="btn-secondary" special="cancel"/>-->
+<!--                    </footer>-->
+<!--                </sheet>-->
+<!--                <div class="oe_chatter" context="{'validate_analytic': True}">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--&lt;!&ndash;            <form string="EQA Result Wizard">&ndash;&gt;-->
+<!--&lt;!&ndash;                <group>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <field name="name"/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <field name="due_date"/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                    <field name="state"/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <field name="sample_id"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                <footer>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button string="Submit" type="object" name="action_submit_results" class="btn-primary"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button string="Cancel" class="btn-secondary" special="cancel"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </footer>&ndash;&gt;-->
+<!--&lt;!&ndash;            </form>&ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="action_open_form_view_server" model="ir.actions.server">
+        <field name="name">Open Form View</field>
+        <field name="model_id" ref="model_zaneqas_tb_xpert_eqa_expected_result"/>
+        <field name="binding_model_id" ref="model_zaneqas_tb_xpert_eqa_expected_result"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = {
+            'type': 'ir.actions.act_window',
+            'name': 'Submit EQA Results',
+            'res_model': 'zaneqas.tb.xpert.eqa.expected.result',
+            'view_mode': 'form',
+            'view_id': env.ref('zaneqas_tb.view_zaneqas_tb_xpert_eqa_expected_result_wizard_form').id,
+            'res_id': record.id,
+            'target': 'new'
+            }
+            <!--        record.save_wizard_data()-->
+        </field>
+    </record>
 
     <record id="zaneqas_tb_xpert_eqa_expected_results_tree" model="ir.ui.view">
         <field name="name">zaneqas.tb.xpert.eqa.expected.result.tree</field>
@@ -10,11 +28,12 @@
                 <field name="name"/>
                 <field name="due_date"/>
                 <field name="state"/>
-                <button name="action_submit_results"
+                <button name="%(action_open_form_view_server)d"
                         confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"
                         string="Submit Results"
-                        type="object"
+                        type="action"
                         class="btn-primary"
+                        context="{'hide_participants_page': True, 'hide_internal_states': True, 'open_notebook2': True}"
                         invisible="user_in_assigned_company_and_open == False"/>
             </tree>
         </field>
@@ -55,8 +74,9 @@
                             invisible="state != 'supervisor' "/>
 
                     <field name="state" context="{'validate_analytic': True}" widget="statusbar"
-                           statusbar_visible="draft,supervisor,approved,open,closed,extended,resultsPublished"
+                           statusbar_visible="draft,supervisor,approved,open,extended,closed,resultsPublished"
                            options="{'clickable':'1'}"/>
+                    <!--                           invisible = "[('context.hide_internal_states', '=', True), ('state', 'in', ['draft','supervisor','approved'])]"/>-->
 
                 </header>
 
@@ -64,24 +84,19 @@
                     <group>
                         <group>
                             <field name="name" domain="[('state', '=', 'approved')]"/>
+                            <!--                            <field name="name" domain="[('state', '=', 'approved')]" readonly="[('context.hide_participants_page', '=', True)]"/>-->
                             <field name="due_date"/>
-                        </group>
-
-                        <group>
-                            <field name='supervisor_comment'/>
-                            <!--                            <field name="is_supervisor" column_invisible="True"/>-->
-                            <!--                            <field name="is_LabIncharge" column_invisible="True"/>-->
-                            <!--                            <field name="supervisor_comment" readonly="is_supervisor == False"/>-->
-                            <!--                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>-->
+                            <!--                            <field name="due_date" readonly="[('context.hide_participants_page', '=', True)]"/>-->
                         </group>
                     </group>
 
-                    <notebook>
+                    <!--                <notebook invisible="[('user_company_in_list', '=', False)]">-->
+                    <notebook groups="zaneqas_tb.group_cdl_staff">
                         <page string="TB Detection Result" id="tb_detection_result">
-                            <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
+                            <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1"/>
-                                    <field name="tb_detection_not_detected"/>
+                                    <field name="tb_detection_not_detected" string="notebook1"/>
                                     <field name="tb_detection_trace"/>
                                     <field name="tb_detection_very_low"/>
                                     <field name="tb_detection_low"/>
@@ -91,7 +106,7 @@
                             </field>
                         </page>
                         <page string="Rif Detection Result" id="rif_detection_result">
-                            <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
+                            <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1" force_save="1"/>
                                     <field name="rif_na"/>
@@ -102,7 +117,7 @@
                             </field>
                         </page>
                         <page string="Uninterpretable Result" id="rif_detection_result">
-                            <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
+                            <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1" force_save="1"/>
                                     <field name="uninterpretable_invalid"/>
@@ -114,8 +129,8 @@
                             </field>
                         </page>
                         <page string="TB Detection Result" id="tb_detection_result">
-                            <field name="zaneqas_tb_xpert_eqa_expected_result_ids">
-                                <tree editable="top" create="0" delete="0">
+                            <field name="sample_ids">
+                                <tree editable="top">
                                     <field name="sample_id" readonly="1" force_save="1"/>
                                     <field name="ct_probe_d_ultra_spsc"/>
                                     <field name="ct_probe_c_is1081_is6110"/>
@@ -128,26 +143,27 @@
                             </field>
                         </page>
                     </notebook>
-                    <notebook>
-                        <page string="Participant(s)">
+
+                    <notebook groups="zaneqas_tb.group_cdl_staff">
+                        <page string="Participant(s)" invisible="context.hide_participants_page == False">
                             <group>
                                 <a name="download_csv_template"
-                                   type="object"
-                                   invisible="state != 'draft' and company_ids">
+                                   type="object">
+                                    <!--                                   invisible="state != 'draft' and company_ids">-->
                                     Download Template
                                 </a>
-                                <field name="csv_file" filename="csv_filename"
-                                       invisible="state != 'draft' or company_ids"/>
+                                <field name="csv_file" filename="csv_filename"/>
+                                <!--                                       invisible="state != 'draft' or company_ids"/>-->
                                 <a name="action_test_upload"
                                    type="object"
-                                   string="Test Upload"
-                                   invisible="state != 'draft' or not csv_file">
+                                   string="Test Upload">
+                                    <!--                                   invisible="state != 'draft' or not csv_file">-->
                                     Test Upload
                                 </a>
                                 <a name="import_companies_from_csv"
                                    confirm="Are you sure you want to import companies from the attached file?"
-                                   type="object"
-                                   invisible="state != 'draft' and company_ids">
+                                   type="object">
+                                    <!--                                   invisible="state != 'draft' and company_ids">-->
                                     Import Participating Facilities
                                 </a>
                             </group>
@@ -158,11 +174,147 @@
                             <!--                            <field name="company_ids" widget="many2many_tags"/>-->
                         </page>
                     </notebook>
+
                 </sheet>
                 <div class="oe_chatter" context="{'validate_analytic': True}">
                     <field name="message_follower_ids"/>
                     <field name="message_ids"/>
                 </div>
+            </form>
+        </field>
+    </record>
+    <record id="view_zaneqas_tb_xpert_eqa_expected_result_wizard_form" model="ir.ui.view">
+        <field name="name">zaneqas.tb.xpert.eqa.expected.result.wizard.form</field>
+        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <h3>
+                        <field name="name" readonly="1" nolabel="1" widget="statusbar" options="{'clickable':'0'}"/>
+                    </h3>
+
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="is_supervisor" invisible="1"/>
+                            <field name="is_LabIncharge" invisible="1"/>
+                            <field name="supervisor_comment" readonly="is_supervisor == False"/>
+                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>
+                        </group>
+                    </group>
+
+
+                    <div class="oe_title" style="text-align:center;">
+
+                    </div>
+                    <group>
+                        <group>
+                            <!--                            <field name="name" domain="[('state', '=', 'approved')]"/>-->
+                            <field name="date_panel_received"/>
+                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
+                        </group>
+                        <group>
+                            <field name="xpert_assay_used" domain="[('state', '=', 'approved')]"/>
+                            <field name="expiry_date"/>
+                            <field name="catridge_lot_number"/>
+                        </group>
+
+                        <br/>
+                        <br/>
+                    </group>
+                    <div>
+
+                        <br/>
+                        <br/>
+                        <h5>
+                            <b>Instructions:</b>
+                            Tick the appropriate checkboxes below corresponding to the
+                            results after testing each sample provided. Document the error code in the Error Code column
+                            for tests resulting in error. Record the cycle thresholds (Ct) in the cells provided for all
+                            successful tests.
+                        </h5>
+                    </div>
+                    <notebook>
+                        <page string="TB Detection Result" id="tb_detection_result">
+                            <field name="sample_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_date_tested" string="notebook2"/>
+                                    <field name="facility_result_tb_detection_not_detected"/>
+                                    <field name="facility_result_tb_detection_trace"/>
+                                    <field name="facility_result_tb_detection_very_low"/>
+                                    <field name="facility_result_tb_detection_low"/>`
+                                    <field name="facility_result_tb_detection_medium"/>
+                                    <field name="facility_result_tb_detection_high"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Rif Detection Result" id="rif_detection_result">
+                            <field name="sample_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_rif_na"/>
+                                    <field name="facility_result_rif_not_detected"/>
+                                    <field name="facility_result_rif_detected"/>
+                                    <field name="facility_result_rif_indeterminate"/>
+
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Uninterpretable Result" id="rif_detection_result">
+                            <field name="sample_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_uninterpretable_invalid"/>
+                                    <field name="facility_result_uninterpretable_no_result"/>
+                                    <field name="facility_result_uninterpretable_error"/>
+                                    <field name="facility_result_uninterpretable_indeterminate"/>
+                                    <field name="facility_result_uninterpretable_error_code"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="TB Detection Result" id="tb_detection_result">
+                            <field name="sample_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_ct_probe_d_ultra_spsc"/>
+                                    <field name="facility_result_ct_probe_c_is1081_is6110"/>
+                                    <field name="facility_result_ct_probe_e_rpob2"/>
+                                    <field name="facility_result_ct_probe_b_rpoB1"/>
+                                    <field name="facility_result_ct_spc_rpoB3"/>
+                                    <field name="facility_result_ct_probe_a_rpob4"/>
+                                    <field name="facility_result_ct_xpert_module_number"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <br/>
+                    <group>
+                        <group>
+
+                            <field name="add_infor_was_monthly_maintenance_done_for_the_genexpert"/>
+                            <field name="add_infor_monthly_maintenance_done_by_date"/>
+                            <field name="add_infor_monthly_maintenance_done_by_technologist"/>
+                            <field name="add_infor_instrument_user"/>
+                        </group>
+                        <group>
+                            <field name="add_infor_number_of_tests_conducted_in_last_full_month"/>
+                            <field name="add_infor_number_of_errors_occurred"/>
+                            <field name="add_infor_gene_xpert_serial_number"/>
+                            <field name="add_infor_date_gene_xpert_instrument_installed"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="What Are The Error Codes?" id="tb_detection_result_error_codes">
+                            <field name="zaneqas_tb_xpert_eqa_result_wizard_error_code_ids">
+                                <tree editable="top">
+                                    <field name="add_info_error_code"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
             </form>
         </field>
     </record>
@@ -190,5 +342,6 @@
             </p>
         </field>
     </record>
+
 
 </odoo>

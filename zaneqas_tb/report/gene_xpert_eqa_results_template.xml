@@ -106,7 +106,7 @@
                                         <span>Closing
                                             Date:
 
-                                            <span t-field="lab.due_date"/>
+<!--                                            <span t-field="lab.due_date"/>-->
                                             |
                                         </span>
                                         <span>Results return
@@ -163,10 +163,41 @@
                                                             <span>All Participants’ Consensus Results</span>
                                                         </td>
                                                         <td>
+                                                            <!--! begin facility results-->
+                                                            <t t-if="result.facility_result_tb_detection_not_detected">
+                                                                <span>Not Detected</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_tb_detection_trace">
+                                                                <span>Trace</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_tb_detection_very_low">
+                                                                <span>Very Low</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_tb_detection_low">
+                                                                <span>Low</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_tb_detection_medium">
+                                                                <span>Medium</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_tb_detection_high">
+                                                                <span>High</span>
+                                                                <br/>
+                                                            </t>
+                                                            <!--! end facility results-->
+                                                            <!--! begin expected results-->
+
                                                             <t t-if="result.tb_detection_not_detected">
                                                                 <span>Not Detected</span>
                                                                 <br/>
                                                             </t>
+                                                            <!-- end expected results-->
+                                                            <!-- begin consensus results-->
+                                                            <!-- end consensus results-->
                                                             <t t-if="result.tb_detection_trace">
                                                                 <span>Trace</span>
                                                                 <br/>
@@ -187,6 +218,12 @@
                                                                 <span>High</span>
                                                                 <br/>
                                                             </t>
+
+
+
+
+
+                                                            <!--!-->
                                                             <t t-foreach="lab.expected_result_lines_ids" t-as="line">
                                                                 <span t-field="line.tb_detection_not_detected"/>
                                                                 <span t-field="line.tb_detection_trace"/>
@@ -197,6 +234,22 @@
                                                             </t>
                                                         </td>
                                                         <td>
+                                                            <t t-if="result.facility_result_rif_na">
+                                                                <span>N/A</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_rif_not_detected">
+                                                                <span>Not Detected</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_rif_detected">
+                                                                <span>Detected</span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-if="result.facility_result_rif_indeterminate">
+                                                                <span>Indeterminate</span>
+                                                                <br/>
+                                                            </t>
                                                             <t t-if="result.rif_na">
                                                                 <span>N/A</span>
                                                                 <br/>
@@ -270,11 +323,11 @@
                                         </tr>
                                         <tr>
                                             <td>Total number of participating sites</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
+                                            <td class="text-center"> <span t-field="lab.company_count"/></td>
+                                            <td class="text-center"> <span t-field="lab.company_count"/></td>
+                                            <td class="text-center"> <span t-field="lab.company_count"/></td>
+                                            <td class="text-center"> <span t-field="lab.company_count"/></td>
+                                            <td class="text-center"> <span t-field="lab.company_count"/></td>
                                         </tr>
                                         <tr>
                                             <td>Sites detecting TB (%)</td>

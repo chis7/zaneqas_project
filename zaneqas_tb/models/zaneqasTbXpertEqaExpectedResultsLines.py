@@ -47,7 +47,7 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     # zaneqas_tb_xpert_eqa_expected_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
     #                                                           string="zaneqas tb xpert eqa result", store=True)
 
-    facility_result_date_tested = fields.Date(string="Date Tested", store=True)
+    facility_result_date_tested = fields.Date(string="Date Tested", store=True, default=False)
     facility_result_tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
     facility_result_tb_detection_trace = fields.Boolean(string="Trace", store=True)
     facility_result_tb_detection_very_low = fields.Boolean(string="Very Low", store=True)

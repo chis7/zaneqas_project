@@ -38,6 +38,13 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="Error Codes"
     )
 
+    @api.model
+    def default_get(self, fields_list):
+        res = super(ZaneqasTbXpertEqaExpectedResults, self).default_get(fields_list)
+        for field in fields_list:
+            res[field] = False  # Clear the field by setting it to False
+        return res
+
     @api.onchange('name')
     def _onchange_name(self):
         self.sample_ids = [(5, 0, 0)]  # Clear existing values
@@ -61,7 +68,6 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="Status",
         required=True,
         tracking=True
-
     )
     lab_incharge_comment = fields.Char(string="Lab Incharge Comment", tracking=True)
 
@@ -112,8 +118,6 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     declaration_testing_personnel = fields.Char(string="Testing Personnel", store=True)
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
     company_id = fields.Many2one('res.company', string="Company", default=lambda self: self.env.company)
-
-
 
     def validate_csv_file(self, csv_content):
         csv_reader = csv.reader(StringIO(csv_content))
@@ -267,8 +271,9 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             'add_infor_gene_xpert_serial_number': self.add_infor_gene_xpert_serial_number,
             'add_infor_date_gene_xpert_instrument_installed': self.add_infor_date_gene_xpert_instrument_installed,
             'add_infor_instrument_user': self.add_infor_instrument_user,
-            'company_id': self.company_id.id,
+            'company_id': self.env.user.company_id.id,
             'state': 'draft',
+            'site_id': self.env.user.company_id.id,
 
         }
 
@@ -303,10 +308,32 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
                 'facility_result_ct_probe_a_rpob4': sample.facility_result_ct_probe_a_rpob4,
                 'facility_result_ct_xpert_module_number': sample.facility_result_ct_xpert_module_number,
                 'score': 0,
+                'tb_detection_not_detected': sample.tb_detection_not_detected,
+                'tb_detection_trace': sample.tb_detection_trace,
+                'tb_detection_very_low': sample.tb_detection_very_low,
+                'tb_detection_low': sample.tb_detection_low,
+                'tb_detection_medium': sample.tb_detection_medium,
+                'tb_detection_high': sample.tb_detection_high,
+                'rif_na': sample.rif_na,
+                'rif_not_detected': sample.rif_not_detected,
+                'rif_detected': sample.rif_detected,
+                'rif_indeterminate': sample.rif_indeterminate,
+                'uninterpretable_invalid': sample.uninterpretable_invalid,
+                'uninterpretable_no_result': sample.uninterpretable_no_result,
+                'uninterpretable_error': sample.uninterpretable_error,
+                'uninterpretable_indeterminate': sample.uninterpretable_indeterminate,
+                'uninterpretable_error_code': sample.uninterpretable_error_code,
+                'ct_probe_d_ultra_spsc': sample.ct_probe_d_ultra_spsc,
+                'ct_probe_c_is1081_is6110': sample.ct_probe_c_is1081_is6110,
+                'ct_probe_e_rpob2': sample.ct_probe_e_rpob2,
+                'ct_probe_b_rpoB1': sample.ct_probe_b_rpoB1,
+                'ct_spc_rpoB3': sample.ct_spc_rpoB3,
+                'ct_probe_a_rpob4': sample.ct_probe_a_rpob4,
+                'ct_xpert_module_number': sample.ct_xpert_module_number,
+
             }
 
             self.env['zaneqas.tb.xpert.eqa.result.lines'].create(form_data_2)
-
 
     def action_send_email_to_companies(self):
         for company in self.company_ids:

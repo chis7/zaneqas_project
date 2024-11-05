@@ -95,7 +95,7 @@
                             <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1"/>
-                                    <field name="tb_detection_not_detected" string="notebook1"/>
+                                    <field name="tb_detection_not_detected"/>
                                     <field name="tb_detection_trace"/>
                                     <field name="tb_detection_very_low"/>
                                     <field name="tb_detection_low"/>
@@ -239,7 +239,7 @@
                             <field name="sample_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1"/>
-                                    <field name="facility_result_date_tested" string="notebook2"/>
+                                    <field name="facility_result_date_tested"/>
                                     <field name="facility_result_tb_detection_not_detected"/>
                                     <field name="facility_result_tb_detection_trace"/>
                                     <field name="facility_result_tb_detection_very_low"/>
@@ -315,7 +315,7 @@
                     </notebook>
                 </sheet>
                 <footer>
-                    <button string="Submit" type="object" name="action_submit_results" class="btn-primary"/>
+                    <button string="Submit" type="object" name="action_submit_results" class="btn-primary" confirm="Are you sure you want to submit?"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>

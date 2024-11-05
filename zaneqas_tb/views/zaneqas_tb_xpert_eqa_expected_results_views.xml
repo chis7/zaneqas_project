@@ -15,7 +15,6 @@
             'res_id': record.id,
             'target': 'new'
             }
-            <!--        record.save_wizard_data()-->
         </field>
     </record>
 
@@ -315,6 +314,10 @@
                         </page>
                     </notebook>
                 </sheet>
+                <footer>
+                    <button string="Submit" type="object" name="action_submit_results" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
             </form>
         </field>
     </record>

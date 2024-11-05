@@ -70,6 +70,6 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     facility_result_ct_probe_a_rpob4 = fields.Float(string="Probe A/rpoB4", store=True)
     facility_result_ct_xpert_module_number = fields.Char(string="Xpert Module Number", store=True)
 
-    def action_submit_results(self):
-        # Implement the logic for submitting results
-        pass
+    # def action_submit_results(self):
+    #     # Implement the logic for submitting results
+    #     pass

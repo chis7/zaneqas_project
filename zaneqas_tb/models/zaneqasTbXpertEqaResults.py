@@ -11,7 +11,7 @@ class ZaneqasTbXpertEqaResults(models.Model):
     _inherit = ["mail.thread"]
     _description = "zaneqas tb xpert eqa results"
 
-    name = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="Cycle")
+    name = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="Cycle", ondelete='cascade')
     site_id = fields.Many2one('res.partner', string='Name of Site')
     date_panel_received = fields.Date(string='Date Panel Received', required=True)
     date_of_last_gene_xpert_instrument_calibration_or_installation = fields.Date(

@@ -102,7 +102,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     add_infor_monthly_maintenance_done_by_date = fields.Date(string="Monthly maintenance done by Date",
                                                              store=True)
     add_infor_monthly_maintenance_done_by_technologist = fields.Char(string="Monthly maintenance done by technologist",
-                                                                      store=True)
+                                                                     store=True)
     add_infor_gene_xpert_serial_number = fields.Char(string="GeneXpert Serial Number", store=True)
     add_infor_date_gene_xpert_instrument_installed = fields.Date(string="Date GeneXpert Instrument Installed",
                                                                  store=True)
@@ -235,9 +235,42 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         self.write({'state': 'open'})
         self.action_send_email_to_companies()
 
+    def action_extend_eqa_result(self):
+        self.write({'state': 'extended'})
+
+    def action_close_eqa_result(self):
+        self.write({'state': 'closed'})
+
+    def action_publish_results(self):
+        self.write({'state': 'resultsPublished'})
+
     def action_submit_results(self):
-        # Implement the logic for submitting results
-        pass
+        # Ensure the referenced record exists
+        expected_result = self.env['zaneqas.tb.xpert.eqa.expected.result'].browse(self.id)
+        if not expected_result.exists():
+            raise UserError(f"Referenced expected result with id {self.name.id} does not exist.")
+
+        form_data = {
+            'name': self.id,
+            'supervisor_comment': self.supervisor_comment,
+            'lab_incharge_comment': self.lab_incharge_comment,
+            'date_panel_received': self.date_panel_received,
+            'date_of_last_gene_xpert_instrument_calibration_or_installation': self.date_of_last_gene_xpert_instrument_calibration_or_installation,
+            'xpert_assay_used': self.xpert_assay_used.id,
+            'catridge_lot_number': self.catridge_lot_number,
+            'expiry_date': self.expiry_date,
+            'add_infor_number_of_tests_conducted_in_last_full_month': self.add_infor_number_of_tests_conducted_in_last_full_month,
+            'add_infor_number_of_errors_occurred': self.add_infor_number_of_errors_occurred,
+            'add_infor_was_monthly_maintenance_done_for_the_genexpert': self.add_infor_was_monthly_maintenance_done_for_the_genexpert,
+            'add_infor_monthly_maintenance_done_by_date': self.add_infor_monthly_maintenance_done_by_date,
+            'add_infor_monthly_maintenance_done_by_technologist': self.add_infor_monthly_maintenance_done_by_technologist,
+            'add_infor_gene_xpert_serial_number': self.add_infor_gene_xpert_serial_number,
+            'add_infor_date_gene_xpert_instrument_installed': self.add_infor_date_gene_xpert_instrument_installed,
+            'add_infor_instrument_user': self.add_infor_instrument_user,
+            'company_id': self.company_id.id,
+        }
+
+        self.env['zaneqas.tb.xpert.eqa.result'].create(form_data)
 
     def action_send_email_to_companies(self):
         for company in self.company_ids:

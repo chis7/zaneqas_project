@@ -74,6 +74,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="User in Assigned Company and Open",
         compute='_compute_user_in_assigned_company_and_open'
     )
+    sample_id = fields.Char(string="Test Sample ID", store=True)
+    date_tested = fields.Date(string="Date Tested", store=True)
 
     company_count = fields.Integer(string='Company Count', compute='_compute_company_count', store=True)
 
@@ -111,9 +113,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
     company_id = fields.Many2one('res.company', string="Company", default=lambda self: self.env.company)
 
-    def save_wizard_data(self):
-        # Implement the save logic here
-        pass
+
 
     def validate_csv_file(self, csv_content):
         csv_reader = csv.reader(StringIO(csv_content))
@@ -268,9 +268,45 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             'add_infor_date_gene_xpert_instrument_installed': self.add_infor_date_gene_xpert_instrument_installed,
             'add_infor_instrument_user': self.add_infor_instrument_user,
             'company_id': self.company_id.id,
+            'state': 'draft',
+
         }
 
-        self.env['zaneqas.tb.xpert.eqa.result'].create(form_data)
+        new_record = self.env['zaneqas.tb.xpert.eqa.result'].create(form_data)
+        new_record_id = new_record.id
+
+        for sample in self.sample_ids:
+            form_data_2 = {
+                'zaneqas_tb_xpert_eqa_result_id': new_record_id,
+                'sample_id': sample.sample_id,
+                'facility_result_date_tested': sample.facility_result_date_tested,
+                'facility_result_tb_detection_not_detected': sample.facility_result_tb_detection_not_detected,
+                'facility_result_tb_detection_trace': sample.facility_result_tb_detection_trace,
+                'facility_result_tb_detection_very_low': sample.facility_result_tb_detection_very_low,
+                'facility_result_tb_detection_low': sample.facility_result_tb_detection_low,
+                'facility_result_tb_detection_medium': sample.facility_result_tb_detection_medium,
+                'facility_result_tb_detection_high': sample.facility_result_tb_detection_high,
+                'facility_result_rif_na': sample.facility_result_rif_na,
+                'facility_result_rif_not_detected': sample.facility_result_rif_not_detected,
+                'facility_result_rif_detected': sample.facility_result_rif_detected,
+                'facility_result_rif_indeterminate': sample.facility_result_rif_indeterminate,
+                'facility_result_uninterpretable_invalid': sample.facility_result_uninterpretable_invalid,
+                'facility_result_uninterpretable_no_result': sample.facility_result_uninterpretable_no_result,
+                'facility_result_uninterpretable_error': sample.facility_result_uninterpretable_error,
+                'facility_result_uninterpretable_indeterminate': sample.facility_result_uninterpretable_indeterminate,
+                'facility_result_uninterpretable_error_code': sample.facility_result_uninterpretable_error_code,
+                'facility_result_ct_probe_d_ultra_spsc': sample.facility_result_ct_probe_d_ultra_spsc,
+                'facility_result_ct_probe_c_is1081_is6110': sample.facility_result_ct_probe_c_is1081_is6110,
+                'facility_result_ct_probe_e_rpob2': sample.facility_result_ct_probe_e_rpob2,
+                'facility_result_ct_probe_b_rpoB1': sample.facility_result_ct_probe_b_rpoB1,
+                'facility_result_ct_spc_rpoB3': sample.facility_result_ct_spc_rpoB3,
+                'facility_result_ct_probe_a_rpob4': sample.facility_result_ct_probe_a_rpob4,
+                'facility_result_ct_xpert_module_number': sample.facility_result_ct_xpert_module_number,
+                'score': 0,
+            }
+
+            self.env['zaneqas.tb.xpert.eqa.result.lines'].create(form_data_2)
+
 
     def action_send_email_to_companies(self):
         for company in self.company_ids:

@@ -19,6 +19,7 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     #     string="Rounds Sample Line",
     #     ondelete='cascade'
     # )
+
     sample_id = fields.Char(string="Test Sample ID", store=True)
     tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
     tb_detection_trace = fields.Boolean(string="Trace", store=True)

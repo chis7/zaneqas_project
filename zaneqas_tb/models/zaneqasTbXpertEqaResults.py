@@ -94,6 +94,14 @@ class ZaneqasTbXpertEqaResults(models.Model):
         readonly=True,
         store=True
     )
+    company_count = fields.Integer(
+        related='name.company_count',
+        string="Company Count",
+        readonly=True,
+        store=True
+    )
+    due_date=fields.Date(string="Due Date", related='name.due_date', store=True)
+    total_score = fields.Integer(string='Total Score', store=True)
 
     # Define the print_report method
 
@@ -154,13 +162,13 @@ class ZaneqasTbXpertEqaResults(models.Model):
             ):
                 score += 20
             if (expected_result.tb_detection_not_detected == actual_result.tb_detection_not_detected and
-                        expected_result.tb_detection_trace == actual_result.tb_detection_trace and
-                        expected_result.tb_detection_very_low == actual_result.tb_detection_very_low and
-                        expected_result.tb_detection_low == actual_result.tb_detection_low and
-                        expected_result.tb_detection_medium == actual_result.tb_detection_medium and
-                        expected_result.tb_detection_high == actual_result.tb_detection_high
-                ) and (actual_result.rif_indeterminate == True):
-                    score += 10
+                expected_result.tb_detection_trace == actual_result.tb_detection_trace and
+                expected_result.tb_detection_very_low == actual_result.tb_detection_very_low and
+                expected_result.tb_detection_low == actual_result.tb_detection_low and
+                expected_result.tb_detection_medium == actual_result.tb_detection_medium and
+                expected_result.tb_detection_high == actual_result.tb_detection_high
+            ) and (actual_result.rif_indeterminate == True):
+                score += 10
             if (actual_result.uninterpretable_invalid or actual_result.uninterpretable_no_result or
                     actual_result.uninterpretable_error or actual_result.uninterpretable_indeterminate):
                 score += 5
@@ -194,7 +202,6 @@ class ZaneqasTbXpertEqaResults(models.Model):
                 mail = self.env['mail.mail'].create(mail_values)
                 mail.send()
 
-
     def action_supervisor_approve_eqa_result(self):
         self.write({'state': 'lab_incharge'})
         group = self.env.ref("zaneqas_tb.group_labIncharge_approve_site_eqa_results")
@@ -221,4 +228,3 @@ class ZaneqasTbXpertEqaResults(models.Model):
     def action_LabIncharge_approve_eqa_result(self):
         self.write({'state': 'approved',
                     'date_results_received_at_CDL': fields.Date.today()})
-

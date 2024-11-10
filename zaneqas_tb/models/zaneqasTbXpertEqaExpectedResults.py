@@ -279,8 +279,44 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
 
         new_record = self.env['zaneqas.tb.xpert.eqa.result'].create(form_data)
         new_record_id = new_record.id
+        total_score = 0
 
         for sample in self.sample_ids:
+            score = 0
+            if (sample.tb_detection_not_detected == sample.facility_result_tb_detection_not_detected and
+                    sample.tb_detection_trace == sample.facility_result_tb_detection_trace and
+                    sample.tb_detection_very_low == sample.facility_result_tb_detection_very_low and
+                    sample.tb_detection_low == sample.facility_result_tb_detection_low and
+                    sample.tb_detection_medium == sample.facility_result_tb_detection_medium and
+                    sample.tb_detection_high == sample.facility_result_tb_detection_high and
+                    sample.rif_na == sample.facility_result_rif_na and
+                    sample.rif_not_detected == sample.facility_result_rif_not_detected and
+                    sample.rif_detected == sample.facility_result_rif_detected):
+                score = 20
+            elif (sample.tb_detection_not_detected == sample.facility_result_tb_detection_not_detected and
+                  sample.tb_detection_trace == sample.facility_result_tb_detection_trace and
+                  sample.tb_detection_very_low == sample.facility_result_tb_detection_very_low and
+                  sample.tb_detection_low == sample.facility_result_tb_detection_low and
+                  sample.tb_detection_medium == sample.facility_result_tb_detection_medium and
+                  sample.tb_detection_high == sample.facility_result_tb_detection_high and
+                  sample.rif_indeterminate):
+                score = 10
+            elif (sample.facility_result_uninterpretable_invalid or
+                  sample.facility_result_uninterpretable_no_result or
+                  sample.facility_result_uninterpretable_error or
+                  sample.facility_result_uninterpretable_indeterminate):
+                score = 5
+            elif (not sample.facility_result_tb_detection_not_detected and
+                  not sample.facility_result_tb_detection_trace and
+                  not sample.facility_result_tb_detection_very_low and
+                  not sample.facility_result_tb_detection_low and
+                  not sample.facility_result_tb_detection_medium and
+                  not sample.facility_result_tb_detection_high and
+                  not sample.facility_result_rif_na and
+                  not sample.facility_result_rif_not_detected and
+                  not sample.facility_result_rif_detected):
+                score = 0
+            total_score += score
             form_data_2 = {
                 'zaneqas_tb_xpert_eqa_result_id': new_record_id,
                 'sample_id': sample.sample_id,
@@ -307,7 +343,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
                 'facility_result_ct_spc_rpoB3': sample.facility_result_ct_spc_rpoB3,
                 'facility_result_ct_probe_a_rpob4': sample.facility_result_ct_probe_a_rpob4,
                 'facility_result_ct_xpert_module_number': sample.facility_result_ct_xpert_module_number,
-                'score': 0,
+                'score': score,
                 'tb_detection_not_detected': sample.tb_detection_not_detected,
                 'tb_detection_trace': sample.tb_detection_trace,
                 'tb_detection_very_low': sample.tb_detection_very_low,
@@ -334,6 +370,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             }
 
             self.env['zaneqas.tb.xpert.eqa.result.lines'].create(form_data_2)
+            new_record.write({'total_score': total_score})
 
     def action_send_email_to_companies(self):
         for company in self.company_ids:

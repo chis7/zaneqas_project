@@ -19,6 +19,7 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     #     string="Rounds Sample Line",
     #     ondelete='cascade'
     # )
+
     sample_id = fields.Char(string="Test Sample ID", store=True)
     tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
     tb_detection_trace = fields.Boolean(string="Trace", store=True)
@@ -46,7 +47,7 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     # zaneqas_tb_xpert_eqa_expected_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
     #                                                           string="zaneqas tb xpert eqa result", store=True)
 
-    facility_result_date_tested = fields.Date(string="Date Tested", store=True)
+    facility_result_date_tested = fields.Date(string="Date Tested", store=True, default=False)
     facility_result_tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
     facility_result_tb_detection_trace = fields.Boolean(string="Trace", store=True)
     facility_result_tb_detection_very_low = fields.Boolean(string="Very Low", store=True)
@@ -70,6 +71,6 @@ class ZaneqasTbXpertEqaExpectedResultsLines(models.Model):
     facility_result_ct_probe_a_rpob4 = fields.Float(string="Probe A/rpoB4", store=True)
     facility_result_ct_xpert_module_number = fields.Char(string="Xpert Module Number", store=True)
 
-    def action_submit_results(self):
-        # Implement the logic for submitting results
-        pass
+    # def action_submit_results(self):
+    #     # Implement the logic for submitting results
+    #     pass

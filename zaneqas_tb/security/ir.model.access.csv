@@ -13,5 +13,6 @@ access_zaneqas_tb_xpert_eqa_result_wizard,access.zaneqas.tb.xpert.eqa.result.wiz
 access_zaneqas_tb_xpert_eqa_result_wizard_lines,access.zaneqas.tb.xpert.eqa.result.wizard.lines,model_zaneqas_tb_xpert_eqa_result_wizard_lines,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_result_wizard_error_code_lines,access.zaneqas.tb.xpert.eqa.result.wizard.error.code.lines,model_zaneqas_tb_xpert_eqa_result_wizard_error_code_lines,,1,1,1,1
 access_zaneqas_tb_xpert_eqa_rounds_sample_lines,access.zaneqas.tb.xpert.eqa.rounds.sample.lines,model_zaneqas_tb_xpert_eqa_rounds_sample_lines,,1,1,1,1
+access_res_company_user,access.res.company.user,base.model_res_company,base.group_user,1,0,0,0
 
 

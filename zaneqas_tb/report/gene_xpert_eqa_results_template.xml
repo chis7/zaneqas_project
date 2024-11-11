@@ -3,484 +3,576 @@
     <data>
         <template id="report_gene_xpert_eqa_results_temp">
             <t t-foreach="docs" t-as="lab">
-                <style>
-                    .header {
-                    text-align: center;
-                    font-size: 14px;
-                    font-weight: bold;
-                    margin-bottom: 20px;
-                    }
-                    <!--                    .small-font {-->
-                    <!--                    font-size: 6px;-->
-                    <!--                    }-->
-                    .footer {
-                    text-align: center;
-                    position: fixed;
-                    bottom: 0;
-                    width: 100%;
-                    font-size: 8px;
-                    }
+                <div class="page" style="width: 80%; margin: auto; margin-top:10;">
+                    <style>
+                        .header {
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                        }
+                        <!--                    .small-font {-->
+                        <!--                    font-size: 6px;-->
+                        <!--                    }-->
+                        .footer {
+                        text-align: center;
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                        font-size: 8px;
+                        }
 
-                    .watermark {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url('/zaneqas_tb/static/src/img/tb_icon.png');
-                    background-repeat: repeat;
-                    opacity: 0.1;
-                    z-index: -1;
-                    }
-                </style>
-                <div class="header">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr style="text-align:center;">
-                                <th rowspan="4">
-                                    <img t-att-src="'/zaneqas_tb/static/src/img/coa.png'" alt="logo"/>
-                                </th>
-                                <th rowspan="4">Ministry of Health
-                                    <br/>
-                                    <br/>
-                                    Chest Diseases
-                                    <br/>
-                                    <br/>
-                                    Laboratory
-                                </th>
-                                <th colspan="4">Xpert MTB/RIF-Ultra
-                                    Individual Performance Report Form
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>Effective Date:
-                                    <b>30/10/2022</b>
-                                </td>
-                                <td>DOC No:
-                                    <b>TF-CDL-011</b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Review Date:
-                                    <b>30/10/2025</b>
-                                </td>
-                                <td>Version:
-                                    <b>01</b>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Site Name:
-                                    <b>
-                                        <span t-field="lab.company_name"/>
-                                    </b>
-                                </td>
-                                <td>Participant Lab Code:
-                                    <b>CDL-011</b>
-                                </td>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div class="small-font">
-                    <t t-call="web.basic_layout">
+                        .watermark {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: url('/zaneqas_tb/static/src/img/tb_icon.png');
+                        background-repeat: repeat;
+                        opacity: 0.1;
+                        z-index: -1;
+                        }
+                    </style>
+                    <div class="header">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr style="text-align:center;">
+                                    <th rowspan="4">
+                                        <img t-att-src="'/zaneqas_tb/static/src/img/coa.png'" alt="logo"/>
+                                    </th>
+                                    <th rowspan="4">Ministry of Health
+                                        <br/>
+                                        <br/>
+                                        Chest Diseases
+                                        <br/>
+                                        <br/>
+                                        Laboratory
+                                    </th>
+                                    <th colspan="4">Xpert MTB/RIF-Ultra
+                                        Individual Performance Report Form
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>Effective Date:
+                                        <b>30/10/2022</b>
+                                    </td>
+                                    <td>DOC No:
+                                        <b>TF-CDL-011</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Review Date:
+                                        <b>30/10/2025</b>
+                                    </td>
+                                    <td>Version:
+                                        <b>01</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Site Name:
+                                        <b>
+                                            <span t-field="lab.company_name"/>
+                                        </b>
+                                    </td>
+                                    <td>Participant Lab Code:
+                                        <b>CDL-011</b>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="small-font">
+                        <t t-call="web.basic_layout">
 
-                        <!--                    <t t-call="web.external_layout">-->
-                        <div class="page">
-                            <div class="row" style="text-size:10">
-                                <div class="col-12">
-                                    <div class="text-center">
-                                        <span>PT Cycle No:
+                            <!--                    <t t-call="web.external_layout">-->
+                            <div class="page">
+                                <div class="row" style="text-size:10">
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <span>PT Cycle No:
 
-                                            <span t-field="lab.name"/>
-                                            |
-                                        </span>
-                                        <span>Date PT Shipped:
+                                                <span t-field="lab.name"/>
+                                                |
+                                            </span>
+                                            <span>Date PT Shipped:
 
-                                            05/06/2024 |
-                                        </span>
-                                        <span>Date PT
-                                            received:
+                                                <span t-field="lab.due_date"/>
+                                                |
+                                            </span>
+                                            <span>Date PT
+                                                received:
 
-                                            07/06/2024 |
-                                        </span>
-                                        <span>Closing
-                                            Date:
+                                                <span t-field="lab.date_panel_received"/>
+                                                |
+                                            </span>
+                                            <span>Closing
+                                                Date:
 
-                                            <span t-field="lab.due_date"/>
-                                            |
-                                        </span>
-                                        <span>Results return
-                                            date
-                                            to CDL:
+                                                <span t-field="lab.due_date"/>
+                                                |
+                                            </span>
+                                            <span>Results return
+                                                date
+                                                to CDL:
 
-                                            <span t-field="lab.write_date"/>
-                                            |
-                                        </span>
+                                                <span t-field="lab.write_date"/>
+                                                |
+                                            </span>
 
-                                        <span>Shipment TAT:
-                                            7 days |
-                                        </span>
-                                        <span>Results TAT:
+                                            <span>Shipment TAT:
+                                                7 days |
+                                            </span>
+                                            <span>Results TAT:
 
-                                            0 days |
-                                        </span>
-                                        <span>Report Issue
-                                            date:
+                                                0 days |
+                                            </span>
+                                            <span>Report Issue
+                                                date:
 
-                                            30/11/2024
-                                        </span>
-                                    </div>
-                                    <br/>
-                                    <table class="table table-bordered" style="table-layout: Flex">
-                                        <thead>
-                                            <tr>
-                                            </tr>
-                                        </thead>
-                                        <tbody style="text-align:center;">
-                                            <t>
-                                                <tr style="font-weight:bold;">
-                                                    <td>Sample ID
-                                                    </td>
-                                                    <td/>
-                                                    <td>MTB Detected
-                                                    </td>
-                                                    <td>Rif
-                                                        Resistance
-                                                    </td>
-                                                    <td>Score</td>
-
+                                                30/11/2024
+                                            </span>
+                                        </div>
+                                        <br/>
+                                        <table class="table table-bordered" style="table-layout: Flex">
+                                            <thead>
+                                                <tr>
                                                 </tr>
-                                                <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
-                                                    <tr>
-                                                        <td>
-                                                            <span style="font-weight:bold;" t-field="result.sample_id"/>
+                                            </thead>
+                                            <tbody style="text-align:center;">
+                                                <t>
+                                                    <tr style="font-weight:bold;">
+                                                        <td>Sample ID
                                                         </td>
-                                                        <td style="text-align:left;">
-                                                            <span>Site's Results</span>
-                                                            <br/>
-                                                            <span>Expected Results</span>
-                                                            <br/>
-                                                            <span>All Participants’ Consensus Results</span>
+                                                        <td/>
+                                                        <td>MTB Detected
+                                                        </td>
+                                                        <td>Rif
+                                                            Resistance
+                                                        </td>
+                                                        <td>Score</td>
+
+                                                    </tr>
+                                                    <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
+                                                        <tr>
+                                                            <td>
+                                                                <span style="font-weight:bold;"
+                                                                      t-field="result.sample_id"/>
+                                                            </td>
+                                                            <td style="text-align:left;">
+                                                                <span>Site's Results</span>
+                                                                <br/>
+                                                                <span>Expected Results</span>
+                                                                <br/>
+                                                                <span>All Participants’ Consensus Results</span>
+                                                            </td>
+                                                            <td>
+                                                                <!--! begin facility results-->
+                                                                <t t-if="result.facility_result_tb_detection_not_detected">
+                                                                    <span>Not Detected</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_tb_detection_trace">
+                                                                    <span>Trace</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_tb_detection_very_low">
+                                                                    <span>Very Low</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_tb_detection_low">
+                                                                    <span>Low</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_tb_detection_medium">
+                                                                    <span>Medium</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_tb_detection_high">
+                                                                    <span>High</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <!--! end facility results-->
+                                                                <!--! begin expected results-->
+
+                                                                <t t-if="result.tb_detection_not_detected">
+                                                                    <span>Not Detected</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <!-- end expected results-->
+                                                                <!-- begin consensus results-->
+                                                                <!-- end consensus results-->
+                                                                <t t-if="result.tb_detection_trace">
+                                                                    <span>Trace</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.tb_detection_very_low">
+                                                                    <span>Very Low</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.tb_detection_low">
+                                                                    <span>Low</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.tb_detection_medium">
+                                                                    <span>Medium</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.tb_detection_high">
+                                                                    <span>High</span>
+                                                                    <br/>
+                                                                </t>
+
+
+                                                                <!--!-->
+                                                                <t t-foreach="lab.expected_result_lines_ids"
+                                                                   t-as="line">
+                                                                    <span t-field="line.tb_detection_not_detected"/>
+                                                                    <span t-field="line.tb_detection_trace"/>
+                                                                    <span t-field="line.tb_detection_very_low"/>
+                                                                    <span t-field="line.tb_detection_low"/>
+                                                                    <span t-field="line.tb_detection_medium"/>
+                                                                    <span t-field="line.tb_detection_high"/>
+                                                                </t>
+                                                            </td>
+                                                            <td>
+                                                                <t t-if="result.facility_result_rif_na">
+                                                                    <span>N/A</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_rif_not_detected">
+                                                                    <span>Not Detected</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_rif_detected">
+                                                                    <span>Detected</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.facility_result_rif_indeterminate">
+                                                                    <span>Indeterminate</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.rif_na">
+                                                                    <span>N/A</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.rif_not_detected">
+                                                                    <span>Not Detected</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.rif_detected">
+                                                                    <span>Detected</span>
+                                                                    <br/>
+                                                                </t>
+                                                                <t t-if="result.rif_indeterminate">
+                                                                    <span>Indeterminate</span>
+                                                                    <br/>
+                                                                </t>
+                                                            </td>
+                                                            <td>
+                                                                <span t-att-style="result.score == 20 and 'color: green;' or result.score == 10 and 'color: orange;' or result.score == 0 and 'color: red;'">
+                                                                    <span t-field="result.score"/>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                    </t>
+                                                    <tr style="text-align:center; font-weight:bold;">
+                                                        <td colspan="2">
+                                                            <b>FINAL SCORE</b>
+                                                        </td>
+                                                        <td colspan="2">
+                                                            <t t-if="lab.total_score &gt;= 80">
+                                                                <span>Satisfactory</span>
+                                                            </t>
+                                                            <t t-if="lab.total_score &lt;= 80">
+                                                                <span>Not Satisfactory</span>
+                                                            </t>
                                                         </td>
                                                         <td>
-                                                            <t t-if="result.tb_detection_not_detected">
-                                                                <span>Not Detected</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.tb_detection_trace">
-                                                                <span>Trace</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.tb_detection_very_low">
-                                                                <span>Very Low</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.tb_detection_low">
-                                                                <span>Low</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.tb_detection_medium">
-                                                                <span>Medium</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.tb_detection_high">
-                                                                <span>High</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-foreach="lab.expected_result_lines_ids" t-as="line">
-                                                                <span t-field="line.tb_detection_not_detected"/>
-                                                                <span t-field="line.tb_detection_trace"/>
-                                                                <span t-field="line.tb_detection_very_low"/>
-                                                                <span t-field="line.tb_detection_low"/>
-                                                                <span t-field="line.tb_detection_medium"/>
-                                                                <span t-field="line.tb_detection_high"/>
-                                                            </t>
-                                                        </td>
-                                                        <td>
-                                                            <t t-if="result.rif_na">
-                                                                <span>N/A</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.rif_not_detected">
-                                                                <span>Not Detected</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.rif_detected">
-                                                                <span>Detected</span>
-                                                                <br/>
-                                                            </t>
-                                                            <t t-if="result.rif_indeterminate">
-                                                                <span>Indeterminate</span>
-                                                                <br/>
-                                                            </t>
-                                                        </td>
-                                                        <td>
-                                                            <span t-att-style="result.score == 20 and 'color: green;' or result.score == 10 and 'color: orange;' or result.score == 0 and 'color: red;'">
-                                                                <span t-field="result.score"/>
+                                                            <span t-att-style="lab.total_score &gt;= 80 and 'color: green;' or result.score &lt; 80 and 'color: red;'">
+                                                                <b t-field="lab.total_score"/>
                                                             </span>
                                                         </td>
                                                     </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                        <br/>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" id="hash_config_review" style="text-align:center;">
+                                        <span>
+                                            <b>Summary of All Reporting Sites</b>
+                                        </span>
+                                    </div>
+                                </div>
+                                <table class="table" style="table-layout: Flex">
+                                    <thead>
+                                        <tr>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t>
+                                            <tr style="text-align:center;">
+                                                <td/>
+                                                <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
+
+                                                    <td>
+                                                        <span t-att-style="'font-size:8px;'">
+                                                            <span t-field="result.sample_id"/>
+                                                        </span>
+                                                    </td>
 
                                                 </t>
-                                                <tr style="text-align:center; font-weight:bold;">
-                                                    <td colspan="2">
-                                                        <b>FINAL SCORE</b>
-                                                    </td>
-                                                    <td colspan="2">
-                                                        <b>Satisfactory</b>
-                                                    </td>
-                                                    <td>
-                                                        <b>100</b>
-                                                    </td>
-                                                </tr>
-                                            </t>
-                                        </tbody>
-                                    </table>
-                                    <br/>
 
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12" id="hash_config_review" style="text-align:center;">
-                                    <span>
-                                        <b>Summary of All Reporting Sites</b>
-                                    </span>
-                                </div>
-                            </div>
-                            <table class="table" style="table-layout: Flex">
-                                <thead>
-                                    <tr>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <t>
-                                        <tr style="text-align:center;">
-                                            <td/>
-                                            <t t-foreach="lab.zaneqas_tb_xpert_eqa_result_ids" t-as="result">
-
-
-                                                <td>
-                                                    <b>
-                                                        <span t-field="result.sample_id"/>
-                                                    </b>
+                                            </tr>
+                                            <tr>
+                                                <td>Total number of participating sites</td>
+                                                <td class="text-center">
+                                                    <span t-field="lab.company_count"/>
                                                 </td>
-
-                                            </t>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Total number of participating sites</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                            <td class="text-center">81</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites detecting TB (%)</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites not detecting TB (%)</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites reporting an uninterpretable TB result</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites with TB detection result missing</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr></tr>
-                                        <tr>
-                                            <td>Sites detecting RIF resistance (%)</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites not detecting RIF resistance (%)</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites reporting indeterminate RIF (%)</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sites with RIF detection results missing</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total number of enrolled sites</td>
-                                            <td class="text-center">11%</td>
-                                            <td class="text-center">99%</td>
-                                            <td class="text-center">96.3%</td>
-                                            <td class="text-center">0%</td>
-                                            <td class="text-center">100%</td>
-                                        </tr>
-                                    </t>
-                                </tbody>
-                            </table>
-                            <br/>
-                            <span>
-                                <b>* Uninterpretable result = invalid, error, or no result</b>
-                            </span>
-                            <br/>
-                            <br/>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Scheme Coordinator:
-                                            <b>John Muzyamba</b>
-                                        </th>
-                                        <th>Report Reviewed By:
-                                            <b>Beene Muleza Manchishi</b>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th>Authorized by:
-                                            <b>Mutende Mwamba</b>
-                                        </th>
-                                        <th>Date:
-                                            <b>01/10/2024</b>
-                                        </th>
-                                    </tr>
-                                </thead>
-                            </table>
-                            <div class="row">
+                                                <td class="text-center">
+                                                    <span t-field="lab.company_count"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-field="lab.company_count"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-field="lab.company_count"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-field="lab.company_count"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites detecting TB (%)</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites not detecting TB (%)</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites reporting an uninterpretable TB result</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites with TB detection result missing</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites detecting RIF resistance (%)</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites not detecting RIF resistance (%)</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites reporting indeterminate RIF (%)</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sites with RIF detection results missing</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total number of enrolled sites</td>
+                                                <td class="text-center">11%</td>
+                                                <td class="text-center">99%</td>
+                                                <td class="text-center">96.3%</td>
+                                                <td class="text-center">0%</td>
+                                                <td class="text-center">100%</td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
                                 <br/>
-                                <b>
-                                    <u>INFORMATION NOTE: ISO 17043 requirements:</u>
+                                <span>
+                                    <b>* Uninterpretable result = invalid, error, or no result</b>
+                                </span>
+                                <br/>
+                                <br/>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Scheme Coordinator:
+                                                <b>John Muzyamba</b>
+                                            </th>
+                                            <th>Report Reviewed By:
+                                                <b>Beene Muleza Manchishi</b>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>Authorized by:
+                                                <b>Mutende Mwamba</b>
+                                            </th>
+                                            <th>Date:
+                                                <b>01/10/2024</b>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div class="row">
                                     <br/>
-                                    a) &#160;The name and contact details for the proficiency testing provider;
-                                </b>
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;Chest Disease Laboratory
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;P.O.BOX 34566,
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;Lusaka.
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;Email:chestlab2016@gmail.com
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;Tel: :021-128 2306
-                                <br/>
-                                <b>
-                                    (b) &#160;The name and contact details for the coordinator and PT manager are as
-                                    follows;
-                                </b>
-                                <br/>
-                                (c) &#160;The name(s), function(s), and signature(s) or equivalent identification of
-                                person(s) authorizing PT reports; Quality officer;
-                                <br/>
-                                (d) &#160;<i>Performance Criteria: The correct result consists of two aspects
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;1) MTB Detection,
-                                <br/>
-                                &#160;&#160;&#160;&#160;&#160;&#160;2) Rifampin status. 20 Marks are allocated for a
-                                single sample if the correct result is reported for both MTB and Rifampicin detection. 10   marks are awarded for;
-                                <br/> &#160;&#160;&#160;&#160;&#160;&#160;I) correct reporting of MTB with rifampicin
-                                getting recorded as indeterminate for a
-                                positive sample. II) correct reporting of MTB but Rifampicin results missing. Incorrect
-                                result are scored 0 Marks. Error. Invalid or No result are allocated 5 marks.
-                            </i>
-                                <br/>
-                                (e) &#160; Only courier services are sub-contracted.
-                                <br/>
-                                (f) &#160;<b>Confidentiality</b>
-                                <br/>
-                                All participant information including details, results, performance among others is
-                                treated
-                                confidential by the PT provider unless otherwise stated. All individual participant and
-                                summary reports don’t bear the identity of Laboratories participating in the CDL PT
-                                Scheme.
-                                Identity of the participant can only be disclosed on the individual participant report
-                                if a
-                                “waiver of confidentiality” is granted. Identity of participants is disclosed in the
-                                summary
-                                round reports disseminated to PT round funders WHO etc. for purposes of performance
-                                improvement. Identities of participants within the CDL-Zambia TB Laboratory names are
-                                disclosed to the National TB and Leprosy Control Program/NTRL laboratory Coordinators,
-                                regional implementing partners laboratory coordinators for purposes of improving
-                                performance
-                                and implementation of the PT Scheme. In circumstances, when a regulatory authority
-                                requires
-                                proficiency testing results to be directly provided to the authority by the proficiency
-                                testing provider, the affected participants shall be notified of this action in writing.
-                                <br/>
-                                (g) &#160; The report number is the PT Scheme round number.
-                                <br/>
-                                (h) &#160; All items used in the PT preparation have been carefully selected. Internal
-                                Quality control processes have been done to ensure homogeneity and stability assessment;
-                                <br/>
-                                (i) &#160; Assigned value are determined through reference materials. The PT provider
-                                allows
-                                the participant to use internal procedures approved by WHO for TB diagnosis and
-                                methods/techniques are identified on individual and all participants’ summary reports.
-                                Where
-                                different methods are used by PT providers, the same scoring system shall be applied as
-                                indicated on the instructions and results forms for each PT scheme. The PT provider has
-                                established procedures for statistical analysis of the PT results. Summaries of results
-                                of
-                                all participants is described in the PT round summary report disseminated at the end of
-                                each
-                                PT round. Comments and recommendations on individual and all participants’ performance
-                                is
-                                described on PT round scheme reports.
-                                <br/>
-                                (j) &#160; Advisory services at the CDL-Zambia PT schemes is provided internally by the
-                                Proficiency testing team (PT team) that comprises of personnel with the necessary
-                                technical
-                                expertise and experience in the relevant field of testing, calibration, sampling or
-                                inspection, as well as statistics for PT scheme analysis and reporting. Where it is
-                                required, the CDL-Zambia will seek for external advisory services.
-                                <br/>
-                                (k) &#160; More information and details on the CDL-Zambia PT Scheme can be obtained from
-                                each round PT Scheme Instructions to participants forms on +260977708424 and email:
-                                chestlab2016@gmail.com
-                                <br/>
+                                    <b>
+                                        <u>INFORMATION NOTE: ISO 17043 requirements:</u>
+                                        <br/>
+                                        a) &#160;The name and contact details for the proficiency testing provider;
+                                    </b>
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;Chest Disease Laboratory
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;P.O.BOX 34566,
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;Lusaka.
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;Email:chestlab2016@gmail.com
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;Tel: :021-128 2306
+                                    <br/>
+                                    <b>
+                                        (b) &#160;The name and contact details for the coordinator and PT manager are as
+                                        follows;
+                                    </b>
+                                    <br/>
+                                    (c) &#160;The name(s), function(s), and signature(s) or equivalent identification of
+                                    person(s) authorizing PT reports; Quality officer;
+                                    <br/>
+                                    (d) &#160;<i>Performance Criteria: The correct result consists of two aspects
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;1) MTB Detection,
+                                    <br/>
+                                    &#160;&#160;&#160;&#160;&#160;&#160;2) Rifampin status. 20 Marks are allocated for a
+                                    single sample if the correct result is reported for both MTB and Rifampicin
+                                    detection.
+                                    10 marks are awarded for;
+                                    <br/> &#160;&#160;&#160;&#160;&#160;&#160;I) correct reporting of MTB with
+                                    rifampicin
+                                    getting recorded as indeterminate for a
+                                    positive sample. II) correct reporting of MTB but Rifampicin results missing.
+                                    Incorrect
+                                    result are scored 0 Marks. Error. Invalid or No result are allocated 5 marks.
+                                </i>
+                                    <br/>
+                                    (e) &#160; Only courier services are sub-contracted.
+                                    <br/>
+                                    (f) &#160;<b>Confidentiality</b>
+                                    <br/>
+                                    All participant information including details, results, performance among others is
+                                    treated
+                                    confidential by the PT provider unless otherwise stated. All individual participant
+                                    and
+                                    summary reports don’t bear the identity of Laboratories participating in the CDL PT
+                                    Scheme.
+                                    Identity of the participant can only be disclosed on the individual participant
+                                    report
+                                    if a
+                                    “waiver of confidentiality” is granted. Identity of participants is disclosed in the
+                                    summary
+                                    round reports disseminated to PT round funders WHO etc. for purposes of performance
+                                    improvement. Identities of participants within the CDL-Zambia TB Laboratory names
+                                    are
+                                    disclosed to the National TB and Leprosy Control Program/NTRL laboratory
+                                    Coordinators,
+                                    regional implementing partners laboratory coordinators for purposes of improving
+                                    performance
+                                    and implementation of the PT Scheme. In circumstances, when a regulatory authority
+                                    requires
+                                    proficiency testing results to be directly provided to the authority by the
+                                    proficiency
+                                    testing provider, the affected participants shall be notified of this action in
+                                    writing.
+                                    <br/>
+                                    (g) &#160; The report number is the PT Scheme round number.
+                                    <br/>
+                                    (h) &#160; All items used in the PT preparation have been carefully selected.
+                                    Internal
+                                    Quality control processes have been done to ensure homogeneity and stability
+                                    assessment;
+                                    <br/>
+                                    (i) &#160; Assigned value are determined through reference materials. The PT
+                                    provider
+                                    allows
+                                    the participant to use internal procedures approved by WHO for TB diagnosis and
+                                    methods/techniques are identified on individual and all participants’ summary
+                                    reports.
+                                    Where
+                                    different methods are used by PT providers, the same scoring system shall be applied
+                                    as
+                                    indicated on the instructions and results forms for each PT scheme. The PT provider
+                                    has
+                                    established procedures for statistical analysis of the PT results. Summaries of
+                                    results
+                                    of
+                                    all participants is described in the PT round summary report disseminated at the end
+                                    of
+                                    each
+                                    PT round. Comments and recommendations on individual and all participants’
+                                    performance
+                                    is
+                                    described on PT round scheme reports.
+                                    <br/>
+                                    (j) &#160; Advisory services at the CDL-Zambia PT schemes is provided internally by
+                                    the
+                                    Proficiency testing team (PT team) that comprises of personnel with the necessary
+                                    technical
+                                    expertise and experience in the relevant field of testing, calibration, sampling or
+                                    inspection, as well as statistics for PT scheme analysis and reporting. Where it is
+                                    required, the CDL-Zambia will seek for external advisory services.
+                                    <br/>
+                                    (k) &#160; More information and details on the CDL-Zambia PT Scheme can be obtained
+                                    from
+                                    each round PT Scheme Instructions to participants forms on +260977708424 and email:
+                                    chestlab2016@gmail.com
+                                    <br/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="footer">
-                            <span>Page
-                                <span class="page"/>
-                                of
-                                <span class="topage"/>
-                            </span>
-                        </div>
+                            <div class="footer">
+                                <span>Page
+                                    <span class="page"/>
+                                    of
+                                    <span class="topage"/>
+                                </span>
+                            </div>
 
-                    </t>
+                        </t>
+                    </div>
                 </div>
             </t>
         </template>

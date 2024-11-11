@@ -38,6 +38,13 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="Error Codes"
     )
 
+    @api.model
+    def default_get(self, fields_list):
+        res = super(ZaneqasTbXpertEqaExpectedResults, self).default_get(fields_list)
+        for field in fields_list:
+            res[field] = False  # Clear the field by setting it to False
+        return res
+
     @api.onchange('name')
     def _onchange_name(self):
         self.sample_ids = [(5, 0, 0)]  # Clear existing values
@@ -61,7 +68,6 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="Status",
         required=True,
         tracking=True
-
     )
     lab_incharge_comment = fields.Char(string="Lab Incharge Comment", tracking=True)
 
@@ -74,6 +80,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="User in Assigned Company and Open",
         compute='_compute_user_in_assigned_company_and_open'
     )
+    sample_id = fields.Char(string="Test Sample ID", store=True)
+    date_tested = fields.Date(string="Date Tested", store=True)
 
     company_count = fields.Integer(string='Company Count', compute='_compute_company_count', store=True)
 
@@ -102,7 +110,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     add_infor_monthly_maintenance_done_by_date = fields.Date(string="Monthly maintenance done by Date",
                                                              store=True)
     add_infor_monthly_maintenance_done_by_technologist = fields.Char(string="Monthly maintenance done by technologist",
-                                                                      store=True)
+                                                                     store=True)
     add_infor_gene_xpert_serial_number = fields.Char(string="GeneXpert Serial Number", store=True)
     add_infor_date_gene_xpert_instrument_installed = fields.Date(string="Date GeneXpert Instrument Installed",
                                                                  store=True)
@@ -111,9 +119,63 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
     company_id = fields.Many2one('res.company', string="Company", default=lambda self: self.env.company)
 
-    def save_wizard_data(self):
-        # Implement the save logic here
-        pass
+    def open_results_submission_wizard(self):
+        self.ensure_one()
+        # Set the values to blank except the samples
+        self.write({
+            'supervisor_comment': '',
+            'lab_incharge_comment': '',
+            'date_panel_received': False,
+            'date_of_last_gene_xpert_instrument_calibration_or_installation': False,
+            'xpert_assay_used': False,
+            'catridge_lot_number': '',
+            'expiry_date': False,
+            'date_results_received_at_CDL': False,
+            'add_infor_number_of_tests_conducted_in_last_full_month': 0,
+            'add_infor_number_of_errors_occurred': 0,
+            'add_infor_was_monthly_maintenance_done_for_the_genexpert': False,
+            'add_infor_monthly_maintenance_done_by_date': False,
+            'add_infor_monthly_maintenance_done_by_technologist': '',
+            'add_infor_gene_xpert_serial_number': '',
+            'add_infor_date_gene_xpert_instrument_installed': False,
+            'add_infor_instrument_user': '',
+            'declaration_testing_personnel': '',
+            'declaration_testing_personnel_date': False,
+
+        })
+        self.sample_ids.write({'facility_result_date_tested': False})
+        self.sample_ids.write({'facility_result_tb_detection_not_detected': False})
+        self.sample_ids.write({'facility_result_tb_detection_trace': False})
+        self.sample_ids.write({'facility_result_tb_detection_very_low': False})
+        self.sample_ids.write({'facility_result_tb_detection_low': False})
+        self.sample_ids.write({'facility_result_tb_detection_medium': False})
+        self.sample_ids.write({'facility_result_tb_detection_high': False})
+        self.sample_ids.write({'facility_result_rif_na': False})
+        self.sample_ids.write({'facility_result_rif_not_detected': False})
+        self.sample_ids.write({'facility_result_rif_detected': False})
+        self.sample_ids.write({'facility_result_rif_indeterminate': False})
+        self.sample_ids.write({'facility_result_uninterpretable_invalid': False})
+        self.sample_ids.write({'facility_result_uninterpretable_no_result': False})
+        self.sample_ids.write({'facility_result_uninterpretable_error': False})
+        self.sample_ids.write({'facility_result_uninterpretable_indeterminate': False})
+        self.sample_ids.write({'facility_result_uninterpretable_error_code': False})
+        self.sample_ids.write({'facility_result_ct_probe_d_ultra_spsc': False})
+        self.sample_ids.write({'facility_result_ct_probe_c_is1081_is6110': False})
+        self.sample_ids.write({'facility_result_ct_probe_e_rpob2': False})
+        self.sample_ids.write({'facility_result_ct_probe_b_rpoB1': False})
+        self.sample_ids.write({'facility_result_ct_spc_rpoB3': False})
+        self.sample_ids.write({'facility_result_ct_probe_a_rpob4': False})
+        self.sample_ids.write({'facility_result_ct_xpert_module_number': False})
+        # Open the wizard
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Submit EQA Results',
+            'res_model': 'zaneqas.tb.xpert.eqa.expected.result',
+            'view_mode': 'form',
+            'view_id': self.env.ref('zaneqas_tb.view_zaneqas_tb_xpert_eqa_expected_result_wizard_form').id,
+            'res_id': self.id,
+            'target': 'new'
+        }
 
     def validate_csv_file(self, csv_content):
         csv_reader = csv.reader(StringIO(csv_content))
@@ -235,9 +297,138 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         self.write({'state': 'open'})
         self.action_send_email_to_companies()
 
+    def action_extend_eqa_result(self):
+        self.write({'state': 'extended'})
+
+    def action_close_eqa_result(self):
+        self.write({'state': 'closed'})
+
+    def action_publish_results(self):
+        self.write({'state': 'resultsPublished'})
+
     def action_submit_results(self):
-        # Implement the logic for submitting results
-        pass
+        # Ensure the referenced record exists
+        expected_result = self.env['zaneqas.tb.xpert.eqa.expected.result'].browse(self.id)
+        if not expected_result.exists():
+            raise UserError(f"Referenced expected result with id {self.name.id} does not exist.")
+
+        form_data = {
+            'name': self.id,
+            'supervisor_comment': self.supervisor_comment,
+            'lab_incharge_comment': self.lab_incharge_comment,
+            'date_panel_received': self.date_panel_received,
+            'date_of_last_gene_xpert_instrument_calibration_or_installation': self.date_of_last_gene_xpert_instrument_calibration_or_installation,
+            'xpert_assay_used': self.xpert_assay_used.id,
+            'catridge_lot_number': self.catridge_lot_number,
+            'expiry_date': self.expiry_date,
+            'add_infor_number_of_tests_conducted_in_last_full_month': self.add_infor_number_of_tests_conducted_in_last_full_month,
+            'add_infor_number_of_errors_occurred': self.add_infor_number_of_errors_occurred,
+            'add_infor_was_monthly_maintenance_done_for_the_genexpert': self.add_infor_was_monthly_maintenance_done_for_the_genexpert,
+            'add_infor_monthly_maintenance_done_by_date': self.add_infor_monthly_maintenance_done_by_date,
+            'add_infor_monthly_maintenance_done_by_technologist': self.add_infor_monthly_maintenance_done_by_technologist,
+            'add_infor_gene_xpert_serial_number': self.add_infor_gene_xpert_serial_number,
+            'add_infor_date_gene_xpert_instrument_installed': self.add_infor_date_gene_xpert_instrument_installed,
+            'add_infor_instrument_user': self.add_infor_instrument_user,
+            'company_id': self.env.user.company_id.id,
+            'state': 'draft',
+            'site_id': self.env.user.company_id.id,
+
+        }
+
+        new_record = self.env['zaneqas.tb.xpert.eqa.result'].create(form_data)
+        new_record_id = new_record.id
+        total_score = 0
+
+        for sample in self.sample_ids:
+            score = 0
+            if (sample.tb_detection_not_detected == sample.facility_result_tb_detection_not_detected and
+                    sample.tb_detection_trace == sample.facility_result_tb_detection_trace and
+                    sample.tb_detection_very_low == sample.facility_result_tb_detection_very_low and
+                    sample.tb_detection_low == sample.facility_result_tb_detection_low and
+                    sample.tb_detection_medium == sample.facility_result_tb_detection_medium and
+                    sample.tb_detection_high == sample.facility_result_tb_detection_high and
+                    sample.rif_na == sample.facility_result_rif_na and
+                    sample.rif_not_detected == sample.facility_result_rif_not_detected and
+                    sample.rif_detected == sample.facility_result_rif_detected):
+                score = 20
+            elif (sample.tb_detection_not_detected == sample.facility_result_tb_detection_not_detected and
+                  sample.tb_detection_trace == sample.facility_result_tb_detection_trace and
+                  sample.tb_detection_very_low == sample.facility_result_tb_detection_very_low and
+                  sample.tb_detection_low == sample.facility_result_tb_detection_low and
+                  sample.tb_detection_medium == sample.facility_result_tb_detection_medium and
+                  sample.tb_detection_high == sample.facility_result_tb_detection_high and
+                  sample.rif_indeterminate):
+                score = 10
+            elif (sample.facility_result_uninterpretable_invalid or
+                  sample.facility_result_uninterpretable_no_result or
+                  sample.facility_result_uninterpretable_error or
+                  sample.facility_result_uninterpretable_indeterminate):
+                score = 5
+            elif (not sample.facility_result_tb_detection_not_detected and
+                  not sample.facility_result_tb_detection_trace and
+                  not sample.facility_result_tb_detection_very_low and
+                  not sample.facility_result_tb_detection_low and
+                  not sample.facility_result_tb_detection_medium and
+                  not sample.facility_result_tb_detection_high and
+                  not sample.facility_result_rif_na and
+                  not sample.facility_result_rif_not_detected and
+                  not sample.facility_result_rif_detected):
+                score = 0
+            total_score += score
+            form_data_2 = {
+                'zaneqas_tb_xpert_eqa_result_id': new_record_id,
+                'sample_id': sample.sample_id,
+                'facility_result_date_tested': sample.facility_result_date_tested,
+                'facility_result_tb_detection_not_detected': sample.facility_result_tb_detection_not_detected,
+                'facility_result_tb_detection_trace': sample.facility_result_tb_detection_trace,
+                'facility_result_tb_detection_very_low': sample.facility_result_tb_detection_very_low,
+                'facility_result_tb_detection_low': sample.facility_result_tb_detection_low,
+                'facility_result_tb_detection_medium': sample.facility_result_tb_detection_medium,
+                'facility_result_tb_detection_high': sample.facility_result_tb_detection_high,
+                'facility_result_rif_na': sample.facility_result_rif_na,
+                'facility_result_rif_not_detected': sample.facility_result_rif_not_detected,
+                'facility_result_rif_detected': sample.facility_result_rif_detected,
+                'facility_result_rif_indeterminate': sample.facility_result_rif_indeterminate,
+                'facility_result_uninterpretable_invalid': sample.facility_result_uninterpretable_invalid,
+                'facility_result_uninterpretable_no_result': sample.facility_result_uninterpretable_no_result,
+                'facility_result_uninterpretable_error': sample.facility_result_uninterpretable_error,
+                'facility_result_uninterpretable_indeterminate': sample.facility_result_uninterpretable_indeterminate,
+                'facility_result_uninterpretable_error_code': sample.facility_result_uninterpretable_error_code,
+                'facility_result_ct_probe_d_ultra_spsc': sample.facility_result_ct_probe_d_ultra_spsc,
+                'facility_result_ct_probe_c_is1081_is6110': sample.facility_result_ct_probe_c_is1081_is6110,
+                'facility_result_ct_probe_e_rpob2': sample.facility_result_ct_probe_e_rpob2,
+                'facility_result_ct_probe_b_rpoB1': sample.facility_result_ct_probe_b_rpoB1,
+                'facility_result_ct_spc_rpoB3': sample.facility_result_ct_spc_rpoB3,
+                'facility_result_ct_probe_a_rpob4': sample.facility_result_ct_probe_a_rpob4,
+                'facility_result_ct_xpert_module_number': sample.facility_result_ct_xpert_module_number,
+                'score': score,
+                'tb_detection_not_detected': sample.tb_detection_not_detected,
+                'tb_detection_trace': sample.tb_detection_trace,
+                'tb_detection_very_low': sample.tb_detection_very_low,
+                'tb_detection_low': sample.tb_detection_low,
+                'tb_detection_medium': sample.tb_detection_medium,
+                'tb_detection_high': sample.tb_detection_high,
+                'rif_na': sample.rif_na,
+                'rif_not_detected': sample.rif_not_detected,
+                'rif_detected': sample.rif_detected,
+                'rif_indeterminate': sample.rif_indeterminate,
+                'uninterpretable_invalid': sample.uninterpretable_invalid,
+                'uninterpretable_no_result': sample.uninterpretable_no_result,
+                'uninterpretable_error': sample.uninterpretable_error,
+                'uninterpretable_indeterminate': sample.uninterpretable_indeterminate,
+                'uninterpretable_error_code': sample.uninterpretable_error_code,
+                'ct_probe_d_ultra_spsc': sample.ct_probe_d_ultra_spsc,
+                'ct_probe_c_is1081_is6110': sample.ct_probe_c_is1081_is6110,
+                'ct_probe_e_rpob2': sample.ct_probe_e_rpob2,
+                'ct_probe_b_rpoB1': sample.ct_probe_b_rpoB1,
+                'ct_spc_rpoB3': sample.ct_spc_rpoB3,
+                'ct_probe_a_rpob4': sample.ct_probe_a_rpob4,
+                'ct_xpert_module_number': sample.ct_xpert_module_number,
+
+            }
+
+            self.env['zaneqas.tb.xpert.eqa.result.lines'].create(form_data_2)
+            new_record.write({'total_score': total_score})
 
     def action_send_email_to_companies(self):
         for company in self.company_ids:

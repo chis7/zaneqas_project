@@ -11,7 +11,7 @@ class ZaneqasTbXpertEqaResults(models.Model):
     _inherit = ["mail.thread"]
     _description = "zaneqas tb xpert eqa results"
 
-    name = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="Cycle")
+    name = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="Cycle", ondelete='cascade')
     site_id = fields.Many2one('res.partner', string='Name of Site')
     date_panel_received = fields.Date(string='Date Panel Received', required=True)
     date_of_last_gene_xpert_instrument_calibration_or_installation = fields.Date(
@@ -80,10 +80,10 @@ class ZaneqasTbXpertEqaResults(models.Model):
         required=True,
         tracking=True
     )
-    # expected_result_lines_ids = fields.One2many(
-    #     'zaneqas.tb.xpert.eqa.expected.result.lines', 'zaneqas_tb_xpert_eqa_expected_result_id',
-    #     string='Expected Results'
-    # )
+    expected_result_lines_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.expected.result.lines', 'zaneqas_tb_xpert_eqa_expected_result_id',
+        string='Expected Results'
+    )
     supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
     lab_incharge_comment = fields.Text(string="Lab Incharge Comment", tracking=True)
     results_status = fields.Char(string="Results Status", compute="_compute_results_status")
@@ -94,131 +94,137 @@ class ZaneqasTbXpertEqaResults(models.Model):
         readonly=True,
         store=True
     )
+    company_count = fields.Integer(
+        related='name.company_count',
+        string="Company Count",
+        readonly=True,
+        store=True
+    )
+    due_date=fields.Date(string="Due Date", related='name.due_date', store=True)
+    total_score = fields.Integer(string='Total Score', store=True)
 
     # Define the print_report method
 
-    # def print_report(self):
-    #     report = self.env.ref('zaneqas_tb.report_gene_xpert_eqa_results')
-    #     return self.env['ir.actions.report'].sudo()._get_report_from_name(report.report_name).report_action(self)
-    #
-    # @api.depends('create_uid')
-    # def _compute_company_name(self):
-    #     for record in self:
-    #         record.company_name = record.create_uid.company_id.name if record.create_uid.company_id else ''
-    #
-    # tb_detection_not_detected = fields.Boolean(
-    #     related='zaneqas_tb_xpert_eqa_result_ids.tb_detection_not_detected',
-    #     string="MTB Detection - Not Detected",
-    #     store=True
-    # )
-    # expected_result_lines_ids = fields.One2many(
-    #     'zaneqas.tb.xpert.eqa.expected.result.lines',
-    #     'zaneqas_tb_xpert_eqa_expected_result_id',
-    #     string="Expected Results"
-    # )
-    #
-    # @api.depends('create_uid')
-    # def _compute_company_name(self):
-    #     for record in self:
-    #         record.company_name = record.create_uid.company_id.name if record.create_uid.company_id else ''
-    #
-    # @api.depends('date_results_received_at_CDL')
-    # def _compute_results_status(self):
-    #     for record in self:
-    #         record.results_status = "Not Received" if not record.date_results_received_at_CDL else "Received"
-    #
-    # def action_save_eqa_result_as_draft(self):
-    #
-    #     company_name = self.env.user.company_id.id
-    #     self.write({'state': 'draft',
-    #                 'date_results_received_at_CDL': fields.Date.today(),
-    #                 'company_name': company_name
-    #                 })
-    #     for actual_result in self.zaneqas_tb_xpert_eqa_result_ids:
-    #         expected_result = self.env['zaneqas.tb.xpert.eqa.expected.result.lines'].search([
-    #             ('sample_id', '=', actual_result.sample_id),
-    #             ('zaneqas_tb_xpert_eqa_expected_result_id', '=', self.name.id)
-    #         ], limit=1)
-    #         if not expected_result:
-    #             raise ValidationError(f"No expected result found for sample {actual_result.sample_id}")
-    #         score = 0
-    #         if (expected_result.tb_detection_not_detected == actual_result.tb_detection_not_detected and
-    #                 expected_result.tb_detection_trace == actual_result.tb_detection_trace and
-    #                 expected_result.tb_detection_very_low == actual_result.tb_detection_very_low and
-    #                 expected_result.tb_detection_low == actual_result.tb_detection_low and
-    #                 expected_result.tb_detection_medium == actual_result.tb_detection_medium and
-    #                 expected_result.tb_detection_high == actual_result.tb_detection_high and
-    #                 expected_result.rif_na == actual_result.rif_na and
-    #                 expected_result.rif_not_detected == actual_result.rif_not_detected and
-    #                 expected_result.rif_detected == actual_result.rif_detected
-    #         ):
-    #             score += 20
-    #         if (expected_result.tb_detection_not_detected == actual_result.tb_detection_not_detected and
-    #                     expected_result.tb_detection_trace == actual_result.tb_detection_trace and
-    #                     expected_result.tb_detection_very_low == actual_result.tb_detection_very_low and
-    #                     expected_result.tb_detection_low == actual_result.tb_detection_low and
-    #                     expected_result.tb_detection_medium == actual_result.tb_detection_medium and
-    #                     expected_result.tb_detection_high == actual_result.tb_detection_high
-    #             ) and (actual_result.rif_indeterminate == True):
-    #                 score += 10
-    #         if (actual_result.uninterpretable_invalid or actual_result.uninterpretable_no_result or
-    #                 actual_result.uninterpretable_error or actual_result.uninterpretable_indeterminate):
-    #             score += 5
-    #         if (actual_result.tb_detection_not_detected == False and
-    #                 actual_result.tb_detection_trace == False and
-    #                 actual_result.tb_detection_very_low == False and
-    #                 actual_result.tb_detection_low == False and
-    #                 actual_result.tb_detection_medium == False and
-    #                 actual_result.tb_detection_high == False or
-    #                 actual_result.rif_na == False and
-    #                 actual_result.rif_not_detected == False and
-    #                 actual_result.rif_detected == False):
-    #             score = 0
-    #
-    #         actual_result.write({'score': score})
-    #
-    # def action_submit_eqa_result_to_supervisor(self):
-    #     self.write({'state': 'supervisor'})
-    #     group = self.env.ref("zaneqas_tb.group_supervisor_approve_site_eqa_results")
-    #     users = group.users
-    #
-    #     if users:
-    #         selected_user = random.choice(users)
-    #         # supervisor_id = selected_user.id
-    #         if selected_user.email:
-    #             mail_values = {
-    #                 'subject': 'Request for Approval',
-    #                 'body_html': """<p>You have received a request for approval of EQA Site results as supervisor. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
-    #                 'email_to': selected_user.email,
-    #             }
-    #             mail = self.env['mail.mail'].create(mail_values)
-    #             mail.send()
-    #
-    #
-    # def action_supervisor_approve_eqa_result(self):
-    #     self.write({'state': 'lab_incharge'})
-    #     group = self.env.ref("zaneqas_tb.group_labIncharge_approve_site_eqa_results")
-    #     users = group.users
-    #
-    #     if users:
-    #         selected_user = random.choice(users)
-    #         # self.supervisor_id = selected_user.id
-    #         if selected_user.email:
-    #             mail_values = {
-    #                 'subject': 'Request for Approval',
-    #                 'body_html': """<p>You have received a request for approval of EQA Site results as lab in-charge. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
-    #                 'email_to': selected_user.email,
-    #             }
-    #             mail = self.env['mail.mail'].create(mail_values)
-    #             mail.send()
-    #
-    # def action_supervisor_send_back_eqa_result(self):
-    #     self.write({'state': 'draft'})
-    #
-    # def action_LabIncharge_send_back_eqa_result(self):
-    #     self.write({'state': 'lab_incharge'})
-    #
-    # def action_LabIncharge_approve_eqa_result(self):
-    #     self.write({'state': 'approved',
-    #                 'date_results_received_at_CDL': fields.Date.today()})
-    #
+    def print_report(self):
+        report = self.env.ref('zaneqas_tb.report_gene_xpert_eqa_results')
+        return self.env['ir.actions.report'].sudo()._get_report_from_name(report.report_name).report_action(self)
+
+    @api.depends('create_uid')
+    def _compute_company_name(self):
+        for record in self:
+            record.company_name = record.create_uid.company_id.name if record.create_uid.company_id else ''
+
+    tb_detection_not_detected = fields.Boolean(
+        related='zaneqas_tb_xpert_eqa_result_ids.tb_detection_not_detected',
+        string="MTB Detection - Not Detected",
+        store=True
+    )
+    expected_result_lines_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.expected.result.lines',
+        'zaneqas_tb_xpert_eqa_expected_result_id',
+        string="Expected Results"
+    )
+
+    @api.depends('create_uid')
+    def _compute_company_name(self):
+        for record in self:
+            record.company_name = record.create_uid.company_id.name if record.create_uid.company_id else ''
+
+    @api.depends('date_results_received_at_CDL')
+    def _compute_results_status(self):
+        for record in self:
+            record.results_status = "Not Received" if not record.date_results_received_at_CDL else "Received"
+
+    def action_save_eqa_result_as_draft(self):
+
+        company_name = self.env.user.company_id.id
+        self.write({'state': 'draft',
+                    'date_results_received_at_CDL': fields.Date.today(),
+                    'company_name': company_name
+                    })
+        for actual_result in self.zaneqas_tb_xpert_eqa_result_ids:
+            expected_result = self.env['zaneqas.tb.xpert.eqa.expected.result.lines'].search([
+                ('sample_id', '=', actual_result.sample_id),
+                ('zaneqas_tb_xpert_eqa_expected_result_id', '=', self.name.id)
+            ], limit=1)
+            if not expected_result:
+                raise ValidationError(f"No expected result found for sample {actual_result.sample_id}")
+            score = 0
+            if (expected_result.tb_detection_not_detected == actual_result.tb_detection_not_detected and
+                    expected_result.tb_detection_trace == actual_result.tb_detection_trace and
+                    expected_result.tb_detection_very_low == actual_result.tb_detection_very_low and
+                    expected_result.tb_detection_low == actual_result.tb_detection_low and
+                    expected_result.tb_detection_medium == actual_result.tb_detection_medium and
+                    expected_result.tb_detection_high == actual_result.tb_detection_high and
+                    expected_result.rif_na == actual_result.rif_na and
+                    expected_result.rif_not_detected == actual_result.rif_not_detected and
+                    expected_result.rif_detected == actual_result.rif_detected
+            ):
+                score += 20
+            if (expected_result.tb_detection_not_detected == actual_result.tb_detection_not_detected and
+                expected_result.tb_detection_trace == actual_result.tb_detection_trace and
+                expected_result.tb_detection_very_low == actual_result.tb_detection_very_low and
+                expected_result.tb_detection_low == actual_result.tb_detection_low and
+                expected_result.tb_detection_medium == actual_result.tb_detection_medium and
+                expected_result.tb_detection_high == actual_result.tb_detection_high
+            ) and (actual_result.rif_indeterminate == True):
+                score += 10
+            if (actual_result.uninterpretable_invalid or actual_result.uninterpretable_no_result or
+                    actual_result.uninterpretable_error or actual_result.uninterpretable_indeterminate):
+                score += 5
+            if (actual_result.tb_detection_not_detected == False and
+                    actual_result.tb_detection_trace == False and
+                    actual_result.tb_detection_very_low == False and
+                    actual_result.tb_detection_low == False and
+                    actual_result.tb_detection_medium == False and
+                    actual_result.tb_detection_high == False or
+                    actual_result.rif_na == False and
+                    actual_result.rif_not_detected == False and
+                    actual_result.rif_detected == False):
+                score = 0
+
+            actual_result.write({'score': score})
+
+    def action_submit_eqa_result_to_supervisor(self):
+        self.write({'state': 'supervisor'})
+        group = self.env.ref("zaneqas_tb.group_supervisor_approve_site_eqa_results")
+        users = group.users
+
+        if users:
+            selected_user = random.choice(users)
+            # supervisor_id = selected_user.id
+            if selected_user.email:
+                mail_values = {
+                    'subject': 'Request for Approval',
+                    'body_html': """<p>You have received a request for approval of EQA Site results as supervisor. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
+                    'email_to': selected_user.email,
+                }
+                mail = self.env['mail.mail'].create(mail_values)
+                mail.send()
+
+    def action_supervisor_approve_eqa_result(self):
+        self.write({'state': 'lab_incharge'})
+        group = self.env.ref("zaneqas_tb.group_labIncharge_approve_site_eqa_results")
+        users = group.users
+
+        if users:
+            selected_user = random.choice(users)
+            # self.supervisor_id = selected_user.id
+            if selected_user.email:
+                mail_values = {
+                    'subject': 'Request for Approval',
+                    'body_html': """<p>You have received a request for approval of EQA Site results as lab in-charge. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
+                    'email_to': selected_user.email,
+                }
+                mail = self.env['mail.mail'].create(mail_values)
+                mail.send()
+
+    def action_supervisor_send_back_eqa_result(self):
+        self.write({'state': 'draft'})
+
+    def action_LabIncharge_send_back_eqa_result(self):
+        self.write({'state': 'lab_incharge'})
+
+    def action_LabIncharge_approve_eqa_result(self):
+        self.write({'state': 'approved',
+                    'date_results_received_at_CDL': fields.Date.today()})

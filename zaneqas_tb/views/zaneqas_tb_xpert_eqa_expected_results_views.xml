@@ -27,13 +27,15 @@
                 <field name="name"/>
                 <field name="due_date"/>
                 <field name="state"/>
-                <button name="%(action_open_form_view_server)d"
+<!--                <button name="%(action_open_form_view_server)d"-->
+                <button name="open_results_submission_wizard"
                         confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"
                         string="Submit Results"
-                        type="action"
+                        type="object"
                         class="btn-primary"
-                        context="{'hide_participants_page': True, 'hide_internal_states': True, 'open_notebook2': True}"
                         invisible="user_in_assigned_company_and_open == False"/>
+<!--                        context="{'hide_participants_page': True, 'hide_internal_states': True, 'open_notebook2': True}"-->
+<!--                        invisible="user_in_assigned_company_and_open == False"/>-->
             </tree>
         </field>
     </record>
@@ -42,7 +44,7 @@
         <field name="name">zaneqas.tb.xpert.eqa.expected.result.form</field>
         <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
         <field name="arch" type="xml">
-            <form>
+            <form duplicate="0">
                 <header>
 
                     <button name="action_save_eqa_result_as_draft" data-hotkey="v"
@@ -335,13 +337,13 @@
 
     <!-- training plan action-->
     <record id="action_zaneqas_tb_xpert_eqa_expected_results" model="ir.actions.act_window">
-        <field name="name">GeneXpert Expected Results</field>
+        <field name="name">GeneXpert EQA Cycles</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">zaneqas.tb.xpert.eqa.expected.result</field>
         <field name="view_mode">tree,kanban,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                create a zaneqas tb xpert eqa expected result
+                create a zaneqas tb xpert eqa result submission
             </p>
         </field>
     </record>

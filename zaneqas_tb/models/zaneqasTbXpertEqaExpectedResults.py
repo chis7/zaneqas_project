@@ -119,6 +119,64 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     declaration_testing_personnel_date = fields.Date(string="Date", store=True)
     company_id = fields.Many2one('res.company', string="Company", default=lambda self: self.env.company)
 
+    def open_results_submission_wizard(self):
+        self.ensure_one()
+        # Set the values to blank except the samples
+        self.write({
+            'supervisor_comment': '',
+            'lab_incharge_comment': '',
+            'date_panel_received': False,
+            'date_of_last_gene_xpert_instrument_calibration_or_installation': False,
+            'xpert_assay_used': False,
+            'catridge_lot_number': '',
+            'expiry_date': False,
+            'date_results_received_at_CDL': False,
+            'add_infor_number_of_tests_conducted_in_last_full_month': 0,
+            'add_infor_number_of_errors_occurred': 0,
+            'add_infor_was_monthly_maintenance_done_for_the_genexpert': False,
+            'add_infor_monthly_maintenance_done_by_date': False,
+            'add_infor_monthly_maintenance_done_by_technologist': '',
+            'add_infor_gene_xpert_serial_number': '',
+            'add_infor_date_gene_xpert_instrument_installed': False,
+            'add_infor_instrument_user': '',
+            'declaration_testing_personnel': '',
+            'declaration_testing_personnel_date': False,
+
+        })
+        self.sample_ids.write({'facility_result_date_tested': False})
+        self.sample_ids.write({'facility_result_tb_detection_not_detected': False})
+        self.sample_ids.write({'facility_result_tb_detection_trace': False})
+        self.sample_ids.write({'facility_result_tb_detection_very_low': False})
+        self.sample_ids.write({'facility_result_tb_detection_low': False})
+        self.sample_ids.write({'facility_result_tb_detection_medium': False})
+        self.sample_ids.write({'facility_result_tb_detection_high': False})
+        self.sample_ids.write({'facility_result_rif_na': False})
+        self.sample_ids.write({'facility_result_rif_not_detected': False})
+        self.sample_ids.write({'facility_result_rif_detected': False})
+        self.sample_ids.write({'facility_result_rif_indeterminate': False})
+        self.sample_ids.write({'facility_result_uninterpretable_invalid': False})
+        self.sample_ids.write({'facility_result_uninterpretable_no_result': False})
+        self.sample_ids.write({'facility_result_uninterpretable_error': False})
+        self.sample_ids.write({'facility_result_uninterpretable_indeterminate': False})
+        self.sample_ids.write({'facility_result_uninterpretable_error_code': False})
+        self.sample_ids.write({'facility_result_ct_probe_d_ultra_spsc': False})
+        self.sample_ids.write({'facility_result_ct_probe_c_is1081_is6110': False})
+        self.sample_ids.write({'facility_result_ct_probe_e_rpob2': False})
+        self.sample_ids.write({'facility_result_ct_probe_b_rpoB1': False})
+        self.sample_ids.write({'facility_result_ct_spc_rpoB3': False})
+        self.sample_ids.write({'facility_result_ct_probe_a_rpob4': False})
+        self.sample_ids.write({'facility_result_ct_xpert_module_number': False})
+        # Open the wizard
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Submit EQA Results',
+            'res_model': 'zaneqas.tb.xpert.eqa.expected.result',
+            'view_mode': 'form',
+            'view_id': self.env.ref('zaneqas_tb.view_zaneqas_tb_xpert_eqa_expected_result_wizard_form').id,
+            'res_id': self.id,
+            'target': 'new'
+        }
+
     def validate_csv_file(self, csv_content):
         csv_reader = csv.reader(StringIO(csv_content))
         headers = next(csv_reader, None)

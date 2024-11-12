@@ -18,6 +18,7 @@
         </field>
     </record>
 
+
     <record id="zaneqas_tb_xpert_eqa_expected_results_tree" model="ir.ui.view">
         <field name="name">zaneqas.tb.xpert.eqa.expected.result.tree</field>
         <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
@@ -28,12 +29,12 @@
                 <field name="due_date"/>
                 <field name="state"/>
 <!--                <button name="%(action_open_form_view_server)d"-->
-                <button name="open_results_submission_wizard"
-                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"
-                        string="Submit Results"
-                        type="object"
-                        class="btn-primary"
-                        invisible="user_in_assigned_company_and_open == False"/>
+<!--                <button name="open_results_submission_wizard"-->
+<!--                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"-->
+<!--                        string="Submit Results"-->
+<!--                        type="object"-->
+<!--                        class="btn-primary"-->
+<!--                        invisible="user_in_assigned_company_and_open == False"/>-->
 <!--                        context="{'hide_participants_page': True, 'hide_internal_states': True, 'open_notebook2': True}"-->
 <!--                        invisible="user_in_assigned_company_and_open == False"/>-->
             </tree>
@@ -125,7 +126,7 @@
                                     <field name="uninterpretable_no_result"/>
                                     <field name="uninterpretable_error"/>
                                     <field name="uninterpretable_indeterminate"/>
-                                    <field name="uninterpretable_error_code"/>
+<!--                                    <field name="uninterpretable_error_code"/>-->
                                 </tree>
                             </field>
                         </page>
@@ -139,7 +140,7 @@
                                     <field name="ct_probe_b_rpoB1"/>
                                     <field name="ct_spc_rpoB3"/>
                                     <field name="ct_probe_a_rpob4"/>
-                                    <field name="ct_xpert_module_number"/>
+<!--                                    <field name="ct_xpert_module_number"/>-->
                                 </tree>
                             </field>
                         </page>
@@ -340,7 +341,7 @@
         <field name="name">GeneXpert EQA Cycles</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">zaneqas.tb.xpert.eqa.expected.result</field>
-        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 create a zaneqas tb xpert eqa result submission

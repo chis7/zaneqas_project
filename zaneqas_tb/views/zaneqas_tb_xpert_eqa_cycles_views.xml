@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_open_form_view_server" model="ir.actions.server">
+        <field name="name">Open Form View</field>
+        <field name="model_id" ref="model_zaneqas_tb_xpert_eqa_expected_result"/>
+        <field name="binding_model_id" ref="model_zaneqas_tb_xpert_eqa_expected_result"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = {
+            'type': 'ir.actions.act_window',
+            'name': 'Submit EQA Results',
+            'res_model': 'zaneqas.tb.xpert.eqa.expected.result',
+            'view_mode': 'form',
+            'view_id': env.ref('zaneqas_tb.view_zaneqas_tb_xpert_eqa_expected_result_wizard_form').id,
+            'res_id': record.id,
+            'target': 'new'
+            }
+        </field>
+    </record>
+    >
+    <record id="zaneqas_tb_xpert_eqa_expected_results_kanban" model="ir.ui.view">
+        <field name="name">zaneqas.tb.xpert.eqa.expected.result.kanban</field>
+        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="user_in_assigned_company_and_open" column_invisible="True"/>
+                <field name="user_in_assigned_company_and_results_published" column_invisible="True"/>
+                <field name="name" readonly="1"/>
+                <field name="due_date" readonly="1"/>
+                <field name="state" readonly="1"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <!--                        <div class="oe_kanban_global_click o_kanban_record">-->
+                        <div class="o_kanban_details">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_left">
+                                    <div class="o_kanban_record_title">
+                                        <strong>
+                                            <field name="name"/>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                                <div class="o_kanban_record_right">-->
+                            <!--                                    <field name="due_date" string="Due Date: "/>-->
+                            <!--                                </div>-->
+                            <div>
+                                <field name="state" string="Status: "/>
+                            </div>
+                            <br/>
+
+                            <div class="o_kanban_record_bottom">
+                                <button name="open_results_submission_wizard"
+                                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"
+                                        string="Submit Results"
+                                        type="object"
+                                        class="btn-primary"
+                                        invisible="user_in_assigned_company_and_open == False"/>
+                                <button name="action_print_results"
+                                        string="View Your Results"
+                                        type="object"
+                                        class="btn-primary"
+                                        invisible="user_in_assigned_company_and_results_published == False"/>
+                            </div>
+                        </div>
+                        <!--                        </div>-->
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+<!--    <record id="zaneqas_tb_xpert_eqa_expected_results_tree_1" model="ir.ui.view">-->
+<!--        <field name="name">zaneqas.tb.xpert.eqa.expected.result.tree</field>-->
+<!--        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree>-->
+<!--                <field name="user_in_assigned_company_and_open" column_invisible="True"/>-->
+<!--                <field name="name" readonly="1"/>-->
+<!--                <field name="due_date" readonly="1"/>-->
+<!--                <field name="state" readonly="1"/>-->
+<!--                <button name="open_results_submission_wizard"-->
+<!--                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"-->
+<!--                        string="Submit Results"-->
+<!--                        type="object"-->
+<!--                        class="btn-primary"-->
+<!--                        invisible="user_in_assigned_company_and_open == False"/>-->
+<!--                <button name="action_print_results"-->
+<!--                        string="Print Results"-->
+<!--                        type="object"-->
+<!--                        class="btn-primary"-->
+<!--                        invisible="user_in_assigned_company_and_results_published == False"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
+    <record id="zaneqas_tb_xpert_eqa_expected_results_search" model="ir.ui.view">
+        <field name="name">zaneqas.tb.xpert.eqa.expected.result.search</field>
+        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>
+        <field name="arch" type="xml">
+            <search string="TB Xpert EQA Expected Results">
+
+                <separator/>
+            </search>
+        </field>
+    </record>
+
+    <!-- training plan action-->
+    <record id="action_zaneqas_tb_xpert_eqa_cycles" model="ir.actions.act_window">
+        <field name="name">GeneXpert EQA Cycles</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">zaneqas.tb.xpert.eqa.expected.result</field>
+        <field name="view_mode">kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create a zaneqas tb xpert eqa result submission
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

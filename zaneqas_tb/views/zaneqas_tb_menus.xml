@@ -12,7 +12,7 @@
     <menuitem id="zaneqas_tb_mtb_rif_assay"
               name="MTB/RIF GeneXpert Assay"
               parent="zaneqas_tb_eqa_root"
-              action="action_zaneqas_tb_xpert_eqa_expected_results"/>
+              action="action_zaneqas_tb_xpert_eqa_cycles"/>
 
     <menuitem id="zaneqas_tb_microscopy"
               name="My Submissions"
@@ -22,6 +22,7 @@
     <menuitem id="zaneqas_tb_eqa_configs"
               name="Configuration"
               parent="zaneqas_tb_root"
+              groups="zaneqas_tb.group_cdl_staff"
               action="action_zaneqas_tb_xpert_eqa_expected_results"/>
 
 <!--    <menuitem id="zaneqas_tb_eqa_reports"-->

@@ -8,8 +8,6 @@
             <tree>
                 <field name="name"/>
                 <field name="company_name"/>
-                <field name="date_panel_received"/>
-                <field name="xpert_assay_used"/>
                 <field name="state"/>
             </tree>
 

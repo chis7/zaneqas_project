@@ -225,15 +225,15 @@
 
 
                                                                 <!--!-->
-                                                                <t t-foreach="lab.expected_result_lines_ids"
-                                                                   t-as="line">
-                                                                    <span t-field="line.tb_detection_not_detected"/>
-                                                                    <span t-field="line.tb_detection_trace"/>
-                                                                    <span t-field="line.tb_detection_very_low"/>
-                                                                    <span t-field="line.tb_detection_low"/>
-                                                                    <span t-field="line.tb_detection_medium"/>
-                                                                    <span t-field="line.tb_detection_high"/>
-                                                                </t>
+<!--                                                                <t t-foreach="lab.expected_result_lines_ids"-->
+<!--                                                                   t-as="line">-->
+<!--                                                                    <span t-field="line.tb_detection_not_detected"/>-->
+<!--                                                                    <span t-field="line.tb_detection_trace"/>-->
+<!--                                                                    <span t-field="line.tb_detection_very_low"/>-->
+<!--                                                                    <span t-field="line.tb_detection_low"/>-->
+<!--                                                                    <span t-field="line.tb_detection_medium"/>-->
+<!--                                                                    <span t-field="line.tb_detection_high"/>-->
+<!--                                                                </t>-->
                                                             </td>
                                                             <td>
                                                                 <t t-if="result.facility_result_rif_na">

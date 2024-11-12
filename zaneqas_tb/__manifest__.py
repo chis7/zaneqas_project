@@ -42,6 +42,7 @@
         'views/zaneqas_web_page_title.xml',
         'wizard/zaneqas_tb_xpert_results_wizard_views.xml',
         'views/zaneqas_tb_xpert_eqa_results_views.xml',
+        'views/zaneqas_tb_xpert_eqa_cycles_views.xml',
         'views/zaneqas_tb_xpert_eqa_expected_results_views.xml',
         'views/zaneqas_tb_xpert_eqa_participant_submission_views.xml',
         'views/zaneqas_tb_xpert_eqa_config_rounds_views.xml',

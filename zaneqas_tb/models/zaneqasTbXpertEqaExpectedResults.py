@@ -38,6 +38,10 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="Error Codes"
     )
 
+    def action_print_results(self):
+        return self.env.ref('zaneqas_tb.report_gene_xpert_eqa_results').report_action(self)
+
+
     @api.model
     def default_get(self, fields_list):
         res = super(ZaneqasTbXpertEqaExpectedResults, self).default_get(fields_list)
@@ -79,6 +83,10 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
     user_in_assigned_company_and_open = fields.Boolean(
         string="User in Assigned Company and Open",
         compute='_compute_user_in_assigned_company_and_open'
+    )
+    user_in_assigned_company_and_results_published = fields.Boolean(
+        string="User in Assigned Company and Results Published",
+        compute='_compute_user_in_assigned_company_and_results_published'
     )
     sample_id = fields.Char(string="Test Sample ID", store=True)
     date_tested = fields.Date(string="Date Tested", store=True)
@@ -215,6 +223,11 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         for record in self:
             user_company = self.env.user.company_id
             record.user_in_assigned_company_and_open = user_company in record.company_ids and record.state == 'open'
+
+    def _compute_user_in_assigned_company_and_results_published(self):
+        for record in self:
+            user_company = self.env.user.company_id
+            record.user_in_assigned_company_and_results_published = user_company in record.company_ids and record.state == 'resultsPublished'
 
     def download_csv_template(self):
         csv_content = StringIO()

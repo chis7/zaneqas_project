@@ -316,6 +316,9 @@
                             </field>
                         </page>
                     </notebook>
+                    <group>
+                        <field name="pdf_file" filename="pdf_filename"/>
+                    </group>
                 </sheet>
                 <footer>
                     <button string="Submit" type="object" name="action_submit_results" class="btn-primary" confirm="Are you sure you want to submit?"/>

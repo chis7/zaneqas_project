@@ -25,6 +25,7 @@
             <kanban>
                 <field name="user_in_assigned_company_and_open" column_invisible="True"/>
                 <field name="user_in_assigned_company_and_results_published" column_invisible="True"/>
+                <field name="user_in_assigned_company_and_open_and_submitted" column_invisible="True"/>
                 <field name="name" readonly="1"/>
                 <field name="due_date" readonly="1"/>
                 <field name="state" readonly="1"/>
@@ -47,7 +48,6 @@
                             <div>
                                 <field name="state" string="Status: "/>
                             </div>
-                            <br/>
 
                             <div class="o_kanban_record_bottom">
                                 <button name="open_results_submission_wizard"
@@ -56,11 +56,23 @@
                                         type="object"
                                         class="btn-primary"
                                         invisible="user_in_assigned_company_and_open == False"/>
-                                <button name="action_print_results"
-                                        string="View Your Results"
-                                        type="object"
-                                        class="btn-primary"
-                                        invisible="user_in_assigned_company_and_results_published == False"/>
+<!--                                <t t-if="user_in_assigned_company_and_open == False">-->
+<!--                                    <h5>Results Submitted</h5>-->
+<!--                                </t>-->
+
+
+                                <!--                                <button name="action_print_results"-->
+                                <!--                                        string="View Your Results"-->
+                                <!--                                        type="object"-->
+                                <!--                                        class="btn-primary"-->
+                                <!--                                        invisible="user_in_assigned_company_and_results_published == False"/>-->
+                                <!--                                <button-->
+                                <!--                                        string="Results Submitted"-->
+                                <!--                                        type="object"-->
+                                <!--                                        class="btn-warning"-->
+                                <!--                                        invisible="user_in_assigned_company_and_open == True"-->
+                                <!--                                        disabled="True"/>-->
+
                             </div>
                         </div>
                         <!--                        </div>-->
@@ -70,29 +82,29 @@
         </field>
     </record>
 
-<!--    <record id="zaneqas_tb_xpert_eqa_expected_results_tree_1" model="ir.ui.view">-->
-<!--        <field name="name">zaneqas.tb.xpert.eqa.expected.result.tree</field>-->
-<!--        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <tree>-->
-<!--                <field name="user_in_assigned_company_and_open" column_invisible="True"/>-->
-<!--                <field name="name" readonly="1"/>-->
-<!--                <field name="due_date" readonly="1"/>-->
-<!--                <field name="state" readonly="1"/>-->
-<!--                <button name="open_results_submission_wizard"-->
-<!--                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"-->
-<!--                        string="Submit Results"-->
-<!--                        type="object"-->
-<!--                        class="btn-primary"-->
-<!--                        invisible="user_in_assigned_company_and_open == False"/>-->
-<!--                <button name="action_print_results"-->
-<!--                        string="Print Results"-->
-<!--                        type="object"-->
-<!--                        class="btn-primary"-->
-<!--                        invisible="user_in_assigned_company_and_results_published == False"/>-->
-<!--            </tree>-->
-<!--        </field>-->
-<!--    </record>-->
+    <!--    <record id="zaneqas_tb_xpert_eqa_expected_results_tree_1" model="ir.ui.view">-->
+    <!--        <field name="name">zaneqas.tb.xpert.eqa.expected.result.tree</field>-->
+    <!--        <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <tree>-->
+    <!--                <field name="user_in_assigned_company_and_open" column_invisible="True"/>-->
+    <!--                <field name="name" readonly="1"/>-->
+    <!--                <field name="due_date" readonly="1"/>-->
+    <!--                <field name="state" readonly="1"/>-->
+    <!--                <button name="open_results_submission_wizard"-->
+    <!--                        confirm="You are about to start entering your results for submission. Are you sure you want to proceed?"-->
+    <!--                        string="Submit Results"-->
+    <!--                        type="object"-->
+    <!--                        class="btn-primary"-->
+    <!--                        invisible="user_in_assigned_company_and_open == False"/>-->
+    <!--                <button name="action_print_results"-->
+    <!--                        string="Print Results"-->
+    <!--                        type="object"-->
+    <!--                        class="btn-primary"-->
+    <!--                        invisible="user_in_assigned_company_and_results_published == False"/>-->
+    <!--            </tree>-->
+    <!--        </field>-->
+    <!--    </record>-->
     <record id="zaneqas_tb_xpert_eqa_expected_results_search" model="ir.ui.view">
         <field name="name">zaneqas.tb.xpert.eqa.expected.result.search</field>
         <field name="model">zaneqas.tb.xpert.eqa.expected.result</field>

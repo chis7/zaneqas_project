@@ -88,22 +88,31 @@ class ZaneqasTbXpertEqaResults(models.Model):
     lab_incharge_comment = fields.Text(string="Lab Incharge Comment", tracking=True)
     results_status = fields.Char(string="Results Status", compute="_compute_results_status")
     company_name = fields.Char(string='Company Name', compute='_compute_company_name')
+
     state_of_cycle = fields.Selection(
         related='name.state',
         string="State of Cycle",
         readonly=True,
         store=True
     )
+    pdf_file = fields.Binary(string="PDF File")
+    pdf_filename = fields.Char(string="PDF Filename")
     company_count = fields.Integer(
         related='name.company_count',
         string="Company Count",
         readonly=True,
         store=True
     )
-    due_date=fields.Date(string="Due Date", related='name.due_date', store=True)
+    due_date = fields.Date(string="Due Date", related='name.due_date', store=True)
     total_score = fields.Integer(string='Total Score', store=True)
 
-    # Define the print_report method
+    def action_preview_pdf(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_url',
+            'url': '/web/content/%s/pdf_file/%s' % (self.id, self.pdf_filename),
+            'target': 'new',
+        }
 
     def print_report(self):
         report = self.env.ref('zaneqas_tb.report_gene_xpert_eqa_results')
@@ -124,6 +133,11 @@ class ZaneqasTbXpertEqaResults(models.Model):
         'zaneqas_tb_xpert_eqa_expected_result_id',
         string="Expected Results"
     )
+
+    def _compute_user_in_assigned_company_and_open(self):
+        for record in self:
+            user_company = self.env.user.company_id
+            record.user_in_assigned_company_and_open = user_company in record.company_ids and record.state_of_cycle == 'open'
 
     @api.depends('create_uid')
     def _compute_company_name(self):

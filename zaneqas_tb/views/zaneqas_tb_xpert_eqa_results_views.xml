@@ -63,6 +63,7 @@
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'lab_incharge' "/>
                     <field name="state_of_cycle" invisible="1"/>
+<!--                    <button name="action_preview_pdf" type="object" string="Preview Attachment" class="btn-primary"/>-->
                     <!-- Print Button -->
                     <button name="print_report" type="object" string="Print"
                             class="oe_highlight"
@@ -79,6 +80,10 @@
                 <sheet>
                     <div class="oe_title" style="text-align:center;">
                         <h3>
+                            <field name="pdf_file" filename="pdf_filename" string="Results Form" readonly="1"
+                                   widget="binary"/>
+<!--                            <img src="/zaneqas_tb/static/src/img/pdf_icon.png" alt="PDF Icon"-->
+<!--                                 style="width: 20px; height: 20px; margin-left: 10px;"/>-->
                             <b>
                                 Xpert TB Proficiency test Result Form
                             </b>

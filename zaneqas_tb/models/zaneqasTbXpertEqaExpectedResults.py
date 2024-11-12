@@ -26,6 +26,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         'res.company',
         string='Facilities'
     )
+    pdf_file = fields.Binary(string="PDF File")
+    pdf_filename = fields.Char(string="PDF Filename")
     sample_ids = fields.One2many(
         'zaneqas.tb.xpert.eqa.expected.result.lines',
         'zaneqas_tb_xpert_eqa_expected_result_id',
@@ -72,6 +74,11 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         string="Status",
         required=True,
         tracking=True
+    )
+    user_in_assigned_company_and_open_and_submitted = fields.Boolean(
+        string="User in Assigned Company and Open and Submitted",
+        compute="_compute_has_logged_in_user_company_submitted_record",
+        store=True
     )
     lab_incharge_comment = fields.Char(string="Lab Incharge Comment", tracking=True)
 
@@ -149,6 +156,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             'add_infor_instrument_user': '',
             'declaration_testing_personnel': '',
             'declaration_testing_personnel_date': False,
+            'pdf_file': False,
+
 
         })
         self.sample_ids.write({'facility_result_date_tested': False})
@@ -219,10 +228,29 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         for record in self:
             record.company_count = len(record.company_ids)
 
+    def _compute_has_logged_in_user_company_submitted_record(self):
+        for record in self:
+            user_company = self.env.user.company_id
+            record.user_in_assigned_company_and_open_and_submitted = (
+                    user_company in record.company_ids and
+                    record.state == 'open' and
+                    self.env['zaneqas.tb.xpert.eqa.result'].search_count([
+                        ('company_id', '=', user_company.id),
+                        ('name', '=', record.name.id)
+                    ]) > 0
+            )
+
     def _compute_user_in_assigned_company_and_open(self):
         for record in self:
             user_company = self.env.user.company_id
-            record.user_in_assigned_company_and_open = user_company in record.company_ids and record.state == 'open'
+            record.user_in_assigned_company_and_open = (
+                    user_company in record.company_ids and
+                    record.state == 'open' and
+                    self.env['zaneqas.tb.xpert.eqa.result'].search_count([
+                        ('company_id', '=', user_company.id),
+                        ('name', '=', record.name.id)
+                    ]) == 0
+            )
 
     def _compute_user_in_assigned_company_and_results_published(self):
         for record in self:
@@ -325,6 +353,11 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         if not expected_result.exists():
             raise UserError(f"Referenced expected result with id {self.name.id} does not exist.")
 
+
+        user_company_name = self.env.user.company_id.name
+        record_name = self.name.name
+        file_name = f'{record_name}_{user_company_name}.pdf'
+
         form_data = {
             'name': self.id,
             'supervisor_comment': self.supervisor_comment,
@@ -345,6 +378,8 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
             'company_id': self.env.user.company_id.id,
             'state': 'draft',
             'site_id': self.env.user.company_id.id,
+            'pdf_file': self.pdf_file,
+            'pdf_filename': file_name,
 
         }
 

@@ -15,7 +15,7 @@
               action="action_zaneqas_tb_xpert_eqa_cycles"/>
 
     <menuitem id="zaneqas_tb_microscopy"
-              name="My Submissions"
+              name="Submissions"
               parent="zaneqas_tb_mtb_rif_assay"
               action="action_zaneqas_tb_xpert_eqa_results"/>
 

@@ -71,13 +71,10 @@ class ZaneqasTbXpertEqaResults(models.Model):
     state = fields.Selection(
         selection=[
             ("draft", "Draft"),
-            ("supervisor", "Supervisor"),
-            ("lab_incharge", "Lab Incharge"),
-            ("approved", "Approved"),
+            ("approved", "Results Submitted"),
         ],
         default='draft',
         string="Status",
-        required=True,
         tracking=True
     )
     expected_result_lines_ids = fields.One2many(
@@ -200,21 +197,24 @@ class ZaneqasTbXpertEqaResults(models.Model):
             actual_result.write({'score': score})
 
     def action_submit_eqa_result_to_supervisor(self):
-        self.write({'state': 'supervisor'})
-        group = self.env.ref("zaneqas_tb.group_supervisor_approve_site_eqa_results")
-        users = group.users
-
-        if users:
-            selected_user = random.choice(users)
-            # supervisor_id = selected_user.id
-            if selected_user.email:
-                mail_values = {
-                    'subject': 'Request for Approval',
-                    'body_html': """<p>You have received a request for approval of EQA Site results as supervisor. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
-                    'email_to': selected_user.email,
-                }
-                mail = self.env['mail.mail'].create(mail_values)
-                mail.send()
+        self.write({'state': 'approved',
+                    'date_results_received_at_CDL': fields.Date.today()})
+    # def action_submit_eqa_result_to_supervisor(self):
+    #     self.write({'state': 'supervisor'})
+    #     group = self.env.ref("zaneqas_tb.group_supervisor_approve_site_eqa_results")
+    #     users = group.users
+    #
+    #     if users:
+    #         selected_user = random.choice(users)
+    #         # supervisor_id = selected_user.id
+    #         if selected_user.email:
+    #             mail_values = {
+    #                 'subject': 'Request for Approval',
+    #                 'body_html': """<p>You have received a request for approval of EQA Site results as supervisor. Click <a href='http://localhost:8069'>here</a> to log in and access the request.</p>""",
+    #                 'email_to': selected_user.email,
+    #             }
+    #             mail = self.env['mail.mail'].create(mail_values)
+    #             mail.send()
 
     def action_supervisor_approve_eqa_result(self):
         self.write({'state': 'lab_incharge'})

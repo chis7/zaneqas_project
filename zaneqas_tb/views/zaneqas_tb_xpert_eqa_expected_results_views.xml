@@ -73,7 +73,7 @@
                             confirm="Are you sure you want to open this PT cycle?"
                             string="Open PT Cycle" class="btn-primary" type="object"
                             context="{'validate_analytic': True}"
-                            invisible="state != 'supervisor' "/>
+                            invisible="state != 'approved' "/>
 
                     <field name="state" context="{'validate_analytic': True}" widget="statusbar"
                            statusbar_visible="draft,supervisor,approved,open,extended,closed,resultsPublished"
@@ -201,8 +201,8 @@
                         <group>
                             <field name="is_supervisor" invisible="1"/>
                             <field name="is_LabIncharge" invisible="1"/>
-                            <field name="supervisor_comment" readonly="is_supervisor == False"/>
-                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>
+<!--                            <field name="supervisor_comment" readonly="is_supervisor == False"/>-->
+<!--                            <field name="lab_incharge_comment" readonly="is_LabIncharge == False"/>-->
                         </group>
                     </group>
 

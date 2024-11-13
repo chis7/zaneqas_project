@@ -56,9 +56,10 @@
                                         type="object"
                                         class="btn-primary"
                                         invisible="user_in_assigned_company_and_open == False"/>
-<!--                                <t t-if="user_in_assigned_company_and_open == False">-->
-<!--                                    <h5>Results Submitted</h5>-->
-<!--                                </t>-->
+
+                                <!--                                <t t-if="user_in_assigned_company_and_open == False">-->
+                                <!--                                    <h5>Results Submitted</h5>-->
+                                <!--                                </t>-->
 
 
                                 <!--                                <button name="action_print_results"-->
@@ -66,12 +67,7 @@
                                 <!--                                        type="object"-->
                                 <!--                                        class="btn-primary"-->
                                 <!--                                        invisible="user_in_assigned_company_and_results_published == False"/>-->
-                                <!--                                <button-->
-                                <!--                                        string="Results Submitted"-->
-                                <!--                                        type="object"-->
-                                <!--                                        class="btn-warning"-->
-                                <!--                                        invisible="user_in_assigned_company_and_open == True"-->
-                                <!--                                        disabled="True"/>-->
+
 
                             </div>
                         </div>

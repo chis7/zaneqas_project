@@ -14,7 +14,7 @@ class ZaneqasTbXpertEqaRoundsSampleIdLines(models.Model):
     sample_id = fields.Char(string="Test Sample ID", required=True, store=True)
 
     config_round_id = fields.Many2one(
-        'zaneqas.tb.xpert.eqa.config.rounds', string="Config Round ID", required=True
+        'zaneqas.tb.xpert.eqa.config.rounds', string="Config Round ID"
     )
     sample_ids = fields.Many2one(
         'zaneqas.tb.xpert.eqa.config.rounds', string="Config Round"

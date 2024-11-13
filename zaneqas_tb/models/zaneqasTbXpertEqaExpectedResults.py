@@ -72,7 +72,6 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         ],
         default='draft',
         string="Status",
-        required=True,
         tracking=True
     )
     user_in_assigned_company_and_open_and_submitted = fields.Boolean(
@@ -323,7 +322,7 @@ class ZaneqasTbXpertEqaExpectedResults(models.Model):
         self.write({'state': 'supervisor'})
 
     def action_supervisor_approve_eqa_result(self):
-        self.write({'state': 'lab_incharge'})
+        self.write({'state': 'approved'})
 
     def action_supervisor_send_back_eqa_result(self):
         self.write({'state': 'draft'})

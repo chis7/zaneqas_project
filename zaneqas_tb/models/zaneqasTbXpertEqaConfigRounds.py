@@ -11,7 +11,21 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
     _inherit = ["mail.thread"]
     _description = "zaneqas tb xpert eqa config rounds"
 
-    name = fields.Char(string="Name", required=True)
+    # name = fields.Char(string="Name", required=True)
+    @api.model
+    def _get_name_selection(self):
+        current_year = datetime.now().year
+        return [
+            (f"{current_year} Round 1", f"{current_year} Round 1"),
+            (f"{current_year} Round 2", f"{current_year} Round 2"),
+        ]
+
+    name = fields.Selection(
+        selection=_get_name_selection,
+        string="Name",
+        required=True,
+        tracking=True
+    )
     state = fields.Selection(
         selection=[
             ("draft", "Draft"),
@@ -52,8 +66,7 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
         # record = super(ZaneqasTbXpertEqaConfigRounds, self).create(vals)
 
         self.write({
-            'state': 'draft',
-            'name': f"{current_year} {self.name}"
+            'state': 'draft'
         })
         self.generate_sample_ids()
         # return record
@@ -76,10 +89,7 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
                 mail.send()
 
     def action_supervisor_approve_eqa_config_round(self):
-        if self.env.user != self.supervisor_id:
-            raise models.ValidationError("You are not authorized to approve this EQA configuration round.")
-        current_year = datetime.now().year
-        self.write({'state': 'approved', 'name': f"{current_year} {self.name}"})
+        self.write({'state': 'approved'})
         user = self.create_uid.email
         if user:
             mail_values = {

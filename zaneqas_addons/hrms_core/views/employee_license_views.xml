@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hrms_employee_license_tree" model="ir.ui.view">
+            <field name="name">hrms.employee.license.tree</field>
+            <field name="model">hrms.employee.license</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Licenses" expand="1"
+                      decoration-danger="state == 'expired' and issue_date != expiry_date"
+                      decoration-warning="state == 'expiring'"
+                      default_group_by="employee_id">
+                    <field name="employee_id" widget="many2one_avatar_user"/>
+                    <field name="license_id"/>
+                    <field name="license_number"/>
+                    <field name="issue_date"/>
+                    <field name="expiry_date"/>
+                    <field name="state" widget="badge" decoration-warning="state == 'expiring'" decoration-success="state == 'valid'" decoration-danger="state == 'expired'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_employee_license_form" model="ir.ui.view">
+            <field name="name">hrms.employee.license.form</field>
+            <field name="model">hrms.employee.license</field>
+            <field name="arch" type="xml">
+                <form string="Employee License">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="license_id"/>
+                                <field name="license_number"/>
+                            </group>
+                            <group>
+                                <field name="issue_date" string="Duration" widget="daterange" options="{'end_date_field': 'expiry_date'}"/>
+                                <field name="expiry_date" invisible="1"/>
+                                <field name="license_name" invisible="1"/>
+                                <field name="certificate" widget="license_upload" filename="license_name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_employee_license" model="ir.actions.act_window">
+            <field name="name">Employee License</field>
+            <field name="res_model">hrms.employee.license</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

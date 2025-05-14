@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- HRMSJob Demo Records -->
+
+    <record id="hrms_job_1" model="hrms.job">
+        <field name="name">Medical Doctor</field>
+        <field name="isco_08_id" ref="isco_08_2211"/> <!-- Generalist medical practitioners -->
+        <field name="cadre_id" ref="cadre_7"/> <!-- Medical Doctors -->
+        <field name="job_classification_id" ref="job_classification_1"/> <!-- Division I -->
+        <field name="salary_grade_id" ref="salary_grade_12"/> <!-- Grade M -->
+        <field name="who_cadre_id" ref="who_cadre_1"/> <!-- Generalist medical practitioners -->
+    </record>
+
+    <record id="hrms_job_2" model="hrms.job">
+        <field name="name">Specialist Medical Practitioner</field>
+        <field name="isco_08_id" ref="isco_08_2212"/> <!-- Specialist medical practitioners -->
+        <field name="cadre_id" ref="cadre_24"/> <!-- Anaesthesiologist -->
+        <field name="job_classification_id" ref="job_classification_2"/> <!-- Division II -->
+        <field name="salary_grade_id" ref="salary_grade_13"/> <!-- Grade N -->
+        <field name="who_cadre_id" ref="who_cadre_2"/> <!-- Specialist Medical Practitioners -->
+    </record>
+
+    <record id="hrms_job_3" model="hrms.job">
+        <field name="name">Nursing Professional</field>
+        <field name="isco_08_id" ref="isco_08_2221"/> <!-- Nursing professionals -->
+        <field name="cadre_id" ref="cadre_18"/> <!-- Nurses -->
+        <field name="job_classification_id" ref="job_classification_3"/> <!-- Division III -->
+        <field name="salary_grade_id" ref="salary_grade_10"/> <!-- Grade K -->
+        <field name="who_cadre_id" ref="who_cadre_7"/> <!-- Nursing Professionals -->
+    </record>
+
+    <record id="hrms_job_4" model="hrms.job">
+        <field name="name">Midwifery Professional</field>
+        <field name="isco_08_id" ref="isco_08_2222"/> <!-- Midwifery professionals -->
+        <field name="cadre_id" ref="cadre_99"/> <!-- Registered Midwives -->
+        <field name="job_classification_id" ref="job_classification_3"/> <!-- Division III -->
+        <field name="salary_grade_id" ref="salary_grade_9"/> <!-- Grade J -->
+        <field name="who_cadre_id" ref="who_cadre_8"/> <!-- Midwifery Professionals -->
+    </record>
+
+    <record id="hrms_job_5" model="hrms.job">
+        <field name="name">Dentist</field>
+        <field name="isco_08_id" ref="isco_08_2261"/> <!-- Dentists -->
+        <field name="cadre_id" ref="cadre_4"/> <!-- Dentist -->
+        <field name="job_classification_id" ref="job_classification_1"/> <!-- Division I -->
+        <field name="salary_grade_id" ref="salary_grade_11"/> <!-- Grade L -->
+        <field name="who_cadre_id" ref="who_cadre_11"/> <!-- Dentists -->
+    </record>
+
+    <record id="hrms_job_6" model="hrms.job">
+        <field name="name">Pharmacist</field>
+        <field name="isco_08_id" ref="isco_08_2262"/> <!-- Pharmacists -->
+        <field name="cadre_id" ref="cadre_14"/> <!-- Pharmacist -->
+        <field name="job_classification_id" ref="job_classification_2"/> <!-- Division II -->
+        <field name="salary_grade_id" ref="salary_grade_10"/> <!-- Grade K -->
+        <field name="who_cadre_id" ref="who_cadre_12"/> <!-- Pharmacists -->
+    </record>
+
+    <record id="hrms_job_7" model="hrms.job">
+        <field name="name">Physiotherapist</field>
+        <field name="isco_08_id" ref="isco_08_2264"/> <!-- Physiotherapists -->
+        <field name="cadre_id" ref="cadre_15"/> <!-- Physiotherapist -->
+        <field name="job_classification_id" ref="job_classification_2"/> <!-- Division II -->
+        <field name="salary_grade_id" ref="salary_grade_8"/> <!-- Grade I -->
+        <field name="who_cadre_id" ref="who_cadre_14"/> <!-- Physiotherapists -->
+    </record>
+
+    <record id="hrms_job_8" model="hrms.job">
+        <field name="name">Dietician/Nutritionist</field>
+        <field name="isco_08_id" ref="isco_08_2265"/> <!-- Dieticians and Nutritionists -->
+        <field name="cadre_id" ref="cadre_10"/> <!-- Nutritionist -->
+        <field name="job_classification_id" ref="job_classification_1"/> <!-- Division I -->
+        <field name="salary_grade_id" ref="salary_grade_9"/> <!-- Grade J -->
+        <field name="who_cadre_id" ref="who_cadre_15"/> <!-- Dieticians and Nutritionists -->
+    </record>
+
+    <record id="hrms_job_9" model="hrms.job">
+        <field name="name">Optometrist</field>
+        <field name="isco_08_id" ref="isco_08_2267"/> <!-- Optometrists and Ophthalmic Opticians -->
+        <field name="cadre_id" ref="cadre_11"/> <!-- Optometry -->
+        <field name="job_classification_id" ref="job_classification_2"/> <!-- Division II -->
+        <field name="salary_grade_id" ref="salary_grade_10"/> <!-- Grade K -->
+        <field name="who_cadre_id" ref="who_cadre_17"/> <!-- Optometrists and Ophthalmic Opticians -->
+    </record>
+
+    <record id="hrms_job_10" model="hrms.job">
+        <field name="name">Environmental Health Officer</field>
+        <field name="isco_08_id" ref="isco_08_2263"/> <!-- Environmental and Occupational Health and Hygiene Professionals -->
+        <field name="cadre_id" ref="cadre_5"/> <!-- Environmental Health -->
+        <field name="job_classification_id" ref="job_classification_2"/> <!-- Division II -->
+        <field name="salary_grade_id" ref="salary_grade_8"/> <!-- Grade I -->
+        <field name="who_cadre_id" ref="who_cadre_13"/> <!-- Environmental and Occupational Health and Hygiene Professionals -->
+    </record>
+
+</odoo>

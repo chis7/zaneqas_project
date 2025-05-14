@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hrms_record_departure_form" model="ir.ui.view">
+            <field name="name">hrms.record.departure.form</field>
+            <field name="model">hrms.record.departure.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Record a Departure">
+                    <h1><field name="employee_id" readonly="1" options="{'no_open': True}"/></h1>
+                    <h2><field name="position_id" readonly="1" options="{'no_open': True}"/></h2>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="departure_date" required="1"/>
+                                <field name="departure_reason_id" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                     <footer>
+                         <button name="action_record_departure" string="Apply" type="object" class="oe_highlight" data-hotkey="q"/>
+                         <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                     </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hrms_employee_position_tree" model="ir.ui.view">
+            <field name="name">hrms.employee.position.tree</field>
+            <field name="model">hrms.employee.position</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Positions">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="position_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <button name="open_record_departure_wizard" type="object" string="Record Departure" class="btn btn-link" icon="fa-plane-departure"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_employee_position_form" model="ir.ui.view">
+            <field name="name">hrms.employee.position.form</field>
+            <field name="model">hrms.employee.position</field>
+            <field name="arch" type="xml">
+                <form string="Employee Position">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="name"/></h1>
+                            <H2><field name="position_name"/></H2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id" required="1"/>
+                                <field name="position_id" required="1"/>
+                                <field name="appointment_letter" widget="attachment_upload" class="oe_inline"/>
+                            </group>
+                            <group>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="departure_reason_id" invisible="end_date == False"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_employee_position" model="ir.actions.act_window">
+            <field name="name">Employee Positions</field>
+            <field name="res_model">hrms.employee.position</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

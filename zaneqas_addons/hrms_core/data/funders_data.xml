@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="funder_grz" model="hrms.funder">
+            <field name="name">Government Republic of Zambia</field>
+            <field name="short_name">GRZ</field>
+        </record>
+        <record id="funder_gf" model="hrms.funder">
+            <field name="name">Global Fund</field>
+            <field name="short_name">GF</field>
+        </record>
+        <record id="funder_cdc" model="hrms.funder">
+            <field name="name">Centers for Disease Control and Prevention</field>
+            <field name="short_name">CDC</field>
+        </record>
+        <record id="funder_cirdz" model="hrms.funder">
+            <field name="name">Centre for Infectious Disease Research in Zambia</field>
+            <field name="short_name">CIDRZ</field>
+        </record>
+        <record id="funder_chai" model="hrms.funder">
+            <field name="name">Clinton Health Access Initiative</field>
+            <field name="short_name">CHAI</field>
+        </record>
+        <record id="funder_eu" model="hrms.funder">
+            <field name="name">European Union</field>
+            <field name="short_name">EU</field>
+        </record>
+        <record id="funder_jphiego" model="hrms.funder">
+            <field name="name">Jhpiego Corporation</field>
+            <field name="short_name">Jhpiego</field>
+        </record>
+        <record id="funder_wb" model="hrms.funder">
+            <field name="name">World Bank</field>
+            <field name="short_name">WB</field>
+        </record>
+    </data>
+</odoo>

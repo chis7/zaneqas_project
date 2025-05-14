@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="who_cadre_1" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2211"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Generalist medical practitioners</field>
+      <field name="definition">Generalist medical doctors (including family and
+primary care doctors) diagnose, treat and prevent
+illness, disease, injury, and other physical and
+mental impairments and maintain general health in
+humans through application of the principles and
+procedures of modern medicine. They plan,
+supervise and evaluate the implementation of care
+and treatment plans by other health care providers.
+They do not limit their practice to certain disease
+categories or methods of treatment, and may
+assume responsibility for the provision of
+continuing and comprehensive medical care to
+individuals, families and communities.</field>
+      <field name="examples">Medical doctor (general), Medical officer (general),
+Physician (general), General practitioner, Family
+medical practitioner, Primary health care physician,
+District medical doctor, Resident medical officer
+specializing in general practice, Township medical
+officer, Station medical officer, Specialist in family
+medicine, Medical officer</field>
+      <field name="notes">Occupations included in this category require completion of a
+university-level degree in basic medical education plus
+postgraduate clinical training or equivalent. Medical interns
+who have completed their university education in basic
+medical education and are undertaking postgraduate clinical
+training are included here. Although in some countries
+‘general practice’ and 'family medicine' may be considered as
+medical specializations, these occupations should always be
+classified here</field>
+    </record>
+    <record id="who_cadre_2" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2212"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Specialist Medical Practitioners</field>
+      <field name="definition">Specialist medical doctors diagnose, treat and
+prevent illness, disease, injury and other physical
+and mental impairments using specialized testing,
+diagnostic, medical, surgical, physical and
+psychiatric techniques, through application of the
+principles and procedures of modern medicine.
+They plan, supervise and evaluate the
+implementation of care and treatment plans by
+other health care providers. They specialize in
+certain disease categories, types of patient or
+methods of treatment, and may conduct medical
+education and research activities in their chosen
+areas of specialization.
+</field>
+      <field name="examples">Specialist physician (internal medicine), Surgeon,
+Anaesthetist, Cardiologist, Emergency medicine
+specialist, Ophthalmologist, Gynaecologist,
+Obstetrician, Paediatrician, Pathologist, Preventive
+medicine specialist, Psychiatrist, Radiologist,
+Resident medical officer in specialist training</field>
+      <field name="notes">Occupations included in this category require completion of a
+university-level degree in basic medical education plus
+postgraduate clinical training in a medical specialization
+(except general practice) or equivalent. Resident medical
+officers training as specialist practitioners (except general
+practice) are included here. Although in some countries
+'stomatology' may be considered as a medical specialization,
+stomatologists should be included under 'Dentists'-2261.
+Medical research professionals who participate in biomedical
+research using living organisms and do not undertake clinical
+practice should be excluded from here (classified under 'Life
+science professionals').</field>
+    </record>
+<!--    <record id="who_cadre_3" model="hrms.who.cadre">-->
+<!--      <field name="isco_08_id" ref="isco_08_2212"/>-->
+<!--      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>-->
+<!--      <field name="occupation_group">Specialist Medical Practitioners</field>-->
+<!--      <field name="definition">Doctors in obstetric and gynaecological-->
+<!--specialties and related branches focusing on the-->
+<!--care of the reproductive system of women-->
+<!--including before, during and after pregnancy and-->
+<!--childbirth.</field>-->
+<!--      <field name="examples">Gynaecologist, Obstetrician</field>-->
+<!--      <field name="notes">It is of significance to countries and stakeholders to be able-->
+<!--to distinguish the different categories of specialist medical-->
+<!--practitioners. For purposes of international comparability,-->
+<!--where data pertaining to specialist medical practitioners are-->
+<!--reported and classified by medical specialty, they should be-->
+<!--mapped to these groupings. Each specialist should only be-->
+<!--counted once, according to the main area of practice (or, if-->
+<!--this information is not available, the last specialty registered).-->
+<!--</field>-->
+<!--    </record>-->
+<!--    <record id="who_cadre_4" model="hrms.who.cadre">-->
+<!--      <field name="isco_08_id" ref="isco_08_2212"/>-->
+<!--      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>-->
+<!--      <field name="occupation_group">Specialist Medical Practitioners</field>-->
+<!--      <field name="definition">Doctors in paediatrics and related specialties-->
+<!--focusing on the prevention, diagnosis and-->
+<!--treatment of health problems in infants, children-->
+<!--and adolescents</field>-->
+<!--      <field name="examples">Paediatrician, Neonatologist</field>-->
+<!--      <field name="notes">It is of significance to countries and stakeholders to be able-->
+<!--to distinguish the different categories of specialist medical-->
+<!--practitioners. For purposes of international comparability,-->
+<!--where data pertaining to specialist medical practitioners are-->
+<!--reported and classified by medical specialty, they should be-->
+<!--mapped to these groupings. Each specialist should only be-->
+<!--counted once, according to the main area of practice (or, if-->
+<!--this information is not available, the last specialty registered).-->
+<!--</field>-->
+<!--    </record>-->
+<!--    <record id="who_cadre_5" model="hrms.who.cadre">-->
+<!--      <field name="isco_08_id" ref="isco_08_2212"/>-->
+<!--      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>-->
+<!--      <field name="occupation_group">Specialist Medical Practitioners</field>-->
+<!--      <field name="definition">Doctors in psychiatric specialties and related-->
+<!--branches focusing on the study and treatment of-->
+<!--mental illness and behavioural disorders.</field>-->
+<!--      <field name="examples">Psychiatrist, Child psychiatrist, Gerontopsychiatrist,-->
+<!--Neuropsychiatrist</field>-->
+<!--      <field name="notes">It is of significance to countries and stakeholders to be able-->
+<!--to distinguish the different categories of specialist medical-->
+<!--practitioners. For purposes of international comparability,-->
+<!--where data pertaining to specialist medical practitioners are-->
+<!--reported and classified by medical specialty, they should be-->
+<!--mapped to these groupings. Each specialist should only be-->
+<!--counted once, according to the main area of practice (or, if-->
+<!--this information is not available, the last specialty registered).-->
+<!--</field>-->
+<!--    </record>-->
+<!--    <record id="who_cadre_5" model="hrms.who.cadre">-->
+<!--      <field name="isco_08_id" ref="isco_08_2212"/>-->
+<!--      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>-->
+<!--      <field name="occupation_group">Specialist Medical Practitioners</field>-->
+<!--      <field name="definition">Doctors in the medical group of specialties-->
+<!--and related branches (not elsewhere classified)-->
+<!--focusing on the diagnosis, management and non-surgical treatment of health problems.</field>-->
+<!--      <field name="examples">Specialist medical doctor in cardiology, dermato-venerology, forensic medicine, gastroenterology,-->
+<!--haematology, immunology, infectious disease,-->
+<!--internal medicine, neurology, occupational medicine,-->
+<!--oncology, radiology, rehabilitative medicine,-->
+<!--respiratory medicine, urology</field>-->
+<!--      <field name="notes">It is of significance to countries and stakeholders to be able-->
+<!--to distinguish the different categories of specialist medical-->
+<!--practitioners. For purposes of international comparability,-->
+<!--where data pertaining to specialist medical practitioners are-->
+<!--reported and classified by medical specialty, they should be-->
+<!--mapped to these groupings. Each specialist should only be-->
+<!--counted once, according to the main area of practice (or, if-->
+<!--this information is not available, the last specialty registered).-->
+<!--</field>-->
+<!--    </record>-->
+<!--    <record id="who_cadre_6" model="hrms.who.cadre">-->
+<!--      <field name="isco_08_id" ref="isco_08_2212"/>-->
+<!--      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>-->
+<!--      <field name="occupation_group">Specialist Medical Practitioners</field>-->
+<!--      <field name="definition">Doctors in the surgical group of specialties-->
+<!--and related branches (not elsewhere classified)-->
+<!--focusing on the treatment of health problems with-->
+<!--surgery.-->
+<!--</field>-->
+<!--      <field name="examples">Specialist medical doctor in general surgery, accident-->
+<!--and emergency medicine, anaesthesiology, intensive-->
+<!--care, neurological surgery, ophthalmology,-->
+<!--orthopaedics, otolaryngology, paediatric surgery,-->
+<!--plastic surgery, thoracic surgery, vascular surgery-->
+<!--</field>-->
+<!--      <field name="notes">It is of significance to countries and stakeholders to be able-->
+<!--to distinguish the different categories of specialist medical-->
+<!--practitioners. For purposes of international comparability,-->
+<!--where data pertaining to specialist medical practitioners are-->
+<!--reported and classified by medical specialty, they should be-->
+<!--mapped to these groupings. Each specialist should only be-->
+<!--counted once, according to the main area of practice (or, if-->
+<!--this information is not available, the last specialty registered).-->
+<!--</field>-->
+<!--    </record>-->
+<!--    <record id="who_cadre_7" model="hrms.who.cadre">-->
+<!--      <field name="isco_08_id" ref="isco_08_2212"/>-->
+<!--      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>-->
+<!--      <field name="occupation_group">Specialist Medical Practitioners</field>-->
+<!--      <field name="definition">Doctors in specialties not elsewhere-->
+<!--classified includes medical doctors in specialist-->
+<!--practice excepting obstetric, gynaecological,-->
+<!--paediatric, psychiatric, surgical or medical-->
+<!--specialties as classified elsewhere.-->
+<!--</field>-->
+<!--      <field name="notes">It is of significance to countries and stakeholders to be able-->
+<!--to distinguish the different categories of specialist medical-->
+<!--practitioners. For purposes of international comparability,-->
+<!--where data pertaining to specialist medical practitioners are-->
+<!--reported and classified by medical specialty, they should be-->
+<!--mapped to these groupings. Each specialist should only be-->
+<!--counted once, according to the main area of practice (or, if-->
+<!--this information is not available, the last specialty registered).-->
+<!--</field>-->
+<!--    </record>-->
+    <record id="who_cadre_7" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2221"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Nursing Professionals</field>
+      <field name="definition">Nursing professionals provide treatment, support
+and care services for people who are in need of
+nursing care due to the effects of ageing, injury,
+illness or other physical or mental impairment, or
+potential risks to health, according to the practice
+and standards of modern nursing. They assume
+responsibility for the planning and management of
+the care of patients, including the supervision of
+other health care workers, working autonomously
+or in teams with medical doctors and others in the
+practical application of preventive and curative
+measures in clinical and community settings.</field>
+      <field name="examples">Professional nurse, Specialist nurse, Nurse
+practitioner, Clinical nurse, District nurse, Operating
+theatre nurse, Public health nurse, Nurse
+anaesthetist, Nurse educator, Township health
+Nurse, Public health nursing sister</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in nursing. The distinction between
+nursing and midwifery professionals and associate
+professionals should be made on the basis of the nature of
+the work performed in relation to this definition. The
+qualifications held by individuals or that predominate in the
+country are not the main factor in making this distinction, as
+training arrangements for nurses and midwives vary widely
+between countries and have varied over time within
+countries.
+</field>
+    </record>
+    <record id="who_cadre_8" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2222"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Midwifery Professionals</field>
+      <field name="definition">Midwifery professionals plan, manage, provide
+and evaluate midwifery care services before,
+during and after pregnancy and childbirth. They
+provide delivery care for reducing health risks to
+women and newborn children according to the
+practice and standards of modern midwifery,
+working autonomously or in teams with other health
+care providers. They may conduct research on
+midwifery practices and procedures, and
+implement midwifery education activities in clinical
+and community settings.</field>
+      <field name="examples">Professional midwife, Public health midwife</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in midwifery. The distinctions between
+nursing and midwifery professionals and associate
+professionals should be made on the basis of the nature of
+the work performed in relation to this definition. The
+qualifications held by individuals or that predominate in the
+country are not the main factor in making this distinction, as
+training arrangements for nurses and midwives vary widely
+between countries and have varied over time within
+countries.
+</field>
+    </record>
+    <record id="who_cadre_9" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2230"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Traditional and Complementary Medicine Professionals</field>
+      <field name="definition">Traditional and complementary medicine
+professionals examine patients and prevent and
+treat illness, disease, injury and other physical,
+mental and psychosocial ailments by applying
+knowledge, skills and practices acquired through
+extensive study of the theories and experiences
+originating in specific cultures. They research,
+develop and implement treatment plans using
+applications such as acupuncture, ayurvedic,
+homoeopathic and herbal medicine.
+</field>
+      <field name="examples">Acupuncturist, Ayurvedic practitioner, Chinese herbal
+medicine practitioner, Homeopath, Naturopath, Unani
+practitioner, Drungtsho
+      </field>
+      <field name="notes">This category includes occupations for which competent
+performance requires an extensive understanding of the
+benefits and applications of traditional and complementary
+therapies, developed as the result of extended formal study
+of these techniques as well as human anatomy and elements
+of modern medicine. Practitioners working in the singular
+application of approaches to herbal medicines, spiritual
+therapies or manual therapeutic activity are excluded from
+here.
+</field>
+    </record>
+    <record id="who_cadre_10" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2240"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Paramedical Practitioners</field>
+      <field name="definition">Paramedical practitioners (including clinical
+officers and related) provide advisory, diagnostic,
+curative and preventive medical services more
+limited in scope and complexity than those carried
+out by medical doctors. They work autonomously or
+with limited supervision of medical doctors, and
+perform clinical, therapeutic and surgical
+procedures for treating and preventing diseases,
+injuries, and other physical or mental impairments
+common to specific communities.
+</field>
+      <field name="examples">Clinical officer, Primary care paramedic, Advanced
+care paramedic, Surgical technician, Feldsher
+</field>
+      <field name="notes">Occupations included in this category normally require
+completion of tertiary-level training in theoretical and practical
+medical services. Workers providing services limited to
+emergency treatment and ambulance practice are classified
+under 'Ambulance workers'-3258.
+</field>
+    </record>
+    <record id="who_cadre_11" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2261"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Dentists</field>
+      <field name="definition">Dentists (including dental surgeons and related)
+diagnose, treat and prevent diseases, injuries and
+abnormalities of the teeth, mouth, jaws and
+associated tissues by applying the principles and
+procedures of modern dentistry. They use a broad
+range of specialized diagnostic, surgical and other
+techniques to promote and restore oral health.
+</field>
+      <field name="examples">Dentist, Dental practitioner, Dental surgeon,
+Endodontist, Oral and maxillofacial surgeon, Oral
+pathologist, Orthodontist, Paedodontist, Periodontist,
+Prosthodontist, Stomatologist</field>
+      <field name="notes">Occupations included in this category normally require
+completion of university-level training in theoretical and
+practical dentistry or a related field. Although in some
+countries ‘stomatology’ and 'dental, oral and maxillofacial
+surgery' may be considered as medical specializations,
+occupations in these fields should always be classified here.</field>
+    </record>
+    <record id="who_cadre_12" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2262"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Pharmacists</field>
+      <field name="definition">Pharmacists store, preserve, compound and
+dispense medicinal products. They counsel on the
+proper use and adverse effects of drugs and
+medicines following prescriptions issued by
+medical doctors and other health professionals.
+They contribute to researching, testing, preparing,
+prescribing and monitoring medicinal therapies for
+optimizing human health.</field>
+      <field name="examples">Hospital pharmacist, Industrial pharmacist, Retail
+pharmacist, Dispensing chemist</field>
+      <field name="notes">Occupations included in this category normally require
+completion of university-level training in theoretical and
+practical pharmacy, pharmaceutical chemistry or a related
+field. Pharmacologists and related professionals who study
+living organisms are excluded from here (classified under
+'Life science professionals').</field>
+    </record>
+    <record id="who_cadre_13" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2263"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Environmental and Occupational Health and Hygiene Professionals</field>
+      <field name="definition">Environmental and occupational health and
+hygiene professionals assess, plan and
+implement programs to recognize, monitor and
+control environmental factors that can potentially
+affect human health, to ensure safe and healthy
+working conditions, and to prevent disease or injury
+caused by chemical, physical, radiological and
+biological agents or ergonomic factors.
+</field>
+      <field name="examples">Environmental health officer, Occupational health and
+safety adviser, Occupational hygienist, Radiation
+protection adviser</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in environmental or occupational
+health and safety, or a related field. Professionals who
+assess, plan and implement programmes to monitor or
+control the impact of human activities on the environment are
+excluded from here (classified under 'Life science
+professionals')</field>
+    </record>
+    <record id="who_cadre_14" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2264"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Physiotherapists</field>
+      <field name="definition">Physiotherapists assess, plan and implement
+rehabilitative programs that improve or restore
+human motor functions, maximize movement
+ability, relieve pain syndromes, and treat or prevent
+physical challenges associated with injuries,
+diseases and other impairments. They apply a
+broad range of physical therapies and techniques
+such as movement, ultrasound, heating, laser and
+other techniques. They may develop and
+implement programmes for screening and
+prevention of common physical ailments and
+disorders.
+</field>
+      <field name="examples">Physiotherapist, Geriatric physical therapist,
+Orthopaedic physical therapist, Paediatric physical
+therapist</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in physiotherapy or a related field.</field>
+    </record>
+    <record id="who_cadre_15" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2265"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Dieticians and Nutritionists</field>
+      <field name="definition">Dieticians and nutritionists assess, plan and
+implement programs to enhance the impact of food
+and nutrition on human health. They may conduct
+research, assessments and education to improve
+nutritional levels among individuals and
+communities.
+</field>
+      <field name="examples">Dietician, Clinical dietician, Food service dietician,
+Nutritionist, Public health nutritionist, Sports
+nutritionist</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in food and nutritional science,
+nutrition education, dietetics, or a related field.</field>
+    </record>
+    <record id="who_cadre_16" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2266"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Audiologists and Speech Therapists</field>
+      <field name="definition">Audiologists and speech therapists evaluate,
+manage and treat physical disorders affecting
+human hearing, speech communication and
+swallowing. They prescribe corrective devices or
+rehabilitative therapies for hearing loss, speech
+disorders, and related sensory and neural
+problems. They plan hearing screening programs
+and provide counselling on hearing safety and
+communication performance.</field>
+      <field name="examples">Audiologist, Speech therapist, Speech pathologist,
+Language therapist</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in audiology, speech pathology,
+clinical language sciences or a related field.</field>
+    </record>
+    <record id="who_cadre_17" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2267"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Optometrists and Opthalmic Opticians</field>
+      <field name="definition">Optometrists and ophthalmic opticians provide
+diagnosis, management and treatment services for
+disorders of the eyes and visual system. They
+counsel and advise on eye care and safety, and
+prescribe optical aids or other therapies for visual
+disturbance.</field>
+      <field name="examples">Optometrist, Ophthalmic optician, Orthoptist</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training at a higher
+educational institution in optometry, orthoptics or a related
+field.</field>
+    </record>
+    <record id="who_cadre_18" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2269"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_1"/>
+      <field name="occupation_group">Health professionals not elsewhere Classified</field>
+      <field name="definition">This group covers health professionals not
+classified elsewhere such as podiatrists,
+occupational therapists, recreational therapists and
+other professionals providing diagnostic,
+preventive, curative and rehabilitative health
+services.
+</field>
+      <field name="examples">Podiatrist, Occupational therapist, Recreational
+therapist, Arts therapist, Dance and movement
+therapist
+</field>
+    </record>
+    <record id="who_cadre_19" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3211"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Medical imaging and Therapeutic Equipment Technicians</field>
+      <field name="definition">Medical imaging and therapeutic equipment
+technicians test and operate radiographic,
+ultrasound and other medical imaging equipment to
+produce images of body structures for the
+diagnosis and treatment of injury, disease and
+other impairments. They may administer radiation
+treatments and monitor patients' conditions under
+the supervision of a radiologist or other health
+professional.</field>
+      <field name="examples">Diagnostic medical radiographer, Medical radiation
+therapist, Magnetic resonance imaging technologist,
+Nuclear medicine technologist, Mammographer,
+Sonographer</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in medical
+technology, radiology, sonography, nuclear medical
+technology or a related field.
+</field>
+    </record>
+    <record id="who_cadre_20" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3212"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Medical and Pathology Laboratory Technicians</field>
+      <field name="definition">Medical and pathology laboratory technicians
+perform clinical tests on specimens of bodily fluids
+and tissues in order to get information about the
+health of a patient or cause of death. They test and
+operate equipment such as spectrophotometers,
+calorimeters and flame photometers for analysis of
+biological material including blood, urine and spinal
+fluid.</field>
+      <field name="examples">Medical laboratory technician, Medical laboratory
+assistant, Blood bank technician, Cytology technician,
+Pathology technician</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in biomedical
+science, medical technology or a related field. Technicians
+who conduct laboratory tests on living organisms should be
+classified under 'Life science technicians'. Forensic science
+technicians, who perform clinical tests to aid in the
+investigation of crimes, should be classified under 'Physical
+and engineering science technicians'.
+</field>
+    </record>
+    <record id="who_cadre_21" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3213"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Pharmaceutical Technicians and Assistants</field>
+      <field name="definition">Pharmaceutical technicians and assistants
+perform a variety of tasks associated with
+dispensing medicinal products under the guidance
+of a pharmacist or other health professional. They
+inventory, prepare and store medications and other
+pharmaceutical compounds and supplies, and may
+dispense medicines and drugs to clients and
+instruct on their use as prescribed by health
+professionals.
+</field>
+      <field name="examples">Pharmaceutical technician, Pharmaceutical assistant,
+Dispensing technician</field>
+      <field name="notes">Occupations included in this category normally require
+knowledge and skills in pharmaceutical services as obtained
+through formal training. Pharmacology technicians and
+related associate professionals who work with living
+organisms are excluded from here (classified under 'Life
+science technicians').
+</field>
+    </record>
+    <record id="who_cadre_22" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3214"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Medical and Dental Prosthetic Technicians</field>
+      <field name="definition">Medical and dental prosthetic technicians
+design, fit, service and repair medical and dental
+devices and appliances following prescriptions or
+instructions established by a health professional.
+They may service a wide range of support
+instruments to correct physical medical or dental
+problems such as neck braces, orthopaedic splints,
+artificial limbs, hearing aides, arch supports,
+dentures, and dental crowns and bridges.
+</field>
+      <field name="examples">Medical appliance technician, Orthotist, Orthotic
+technician, Prosthetist, Prosthetic technician,
+Denturist, Dental technician
+</field>
+      <field name="notes">Occupations included in this category normally require some
+medical, dental and anatomical knowledge obtained through
+formal training. Technicians who construct and repair
+precision medical and surgical instruments are excluded
+from here (classified under 'Trades workers')
+</field>
+    </record>
+    <record id="who_cadre_23" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3221"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Nursing Associate Professionals</field>
+      <field name="definition">Nursing associate professionals provide basic
+nursing and personal care for people in need of
+such care due to effects of ageing, illness, injury, or
+other physical or mental impairment. They provide
+health advice to patients and families; monitor
+patients' conditions; and implement care, treatment
+and referral plans usually established by medical,
+nursing and other health professionals.</field>
+      <field name="examples">Assistant nurse, Enrolled nurse, Practical nurse</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires knowledge and skills obtained
+as the result of study in nursing; in some cases, extensive on-the-job training may substitute for the formal education
+formal. The criteria for inclusion of individuals in this category
+should be made on the basis of the nature of the work
+performed in relation to this definition, and not the
+qualifications held by individuals or that predominate in the
+country.</field>
+    </record>
+    <record id="who_cadre_24" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3222"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Midwifery Associate Professionals</field>
+      <field name="definition">Midwifery associate professionals provide basic
+health care and advice before, during and after
+pregnancy and childbirth. They provide advice to
+women, families and communities on birth and
+emergency plans, breastfeeding, infant care, family
+planning and related topics; monitor health status
+during pregnancy and childbirth; and implement
+care, treatment and referral plans usually
+established by medical, midwifery and other health
+professionals.</field>
+      <field name="examples">Assistant midwife, Auxiliary midwife, Traditional midwife</field>
+      <field name="notes">This category includes occupations for which competent
+performance requires knowledge and skills in routine and
+emergency midwifery care acquired through formal or
+informal training. The criteria for inclusion of individuals in
+this category should be made on the basis of the nature of
+the work performed in relation to this definition, and not the
+qualifications held by individuals or that predominate in the
+country. Traditional and lay midwives, who provide basic
+pregnancy and birthing care and advice based primarily on
+experience and knowledge acquired informally through the
+traditions and practices of the communities where they
+originated, are included here. Birth assistants, who provide
+emotional support and general care and advice to women
+and families during pregnancy and labour, are excluded from
+here (classified under 'Personal care workers in health
+services').</field>
+    </record>
+    <record id="who_cadre_25" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3230"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Traditional and Complementary Medicine Associate Professionals</field>
+      <field name="definition">Traditional and complementary medicine
+associate professionals prevent, care for and
+treat physical and mental illnesses, disorders and
+injuries using herbal and other therapies based on
+theories and experiences originating in specific
+cultures. They administer treatments using
+traditional techniques and medicaments, either
+acting independently or according to therapeutic
+care plans established by a traditional medicine or
+other health professional.</field>
+      <field name="examples">Acupuncture technician, Ayurvedic technician,
+Bonesetter, Herbalist, Homeopathy technician,
+Scraping and cupping therapist, Village healer,
+sMenpas
+</field>
+      <field name="notes">This category includes occupations for which competent
+performance requires knowledge and skills acquired through
+relatively short periods of education and training, or
+informally through the traditions and practices of the
+communities where they originated. Faith healers, who treat
+human ailments through spiritual therapies, without using
+herbal therapies or other medicaments or physical
+treatments, are excluded from here (classified under
+'Religious associate professionals'). Occupations that
+provide therapy using traditional forms of massage and the
+application of pressure, such as acupressure and shiatsu
+therapists, are classified under 'Physiotherapy technicians
+and assistants'-3255.
+</field>
+    </record>
+    <record id="who_cadre_26" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3251"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Dental Assistants and Therapists</field>
+      <field name="definition">Dental assistants and therapists provide basic
+dental care services for the prevention and
+treatment of diseases and disorders of the teeth
+and mouth, as per care plans and procedures
+established by a dentist or other oral health
+professional. They examine patients' mouths, teeth
+and related structures to assess oral health status;
+provide advice on dental hygiene; perform basic or
+routine clinical dental procedures; and assisting
+dentists during complex dental procedures.</field>
+      <field name="examples">Dental assistant, Dental hygienist, Dental therapist</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in dental
+hygiene, dental-assisting or a related field.</field>
+    </record>
+    <record id="who_cadre_27" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3252"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Medical Records and Health Information Technicians</field>
+      <field name="definition">Medical records and health information
+technicians develop, implement and assess health
+records processing, storage and retrieval systems
+in medical facilities and other health care settings
+to meet the legal, professional, ethical and
+administrative records-keeping requirements of
+health services delivery.
+</field>
+      <field name="examples">Medical records technician, Health information clerk,
+Medical records analyst, Medical records unit
+supervisor, Clinical coder, Disease registry technician</field>
+      <field name="notes">Occupations included in this category require knowledge of
+medical terminology, legal aspects of health information,
+health data standards, and computer- or paper-based data
+management as obtained through formal education and/or
+prolonged on-the-job training. General secretarial or clerical
+workers are excluded from here.</field>
+    </record>
+    <record id="who_cadre_28" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3253"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Community Health Workers</field>
+      <field name="definition">Community health workers provide health
+education, referral and follow up, case
+management, and basic preventive health care and
+home visiting services to specific communities.
+They provide support and assistance to individuals
+and families in navigating the health and social
+services system.</field>
+      <field name="examples">Community health worker, Community health aide,
+Community health promoter, Village health worker,
+Kaders (community volunteer)</field>
+      <field name="notes">Occupations included in this category normally require formal
+or informal training and supervision recognized by the health
+and social services authorities. Providers of routine personal
+care services and traditional medicine practitioners are not
+included here.</field>
+    </record>
+    <record id="who_cadre_29" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3254"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Dispensing Opticians</field>
+      <field name="definition">Dispensing opticians design, fit and dispense
+optical lenses based on a prescription from an
+ophthalmologist or optometrist for the correction of
+reduced visual acuity. They service corrective
+eyeglasses, contact lenses, low-vision aids and
+other optical devices.
+</field>
+      <field name="examples">Dispensing optician, Contact lens optician</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in opticianry.
+</field>
+    </record>
+    <record id="who_cadre_30" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3255"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Physiotherapy Technicians and Assistants</field>
+      <field name="definition">Physiotherapy technicians and assistants
+provide physical therapeutic treatments to patients
+in circumstances where functional movement is
+threatened by injury, disease or impairment. They
+fit patients for physical supportive devices and
+administer and monitor manual treatments,
+electrical modality treatments, ultrasound and other
+physical therapies. Therapies are usually provided
+as per rehabilitative plans established by a
+physiotherapist or other health professional.</field>
+      <field name="examples">Physiotherapy technician, Physical rehabilitation
+technician, Acupressure therapist, Electrotherapist,
+Hydrotherapist, Massage therapist, Shiatsu therapist</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in physical
+rehabilitation therapy or a related field. Fitness instructors,
+who teach body movements used in fitness routines and
+recreational activities, are excluded from here (classified
+under 'Social, cultural and related associate professionals').
+</field>
+    </record>
+    <record id="who_cadre_31" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3256"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Medical Assistants</field>
+      <field name="definition">Medical assistants perform basic clinical and
+administrative tasks to support patient care under
+the direct supervision of a medical practitioner or
+other health professional. They perform routine
+tasks and procedures such as measuring patients'
+vital signs, administering medications and
+injections, recording information in medical records-keeping systems, preparing and handling medical
+instruments and supplies, and collecting and
+preparing specimens of bodily fluids and tissues for
+laboratory testing.</field>
+      <field name="examples">Medical assistant, Clinical assistant, Ophthalmic
+assistant, Health assistant</field>
+      <field name="notes">This category includes occupations for which competent
+performance normally requires formal training in health
+services provision. Clinical care providers with advanced
+training and skills to provide independent medical diagnostic
+and treatment services should be classified under
+'Paramedical practitioners'-2240.</field>
+    </record>
+    <record id="who_cadre_31" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3256"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Medical Assistants</field>
+      <field name="definition">Medical assistants perform basic clinical and
+administrative tasks to support patient care under
+the direct supervision of a medical practitioner or
+other health professional. They perform routine
+tasks and procedures such as measuring patients'
+vital signs, administering medications and
+injections, recording information in medical records-keeping systems, preparing and handling medical
+instruments and supplies, and collecting and
+preparing specimens of bodily fluids and tissues for
+laboratory testing.</field>
+      <field name="examples">Medical assistant, Clinical assistant, Ophthalmic
+assistant, Health assistant</field>
+      <field name="notes">This category includes occupations for which competent
+performance normally requires formal training in health
+services provision. Clinical care providers with advanced
+training and skills to provide independent medical diagnostic
+and treatment services should be classified under
+'Paramedical practitioners'-2240.</field>
+    </record>
+    <record id="who_cadre_32" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3257"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Environmental and Occupational Health Inspectors and Associates</field>
+      <field name="definition">Environmental and occupational health
+inspectors and associates investigate the
+implementation of rules and regulations relating to
+environmental factors that can potentially affect
+human health, health and safety in the workplace,
+and safety of processes for the production of goods
+and services. They may implement and evaluate
+programs to restore or improve safety and sanitary
+conditions under the supervision of a health
+professional.</field>
+      <field name="examples">Health inspector, Food sanitation and safety
+inspector, Occupational health and safety inspector,
+Sanitarian, Sanitary inspector</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in sanitary
+sciences, occupational and institutional safety and sanitation,
+or a related field.</field>
+    </record>
+    <record id="who_cadre_33" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3258"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Ambulance Workers</field>
+      <field name="definition">Ambulance workers provide emergency health
+care to patients who are injured, sick, infirm or
+otherwise physically or mentally impaired prior to
+and during transport to medical, rehabilitation and
+other health care facilities. They monitor changes in
+health status of patients during transport and
+perform procedures according to protocol for
+emergency medical treatment. They may patrol and
+provide information on first aid at large-scale public
+gatherings and other events where health
+emergencies are more likely to occur.</field>
+      <field name="examples">Ambulance officer, Ambulance paramedic,
+Emergency medical technician, Emergency
+paramedic</field>
+      <field name="notes">Occupations included in this category normally require formal
+training in emergency medical treatment, patient transport,
+ambulance principles and practice, or a related field.
+Ambulance drivers who do not provide health care are
+excluded from here (classified under 'Plant and machine
+operators').
+</field>
+    </record>
+    <record id="who_cadre_34" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3259"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_2"/>
+      <field name="occupation_group">Health Associate Professionals not elsewhere Classified</field>
+      <field name="definition">This group covers health associate professionals
+not classified elsewhere including, for instance,
+chiropractors, osteopaths, respiratory and
+anaesthesia technicians, HIV counsellors and
+others performing technical tasks and providing
+support for diagnostic, preventive, curative,
+promotional and rehabilitative health services.
+</field>
+      <field name="examples">Chiropractor, Osteopath, Respiratory technologist,
+Anaesthesia technician, HIV counsellor, Family
+planning counsellor</field>
+      <field name="notes">This category includes occupations for which competent
+performance usually requires formal training in health service
+provision. Although in some jurisdictions chiropractic and
+osteopathic are considered to have the attributes of medical
+specialties, practitioners in these disciplines should always
+be classified here.
+</field>
+    </record>
+    <record id="who_cadre_35" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_5321"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_3"/>
+      <field name="occupation_group">Health Care Assistants</field>
+      <field name="definition">Health care assistants provide routine personal
+care, support and assistance with activities of daily
+living to patients and residents in a variety of health
+care settings such as hospitals, clinics and
+residential nursing care facilities. They assist
+patients with personal, physical mobility and
+therapeutic care needs as per established care
+plans and practices, and generally under the direct
+supervision of medical, nursing or other health
+professionals or associate professionals.</field>
+      <field name="examples">Nursing aide (hospital or clinic), Patient care
+assistant, Birth assistant (hospital or clinic),
+Psychiatric aide</field>
+      <field name="notes">Occupations included in this category generally do not
+require extensive health care knowledge or training.
+Classified here are workers providing services in health care
+settings such as hospitals, health care facilities, rehabilitation
+centres, residential nursing care facilities, and other
+establishments with permanent medical or nursing
+supervision.</field>
+    </record>
+    <record id="who_cadre_36" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_5322"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_3"/>
+      <field name="occupation_group">Home-Based Personal Care Workers</field>
+      <field name="definition">Home-based personal care workers provide
+routine personal care, support and assistance with
+activities of daily living to persons who are in need
+of such care due to effects of ageing, illness, injury,
+or other physical or mental condition in private
+homes and other independent residential settings.
+They assist clients with personal, physical mobility
+and therapeutic care needs, usually as per care
+plans established by a health professional.
+</field>
+      <field name="examples">Nursing aide (home), Home care aide, Home birth
+assistant, Personal Care Provider</field>
+      <field name="notes">Occupations included in this category generally do not
+require extensive health care knowledge or training.
+Classified here are workers providing services in primary
+residential settings including assisted-living facilities,
+continuing care retirement communities, and other types of
+residential facilities with minimal or no on-site medical or
+nursing supervision. Home birth assistants, who provide
+emotional support and general care and advice to women
+and families during pregnancy and labour, but not delivery
+care to reduce health risks, are included here. Care workers
+who provide care and supervision for children in residential
+homes and care centres are excluded from here.
+</field>
+    </record>
+    <record id="who_cadre_37" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_5329"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_3"/>
+      <field name="occupation_group">Personal care Workers in Health Services not
+elsewhere Classified</field>
+      <field name="definition">This group covers personal care workers in
+health services not classified elsewhere
+including, for instance, dental aides, hospital
+orderlies, medical imaging assistants, pharmacy
+aides and other providers of routine health and
+personal care support services.</field>
+      <field name="examples">Dental aide, First-aid attendant, Hospital orderly,
+Medical imaging assistant, Pharmacy aide,
+Phlebotomist, Sterilization aide
+</field>
+    </record>
+    <record id="who_cadre_38" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_1342"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Health Service Managers</field>
+      <field name="definition">Health service managers plan, direct, coordinate
+and evaluate the provision of clinical and
+community health care services in hospitals,
+clinics, public health agencies and similar
+organizations. They provide overall direction, policy
+standards and operational criteria for the units they
+manage, including supervising and evaluating the
+recruitment, training and work activities of
+personnel. They monitor the use of health services
+and resources. They liaise with other health and
+welfare service providers, boards and funding
+bodies to coordinate the provision of services.
+</field>
+      <field name="examples">Health facility administrator, Medical administrator,
+Clinical director, Director of nursing, Hospital matron,
+Community health care coordinator, Chief public
+health officer
+</field>
+        <field name="notes">The main tasks and duties for jobs in this occupational
+category include guiding and directing the activities of
+organizations, departments and other workers, and other
+tasks which require complex problem solving and decision
+making based on knowledge and skills normally obtained as
+the result of some combination of higher education,
+extensive work experience and prolonged on-the-job training.</field>
+    </record>
+    <record id="who_cadre_39" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2131"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Health Management Personnel not
+elsewhere classified</field>
+      <field name="definition">This group covers managers and administrators
+not classified elsewhere (except health service
+mangers) working in health systems including, for
+instance, government health department heads,
+human resource managers, supply chain
+managers, regional health policy and planning
+directors, and others whose main tasks and duties
+include guiding and directing the activities of
+organizations, departments and other workers
+      </field>
+      <field name="examples">Government health department head, Human
+resource manager, Medical commodities
+procurement manager, Regional health planning
+director, Aged care service manager, Social welfare
+manager, Information and communications
+technology service manager</field>
+    </record>
+    <record id="who_cadre_40" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2133"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Life Science Professionals</field>
+      <field name="definition">Life science professionals (including
+bacteriologists, pharmacologists and related) study
+living organisms and their interactions with each
+other and the environment, and apply this
+knowledge to solve human health and
+environmental problems. They gather, examine and
+analyse human, animal, insect, plant, soil, water
+and air specimens and samples in laboratories and
+in the field using specialised equipment,
+instruments, technologies and techniques. They
+work in diverse fields such as bacteriology,
+biochemistry, genetics, immunology,
+pharmacology, toxicology and virology.</field>
+      <field name="examples">Air pollution analyst, Bacteriologist, Biotechnologist,
+Cell geneticist, Ecologist, Environmental protection
+adviser, Microbiologist, Molecular biologist, Molecular
+geneticist, Pharmacologist, Water quality analyst</field>
+        <field name="notes">The tasks and duties for occupations in this category include
+collecting, analyzing and evaluating experimental and field
+data to identify and develop new products, processes and
+techniques for pharmaceutical and environmental use. The
+knowledge and skills required are usually obtained as the
+result of study at a higher educational institution in life
+science or related field for a period of 3–6 years leading to
+the award of a first degree or higher qualification.
+</field>
+    </record>
+    <record id="who_cadre_41" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2149"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Biomedical Engineers</field>
+      <field name="definition">The group includes those who conduct research
+and advise on or develop engineering procedures
+and solutions concerning biomedical engineering.</field>
+      <field name="examples">Biomedical engineer</field>
+    </record>
+    <record id="who_cadre_42" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2634"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Clinical Psychologists</field>
+      <field name="definition">Psychologists research into and study mental
+processes and behaviour of human beings as
+individuals or in groups, and apply this knowledge
+to promote personal, social, educational or
+occupational adjustment and development.
+</field>
+      <field name="examples">Clinical psychologist, Educational psychologist, Psychotherapist</field>
+    </record>
+    <record id="who_cadre_42" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2634"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Clinical Psychologists</field>
+      <field name="definition">Psychologists research into and study mental
+processes and behaviour of human beings as
+individuals or in groups, and apply this knowledge
+to promote personal, social, educational or
+occupational adjustment and development.
+</field>
+      <field name="examples">Clinical psychologist, Educational psychologist,
+Psychotherapist</field>
+        <field name="notes">The tasks and duties for occupations in this category include
+collecting, analyzing and evaluating experimental and field
+data to identify and develop new products, processes and
+techniques for pharmaceutical and environmental use. The
+knowledge and skills required are usually obtained as the
+result of study at a higher educational institution in life
+science or related field for a period of 3–6 years leading to
+the award of a first degree or higher qualification.
+</field>
+    </record>
+    <record id="who_cadre_43" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_2635"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Social Work and Counselling Professionals</field>
+      <field name="definition">Social work and counselling professionals
+provide counselling, therapy and mediation
+services to individuals, families, groups and
+communities in response to social and personal
+difficulties. They assist clients to develop skills and
+access resources and support services needed to
+respond to issues arising from health problems, life
+transitions, addictions, and other personal, family
+and social problems. They liaise with other social
+service agencies, educational institutions and
+health care providers to advocate for client and
+community needs.</field>
+      <field name="examples">Addictions counsellor, Bereavement counsellor,
+Clinical social worker, District social welfare officer,
+Sexual assault counsellor, Women’s welfare
+organizer</field>
+        <field name="notes">The tasks and duties for occupations in this category include
+planning and providing counselling, skills development, crisis
+intervention and mediation services in individual, family or
+group settings to assist clients function within the limitations
+of their environment, improve their relationships, and solve
+personal and family problems. The knowledge and skills
+required are usually obtained as the result of study at a
+higher educational institution in social work and counselling
+for a period of 3–6 years leading to the award of a first
+degree or higher qualification</field>
+    </record>
+    <record id="who_cadre_44" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Non-health Professionals not elsewhere Classified</field>
+      <field name="definition">This group covers professionals not classified
+elsewhere (except health, life science and social
+work) working in health systems including, for
+instance, physical, mathematical and engineering
+science professionals, teaching professionals,
+business and administration professionals,
+information and communications technology
+professionals, legal professionals and social
+science professionals.
+</field>
+      <field name="examples">Accountant, Biomedical engineer, Clinical
+psychologist, Environmental engineer, Health
+economist, Health policy analyst, Health policy
+lawyer, Health statistician, Health vocational
+education teacher, Medical and pharmaceutical
+products sales representative, Medical physicist,
+Operations research analyst, Optical engineer, Safety
+engineer, Software developer, Staff training officer,
+University medical lecturer, Veterinary epidemiologist</field>
+        <field name="notes">The tasks and duties of occupations in this category include
+conducting analysis and research and advising on
+applications of the physical, mathematical, engineering and
+social sciences to the medical and health fields; teaching the
+theory and practice of health science and services at higher
+education levels; and providing various technological,
+business and legal services in health systems.</field>
+    </record>
+    <record id="who_cadre_45" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3141"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Non-health Professionals not elsewhere Classified</field>
+      <field name="definition">This group covers professionals not classified
+elsewhere (except health, life science and social
+work) working in health systems including, for
+instance, physical, mathematical and engineering
+science professionals, teaching professionals,
+business and administration professionals,
+information and communications technology
+professionals, legal professionals and social
+science professionals.
+</field>
+      <field name="examples">Accountant, Biomedical engineer, Clinical
+psychologist, Environmental engineer, Health
+economist, Health policy analyst, Health policy
+lawyer, Health statistician, Health vocational
+education teacher, Medical and pharmaceutical
+products sales representative, Medical physicist,
+Operations research analyst, Optical engineer, Safety
+engineer, Software developer, Staff training officer,
+University medical lecturer, Veterinary epidemiologist</field>
+        <field name="notes">The tasks and duties of occupations in this category include
+conducting analysis and research and advising on
+applications of the physical, mathematical, engineering and
+social sciences to the medical and health fields; teaching the
+theory and practice of health science and services at higher
+education levels; and providing various technological,
+business and legal services in health systems.</field>
+    </record>
+    <record id="who_cadre_45" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3141"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Life Science Technicians</field>
+      <field name="definition">Life science technicians (excluding medical)
+provide technical support for research, analysis
+and testing of living organisms, and development
+and application of products and processes
+resulting from research to solve human health and
+environmental problems. They collect and prepare
+specimens and samples generally under the
+guidance of a life science professional, calibrate
+and operate laboratory instruments and equipment,
+perform routine field and laboratory tests, and
+monitor experiments to ensure adherence to quality
+control procedures and health and safety
+guidelines. They work in areas such as biology,
+biochemistry, biotechnology, environmental
+protection and pharmacology.
+</field>
+      <field name="examples">Bacteriology technician, Biochemistry technician,
+Pharmacology technician, Serology technician,
+Tissue culture technician</field>
+        <field name="notes">Occupations included in this category usually require
+knowledge and skills as obtained through formal training in
+life science or related field.
+</field>
+    </record>
+    <record id="who_cadre_46" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3344"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Medical Secretaries</field>
+      <field name="definition">Medical secretaries, using specialized knowledge
+of medical terminology and health care delivery
+procedures, perform a variety of communication,
+documentation, administrative and internal
+coordination functions, to support health workers in
+medical facilities and other health care-related
+organizations. They schedule medical
+appointments, record and review medical charts
+and correspondence, interview patients to
+complete case histories, prepare health insurance
+claims and acquisition orders, and supervise the
+work of other office support workers.
+</field>
+      <field name="examples">Medical secretary, Medical office administrative
+assistant, Hospital ward secretary, Patient care
+secretary, Medical insurance billing secretary,
+Medical laboratory secretary, Medical stenographer,
+Medical transcriptionist, Pathology secretary, Dental
+secretary</field>
+        <field name="notes">Occupations included in this category require basic
+knowledge of medical terminology and health care delivery
+procedures as obtained through formal education and/or
+prolonged on-the-job training. General secretaries,
+receptionists and clerical workers are excluded from here.
+</field>
+    </record>
+    <record id="who_cadre_47" model="hrms.who.cadre">
+      <field name="isco_08_id" ref="isco_08_3412"/>
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Social Work Associate Professionals</field>
+      <field name="definition">Social work associate professionals administer
+and implement social assistance programmes and
+community services and assist clients to deal with
+personal and social problems.</field>
+      <field name="examples">Community development worker, Community services
+worker, Disability services worker, Family services
+worker, Mental health support worker</field>
+    </record>
+    <record id="who_cadre_48" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Non-health Technicians and Associate Professionals not elsewhere Classified
+</field>
+      <field name="definition">This group covers technicians and associate
+professionals not classified elsewhere (except
+health, life science and medical secretarial)
+working in health systems including, for instance,
+physical and engineering science technicians,
+information and communications technicians,
+business and administration associate
+professionals, and social and religious associate
+professionals.
+</field>
+      <field name="examples">Bookkeeper, Computer network technician, Data
+entry supervisor, Disability services officer, Faith
+healer, Fitness instructor, Forensic science
+technician, Health insurance claims officer, Health
+facility licensing officer, Medical supplies procurement
+officer, Mental health support worker, Water
+treatment plant operator</field>
+        <field name="notes">The tasks and duties of occupations in this category include
+technical and related tasks connected with scientific research
+and operational methods and their applications to the
+medical and health fields; technical and practical services
+and support functions in finance, regulation and
+administration of health and social services; and technical
+tasks connected with the practical application of knowledge
+relating to sport, culture and religion to improve health and
+well-being.
+</field>
+    </record>
+    <record id="who_cadre_49" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Clerical Support Workers</field>
+      <field name="definition">This group covers clerical support workers
+(excluding specialized health information
+technicians and medical secretaries) working in
+health systems including, for instance, general
+clerks, keyboard clerks, client services clerks,
+material recording clerks and others who record,
+organize, store, compute and retrieve information,
+and perform clerical and secretarial duties in
+connection with money-handling operations,
+requests for information and appointments.
+</field>
+      <field name="examples">General office clerk, General secretary, General
+receptionist, Accounts clerk, Data entry clerk, Health
+insurance clerk, Hospital admissions clerk, Human
+resource assistant, Medical appointments schedule
+clerk, Medical commodities stock controller, Payroll
+clerk</field>
+        <field name="notes">Many occupations in this category require relatively
+advanced literacy and numeracy skills, good interpersonal
+communication skills and a high level of manual dexterity.
+The knowledge and skills required are usually obtained as
+the result of secondary education and, in some case,
+specialized post-secondary vocational education and/or
+prolonged on-the-job training.</field>
+    </record>
+    <record id="who_cadre_50" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Service and Sales Workers</field>
+      <field name="definition">This group covers service and sales workers
+(except personal care workers) working in health
+systems who provide personal and protective
+services, or demonstrate and sell goods in
+wholesale or retail shops and similar
+establishments.</field>
+      <field name="examples">Building caretaker, Facility cafeteria cook, Hospital
+security guard, Medical products sales demonstrator,
+Undertaker, Pharmaceuticals retail shop cashier</field>
+        <field name="notes">Many occupations in this category require relatively
+advanced literacy and numeracy skills, good interpersonal
+communication skills and a high level of manual dexterity. In
+some case, specialized post-secondary vocational education
+and/or prolonged on-the-job training may be required.
+</field>
+    </record>
+    <record id="who_cadre_51" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Trades workers</field>
+      <field name="definition">This group covers trades workers working in
+health systems including, for instance, building
+trades workers, electrical and electronics trades
+workers, machinery trades workers, precision-instrument makers and others who apply
+knowledge and skills to construct and maintain
+buildings, make and control equipment or tools, or
+apply chemical products on surroundings to
+prevent health risks</field>
+      <field name="examples">Ambulance mechanic, Building exteriors cleaner,
+Computer hardware technician, Health information
+typesetter, Malaria control sprayer, Optical lens
+moulder, Orthopaedic appliance maker, Surgical
+instruments maker, Refrigeration mechanic</field>
+        <field name="notes">The tasks and duties of occupations in this category
+generally require understanding of all stages of the
+production process, the materials and tools used, and the
+nature and purpose of the final product, as usually obtained
+through the completion of secondary education and, in some
+case, specialized post-secondary vocational education
+and/or prolonged on-the-job training.</field>
+    </record>
+    <record id="who_cadre_52" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Plant and Machine Operators and Assemblers</field>
+      <field name="definition">This group covers plant and machine operators
+and assemblers working in health systems
+including, for instance, assemblers, drivers and
+others who operate and monitor machinery and
+equipment, drive motor vehicles and mobile
+machinery, or assemble products from component
+parts according to specifications.</field>
+      <field name="examples">Ambulance driver, Eyeglass frame assembler,
+Laundry machine operator, Pharmaceutical products
+machine operator</field>
+        <field name="notes">The tasks and duties of occupations in this category
+generally call for experience with and an understanding of
+industrial machinery and equipment as well as an ability to
+cope with machine-paced operations and to adapt to
+technological innovations. A high level of manual dexterity is
+often required.
+</field>
+    </record>
+    <record id="who_cadre_53" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_4"/>
+      <field name="occupation_group">Elementary Occupations</field>
+      <field name="definition">This group covers elementary occupations in
+health systems including, for instance, cleaners,
+food preparation assistants, refuse workers and
+others who perform simple and routine tasks which
+may require the use of hand-held tools and
+considerable physical effort.</field>
+      <field name="examples">Hospital garden labourer, Kitchen helper, Lavatory
+attendant, Medical commodities stock handler,
+Refuse collector, Window washer</field>
+        <field name="notes">Most occupations in this category require knowledge and
+skills generally obtained through primary education and/or a
+short period of on-the-job training.</field>
+    </record>
+    <record id="who_cadre_53" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_5"/>
+      <field name="occupation_group">Armed Forces Occupations</field>
+      <field name="definition">This group covers members of the armed forces
+(not classified elsewhere) engaged in actions with
+primary intent to enhance health including, for
+instance, commissioned medical and nursing
+officers and combat medical technicians.
+</field>
+      <field name="examples">Commissioned armed forces medical doctor, Combat
+medical technician, Navy corps nurse, Veteran
+hospital nursing aide</field>
+        <field name="notes">Many jobs performed by members of the armed forces are
+similar, in terms of the nature of the work performed, to
+civilian occupations. For purposes of international
+comparability, where data pertaining to members of the
+armed forces are reported and classified by occupation, they
+should be included under 'Armed forces occupations'. Where
+it is not possible to produce information about the nature of
+work performed by members of the armed forces, they may
+be included with similar civilian jobs. In adapting this
+classification for national purposes, countries may wish to
+consider what approach best suits their circumstances and
+user needs.</field>
+    </record>
+    <record id="who_cadre_54" model="hrms.who.cadre">
+      <field name="who_cadre_category_id" ref="who_cadre_category_5"/>
+      <field name="occupation_group">Armed Forces Occupations</field>
+      <field name="definition">This group covers other categories not
+classifiable as participating in the formal or
+informal health labour market but providing health
+services including, for instance, medical interns
+and trainees who are providing clinical services as
+part of their basic medical education.
+</field>
+      <field name="examples">Medical student intern, Hospital volunteer</field>
+    </record>
+  </data>
+</odoo>

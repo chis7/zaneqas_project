@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hrms_employee_qualification_tree" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.tree</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Qualifications">
+                    <field name="employee_id"/>
+                    <field name="qualification_id"/>
+                    <field name="training_institution_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="department_id"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_employee_qualification_form" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.form</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <form string="Employee qualification">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="qualification_id"/>
+                                <field name="training_institution_id"/>
+                            </group>
+                            <group>
+                                <field name="start_date" string="Duration" widget="daterange" options="{'end_date_field': 'end_date'}"/>
+                                <field name="end_date" invisible="1"/>
+                                <field name="certificate" widget="file_download"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View for Employee Qualification -->
+        <record id="view_employee_qualification_search" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.search</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <search string="Employee Qualifications">
+                    <!-- Filters -->
+<!--                    <filter string="Current Qualifications" name="current_qualifications"-->
+<!--                            domain="[('end_date', '>=', context_today())]"/>-->
+<!--                    <filter string="Expired Qualifications" name="expired_qualifications"-->
+<!--                            domain="[('end_date', '<', context_today())]"/>-->
+
+                    <!-- Group By -->
+                    <group expand="1" string="Group By">
+                        <filter string="Employee" name="group_by_employee" context="{'group_by': 'employee_id'}"/>
+                        <filter string="Qualification" name="group_by_qualification" context="{'group_by': 'qualification_id'}"/>
+                        <filter string="Training Institution" name="group_by_institution" context="{'group_by': 'training_institution_id'}"/>
+                        <filter string="Department" name="group_by_department" context="{'group_by': 'department_id'}"/>
+                        <filter string="Institution" name="group_by_institution" context="{'group_by': 'company_id'}"/>
+                    </group>
+
+                    <!-- Search Fields -->
+                    <field name="employee_id"/>
+                    <field name="qualification_id"/>
+                    <field name="training_institution_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Graph View for Employee Qualification by Qualification -->
+        <record id="view_employee_qualification_graph_by_qualification" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.graph.by.qualification</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <graph string="Employee Qualifications by Qualification" type="bar">
+                    <field name="id" type="measure" operator="count"/>
+                    <field name="qualification_id" type="row"/>
+                    <field name="employee_id" type="col"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Graph View for Employee Qualification by Training Institution -->
+        <record id="view_employee_qualification_graph_by_institution" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.graph.by.institution</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <graph string="Employee Qualifications by Training Institution" type="bar">
+                    <field name="id" type="measure" operator="count"/>
+                    <field name="training_institution_id" type="row"/>
+                    <field name="qualification_id" type="col"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Graph View for Employee Qualification by Start Date -->
+        <record id="view_employee_qualification_graph_by_start_date" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.graph.by.start.date</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <graph string="Employee Qualifications by Start Date" type="bar">
+                    <field name="id" type="measure" operator="count"/>
+                    <field name="start_date" type="row" interval="month"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Graph View for Employee Qualification by End Date -->
+        <record id="view_employee_qualification_graph_by_end_date" model="ir.ui.view">
+            <field name="name">hrms.employee.qualification.graph.by.end.date</field>
+            <field name="model">hrms.employee.qualification</field>
+            <field name="arch" type="xml">
+                <graph string="Employee Qualifications by End Date" type="bar">
+                    <field name="id" type="measure" operator="count"/>
+                    <field name="end_date" type="row" interval="month"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_hrms_employee_qualification" model="ir.actions.act_window">
+            <field name="name">Employee Qualifications</field>
+            <field name="res_model">hrms.employee.qualification</field>
+            <field name="view_mode">tree,form,graph,pivot</field>
+        </record>
+    </data>
+</odoo>

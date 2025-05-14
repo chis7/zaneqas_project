@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="zaneqas_tb_xpert_eqa_results_wizard_form" model="ir.ui.view">
+        <field name="name">zaneqas.tb.xpert.eqa.result.wizard.form</field>
+        <field name="model">zaneqas.tb.xpert.eqa.result.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                    <h3>
+
+                    </h3>
+
+                </header>
+
+                <sheet>
+                    <div class="oe_title" style="text-align:center;">
+
+                    </div>
+                    <group>
+                        <group>
+                            <!--                            <field name="name" domain="[('state', '=', 'approved')]"/>-->
+                            <field name="date_panel_received"/>
+                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
+                        </group>
+                        <group>
+                            <field name="xpert_assay_used" domain="[('state', '=', 'approved')]"/>
+                            <field name="expiry_date"/>
+                            <field name="catridge_lot_number"/>
+                        </group>
+
+                        <br/>
+                        <br/>
+                    </group>
+                    <div>
+
+                        <br/>
+                        <br/>
+                        <h5>
+                            <b>Instructions:</b>
+                            Tick the appropriate checkboxes below corresponding to the
+                            results after testing each sample provided. Document the error code in the Error Code column
+                            for tests resulting in error. Record the cycle thresholds (Ct) in the cells provided for all
+                            successful tests.
+                        </h5>
+                    </div>
+                    <notebook>
+                        <page string="TB Detection Result" id="tb_detection_result">
+                            <field name="expected_result_lines_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_date_tested"/>
+                                    <field name="facility_result_tb_detection_not_detected"/>
+                                    <field name="facility_result_tb_detection_trace"/>
+                                    <field name="facility_result_tb_detection_very_low"/>
+                                    <field name="facility_result_tb_detection_low"/>
+                                    <field name="facility_result_tb_detection_medium"/>
+                                    <field name="facility_result_tb_detection_high"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Rif Detection Result" id="rif_detection_result">
+                            <field name="expected_result_lines_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_rif_na"/>
+                                    <field name="facility_result_rif_not_detected"/>
+                                    <field name="facility_result_rif_detected"/>
+                                    <field name="facility_result_rif_indeterminate"/>
+
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Uninterpretable Result" id="rif_detection_result">
+                            <field name="expected_result_lines_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_uninterpretable_invalid"/>
+                                    <field name="facility_result_uninterpretable_no_result"/>
+                                    <field name="facility_result_uninterpretable_error"/>
+                                    <field name="facility_result_uninterpretable_indeterminate"/>
+                                    <field name="facility_result_uninterpretable_error_code"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="TB Detection Result" id="tb_detection_result">
+                            <field name="expected_result_lines_ids">
+                                <tree editable="top" create="0" delete="0">
+                                    <field name="sample_id" readonly="1"/>
+                                    <field name="facility_result_ct_probe_d_ultra_spsc"/>
+                                    <field name="facility_result_ct_probe_c_is1081_is6110"/>
+                                    <field name="facility_result_ct_probe_e_rpob2"/>
+                                    <field name="facility_result_ct_probe_b_rpoB1"/>
+                                    <field name="facility_result_ct_spc_rpoB3"/>
+                                    <field name="facility_result_ct_probe_a_rpob4"/>
+                                    <field name="facility_result_ct_xpert_module_number"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="add_infor_number_of_tests_conducted_in_last_full_month"/>
+                            <field name="add_infor_number_of_errors_occurred"/>
+                            <field name="add_infor_was_monthly_maintenance_done_for_the_genexpert"/>
+                            <field name="add_infor_monthly_maintenance_done_by_date"/>
+                            <field name="add_infor_monthly_maintenance_done_by_technologist"/>
+
+                        </group>
+                        <group>
+                            <field name="add_infor_gene_xpert_serial_number"/>
+                            <field name="add_infor_date_gene_xpert_instrument_installed"/>
+                            <field name="add_infor_instrument_user"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="What Are The Error Codes?" id="tb_detection_result_error_codes">
+                            <field name="zaneqas_tb_xpert_eqa_result_wizard_error_code_ids">
+                                <tree editable="top">
+                                    <field name="add_info_error_code"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button string="Submit" type="object" name="action_submit_results" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+                <div class="oe_chatter" context="{'validate_analytic': True}">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_zaneqas_tb_xpert_eqa_results_wizard" model="ir.actions.act_window">
+        <field name="name">
+            Xpert TB Proficiency test Result Form
+        </field>
+        <field name="res_model">zaneqas.tb.xpert.eqa.result.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'dialog_size' : 'extra-large',
+            }
+        </field>
+    </record>
+
+</odoo>

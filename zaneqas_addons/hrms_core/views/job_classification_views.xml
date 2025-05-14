@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_job_classification_tree" model="ir.ui.view">
+            <field name="name">hrms.job.classification.tree</field>
+            <field name="model">hrms.job.classification</field>
+            <field name="arch" type="xml">
+                <tree string="Job Classifications" editable="bottom">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_job_classification_form" model="ir.ui.view">
+            <field name="name">hrms.job.classification.form</field>
+            <field name="model">hrms.job.classification</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Job classification"/>
+                            <h1>
+                                <field name="name" placeholder="e.g. Division I" required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="code"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_job_classification" model="ir.actions.act_window">
+            <field name="name">Job classification</field>
+            <field name="res_model">hrms.job.classification</field>
+            <field name="view_mode">tree</field>
+        </record>
+    </data>
+</odoo>

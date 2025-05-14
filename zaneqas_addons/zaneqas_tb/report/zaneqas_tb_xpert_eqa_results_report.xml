@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <record id="report_gene_xpert_eqa_results" model="ir.actions.report">-->
+<!--        <field name="name">GeneXpert EQA Performance Report</field>-->
+<!--        <field name="model">zaneqas.tb.xpert.eqa.result</field>-->
+<!--        <field name="report_type">qweb-pdf</field>-->
+<!--        <field name="report_name">zaneqas_tb.report_gene_xpert_eqa_results_temp</field>-->
+<!--        <field name="report_file">zaneqas_tb.report_gene_xpert_eqa_results_temp</field>-->
+<!--        <field name="print_report_name">'GeneXpert EQA Performance Report'</field>-->
+<!--        <field name="binding_model_id" ref="model_zaneqas_tb_xpert_eqa_result"/>-->
+<!--        <field name="binding_type">report</field>-->
+<!--    </record>-->
+
+    <record id="report_gene_xpert_eqa_results_html" model="ir.actions.report">
+        <field name="name">GeneXpert EQA Results (HTML)</field>
+        <field name="model">zaneqas.tb.xpert.eqa.result</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">zaneqas_tb.report_gene_xpert_eqa_results_temp</field>
+        <field name="report_file">zaneqas_tb.report_gene_xpert_eqa_results_temp</field>
+        <field name="binding_model_id" ref="model_zaneqas_tb_xpert_eqa_result"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

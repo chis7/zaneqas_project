@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo data for hr.employee -->
+        <record id="hrms_employee_1" model="hr.employee">
+<!--            <field name="name">Chilufya Mwansa</field>-->
+            <field name="last_name">Mwansa</field>
+            <field name="first_name">Chilufya</field>
+            <field name="gender">male</field>
+            <field name="birthday">1981-02-12</field>
+            <field name="work_email">Chilufya.Mwansa@moh.gov.zm</field>
+            <field name="identification_id">123456/61/1</field>
+            <field name="employee_number">212345</field>
+            <field name="institution_file_number">MOH/CO/12345</field>
+            <field name="department_id" ref="department_135"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_1.jpg"/>
+        </record>
+
+        <record id="hrms_employee_2" model="hr.employee">
+<!--            <field name="name">Mutinta Banda</field>-->
+            <field name="last_name">Banda</field>
+            <field name="first_name">Mutinta</field>
+            <field name="gender">female</field>
+            <field name="birthday">1989-09-22</field>
+            <field name="work_email">Mutinta.Banda@moh.gov.zm</field>
+            <field name="identification_id">123466/61/1</field>
+            <field name="employee_number">212346</field>
+            <field name="institution_file_number">MOH/CO/12346</field>
+            <field name="department_id" ref="department_136"/>
+            <field name="parent_id" ref="hrms_employee_1"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_2.jpeg"/>
+        </record>
+
+        <!--    Accountant    -->
+        <record id="hrms_employee_3" model="hr.employee">
+<!--            <field name="name">Mukuka Mumba</field>-->
+            <field name="last_name">Mumba</field>
+            <field name="first_name">Mukuka</field>
+            <field name="gender">male</field>
+            <field name="birthday">1980-01-25</field>
+            <field name="work_email">Mukuka.Mumba@moh.gov.zm</field>
+            <field name="identification_id">123476/61/1</field>
+            <field name="employee_number">212347</field>
+            <field name="institution_file_number">MOH/CO/12347</field>
+            <field name="department_id" ref="department_16"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_3.jpeg"/>
+        </record>
+
+        <!--    Clinical Officer - General    -->
+        <record id="hrms_employee_4" model="hr.employee">
+<!--            <field name="name">Mwape Phiri</field>-->
+            <field name="last_name">Phiri</field>
+            <field name="first_name">Mwape</field>
+            <field name="gender">female</field>
+            <field name="birthday">1990-05-5</field>
+            <field name="work_email">Mwape.Phiri@moh.gov.zm</field>
+            <field name="identification_id">123486/61/1</field>
+            <field name="employee_number">812348</field>
+            <field name="institution_file_number">MOH/CO/12348</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_4.jpeg"/>
+        </record>
+
+        <!--    Hospital Administrator    -->
+        <record id="hrms_employee_5" model="hr.employee">
+<!--            <field name="name">Nchimunya Chanda</field>-->
+            <field name="last_name">Chanda</field>
+            <field name="first_name">Nchimunya</field>
+            <field name="gender">male</field>
+            <field name="birthday">1985-07-30</field>
+            <field name="work_email">Nchimunya.Chanda@moh.gov.zm</field>
+            <field name="identification_id">123496/61/1</field>
+            <field name="employee_number">712349</field>
+            <field name="institution_file_number">MOH/CO/12349</field>
+            <field name="department_id" ref="department_135"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_5.jpg"/>
+        </record>
+
+        <!--    Director - Finance    -->
+        <record id="hrms_employee_6" model="hr.employee">
+<!--            <field name="name">Mubanga Zulu</field>-->
+            <field name="last_name">Zulu</field>
+            <field name="first_name">Mubanga</field>
+            <field name="gender">male</field>
+            <field name="birthday">1974-07-30</field>
+            <field name="work_email">Mubanga.Zulu@moh.gov.zm</field>
+            <field name="identification_id">123406/61/1</field>
+            <field name="employee_number">112340</field>
+            <field name="institution_file_number">MOH/CO/12340</field>
+            <field name="department_id" ref="department_16"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_6.jpg"/>
+        </record>
+
+        <!--    Chief Accountant    -->
+        <record id="hrms_employee_7" model="hr.employee">
+<!--            <field name="name">Mutale Njobvu</field>-->
+            <field name="last_name">Njobvu</field>
+            <field name="first_name">Mutale</field>
+            <field name="gender">male</field>
+            <field name="birthday">1980-09-3</field>
+            <field name="work_email">Mutale.Njobvu@moh.gov.zm</field>
+            <field name="identification_id">123416/61/1</field>
+            <field name="employee_number">112341</field>
+            <field name="institution_file_number">MOH/CO/12341</field>
+            <field name="department_id" ref="department_16"/>
+            <field name="parent_id" ref="hrms_employee_6"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_7.jpg"/>
+        </record>
+
+        <!--    Principal Accountant    -->
+        <record id="hrms_employee_8" model="hr.employee">
+<!--            <field name="name">Tafadzwa Tembo</field>-->
+            <field name="last_name">Tembo</field>
+            <field name="first_name">Tafadzwa</field>
+            <field name="gender">male</field>
+            <field name="birthday">1980-09-3</field>
+            <field name="work_email">Tafadzwa.Tembo@moh.gov.zm</field>
+            <field name="identification_id">123426/61/1</field>
+            <field name="employee_number">112342</field>
+            <field name="institution_file_number">MOH/CO/12342</field>
+            <field name="department_id" ref="department_16"/>
+            <field name="parent_id" ref="hrms_employee_7"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_8.jpg"/>
+        </record>
+
+        <!--    Assistant Director - ICT    -->
+        <record id="hrms_employee_9" model="hr.employee">
+<!--            <field name="name">Namwinga Lungu</field>-->
+            <field name="last_name">Lungu</field>
+            <field name="first_name">Namwinga</field>
+            <field name="gender">female</field>
+            <field name="birthday">1980-11-11</field>
+            <field name="work_email">Namwinga.Lungu@moh.gov.zm</field>
+            <field name="identification_id">123436/61/1</field>
+            <field name="employee_number">112343</field>
+            <field name="institution_file_number">MOH/CO/12342</field>
+            <field name="department_id" ref="department_143"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_9.jpeg"/>
+        </record>
+
+        <!--    Principal ICT Officer - Hardware    -->
+        <record id="hrms_employee_10" model="hr.employee">
+<!--            <field name="name">Bwalya Mwila</field>-->
+            <field name="last_name">Mwila</field>
+            <field name="first_name">Bwalya</field>
+            <field name="gender">male</field>
+            <field name="birthday">1984-12-1</field>
+            <field name="work_email">Bwalya.Mwila@moh.gov.zm</field>
+            <field name="identification_id">123446/61/1</field>
+            <field name="employee_number">112344</field>
+            <field name="institution_file_number">MOH/CO/12344</field>
+            <field name="department_id" ref="department_143"/>
+            <field name="parent_id" ref="hrms_employee_9"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_10.jpg"/>
+        </record>
+
+        <!--    Principal ICT Officer - Software    -->
+        <record id="hrms_employee_11" model="hr.employee">
+<!--            <field name="name">Ahmed Kaluba</field>-->
+            <field name="last_name">Kaluba</field>
+            <field name="first_name">Ahmed</field>
+            <field name="gender">male</field>
+            <field name="birthday">1984-12-1</field>
+            <field name="work_email">Ahmed.Kaluba@moh.gov.zm</field>
+            <field name="identification_id">123446/61/1</field>
+            <field name="employee_number">112344</field>
+            <field name="institution_file_number">MOH/CO/12344</field>
+            <field name="department_id" ref="department_143"/>
+            <field name="parent_id" ref="hrms_employee_9"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_11.jpg"/>
+        </record>
+
+        <!--    Senior ICT Officer - Developer    -->
+        <record id="hrms_employee_12" model="hr.employee">
+<!--            <field name="name">Lombe Chileshe</field>-->
+            <field name="last_name">Chileshe</field>
+            <field name="first_name">Lombe</field>
+            <field name="gender">male</field>
+            <field name="birthday">1988-04-1</field>
+            <field name="work_email">Lombe.Chileshe@moh.gov.zm</field>
+            <field name="identification_id">223446/61/1</field>
+            <field name="employee_number">212344</field>
+            <field name="institution_file_number">MOH/CO/11234</field>
+            <field name="department_id" ref="department_143"/>
+            <field name="parent_id" ref="hrms_employee_11"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_12.jpg"/>
+        </record>
+
+        <!--    Head - Clinical Care    -->
+        <record id="hrms_employee_13" model="hr.employee">
+<!--            <field name="name">Mulenga Mulenga</field>-->
+            <field name="last_name">Mulenga</field>
+            <field name="first_name">Mulenga</field>
+            <field name="gender">male</field>
+            <field name="birthday">1988-04-1</field>
+            <field name="work_email">Mulenga.Mulenga@moh.gov.zm</field>
+            <field name="identification_id">323446/61/1</field>
+            <field name="employee_number">312344</field>
+            <field name="institution_file_number">MOH/CO/21234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_13.jpeg"/>
+        </record>
+
+        <!--    Clinical Nurse    -->
+        <record id="hrms_employee_14" model="hr.employee">
+<!--            <field name="name">Kabwe Bwalya</field>-->
+            <field name="last_name">Bwalya</field>
+            <field name="first_name">Kabwe</field>
+            <field name="gender">male</field>
+            <field name="birthday">1991-10-24</field>
+            <field name="work_email">Kabwe.Bwalya@moh.gov.zm</field>
+            <field name="identification_id">423446/61/1</field>
+            <field name="employee_number">412344</field>
+            <field name="institution_file_number">MOH/CO/31234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_14.jpeg"/>
+        </record>
+
+        <!--    Clinical Specialist    -->
+        <record id="hrms_employee_15" model="hr.employee">
+<!--            <field name="name">Kabwe Bwalya</field>-->
+            <field name="last_name">Bwalya</field>
+            <field name="first_name">Kabwe</field>
+            <field name="gender">male</field>
+            <field name="birthday">1982-08-10</field>
+            <field name="work_email">Kabwe.Bwalya@moh.gov.zm</field>
+            <field name="identification_id">523446/61/1</field>
+            <field name="employee_number">512344</field>
+            <field name="institution_file_number">MOH/CO/41234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_15.jpeg"/>
+        </record>
+
+        <!--    Clinical Officer    -->
+        <record id="hrms_employee_16" model="hr.employee">
+<!--            <field name="name">Sitali Mudenda</field>-->
+            <field name="last_name">Mudenda</field>
+            <field name="first_name">Sitali</field>
+            <field name="gender">male</field>
+            <field name="birthday">1987-06-10</field>
+            <field name="work_email">Sitali.Mudenda@moh.gov.zm</field>
+            <field name="identification_id">623446/61/1</field>
+            <field name="employee_number">612344</field>
+            <field name="institution_file_number">MOH/CO/51234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_16.jpeg"/>
+        </record>
+
+        <!--    Junior Resident Medical Doctor    -->
+        <record id="employee_17" model="hr.employee">
+<!--            <field name="name">Sophia Nkandu</field>-->
+            <field name="last_name">Nkandu</field>
+            <field name="first_name">Sophia</field>
+            <field name="gender">female</field>
+            <field name="birthday">1990-03-11</field>
+            <field name="work_email">Sophia.Sophia@moh.gov.zm</field>
+            <field name="identification_id">723446/61/1</field>
+            <field name="employee_number">712344</field>
+            <field name="institution_file_number">MOH/CO/61234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_17.jpeg"/>
+        </record>
+
+        <!--    Junior Resident Medical Doctor    -->
+        <record id="hrms_employee_18" model="hr.employee">
+<!--            <field name="name">Chibamba Katongo</field>-->
+            <field name="last_name">Katongo</field>
+            <field name="first_name">Chibamba</field>
+            <field name="gender">female</field>
+            <field name="birthday">1987-06-10</field>
+            <field name="work_email">Chibamba.Katongo@moh.gov.zm</field>
+            <field name="identification_id">823446/61/1</field>
+            <field name="employee_number">812344</field>
+            <field name="institution_file_number">MOH/CO/71234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_18.jpeg"/>
+        </record>
+
+        <!--    Junior Resident Medical Doctor    -->
+        <record id="hrms_employee_19" model="hr.employee">
+<!--            <field name="name">Mutinta Simutowe</field>-->
+            <field name="last_name">Simutowe</field>
+            <field name="first_name">Mutinta</field>
+            <field name="gender">male</field>
+            <field name="birthday">1986-11-4</field>
+            <field name="work_email">Mutinta.Simutowe@moh.gov.zm</field>
+            <field name="identification_id">823446/61/1</field>
+            <field name="employee_number">812344</field>
+            <field name="institution_file_number">MOH/CO/71234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_19.jpeg"/>
+        </record>
+
+        <!--    Junior Resident Medical Doctor    -->
+        <record id="hrms_employee_20" model="hr.employee">
+<!--            <field name="name">Nkandu Chisanga</field>-->
+            <field name="last_name">Chisanga</field>
+            <field name="first_name">Nkandu</field>
+            <field name="gender">female</field>
+            <field name="birthday">1986-11-4</field>
+            <field name="work_email">Nkandu.Nkandu@moh.gov.zm</field>
+            <field name="identification_id">923446/61/1</field>
+            <field name="employee_number">912344</field>
+            <field name="institution_file_number">MOH/CO/91234</field>
+            <field name="department_id" ref="department_63"/>
+            <field name="parent_id" ref="hrms_employee_13"/>
+            <field name="image_1920" type="base64" file="hrms_core/static/img/employee_20.jpeg"/>
+        </record>
+    </data>
+</odoo>

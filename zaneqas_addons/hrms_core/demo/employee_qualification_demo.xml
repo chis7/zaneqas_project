@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Employee Qualification Demo Records -->
+    <record id="employee_qualification_1" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_1"/> <!-- Chilufya Mwansa -->
+        <field name="qualification_id" ref="qualification_49"/> <!-- Bachelor of Medicine and Bachelor of Surgery -->
+        <field name="training_institution_id" ref="training_institution_20"/> <!-- University of Zambia (UNZA) -->
+        <field name="start_date">2015-01-01</field>
+        <field name="end_date">2020-12-31</field>
+    </record>
+
+    <record id="employee_qualification_2" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_2"/> <!-- Mutinta Banda -->
+        <field name="qualification_id" ref="qualification_47"/> <!-- Diploma in Nursing -->
+        <field name="training_institution_id" ref="training_institution_9"/> <!-- Lusaka Apex Medical University (LAMU) -->
+        <field name="start_date">2012-02-01</field>
+        <field name="end_date">2016-12-31</field>
+    </record>
+
+    <record id="employee_qualification_3" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_3"/> <!-- Mukuka Mumba -->
+        <field name="qualification_id" ref="qualification_48"/> <!-- Bachelor of Science in Nursing -->
+        <field name="training_institution_id" ref="training_institution_10"/> <!-- Mulungushi University (MU) -->
+        <field name="start_date">2017-01-01</field>
+        <field name="end_date">2021-12-31</field>
+    </record>
+
+    <record id="employee_qualification_4" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_4"/> <!-- Mwape Phiri -->
+        <field name="qualification_id" ref="qualification_124"/> <!-- Diploma in Midwifery -->
+        <field name="training_institution_id" ref="training_institution_5"/> <!-- Chreso University -->
+        <field name="start_date">2010-06-01</field>
+        <field name="end_date">2014-12-31</field>
+    </record>
+
+    <record id="employee_qualification_5" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_5"/> <!-- Nchimunya Chanda -->
+        <field name="qualification_id" ref="qualification_50"/> <!-- Bachelor of Pharmacy -->
+        <field name="training_institution_id" ref="training_institution_16"/> <!-- Texila American University -->
+        <field name="start_date">2018-01-01</field>
+        <field name="end_date">2022-12-31</field>
+    </record>
+
+    <record id="employee_qualification_6" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_6"/> <!-- Mubanga Zulu -->
+        <field name="qualification_id" ref="qualification_51"/> <!-- Bachelor of Science in Environmental Health -->
+        <field name="training_institution_id" ref="training_institution_27"/> <!-- Copperbelt University (CBU) -->
+        <field name="start_date">2007-01-01</field>
+        <field name="end_date">2011-12-31</field>
+    </record>
+
+    <record id="employee_qualification_7" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_7"/> <!-- Mutale Njobvu -->
+        <field name="qualification_id" ref="qualification_52"/> <!-- Bachelor of Science in Nutrition and Dietetics -->
+        <field name="training_institution_id" ref="training_institution_19"/> <!-- University of Lusaka (UNILUS) -->
+        <field name="start_date">2014-02-01</field>
+        <field name="end_date">2019-12-31</field>
+    </record>
+
+    <record id="employee_qualification_8" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_8"/> <!-- Tafadzwa Tembo -->
+        <field name="qualification_id" ref="qualification_54"/> <!-- Master of Public Health -->
+        <field name="training_institution_id" ref="training_institution_9"/> <!-- Lusaka Apex Medical University (LAMU) -->
+        <field name="start_date">2018-01-01</field>
+        <field name="end_date">2021-12-31</field>
+    </record>
+
+    <record id="employee_qualification_9" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_9"/> <!-- Namwinga Lungu -->
+        <field name="qualification_id" ref="qualification_127"/> <!-- Diploma in Oncology Nursing -->
+        <field name="training_institution_id" ref="training_institution_17"/> <!-- UNICAF University -->
+        <field name="start_date">2009-02-01</field>
+        <field name="end_date">2013-12-31</field>
+    </record>
+
+    <record id="employee_qualification_10" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_10"/> <!-- Bwalya Mwila -->
+        <field name="qualification_id" ref="qualification_128"/> <!-- Advanced Diploma in Critical Care Nursing -->
+        <field name="training_institution_id" ref="training_institution_26"/> <!-- ZCAS University -->
+        <field name="start_date">2011-01-01</field>
+        <field name="end_date">2014-12-31</field>
+    </record>
+
+    <record id="employee_qualification_11" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_1"/> <!-- Chilufya Mwansa -->
+        <field name="qualification_id" ref="qualification_47"/> <!-- Diploma in General Nursing -->
+        <field name="training_institution_id" ref="training_institution_9"/> <!-- Lusaka Apex Medical University (LAMU) -->
+        <field name="start_date">2007-01-01</field>
+        <field name="end_date">2010-12-31</field>
+    </record>
+
+    <record id="employee_qualification_12" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_2"/> <!-- Mutinta Banda -->
+        <field name="qualification_id" ref="qualification_126"/> <!-- Bachelor of Science in Nursing -->
+        <field name="training_institution_id" ref="training_institution_10"/> <!-- Mulungushi University (MU) -->
+        <field name="start_date">2011-01-01</field>
+        <field name="end_date">2014-12-31</field>
+    </record>
+
+    <record id="employee_qualification_13" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_3"/> <!-- Mukuka Mumba -->
+        <field name="qualification_id" ref="qualification_124"/> <!-- Diploma in Midwifery -->
+        <field name="training_institution_id" ref="training_institution_5"/> <!-- Chreso University -->
+        <field name="start_date">2003-06-01</field>
+        <field name="end_date">2007-12-31</field>
+    </record>
+
+    <record id="employee_qualification_14" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_4"/> <!-- Mwape Phiri -->
+        <field name="qualification_id" ref="qualification_50"/> <!-- Bachelor of Pharmacy -->
+        <field name="training_institution_id" ref="training_institution_16"/> <!-- Texila American University -->
+        <field name="start_date">2002-01-01</field>
+        <field name="end_date">2007-12-31</field>
+    </record>
+
+    <record id="employee_qualification_15" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_5"/> <!-- Nchimunya Chanda -->
+        <field name="qualification_id" ref="qualification_51"/> <!-- Bachelor of Science in Environmental Health -->
+        <field name="training_institution_id" ref="training_institution_27"/> <!-- Copperbelt University (CBU) -->
+        <field name="start_date">2010-01-01</field>
+        <field name="end_date">2014-12-31</field>
+    </record>
+
+    <record id="employee_qualification_16" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_6"/> <!-- Mubanga Zulu -->
+        <field name="qualification_id" ref="qualification_52"/> <!-- Bachelor of Science in Nutrition and Dietetics -->
+        <field name="training_institution_id" ref="training_institution_19"/> <!-- University of Lusaka (UNILUS) -->
+        <field name="start_date">2006-01-01</field>
+        <field name="end_date">2010-12-31</field>
+    </record>
+
+    <record id="employee_qualification_17" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_7"/> <!-- Mutale Njobvu -->
+        <field name="qualification_id" ref="qualification_54"/> <!-- Master of Public Health -->
+        <field name="training_institution_id" ref="training_institution_9"/> <!-- Lusaka Apex Medical University (LAMU) -->
+        <field name="start_date">2012-01-01</field>
+        <field name="end_date">2015-12-31</field>
+    </record>
+
+    <record id="employee_qualification_18" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_8"/> <!-- Tafadzwa Tembo -->
+        <field name="qualification_id" ref="qualification_127"/> <!-- Diploma in Oncology Nursing -->
+        <field name="training_institution_id" ref="training_institution_17"/> <!-- UNICAF University -->
+        <field name="start_date">2001-01-15</field>
+        <field name="end_date">2005-12-31</field>
+    </record>
+
+    <record id="employee_qualification_19" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_9"/> <!-- Namwinga Lungu -->
+        <field name="qualification_id" ref="qualification_128"/> <!-- Advanced Diploma in Critical Care Nursing -->
+        <field name="training_institution_id" ref="training_institution_26"/> <!-- ZCAS University -->
+        <field name="start_date">2003-02-01</field>
+        <field name="end_date">2008-12-31</field>
+    </record>
+
+    <record id="employee_qualification_20" model="hrms.employee.qualification">
+        <field name="employee_id" ref="hrms_employee_10"/> <!-- Bwalya Mwila -->
+        <field name="qualification_id" ref="qualification_129"/> <!-- Master of Science in Healthcare Management -->
+        <field name="training_institution_id" ref="training_institution_14"/> <!-- Cavendish University -->
+        <field name="start_date">2008-01-01</field>
+        <field name="end_date">2012-12-31</field>
+    </record>
+</odoo>

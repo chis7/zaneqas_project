@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- hrms.employee.position Demo Records -->
+    <record id="employee_position_1" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_1"/> <!-- Chilufya Mwansa -->
+        <field name="position_id" ref="hr_job_1"/> <!-- Medical Doctor -->
+        <field name="start_date">2023-01-01</field>
+        <field name="end_date">2023-12-31</field>
+    </record>
+
+    <record id="employee_position_2" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_2"/> <!-- Mutinta Banda -->
+        <field name="position_id" ref="hr_job_2"/> <!-- Specialist Medical Practitioner -->
+        <field name="start_date">2022-06-01</field>
+        <field name="end_date">2023-06-01</field>
+    </record>
+
+    <record id="employee_position_3" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_3"/> <!-- Mukuka Mumba -->
+        <field name="position_id" ref="hr_job_3"/> <!-- Nursing Professional -->
+        <field name="start_date">2023-03-01</field>
+        <field name="end_date">2024-03-01</field>
+    </record>
+
+    <record id="employee_position_4" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_4"/> <!-- Mwape Phiri -->
+        <field name="position_id" ref="hr_job_4"/> <!-- Midwifery Professional -->
+        <field name="start_date">2021-07-01</field>
+        <field name="end_date">2022-07-01</field>
+    </record>
+
+    <record id="employee_position_5" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_5"/> <!-- Nchimunya Chanda -->
+        <field name="position_id" ref="hr_job_5"/> <!-- Dentist -->
+        <field name="start_date">2023-01-01</field>
+    </record>
+
+    <record id="employee_position_6" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_6"/> <!-- Mubanga Zulu -->
+        <field name="position_id" ref="hr_job_6"/> <!-- Pharmacist -->
+        <field name="start_date">2022-09-01</field>
+        <field name="end_date">2023-09-01</field>
+    </record>
+
+    <record id="employee_position_7" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_7"/> <!-- Mutale Njobvu -->
+        <field name="position_id" ref="hr_job_7"/> <!-- Physiotherapist -->
+        <field name="start_date">2022-01-01</field>
+        <field name="end_date">2023-01-01</field>
+    </record>
+
+    <record id="employee_position_8" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_8"/> <!-- Tafadzwa Tembo -->
+        <field name="position_id" ref="hr_job_8"/> <!-- Dietician/Nutritionist -->
+        <field name="start_date">2023-02-01</field>
+    </record>
+
+    <record id="employee_position_9" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_9"/> <!-- Namwinga Lungu -->
+        <field name="position_id" ref="hr_job_9"/> <!-- Optometrist -->
+        <field name="start_date">2022-08-01</field>
+        <field name="end_date">2023-08-01</field>
+    </record>
+
+    <record id="employee_position_10" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_10"/> <!-- Bwalya Mwila -->
+        <field name="position_id" ref="hr_job_10"/> <!-- Environmental Health Officer -->
+        <field name="start_date">2023-03-01</field>
+    </record>
+    <record id="employee_position_11" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_1"/> <!-- Chilufya Mwansa -->
+        <field name="position_id" ref="hr_job_1"/> <!-- Medical Doctor -->
+        <field name="start_date">2015-06-01</field>
+        <field name="end_date">2020-12-31</field>
+    </record>
+
+    <record id="employee_position_12" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_2"/> <!-- Mutinta Banda -->
+        <field name="position_id" ref="hr_job_2"/> <!-- Specialist Medical Practitioner -->
+        <field name="start_date">2010-02-15</field>
+        <field name="end_date">2018-08-30</field>
+    </record>
+
+    <record id="employee_position_13" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_3"/> <!-- Mukuka Mumba -->
+        <field name="position_id" ref="hr_job_3"/> <!-- Nursing Professional -->
+        <field name="start_date">2005-01-01</field>
+        <field name="end_date">2011-12-31</field>
+    </record>
+
+    <record id="employee_position_14" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_4"/> <!-- Mwape Phiri -->
+        <field name="position_id" ref="hr_job_4"/> <!-- Midwifery Professional -->
+        <field name="start_date">2008-04-01</field>
+        <field name="end_date">2015-07-01</field>
+    </record>
+
+    <record id="employee_position_15" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_5"/> <!-- Nchimunya Chanda -->
+        <field name="position_id" ref="hr_job_5"/> <!-- Dentist -->
+        <field name="start_date">2002-01-01</field>
+        <field name="end_date">2009-12-31</field>
+    </record>
+
+    <record id="employee_position_16" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_6"/> <!-- Mubanga Zulu -->
+        <field name="position_id" ref="hr_job_6"/> <!-- Pharmacist -->
+        <field name="start_date">2000-11-01</field>
+        <field name="end_date">2005-09-30</field>
+    </record>
+
+    <record id="employee_position_17" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_7"/> <!-- Mutale Njobvu -->
+        <field name="position_id" ref="hr_job_7"/> <!-- Physiotherapist -->
+        <field name="start_date">2007-02-01</field>
+        <field name="end_date">2012-08-01</field>
+    </record>
+
+    <record id="employee_position_18" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_8"/> <!-- Tafadzwa Tembo -->
+        <field name="position_id" ref="hr_job_8"/> <!-- Dietician/Nutritionist -->
+        <field name="start_date">2001-01-15</field>
+        <field name="end_date">2006-12-31</field>
+    </record>
+
+    <record id="employee_position_19" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_9"/> <!-- Namwinga Lungu -->
+        <field name="position_id" ref="hr_job_9"/> <!-- Optometrist -->
+        <field name="start_date">2003-08-01</field>
+        <field name="end_date">2010-08-01</field>
+    </record>
+
+    <record id="employee_position_20" model="hrms.employee.position">
+        <field name="employee_id" ref="hrms_employee_10"/> <!-- Bwalya Mwila -->
+        <field name="position_id" ref="hr_job_10"/> <!-- Environmental Health Officer -->
+        <field name="start_date">2010-03-01</field>
+        <field name="end_date">2015-03-01</field>
+    </record>
+</odoo>

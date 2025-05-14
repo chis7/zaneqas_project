@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_salary_source_tree" model="ir.ui.view">
+            <field name="name">hrms.salary.source.tree</field>
+            <field name="model">hrms.salary.source</field>
+            <field name="arch" type="xml">
+                <tree string="Salary Sources" editable="bottom">
+                    <field name="name"/>
+                    <field name="short_name" placeholder="CDC"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_salary_source_form" model="ir.ui.view">
+            <field name="name">hrms.salary.source.form</field>
+            <field name="model">hrms.salary.source</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Cadre"/>
+                            <h1>
+                                <field name="name" placeholder="e.g. Centers for Disease Control and Prevention" required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="short_name" placeholder="CDC"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_salary_source" model="ir.actions.act_window">
+            <field name="name">Salary Source</field>
+            <field name="res_model">hrms.salary.source</field>
+            <field name="view_mode">tree</field>
+        </record>
+    </data>
+</odoo>

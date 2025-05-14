@@ -1,0 +1,151 @@
+<odoo>
+  <data noupdate="1">
+    <record id="competency_type_1" model="hrms.competency.type">
+      <field name="name" ref="Accounting"/>
+    </record>
+    <record id="competency_type_10" model="hrms.competency.type">
+      <field name="name" ref="Optometry"/>
+    </record>
+    <record id="competency_type_11" model="hrms.competency.type">
+      <field name="name" ref="Pharmacy"/>
+    </record>
+    <record id="competency_type_12" model="hrms.competency.type">
+      <field name="name" ref="Physiotherapy"/>
+    </record>
+    <record id="competency_type_13" model="hrms.competency.type">
+      <field name="name" ref="Protective Services"/>
+    </record>
+    <record id="competency_type_14" model="hrms.competency.type">
+      <field name="name" ref="Public Health"/>
+    </record>
+    <record id="competency_type_15" model="hrms.competency.type">
+      <field name="name" ref="Secretarial"/>
+    </record>
+    <record id="competency_type_16" model="hrms.competency.type">
+      <field name="name" ref="Environmental"/>
+    </record>
+    <record id="competency_type_17" model="hrms.competency.type">
+      <field name="name" ref="EHR"/>
+    </record>
+    <record id="competency_type_18" model="hrms.competency.type">
+      <field name="name" ref="Monitoring and Evaluation"/>
+    </record>
+    <record id="competency_type_2" model="hrms.competency.type">
+      <field name="name" ref="Administration"/>
+    </record>
+    <record id="competency_type_20" model="hrms.competency.type">
+      <field name="name" ref="Ophthalmology"/>
+    </record>
+    <record id="competency_type_21" model="hrms.competency.type">
+      <field name="name" ref="Cancer"/>
+    </record>
+    <record id="competency_type_22" model="hrms.competency.type">
+      <field name="name" ref="STI"/>
+    </record>
+    <record id="competency_type_23" model="hrms.competency.type">
+      <field name="name" ref="Mental Health"/>
+    </record>
+    <record id="competency_type_24" model="hrms.competency.type">
+      <field name="name" ref="Emergency Health Services"/>
+    </record>
+    <record id="competency_type_25" model="hrms.competency.type">
+      <field name="name" ref="Anaesthesiology"/>
+    </record>
+    <record id="competency_type_26" model="hrms.competency.type">
+      <field name="name" ref="TB"/>
+    </record>
+    <record id="competency_type_27" model="hrms.competency.type">
+      <field name="name" ref="Malaria"/>
+    </record>
+    <record id="competency_type_28" model="hrms.competency.type">
+      <field name="name" ref="HIV"/>
+    </record>
+    <record id="competency_type_29" model="hrms.competency.type">
+      <field name="name" ref="Clinical Care"/>
+    </record>
+    <record id="competency_type_3" model="hrms.competency.type">
+      <field name="name" ref="Dentistry"/>
+    </record>
+    <record id="competency_type_30" model="hrms.competency.type">
+      <field name="name" ref="Nutrition"/>
+    </record>
+    <record id="competency_type_31" model="hrms.competency.type">
+      <field name="name" ref="Purchasing and Supply Management"/>
+    </record>
+    <record id="competency_type_32" model="hrms.competency.type">
+      <field name="name" ref="Laboratory"/>
+    </record>
+    <record id="competency_type_33" model="hrms.competency.type">
+      <field name="name" ref="Human Resources"/>
+    </record>
+    <record id="competency_type_38" model="hrms.competency.type">
+      <field name="name" ref="Teaching"/>
+    </record>
+    <record id="competency_type_39" model="hrms.competency.type">
+      <field name="name" ref="Counselling"/>
+    </record>
+    <record id="competency_type_4" model="hrms.competency.type">
+      <field name="name" ref="Housekeeping"/>
+    </record>
+    <record id="competency_type_40" model="hrms.competency.type">
+      <field name="name" ref="Leadership"/>
+    </record>
+    <record id="competency_type_41" model="hrms.competency.type">
+      <field name="name" ref="Adolescent Health"/>
+    </record>
+    <record id="competency_type_42" model="hrms.competency.type">
+      <field name="name" ref="Planning"/>
+    </record>
+    <record id="competency_type_43" model="hrms.competency.type">
+      <field name="name" ref="Cold Chain"/>
+    </record>
+    <record id="competency_type_44" model="hrms.competency.type">
+      <field name="name" ref="Mechanics"/>
+    </record>
+    <record id="competency_type_45" model="hrms.competency.type">
+      <field name="name" ref="Records Management"/>
+    </record>
+    <record id="competency_type_46" model="hrms.competency.type">
+      <field name="name" ref="Quality Assurance"/>
+    </record>
+    <record id="competency_type_47" model="hrms.competency.type">
+      <field name="name" ref="Research"/>
+    </record>
+    <record id="competency_type_48" model="hrms.competency.type">
+      <field name="name" ref="Maternal Health and Neonatal Care"/>
+    </record>
+    <record id="competency_type_49" model="hrms.competency.type">
+      <field name="name" ref="Health Promotions"/>
+    </record>
+    <record id="competency_type_5" model="hrms.competency.type">
+      <field name="name" ref="Information and Communication Technology"/>
+    </record>
+    <record id="competency_type_50" model="hrms.competency.type">
+      <field name="name" ref="Family Planning"/>
+    </record>
+    <record id="competency_type_51" model="hrms.competency.type">
+      <field name="name" ref="Child Health"/>
+    </record>
+    <record id="competency_type_53" model="hrms.competency.type">
+      <field name="name" ref="Safe Motherhood Action Group (SMAGs)"/>
+    </record>
+    <record id="competency_type_54" model="hrms.competency.type">
+      <field name="name" ref="Palliative Care"/>
+    </record>
+    <record id="competency_type_55" model="hrms.competency.type">
+      <field name="name" ref="Social work"/>
+    </record>
+    <record id="competency_type_6" model="hrms.competency.type">
+      <field name="name" ref="Logistics"/>
+    </record>
+    <record id="competency_type_7" model="hrms.competency.type">
+      <field name="name" ref="Management"/>
+    </record>
+    <record id="competency_type_8" model="hrms.competency.type">
+      <field name="name" ref="Medicine"/>
+    </record>
+    <record id="competency_type_9" model="hrms.competency.type">
+      <field name="name" ref="Nursing/Midwifery"/>
+    </record>
+  </data>
+</odoo>

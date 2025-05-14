@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Departmental Work Plan Views -->
+    <record id="view_hrms_departmental_work_plan_tree" model="ir.ui.view">
+        <field name="name">hrms.departmental.work.plan.tree</field>
+        <field name="model">hrms.departmental.work.plan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="department_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hrms_departmental_work_plan_form" model="ir.ui.view">
+        <field name="name">hrms.departmental.work.plan.form</field>
+        <field name="model">hrms.departmental.work.plan</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="department_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Activities" name="activities">
+                            <field name="activity_ids">
+                                <tree>
+                                    <field name="sequence"/>
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                    <field name="start_date"/>
+                                    <field name="end_date"/>
+                                    <field name="status"/>
+                                </tree>
+                                <form string="activity">
+                                    <sheet>
+                                        <div class="oe_title">
+                                            <h3>
+                                                <field name="sequence"/>
+                                            </h3>
+                                        </div>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                            <field name="start_date"/>
+                                            <field name="end_date"/>
+                                            <field name="status"/>
+                                            <field name="responsible_id"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Actions -->
+    <record id="action_hrms_departmental_work_plan" model="ir.actions.act_window">
+        <field name="name">Departmental Work Plans</field>
+        <field name="res_model">hrms.departmental.work.plan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

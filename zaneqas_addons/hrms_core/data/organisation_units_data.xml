@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Provinces as Organisation Units -->
+        <record id="organisation_unit_lusaka" model="res.company">
+            <field name="name">Lusaka Provincial Health Office</field>
+            <field name="short_name">LPHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="lusaka_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_copperbelt" model="res.company">
+            <field name="name">Copperbelt Provincial Health Office</field>
+            <field name="short_name">Copperbelt PHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="copperbelt_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_central" model="res.company">
+            <field name="name">Central Provincial Health Office</field>
+            <field name="short_name">Central PHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="central_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_eastern" model="res.company">
+            <field name="name">Eastern Provincial Health Office</field>
+            <field name="short_name">EPHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="eastern_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_luapula" model="res.company">
+            <field name="name">Luapula Provincial Health Office</field>
+            <field name="short_name">Luapula PHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="luapula_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_northern" model="res.company">
+            <field name="name">Northern Provincial Health Office</field>
+            <field name="short_name">NPHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="northern_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_northwestern" model="res.company">
+            <field name="name">North-Western Provincial Health Office</field>
+            <field name="short_name">NWPHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="northwestern_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_southern" model="res.company">
+            <field name="name">Southern Provincial Health Office</field>
+            <field name="short_name">SPHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="southern_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_western" model="res.company">
+            <field name="name">Western Provincial Health Office</field>
+            <field name="short_name">Western PHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="western_provincial_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_muchinga" model="res.company">
+            <field name="name">Muchinga Provincial Health Office</field>
+            <field name="short_name">Muchinga PHO</field>
+            <field name="parent_id" ref="base.main_company"/>
+            <field name="partner_id" ref="muchinga_provincial_office_partner"/>
+        </record>
+
+        <!-- District Health Offices as branches of each province -->
+        <!-- Lusaka Province District Health Offices -->
+        <record id="organisation_unit_lusaka_district" model="res.company">
+            <field name="name">Lusaka District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_lusaka"/>
+            <field name="partner_id" ref="lusaka_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chilanga_district" model="res.company">
+            <field name="name">Chilanga District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_lusaka"/>
+            <field name="partner_id" ref="chilanga_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kafue_district" model="res.company">
+            <field name="name">Kafue District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_lusaka"/>
+            <field name="partner_id" ref="kafue_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chirundu_district" model="res.company">
+            <field name="name">Chirundu District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_lusaka"/>
+            <field name="partner_id" ref="chirundu_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chongwe_district" model="res.company">
+            <field name="name">Chongwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_lusaka"/>
+            <field name="partner_id" ref="chongwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_rufunsa_district" model="res.company">
+            <field name="name">Rufunsa District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_lusaka"/>
+            <field name="partner_id" ref="rufunsa_district_health_office_partner"/>
+        </record>
+
+        <!-- Copperbelt Province District Health Offices -->
+        <record id="organisation_unit_ndola_district" model="res.company">
+            <field name="name">Ndola District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="ndola_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kitwe_district" model="res.company">
+            <field name="name">Kitwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="kitwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mufulira_district" model="res.company">
+            <field name="name">Mufulira District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="mufulira_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chingola_district" model="res.company">
+            <field name="name">Chingola District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="chingola_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_luanshya_district" model="res.company">
+            <field name="name">Luanshya District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="luanshya_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kalulushi_district" model="res.company">
+            <field name="name">Kalulushi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="kalulushi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chililabombwe_district" model="res.company">
+            <field name="name">Chililabombwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="chililabombwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_masaiti_district" model="res.company">
+            <field name="name">Masaiti District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="masaiti_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_lufwanyama_district" model="res.company">
+            <field name="name">Lufwanyama District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="lufwanyama_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mpongwe_district" model="res.company">
+            <field name="name">Mpongwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_copperbelt"/>
+            <field name="partner_id" ref="mpongwe_district_health_office_partner"/>
+        </record>
+
+        <!-- Central Province District Health Offices -->
+        <record id="organisation_unit_kabwe_district" model="res.company">
+            <field name="name">Kabwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="kabwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kapiri_mposhi_district" model="res.company">
+            <field name="name">Kapiri Mposhi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="kapiri_mposhi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_serenje_district" model="res.company">
+            <field name="name">Serenje District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="serenje_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mkushi_district" model="res.company">
+            <field name="name">Mkushi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="mkushi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mumbwa_district" model="res.company">
+            <field name="name">Mumbwa District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="mumbwa_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chibombo_district" model="res.company">
+            <field name="name">Chibombo District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="chibombo_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_ngabwe_district" model="res.company">
+            <field name="name">Ngabwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="ngabwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chisamba_district" model="res.company">
+            <field name="name">Chisamba District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="chisamba_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_itezhi_tezhi_district" model="res.company">
+            <field name="name">Itezhi Tezhi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_central"/>
+            <field name="partner_id" ref="itezhi_tezhi_district_health_office_partner"/>
+        </record>
+
+        <!-- Eastern Province District Health Offices -->
+        <record id="organisation_unit_chipata_district" model="res.company">
+            <field name="name">Chipata District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="chipata_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_lundazi_district" model="res.company">
+            <field name="name">Lundazi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="lundazi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_petauke_district" model="res.company">
+            <field name="name">Petauke District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="petauke_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_katete_district" model="res.company">
+            <field name="name">Katete District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="katete_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_sinda_district" model="res.company">
+            <field name="name">Sinda District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="sinda_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mambwe_district" model="res.company">
+            <field name="name">Mambwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="mambwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_vubwi_district" model="res.company">
+            <field name="name">Vubwi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="vubwi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_nyimba_district" model="res.company">
+            <field name="name">Nyimba District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="nyimba_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chadiza_district" model="res.company">
+            <field name="name">Chadiza District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_eastern"/>
+            <field name="partner_id" ref="chadiza_district_health_office_partner"/>
+        </record>
+
+        <!-- Luapula Province District Health Offices -->
+        <record id="organisation_unit_mansa_district" model="res.company">
+            <field name="name">Mansa District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="mansa_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_samfya_district" model="res.company">
+            <field name="name">Samfya District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="samfya_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_nchelenge_district" model="res.company">
+            <field name="name">Nchelenge District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="nchelenge_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kawambwa_district" model="res.company">
+            <field name="name">Kawambwa District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="kawambwa_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mwansabombwe_district" model="res.company">
+            <field name="name">Mwansabombwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="mwansabombwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chienge_district" model="res.company">
+            <field name="name">Chienge District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="chienge_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_milenge_district" model="res.company">
+            <field name="name">Milenge District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="milenge_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chifunabuli_district" model="res.company">
+            <field name="name">Chifunabuli District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="chifunabuli_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_lunga_district" model="res.company">
+            <field name="name">Lunga District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_luapula"/>
+            <field name="partner_id" ref="lunga_district_health_office_partner"/>
+        </record>
+
+        <!-- Northern Province District Health Offices -->
+        <record id="organisation_unit_kasama_district" model="res.company">
+            <field name="name">Kasama District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="kasama_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mporokoso_district" model="res.company">
+            <field name="name">Mporokoso District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="mporokoso_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mwense_district" model="res.company">
+            <field name="name">Mwense District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="mwense_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mbala_district" model="res.company">
+            <field name="name">Mbala District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="mbala_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mpulungu_district" model="res.company">
+            <field name="name">Mpulungu District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="mpulungu_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_luwingu_district" model="res.company">
+            <field name="name">Luwingu District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="luwingu_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mungwi_district" model="res.company">
+            <field name="name">Mungwi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="mungwi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_senga_hill_district" model="res.company">
+            <field name="name">Senga Hill District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="senga_hill_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_lupososhi_district" model="res.company">
+            <field name="name">Lupososhi District Health Office Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northern"/>
+            <field name="partner_id" ref="lupososhi_district_health_office_partner"/>
+        </record>
+
+        <!-- North-Western Province District Health Offices -->
+        <record id="organisation_unit_solwezi_district" model="res.company">
+            <field name="name">Solwezi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="solwezi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kasempa_district" model="res.company">
+            <field name="name">Kasempa District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="kasempa_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mwinilunga_district" model="res.company">
+            <field name="name">Mwinilunga District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="mwinilunga_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_zambezi_district" model="res.company">
+            <field name="name">Zambezi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="zambezi_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kalumbila_district" model="res.company">
+            <field name="name">Kalumbila District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="kalumbila_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mushindamo_district" model="res.company">
+            <field name="name">Mushindamo District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="mushindamo_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mufumbwe_district" model="res.company">
+            <field name="name">Mufumbwe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="mufumbwe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_ikelenge_district" model="res.company">
+            <field name="name">Ikelenge District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_northwestern"/>
+            <field name="partner_id" ref="ikelenge_district_health_office_partner"/>
+        </record>
+
+        <!-- Southern Province District Health Offices -->
+        <record id="organisation_unit_livingstone_district" model="res.company">
+            <field name="name">Livingstone District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="livingstone_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mazabuka_district" model="res.company">
+            <field name="name">Mazabuka District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="mazabuka_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_choma_district" model="res.company">
+            <field name="name">Choma District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="choma_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_monze_district" model="res.company">
+            <field name="name">Monze District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="monze_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_namwala_district" model="res.company">
+            <field name="name">Namwala District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="namwala_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_siavonga_district" model="res.company">
+            <field name="name">Siavonga District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="siavonga_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kazungula_district" model="res.company">
+            <field name="name">Kazungula District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="kazungula_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_gwembe_district" model="res.company">
+            <field name="name">Gwembe District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="gwembe_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_pemba_district" model="res.company">
+            <field name="name">Pemba District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_southern"/>
+            <field name="partner_id" ref="pemba_district_health_office_partner"/>
+        </record>
+
+        <!-- Western Province District Health Offices -->
+        <record id="organisation_unit_mongu_district" model="res.company">
+            <field name="name">Mongu District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="mongu_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_sesheke_district" model="res.company">
+            <field name="name">Sesheke District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="sesheke_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_kaoma_district" model="res.company">
+            <field name="name">Kaoma District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="kaoma_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_shangombo_district" model="res.company">
+            <field name="name">Shan'gombo District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="shangombo_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_senanga_district" model="res.company">
+            <field name="name">Senanga District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="senanga_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_sikongo_district" model="res.company">
+            <field name="name">Sikongo District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="sikongo_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_sioma_district" model="res.company">
+            <field name="name">Sioma District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="sioma_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_lukulu_district" model="res.company">
+            <field name="name">Lukulu District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="lukulu_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mwandi_district" model="res.company">
+            <field name="name">Mwandi District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_western"/>
+            <field name="partner_id" ref="mwandi_district_health_office_partner"/>
+        </record>
+
+        <!-- Muchinga Province District Health Offices -->
+        <record id="organisation_unit_chinsali_district" model="res.company">
+            <field name="name">Chinsali District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_muchinga"/>
+            <field name="partner_id" ref="chinsali_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_shiwa_ngandu_district" model="res.company">
+            <field name="name">Shiwa Ng'andu District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_muchinga"/>
+            <field name="partner_id" ref="shiwa_ngandu_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_mpika_district" model="res.company">
+            <field name="name">Mpika District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_muchinga"/>
+            <field name="partner_id" ref="mpika_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_nakonde_district" model="res.company">
+            <field name="name">Nakonde District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_muchinga"/>
+            <field name="partner_id" ref="nakonde_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_isoka_district" model="res.company">
+            <field name="name">Isoka District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_muchinga"/>
+            <field name="partner_id" ref="isoka_district_health_office_partner"/>
+        </record>
+
+        <record id="organisation_unit_chama_district" model="res.company">
+            <field name="name">Chama District Health Office</field>
+            <field name="parent_id" ref="organisation_unit_muchinga"/>
+            <field name="partner_id" ref="chama_district_health_office_partner"/>
+        </record>
+    </data>
+</odoo>

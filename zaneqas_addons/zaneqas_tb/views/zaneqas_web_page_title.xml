@@ -1,0 +1,7 @@
+<odoo>
+    <template id="custom_web_page_title" name="Custom Web Page Title" inherit_id="web.layout">
+        <xpath expr="//title" position="replace">
+            <title>zaneqas</title>
+        </xpath>
+    </template>
+</odoo>

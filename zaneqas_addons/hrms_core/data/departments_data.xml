@@ -1,0 +1,1182 @@
+<odoo>
+  <data noupdate="1">
+    <record id="department_1" model="hr.department">
+      <field name="name">Laboratory</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_10" model="hr.department">
+      <field name="name">Transfusion</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_100" model="hr.department">
+      <field name="name">Oncology Pharmacy</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_101" model="hr.department">
+      <field name="name">Radio-Pharmacy</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_102" model="hr.department">
+      <field name="name">Epidemiology and Preventive Oncology</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_103" model="hr.department">
+      <field name="name">Cancer Epidemiology and HMIS</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_104" model="hr.department">
+      <field name="name">Preventive Oncology</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_105" model="hr.department">
+      <field name="name">National Cancer Registry</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_106" model="hr.department">
+      <field name="name">Planning and Monitoring and Evaluation</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_107" model="hr.department">
+      <field name="name">Pathology</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_108" model="hr.department">
+      <field name="name">Pathology Laboratory</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_109" model="hr.department">
+      <field name="name">Medical Imaging</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_11" model="hr.department">
+      <field name="name">VCT</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_110" model="hr.department">
+      <field name="name">Diagnostic Radiology</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_111" model="hr.department">
+      <field name="name">Diagnostic Radiography</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_112" model="hr.department">
+      <field name="name">Nuclear Medicine Radiography</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_113" model="hr.department">
+      <field name="name">Environmental Health Management</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_114" model="hr.department">
+      <field name="name">Surgical and Gynaecological</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_115" model="hr.department">
+      <field name="name">Gynaecology Oncology</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_116" model="hr.department">
+      <field name="name">Anaesthesiology</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_117" model="hr.department">
+      <field name="name">Paediatric Oncology</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_118" model="hr.department">
+      <field name="name">University Teaching Hospital - Children's Hospital</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_119" model="hr.department">
+      <field name="name">Office of the Senior Medical Superintendent</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_120" model="hr.department">
+      <field name="name">Medical Services</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_122" model="hr.department">
+      <field name="name">Office of the DHD</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_123" model="hr.department">
+      <field name="name">HPESD</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_124" model="hr.department">
+      <field name="name">Planning and Health Systems</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_126" model="hr.department">
+      <field name="name">Zones</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_127" model="hr.department">
+      <field name="name">Permanent Secretary - Technical Services</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_128" model="hr.department">
+      <field name="name">Clinical Care and Diagnostic Services</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_129" model="hr.department">
+      <field name="name">Health Promotion, Environment and Social Determinants</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_13" model="hr.department">
+      <field name="name">Radiography</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_130" model="hr.department">
+      <field name="name">Nursing Services</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_131" model="hr.department">
+      <field name="name">Nuclear Medicine and Research</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_132" model="hr.department">
+      <field name="name">National Malaria Elimination Centre</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_133" model="hr.department">
+      <field name="name">Global Health</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_134" model="hr.department">
+      <field name="name">Permanent Secretary - Administration</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_135" model="hr.department">
+      <field name="name">Human Resources Management and Administration</field>
+      <field name="company_id" ref="base.main_company"/>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_136" model="hr.department">
+      <field name="name">Human Resources Management and Administration</field>
+      <field name="company_id" ref="organisation_unit_central"/>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_137" model="hr.department">
+      <field name="name">Health Policy and Planning</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_138" model="hr.department">
+      <field name="name">Monitoring and Evaluation</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_139" model="hr.department">
+      <field name="name">Physical Infrastructure and Medical Technologies</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_14" model="hr.department">
+      <field name="name">Information and Communications Technology</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_140" model="hr.department">
+      <field name="name">Legal Unit</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_141" model="hr.department">
+      <field name="name">Health Care Financing</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_142" model="hr.department">
+      <field name="name">Procurement and Supplies</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_143" model="hr.department">
+      <field name="name">ICT</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_144" model="hr.department">
+      <field name="name">Office of the PHD</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_145" model="hr.department">
+      <field name="name">Public Health Unit</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_146" model="hr.department">
+      <field name="name">Nursing Unit</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_147" model="hr.department">
+      <field name="name">Planning and Health Systems Unit</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_148" model="hr.department">
+      <field name="name">HRA</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_15" model="hr.department">
+      <field name="name">Public Relations</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_150" model="hr.department">
+      <field name="name">Internal Audit Unit</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_151" model="hr.department">
+      <field name="name">ICT Unit</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_152" model="hr.department">
+      <field name="name">PSU Unit</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_153" model="hr.department">
+      <field name="name">VSC</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_154" model="hr.department">
+      <field name="name">Human Resource and Administration</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_155" model="hr.department">
+      <field name="name">Cardiology</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_156" model="hr.department">
+      <field name="name">Emergency Paediatric</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_157" model="hr.department">
+      <field name="name">Gastroenterology</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_158" model="hr.department">
+      <field name="name">General Paediatric</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_159" model="hr.department">
+      <field name="name">Hematology</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_16" model="hr.department">
+      <field name="name">Finance</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_160" model="hr.department">
+      <field name="name">Infectious Diseases and HIV Medicine</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_161" model="hr.department">
+      <field name="name">Malnutrition</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_162" model="hr.department">
+      <field name="name">Nephrology and Rheumatology</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_163" model="hr.department">
+      <field name="name">Neurology</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_164" model="hr.department">
+      <field name="name">Paediatric Intensive Care</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_165" model="hr.department">
+      <field name="name">Pulmonology</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_166" model="hr.department">
+      <field name="name">Wards and Special Clinics</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_167" model="hr.department">
+      <field name="name">Social Welfare Services</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_168" model="hr.department">
+      <field name="name">Health Information</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_169" model="hr.department">
+      <field name="name">Environmental Health</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_17" model="hr.department">
+      <field name="name">Health Promotion</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_170" model="hr.department">
+      <field name="name">Infection Prevention Unit</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_171" model="hr.department">
+      <field name="name">Waste Management Unit</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_172" model="hr.department">
+      <field name="name">Planning</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_173" model="hr.department">
+      <field name="name">Anterior Segment</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_174" model="hr.department">
+      <field name="name">Cornea and Refractive Surgery</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_175" model="hr.department">
+      <field name="name">General Ophthalmology, Community Eye Health and Research</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_176" model="hr.department">
+      <field name="name">Glaucoma</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_177" model="hr.department">
+      <field name="name">Eye Bank</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_178" model="hr.department">
+      <field name="name">Posterior Segment</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_179" model="hr.department">
+      <field name="name">Surgical Retina</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_18" model="hr.department">
+      <field name="name">Maintenance</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_180" model="hr.department">
+      <field name="name">Uveitis</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_181" model="hr.department">
+      <field name="name">Medical Retina</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_182" model="hr.department">
+      <field name="name">Ophthalmic Biomedical</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_183" model="hr.department">
+      <field name="name">Paediatric and Strabismus</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_184" model="hr.department">
+      <field name="name">Paediatrics and Strabismus Surgery</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_185" model="hr.department">
+      <field name="name">Orthoptics and Low Vision</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_186" model="hr.department">
+      <field name="name">Optometry and Vision Centres</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_187" model="hr.department">
+      <field name="name">Oculoplastic, Oncology and Neuro-Ophthalmology</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_188" model="hr.department">
+      <field name="name">Oculoplastic and Ocular Oncology</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_189" model="hr.department">
+      <field name="name">Neuro-ophthalmology Unit</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_19" model="hr.department">
+      <field name="name">Medical Equipment</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_190" model="hr.department">
+      <field name="name">Neuro-ophthalmology</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_191" model="hr.department">
+      <field name="name">Eye Hospital</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_192" model="hr.department">
+      <field name="name">Infection Prevention</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_193" model="hr.department">
+      <field name="name">Waste Management</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_20" model="hr.department">
+      <field name="name">Mother and Child Health</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_21" model="hr.department">
+      <field name="name">Nutrition</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_22" model="hr.department">
+      <field name="name">Oncology</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_23" model="hr.department">
+      <field name="name">Clinical</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_24" model="hr.department">
+      <field name="name">Physiotherapy</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_25" model="hr.department">
+      <field name="name">Planning and Monitoring</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_26" model="hr.department">
+      <field name="name">Public Health</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_27" model="hr.department">
+      <field name="name">Purchasing and Supplies</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_28" model="hr.department">
+      <field name="name">Internal Medicine</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_3" model="hr.department">
+      <field name="name">Social Service</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_30" model="hr.department">
+      <field name="name">Pharmacy</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_31" model="hr.department">
+      <field name="name">Maternity</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_316" model="hr.department">
+      <field name="name">Senior Medical Superintendent</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_317" model="hr.department">
+      <field name="name">Accidents and Emergency Services</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_318" model="hr.department">
+      <field name="name">Adult Infectious Disease Centre (AIDC) Clinic</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_32" model="hr.department">
+      <field name="name">Surgery</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_320" model="hr.department">
+      <field name="name">Clinic 5 - Staff Clinic</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_321" model="hr.department">
+      <field name="name">Clinic 7 </field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_323" model="hr.department">
+      <field name="name">Dermatology and Venereology</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_324" model="hr.department">
+      <field name="name">Endocrinology</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_325" model="hr.department">
+      <field name="name">Gastroenterology and Hepatology</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_326" model="hr.department">
+      <field name="name">General Medicine</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_327" model="hr.department">
+      <field name="name">Hematology and Oncology</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_328" model="hr.department">
+      <field name="name">Infectious Disease</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_329" model="hr.department">
+      <field name="name">Nephrology</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_33" model="hr.department">
+      <field name="name">Stomatology</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_330" model="hr.department">
+      <field name="name">Palliative Care</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_331" model="hr.department">
+      <field name="name">Rheumatology</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_332" model="hr.department">
+      <field name="name">Clinic 4 </field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_333" model="hr.department">
+      <field name="name">Clinic 6</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_336" model="hr.department">
+      <field name="name">Colon and Rectal Surgical</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_337" model="hr.department">
+      <field name="name">Dental Clinic</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_338" model="hr.department">
+      <field name="name">Endocrine Surgical</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_339" model="hr.department">
+      <field name="name">General Surgical</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_34" model="hr.department">
+      <field name="name">Nursing</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_340" model="hr.department">
+      <field name="name">Laparoscopy surgical</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_341" model="hr.department">
+      <field name="name">Neurosurgical</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_342" model="hr.department">
+      <field name="name">Oral and Maxillofacial</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_343" model="hr.department">
+      <field name="name">Orthopedics Surgical</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_344" model="hr.department">
+      <field name="name">Paediatrics Surgical</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_345" model="hr.department">
+      <field name="name">Plastic and Reconstructive Surgical</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_346" model="hr.department">
+      <field name="name">Vascular Surgical</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_347" model="hr.department">
+      <field name="name">Premium Medical Services</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_348" model="hr.department">
+      <field name="name">Anaesthesia and Critical Care</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_349" model="hr.department">
+      <field name="name">Anaesthesia - Unit Intensive Care</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_35" model="hr.department">
+      <field name="name">Antiretroviral Therapy</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_350" model="hr.department">
+      <field name="name">Anaesthesia Unit - Cardiac Intensive Care</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_351" model="hr.department">
+      <field name="name">Anaesthesia Unit - Trauma and Emergency</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_352" model="hr.department">
+      <field name="name">Laboratory and Blood Transfusion Services</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_353" model="hr.department">
+      <field name="name">Biochemistry Services</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_354" model="hr.department">
+      <field name="name">Endocrinology Services</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_355" model="hr.department">
+      <field name="name">Haematology Services</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_356" model="hr.department">
+      <field name="name">Histopathology and Cytology</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_357" model="hr.department">
+      <field name="name">Microbiology Services</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_358" model="hr.department">
+      <field name="name">Molecular Services</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_359" model="hr.department">
+      <field name="name">Mortuary Services</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_36" model="hr.department">
+      <field name="name">Labour and Delivery Ward</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_360" model="hr.department">
+      <field name="name">Parasitology Services</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_361" model="hr.department">
+      <field name="name">Pathologic Forensic Services</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_362" model="hr.department">
+      <field name="name">UTH Blood Bank and Cross Match Laboratory</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_363" model="hr.department">
+      <field name="name">Virology Services</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_364" model="hr.department">
+      <field name="name">Radiology Department</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_365" model="hr.department">
+      <field name="name">Nutrition and Dietetic</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_366" model="hr.department">
+      <field name="name">Prosthetics and Orthotics</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_367" model="hr.department">
+      <field name="name">Emergency Medical Services</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_368" model="hr.department">
+      <field name="name">Adult Hospital</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_369" model="hr.department">
+      <field name="name">Nursing Services Department</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_37" model="hr.department">
+      <field name="name">Maternal and Child Health</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_370" model="hr.department">
+      <field name="name">Theatre and ICUs</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_371" model="hr.department">
+      <field name="name">Inpatients Pharmacy</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_372" model="hr.department">
+      <field name="name">Outpatient Pharmacy</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_373" model="hr.department">
+      <field name="name">Pharmacy Stores</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_374" model="hr.department">
+      <field name="name">Catering Services</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_375" model="hr.department">
+      <field name="name">Bio-Medical Engineering</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_376" model="hr.department">
+      <field name="name">Engineering and Maintenance</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_377" model="hr.department">
+      <field name="name">Medical and Surgical Services</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_378" model="hr.department">
+      <field name="name">Obstetrics Department</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_379" model="hr.department">
+      <field name="name">Critical Care Obstetrics Unit</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_38" model="hr.department">
+      <field name="name">In-Patient</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_380" model="hr.department">
+      <field name="name">General Obstetrics Unit</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_381" model="hr.department">
+      <field name="name">Maternal- Foetal Medicine Unit</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_382" model="hr.department">
+      <field name="name">Gynecology Department</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_383" model="hr.department">
+      <field name="name">General Gynecology Unit</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_384" model="hr.department">
+      <field name="name">Gynaecological Endoscopic Unit</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_385" model="hr.department">
+      <field name="name">Gynae-oncology Unit</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_386" model="hr.department">
+      <field name="name">Reproductive Endocrinology and Fertility Unit</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_387" model="hr.department">
+      <field name="name">Urogynaecology Unit</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_388" model="hr.department">
+      <field name="name">Neonatology Department</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_389" model="hr.department">
+      <field name="name">Kangaroo Mother Care</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_39" model="hr.department">
+      <field name="name">Out-Patient</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_390" model="hr.department">
+      <field name="name">Neonatal Intensive Care Unit (NICU)</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_391" model="hr.department">
+      <field name="name">Congenital Abnormalities Unit</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_392" model="hr.department">
+      <field name="name">New Born Screening Unit</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_393" model="hr.department">
+      <field name="name">Clinical Research Unit</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_394" model="hr.department">
+      <field name="name">Wards and Special Clinics Section</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_395" model="hr.department">
+      <field name="name">Women and Newborn Hospital</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_396" model="hr.department">
+      <field name="name">Environmental Health Unit</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_397" model="hr.department">
+      <field name="name">Anesthesia Unit</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_4" model="hr.department">
+      <field name="name">Audit</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_40" model="hr.department">
+      <field name="name">Environmental Health and Waste Management</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_400" model="hr.department">
+      <field name="name">Purchasing and Supplies Unit</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_401" model="hr.department">
+      <field name="name">MCHATS</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_402" model="hr.department">
+      <field name="name">HEDEZO</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_403" model="hr.department">
+      <field name="name">Teaching</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_404" model="hr.department">
+      <field name="name">Chief Radiation Therapist</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_405" model="hr.department">
+      <field name="name">Medical</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_406" model="hr.department">
+      <field name="name">Monotoring and Evaluation</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_408" model="hr.department">
+      <field name="name">Planning and Informaion</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_409" model="hr.department">
+      <field name="name">Health Promotions</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_41" model="hr.department">
+      <field name="name">Health Information Systems and Planning</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_410" model="hr.department">
+      <field name="name">Mental Health</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_412" model="hr.department">
+      <field name="name">Environmental</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_413" model="hr.department">
+      <field name="name">Obstetrics</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_414" model="hr.department">
+      <field name="name">Trainer</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_415" model="hr.department">
+      <field name="name">Community Health</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_416" model="hr.department">
+      <field name="name">Anaesthetist</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_417" model="hr.department">
+      <field name="name">Optometry</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_419" model="hr.department">
+      <field name="name">Clincal Care</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_42" model="hr.department">
+      <field name="name">Dental</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_420" model="hr.department">
+      <field name="name">Phsychiatry</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_421" model="hr.department">
+      <field name="name">Laboaratory</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_422" model="hr.department">
+      <field name="name">Stores</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_424" model="hr.department">
+      <field name="name">Support</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_426" model="hr.department">
+      <field name="name">Transport</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_427" model="hr.department">
+      <field name="name">Orthopaedics</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_428" model="hr.department">
+      <field name="name">Planner</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_429" model="hr.department">
+      <field name="name">Urology</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_43" model="hr.department">
+      <field name="name">Medicine</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_430" model="hr.department">
+      <field name="name">Midwife</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_433" model="hr.department">
+      <field name="name">Nurse</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_437" model="hr.department">
+      <field name="name">Service Delivery</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_439" model="hr.department">
+      <field name="name">Finance</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_44" model="hr.department">
+      <field name="name">Obstetrics and Gynaecology</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_440" model="hr.department">
+      <field name="name">Physical Planning and Medical Technologies</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_442" model="hr.department">
+      <field name="name">Information Communication Technology</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_443" model="hr.department">
+      <field name="name">Health Promotions, Environment and Social Determinant</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_444" model="hr.department">
+      <field name="name">Policy and Planning</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_45" model="hr.department">
+      <field name="name">Paediatrics</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_46" model="hr.department">
+      <field name="name">Radiology</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_47" model="hr.department">
+      <field name="name">Theatre</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_48" model="hr.department">
+      <field name="name">Surgical/Orthopedic</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_5" model="hr.department">
+      <field name="name">Hygiene</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_50" model="hr.department">
+      <field name="name">Orthopeadics</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_51" model="hr.department">
+      <field name="name">Rehabilitation</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_52" model="hr.department">
+      <field name="name">Audiology</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_53" model="hr.department">
+      <field name="name">Internal Audit</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_55" model="hr.department">
+      <field name="name">Ear, Nose And Throat</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_56" model="hr.department">
+      <field name="name">Psychiatry</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_57" model="hr.department">
+      <field name="name">Neonatology</field>
+      <field name="color" eval="11"/>
+    </record>
+    <record id="department_58" model="hr.department">
+      <field name="name">ICU / Anaesthesia</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_59" model="hr.department">
+      <field name="name">Clinical Medicine</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_6" model="hr.department">
+      <field name="name">Ophthalmology</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_60" model="hr.department">
+      <field name="name">Basic Sciences</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_61" model="hr.department">
+      <field name="name">Biomedical Sciences</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_62" model="hr.department">
+      <field name="name">Catering</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_63" model="hr.department">
+      <field name="name">Clinical Care</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_64" model="hr.department">
+      <field name="name">Electro-Convulsive Therapy (ECT)</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_65" model="hr.department">
+      <field name="name">Electro-Encephalogram (EEG)</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_66" model="hr.department">
+      <field name="name">Female Acute Ward</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_67" model="hr.department">
+      <field name="name">Female Rehabilitation Ward</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_68" model="hr.department">
+      <field name="name">Filter Clinic (OPD)</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_69" model="hr.department">
+      <field name="name">Forensic Ward (Chainama East)</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_7" model="hr.department">
+      <field name="name">Pediatrics</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_70" model="hr.department">
+      <field name="name">High Cost Ward</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_72" model="hr.department">
+      <field name="name">Laundry</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_73" model="hr.department">
+      <field name="name">Mortuary</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_74" model="hr.department">
+      <field name="name">Occupational Therapy</field>
+      <field name="color" eval="7"/>
+    </record>
+    <record id="department_75" model="hr.department">
+      <field name="name">Operating Theatre</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_76" model="hr.department">
+      <field name="name">Oral Health</field>
+      <field name="color" eval="2"/>
+    </record>
+    <record id="department_77" model="hr.department">
+      <field name="name">Plant And Equipment</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_78" model="hr.department">
+      <field name="name">Psychology</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_79" model="hr.department">
+      <field name="name">Public Relation</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_8" model="hr.department">
+      <field name="name">PMTCT</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_80" model="hr.department">
+      <field name="name">Security</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_81" model="hr.department">
+      <field name="name">Social Work</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_82" model="hr.department">
+      <field name="name">Training</field>
+      <field name="color" eval="6"/>
+    </record>
+    <record id="department_84" model="hr.department">
+      <field name="name">Cancer Diseases Training College</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_85" model="hr.department">
+      <field name="name">Office of the Executive Director</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_86" model="hr.department">
+      <field name="name">Records Management</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_87" model="hr.department">
+      <field name="name">Clinical Oncologist</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_88" model="hr.department">
+      <field name="name">Clinical and Radiation Oncology</field>
+      <field name="color" eval="9"/>
+    </record>
+    <record id="department_89" model="hr.department">
+      <field name="name">Radiation Therapy</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_9" model="hr.department">
+      <field name="name">Kinesitherapy</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_90" model="hr.department">
+      <field name="name">Medical Physicist</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_91" model="hr.department">
+      <field name="name">Brarchytherapy</field>
+      <field name="color" eval="10"/>
+    </record>
+    <record id="department_92" model="hr.department">
+      <field name="name">Chemotherapy</field>
+      <field name="color" eval="4"/>
+    </record>
+    <record id="department_93" model="hr.department">
+      <field name="name">Nuclear Medicine</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_94" model="hr.department">
+      <field name="name">Paediatric Ward Nursing and VIP Ward</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_95" model="hr.department">
+      <field name="name">Male - High Cost Ward</field>
+      <field name="color" eval="5"/>
+    </record>
+    <record id="department_96" model="hr.department">
+      <field name="name">Female - High Cost Ward</field>
+      <field name="color" eval="1"/>
+    </record>
+    <record id="department_97" model="hr.department">
+      <field name="name">Female - General Ward</field>
+      <field name="color" eval="3"/>
+    </record>
+    <record id="department_98" model="hr.department">
+      <field name="name">ICU</field>
+      <field name="color" eval="8"/>
+    </record>
+    <record id="department_99" model="hr.department">
+      <field name="name">Male - General Wards</field>
+      <field name="color" eval="3"/>
+    </record>
+  </data>
+</odoo>

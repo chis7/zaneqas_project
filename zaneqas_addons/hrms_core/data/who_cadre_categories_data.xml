@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="who_cadre_category_1" model="hrms.who.cadre.category">
+      <field name="name">Health Professionals</field>
+      <field name="description">Health professionals study, advise on or provide preventive, curative, rehabilitative and promotional health services based on an extensive body of theoretical and factual knowledge in
+diagnosis and treatment of disease and other health problems. They may conduct research on human disorders and illnesses and ways of treating them, and supervise other workers.
+The knowledge and skills required are usually obtained as the result of study at a higher educational institution in a health-related field for a period of 3–6 years leading to the award of
+a first degree or higher qualification</field>
+    </record>
+    <record id="who_cadre_category_2" model="hrms.who.cadre.category">
+      <field name="name">Health Associate Professionals</field>
+      <field name="description">Health associate professionals perform technical and practical tasks to support diagnosis and treatment of illness, disease, injuries and impairments, and to support implementation of
+health care, treatment and referral plans usually established by medical, nursing and other health professionals. Appropriate formal qualifications are often an essential requirement for
+entry to these occupations; in some cases relevant work experience and prolonged on-the-job training may substitute for the formal education</field>
+    </record>
+    <record id="who_cadre_category_3" model="hrms.who.cadre.category">
+      <field name="name">Personal Care Workers in Health Services</field>
+      <field name="description">Personal care workers provide direct personal care services in health care and residential settings, assist with health care procedures, and perform a variety of other tasks of a simple
+and routine nature for the provision of health services. These occupations typically require relatively advanced literacy and numeracy skills, a high level of manual dexterity, and good
+interpersonal communication skills</field>
+    </record>
+    <record id="who_cadre_category_4" model="hrms.who.cadre.category">
+      <field name="name">Health Management and Support Personnel</field>
+      <field name="description">Health management and support personnel include a wide range of other types of health systems personnel, such as health service managers, health economists, health policy
+lawyers, biomedical engineers, medical physicists, clinical psychologists, social workers, medical secretaries, ambulance drivers, building maintenance staff, and other general
+management, professional, technical, administrative and support staff</field>
+    </record>
+    <record id="who_cadre_category_5" model="hrms.who.cadre.category">
+      <field name="name">Health Service Provider Not Elsewhere Classified</field>
+    </record>
+  </data>
+</odoo>

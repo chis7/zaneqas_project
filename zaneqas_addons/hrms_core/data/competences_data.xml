@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="competence_1" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Reading and counting skills</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_2" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Application of basic arithmetic operations</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_3" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Use of common sense, differentiating and arranging of patterns</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_4" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Knowledge and understanding of current affairs and environment.</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_5" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Carry out processes that are limited in range, are repetitive and familiar.</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_6" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Carry out processes that are employed within closely defined contexts.</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_7" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Knowledge and understanding of the scope and main areas of the subjects.</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_8" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Light detailed knowledge of some key areas which may include some knowledge of current issues in limited specialised areas</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_9" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Carry out processes in a moderate range.</field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_10" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Carry out processes that are familiar, and established.</field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_11" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Offer clear choices of routine responses.</field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_12" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Foundational knowledge for everyday life, further learning and preparation for initial work</field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_13" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">
+                Familiarity and understanding of a range of the essential theories,
+                principles and concepts and an awareness of major issues at the forefront
+                of the subjects.
+            </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_14" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Possession of a well-developed range of skills.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_15" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Apply relevant knowledge with under pinning comprehension in a number of areas.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_16" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Demonstrate ability to compare and interpret ideas, concepts and data.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_17" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Demonstrate factual and theoretical knowledge of a specific area of work and learning.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_18" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Gather, analyse and present ideas, concepts and data that are core to the subject(s).</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_19" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Possession of wide-ranging technical skills.</field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_20" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Possession of knowledge base incorporating theoretical concepts.</field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_21" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Ability to access, analyse and evaluate information</field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_22" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Effectively deploy essential materials, techniques and practices to problem solving.</field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_23" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Possession of a range of specialised technical skills. Possession of theoretical and technical knowledge of a specific area of work.</field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_24" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Possession of specialised knowledge, professional or technical skills and basic research across a major discipline or areas of practice. </field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_25" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Ability to analyse, evaluate, reformat and disseminate a wide range of information and concepts leading to generation of ideas. </field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_26" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Knowledge and critical understanding of well-established principles of and emerging issues in the area of study, and of the way in which those principles have developed. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_27" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Ability to apply underlying concepts and principles outside the context in which they were first studied, including, where appropriate, the application of those principles in varied contexts.</field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_28" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Possession of a systematic, extensive and comparative knowledge and understanding of the subject(s) as a whole and its links to related subject(s).  </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_29" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Knowledge of the main areas of enquiry in the field of study and ability to critically evaluate the appropriateness of different approaches to solving problems. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_30" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Understanding of the limits of their knowledge, and how this influences analyses and interpretations based on that knowledge. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_31" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">A systematic understanding of key aspects of the field of study, including acquisition of coherent and detailed current and new knowledge. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_32" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Accurately deploy established techniques of analysis and enquiry within a discipline. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_33" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Conceptual understanding that enables description and commentary on particular aspects of current research, or equivalent advanced scholarship, in a discipline. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_34" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Demonstrated appreciation of the uncertainty, ambiguity and limits of knowledge. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_35" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">A comprehensive and systematic understanding of key aspects of the field of study, academic discipline or area of professional practice including acquisition of coherent and detailed current and new knowledge. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_36" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Accurately deploy established techniques of analysis and enquiry within a discipline. Advanced knowledge and application of research principles and methods applicable to the field of work or learning.</field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_37" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Systematic acquisition and understanding of a substantial and complex body of knowledge which is at the forefront of an academic discipline or area of professional practice. </field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_38" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">foundational_competence</field>
+            <field name="description">Creation and interpretation of new knowledge, through original research or other advanced scholarship, of a quality to satisfy peer review, extending the forefront of the discipline, and merit publication. </field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_39" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Reading with understanding, following basic grammar rules when writing and speaking in the official language and a Zambian Language </field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_40" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Carrying out basic numerical and calculation activities </field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_41" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Recognition and arrangement of patterns and symbols</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_42" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Basic understanding of ICTs</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_43" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply basic skills to survive </field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_44" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Communicate adequately both orally and in writing</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_45" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply basic mathematical skills</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_46" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Demonstrate basic ICT skills</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_47" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Demonstrate basic scientific skills</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_48" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Demonstrate vocational skills in specific areas </field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_49" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply a limited range of knowledge and cognitive skills.</field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_50" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Identify and report simple issues and problems </field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_51" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Communicate efficiently and effectively in both speech and writing; </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_52" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Understand, interpret, and apply mathematical, scientific and technological concepts </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_53" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply the knowledge, skills, positive attitudes and value systems in vocational, other career environments and general life </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_54" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Operate in a number of contexts.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_55" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Make appropriately choices from a wide range of situations. </field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_56" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Demonstrate 	technical 	and procedural  knowledge of a specific area of work and learning </field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_57" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Co-ordinate and complete activities.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_58" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Solve problems contextually to predictable and sometimes unpredictable problems</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_59" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Communicate accurately and reliably using a range of techniques and tools.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_60" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Operate in varied contexts with guidance.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_61" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply a range of options to solve problems efficiently and contextually. </field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_62" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Select solutions from a considerable choice of options. </field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_63" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Analyse information to complete a range of activities. </field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_64" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Operate in a variety of contexts under limited supervision.</field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_65" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Interpret information from a wide choice of options of solutions </field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_66" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Plan or select information, methods or resources. </field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_67" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Present information and transfer skills</field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_68" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Operate in highly variable technical or professional contexts to well-defined activities. </field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_69" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Select from a wide choice of options often in non-standard combinations in a major discipline.</field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_70" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Diagnose problems and create appropriate responses to resolve problems in a range of technical and professional functions. </field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_71" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Present information and transfer skills through delegation to others. </field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_72" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply a range of established techniques to initiate and undertake critical analysis of information, and to propose solutions to problems.</field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_73" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Effectively communicate information, arguments, and analysis, in a variety of forms, to various audiences. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_74" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Present information and transfer knowledge, skills and values to others through delegation and practice</field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_75" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Acquire skills needed to study further with a high level of autonomy. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_76" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Systematically establish and address personal learning needs.  </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_77" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Apply the methods and techniques learnt to review, consolidate and extend understanding in order to initiate and carry out projects. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_78" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Evaluate arguments, assumptions, abstract concepts and data, to make judgements and to frame appropriate questions to achieve a solution, or to identify a range of solutions, to a problem. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_79" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Communicate information, ideas, problems and solutions to both specialist and nonspecialist audiences.</field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_80" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Devise and sustain arguments for solving problems  </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_81" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Manage self-learning, and make use of scholarly reviews and primary sources. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_82" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Manage self-learning, and make use of scholarly reviews and primary sources. </field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_83" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Systematically and creatively deal with complex issues. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_84" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Make sound judgements in the absence of complete data. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_85" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Autonomously plan and implement tasks. Analyse critically, reflect on and synthesise complex information,  problems, concepts and theories</field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_86" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Originality in developing or applying ideas in varied contexts. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_87" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Evaluate methodologies and develop techniques of them and, where appropriate, propose new hypothesis. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_88" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Communicate information, ideas, problems and solutions to both specialist and nonspecialist audiences. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_89" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Manage self-learning, and make use of scholarly reviews and primary sources. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_90" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Create, conceptualise, design and implement an investigation for the generation of new knowledge and/or adjust the design of the investigation in the light of unforeseen problems. </field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_91" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Make expert judgements on complex issues in specialized fields, often in the absence of complete data, and communicate ideas and conclusions clearly and effectively to specialist and non-specialist audiences. </field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_92" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Undertake pure/applied research and development at an advanced level, contributing substantially to the development of new techniques, ideas or approaches.</field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_93" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Literacy, numeracy  and  measuring skills</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_94" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Basic communicating in an official language </field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_95" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Arranging things in order</field>
+            <field name="qualification_level_id" ref="level_1"/>
+        </record>
+        <record id="competence_96" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Apply ideas in directed activity, under close supervision and with no responsibility for the work or learning of others. </field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_97" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Apply knowledge and skills to demonstrate limited judgement in highly structured and stable contexts within narrow parameters </field>
+            <field name="qualification_level_id" ref="level_2a"/>
+        </record>
+        <record id="competence_98" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Apply information in directed activity, under general supervision and control of quality. </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_99" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Take responsibility for quality and quantity. </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_100" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Guide others. </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_101" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Apply knowledge and skills in highly structured and stable contexts. </field>
+            <field name="qualification_level_id" ref="level_2b"/>
+        </record>
+        <record id="competence_102" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Take responsibility for quantity and quality of output under general supervision in varied contexts.</field>
+            <field name="qualification_level_id" ref="level_3"/>
+        </record>
+        <record id="competence_103" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Responsibility for quantity and quality of output. </field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_104" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Responsibility for the quantity and quality of output of others in a given context. </field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_105" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Autonomously take responsibility for quantity and quality of output under general supervision in varied contexts. </field>
+            <field name="qualification_level_id" ref="level_4"/>
+        </record>
+        <record id="competence_106" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Full responsibility for the nature, quantity and quality of output. </field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_107" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Supervisory responsibility for the achievement of group output. </field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_108" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Autonomously take responsibility for quantity and quality of output with limited supervision in varied contexts. </field>
+            <field name="qualification_level_id" ref="level_5"/>
+        </record>
+        <record id="competence_109" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Ability to develop existing skills and acquire new competencies to enable assumption of limited responsibility within organizations.</field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_110" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Ability to exercise personal responsibility and decisionmaking. </field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_111" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Complete accountability for determining and achieving personal and/or group output. Self-direction at work and learning.</field>
+            <field name="qualification_level_id" ref="level_6"/>
+        </record>
+        <record id="competence_112" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Develop existing skills and acquire new competencies to enable assumption of significant responsibility within organizations. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_113" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Exercise personal responsibility, initiative and decision-making in complex and unpredictable contexts. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_114" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Autonomy, well developed judgement, adaptability and responsibility as a practitioner or learner. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_115" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Demonstrate some originality and creativity in formulating, evaluating and applying evidence-based solutions and arguments. </field>
+            <field name="qualification_level_id" ref="level_7"/>
+        </record>
+        <record id="competence_116" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Possesses qualities and transferable skills necessary for utilisation in varied contexts requiring:
+•	The exercise of initiative and personal responsibility;
+•	Decision-making in complex and unpredictable contexts;</field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_117" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Undertake further study and/or training.</field>
+            <field name="qualification_level_id" ref="level_8"/>
+        </record>
+        <record id="competence_118" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Possesses qualities, ethics and transferable skills necessary for utilisation in varied contexts requiring:
+•	The exercise of initiative and personal responsibility
+•	Decision-making in complex and unpredictable situations.
+•	Independent learning ability required for continuing professional development.
+•	Enquiry reasoning.
+Undertake further study and/or training.</field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_119" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">practical_competence</field>
+            <field name="description">Autonomy, expert judgement, adaptability and responsibility as a practitioner or learner. </field>
+            <field name="qualification_level_id" ref="level_9"/>
+        </record>
+        <record id="competence_120" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Possess qualities, ethics and transferable skills necessary for utilisation in varied contexts requiring the exercise of full personal responsibility and largely autonomous initiative in complex and unpredictable situations.</field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_121" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Demonstration of intellectual independence, authoritative judgement, adaptability and responsibility as an expert and leading practitioner or scholar. </field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+        <record id="competence_122" model="hrms.competence">
+            <field name="sequence">New</field>
+            <field name="competence_type">reflexive_competence</field>
+            <field name="description">Undertake extended learning with a view to continuous generation of new knowledge.  </field>
+            <field name="qualification_level_id" ref="level_10"/>
+        </record>
+    </data>
+</odoo>

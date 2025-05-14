@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem name="zaneqas tb"
+              id="zaneqas_tb_root"
+              web_icon="zaneqas_tb,static/description/icon.png"/>
+
+    <menuitem id="zaneqas_tb_eqa_root"
+              name="EQA Schemes"
+              parent="zaneqas_tb_root"/>
+
+    <menuitem id="zaneqas_tb_mtb_rif_assay"
+              name="MTB/RIF GeneXpert Assay"
+              parent="zaneqas_tb_eqa_root"
+              action="action_zaneqas_tb_xpert_eqa_expected_results"/>
+
+    <menuitem id="zaneqas_tb_microscopy"
+              name="My Submissions"
+              parent="zaneqas_tb_mtb_rif_assay"
+              action="action_zaneqas_tb_xpert_eqa_results"/>
+
+    <menuitem id="zaneqas_tb_eqa_configs"
+              name="Configuration"
+              parent="zaneqas_tb_root"
+              action="action_zaneqas_tb_xpert_eqa_expected_results"/>
+
+<!--    <menuitem id="zaneqas_tb_eqa_reports"-->
+<!--              name="Reports"-->
+<!--              parent="zaneqas_tb_root"-->
+<!--              action="action_zaneqas_tb_xpert_eqa_results"/>-->
+
+<!--    <menuitem id="zaneqas_tb_eqa_mtb_rif_expert_reports"-->
+<!--              name="MTB/RIF GeneXpert Assay Performance Reports"-->
+<!--              parent="zaneqas_tb_eqa_reports"-->
+<!--              action="action_zaneqas_tb_xpert_eqa_results_form"/>-->
+<!--    <menuitem id="zaneqas_tb_eqa_sputum_smear_microscopy_performance_reports"-->
+<!--              name="Sputum Smear Microscopy Performance Reports"-->
+<!--              parent="zaneqas_tb_eqa_reports"-->
+<!--              action="action_zaneqas_tb_xpert_eqa_results"/>-->
+
+    <menuitem id="zaneqas_tb_eqa_configs_rounds"
+              name="EQA Rounds"
+              parent="zaneqas_tb_eqa_configs"
+              action="action_zaneqas_tb_xpert_eqa_config_rounds"/>
+
+    <menuitem id="zaneqas_tb_eqa_configs_xpert"
+              name="Xpert"
+              parent="zaneqas_tb_eqa_configs"
+              action="action_zaneqas_tb_xpert_eqa_expected_results"/>
+
+    <menuitem id="zaneqas_tb_eqa_configs_xpert_expected_results"
+              name="Xpert EQA Expected Results"
+              parent="zaneqas_tb_eqa_configs_xpert"
+              action="action_zaneqas_tb_xpert_eqa_expected_results"/>
+
+    <menuitem id="zaneqas_tb_eqa_configs_xpert_assays"
+              name="Xpert Assays"
+              parent="zaneqas_tb_eqa_configs_xpert"
+              action="action_zaneqas_tb_xpert_eqa_config_assays"/>
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_isco_08_tree" model="ir.ui.view">
+            <field name="name">hrms.isco.08.tree</field>
+            <field name="model">hrms.isco.08</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ISCO_version"/>
+                    <field name="major"/>
+                    <field name="major_label"/>
+                    <field name="sub_major"/>
+                    <field name="sub_major_label"/>
+                    <field name="minor"/>
+                    <field name="minor_label"/>
+                    <field name="unit"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hrms_isco_08_form" model="ir.ui.view">
+            <field name="name">hrms.isco.08.form</field>
+            <field name="model">hrms.isco.08</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="ISCO_version"/>
+                            <field name="major"/>
+                            <field name="major_label"/>
+                            <field name="sub_major"/>
+                            <field name="sub_major_label"/>
+                            <field name="minor"/>
+                            <field name="minor_label"/>
+                            <field name="unit"/>
+                            <field name="description"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hrms_isco_08" model="ir.actions.act_window">
+            <field name="name">ISCO 08</field>
+            <field name="res_model">hrms.isco.08</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

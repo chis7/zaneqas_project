@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- hr.job Demo Records -->
+    <record id="hr_job_1" model="hr.job">
+        <field name="name">Medical Doctor</field>
+        <field name="hrms_job_id" ref="hrms_job_1"/>
+        <field name="department_id" ref="department_45"/> <!-- Paediatrics -->
+        <field name="expected_employees">5</field>
+        <field name="no_of_recruitment">2</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_2" model="hr.job">
+        <field name="name">Specialist Medical Practitioner</field>
+        <field name="hrms_job_id" ref="hrms_job_2"/>
+        <field name="department_id" ref="department_22"/> <!-- Oncology -->
+        <field name="expected_employees">4</field>
+        <field name="no_of_recruitment">1</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_3" model="hr.job">
+        <field name="name">Nursing Professional</field>
+        <field name="hrms_job_id" ref="hrms_job_3"/>
+        <field name="department_id" ref="department_130"/> <!-- Nursing Services -->
+        <field name="expected_employees">10</field>
+        <field name="no_of_recruitment">3</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_4" model="hr.job">
+        <field name="name">Midwifery Professional</field>
+        <field name="hrms_job_id" ref="hrms_job_4"/>
+        <field name="department_id" ref="department_31"/> <!-- Maternity -->
+        <field name="expected_employees">8</field>
+        <field name="no_of_recruitment">2</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_5" model="hr.job">
+        <field name="name">Dentist</field>
+        <field name="hrms_job_id" ref="hrms_job_5"/>
+        <field name="department_id" ref="department_337"/> <!-- Dental Clinic -->
+        <field name="expected_employees">3</field>
+        <field name="no_of_recruitment">1</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_6" model="hr.job">
+        <field name="name">Pharmacist</field>
+        <field name="hrms_job_id" ref="hrms_job_6"/>
+        <field name="department_id" ref="department_371"/> <!-- Inpatients Pharmacy -->
+        <field name="expected_employees">6</field>
+        <field name="no_of_recruitment">1</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_7" model="hr.job">
+        <field name="name">Physiotherapist</field>
+        <field name="hrms_job_id" ref="hrms_job_7"/>
+        <field name="department_id" ref="department_24"/> <!-- Physiotherapy -->
+        <field name="expected_employees">5</field>
+        <field name="no_of_recruitment">2</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_8" model="hr.job">
+        <field name="name">Dietician/Nutritionist</field>
+        <field name="hrms_job_id" ref="hrms_job_8"/>
+        <field name="department_id" ref="department_365"/> <!-- Nutrition and Dietetic -->
+        <field name="expected_employees">3</field>
+        <field name="no_of_recruitment">1</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_9" model="hr.job">
+        <field name="name">Optometrist</field>
+        <field name="hrms_job_id" ref="hrms_job_9"/>
+        <field name="department_id" ref="department_186"/> <!-- Optometry and Vision Centres -->
+        <field name="expected_employees">2</field>
+        <field name="no_of_recruitment">1</field>
+        <field name="state">open</field>
+    </record>
+
+    <record id="hr_job_10" model="hr.job">
+        <field name="name">Environmental Health Officer</field>
+        <field name="hrms_job_id" ref="hrms_job_10"/>
+        <field name="department_id" ref="department_169"/> <!-- Environmental Health -->
+        <field name="expected_employees">4</field>
+        <field name="no_of_recruitment">1</field>
+        <field name="state">open</field>
+    </record>
+</odoo>

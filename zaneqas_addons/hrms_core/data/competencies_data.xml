@@ -1,0 +1,868 @@
+<odoo>
+  <data noupdate="1">
+    <record id="competency_1" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Software Development"/>
+    </record>
+    <record id="competency_10" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="Environment and Sustainable Development"/>
+    </record>
+    <record id="competency_100" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="Essential Medicines Logistics Improvement Programme"/>
+    </record>
+    <record id="competency_101" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="Electronic Logistics Management Information System (eLMIS)"/>
+    </record>
+    <record id="competency_102" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="HIV/AIDS Pharmaceutical Management"/>
+    </record>
+    <record id="competency_103" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="Product Quality in Procurement and Supply Chain of Health Commodities"/>
+    </record>
+    <record id="competency_104" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_39"/>
+      <field name="name" ref="Couple Counselling for Health Care Workers"/>
+    </record>
+    <record id="competency_105" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_39"/>
+      <field name="name" ref="Lay Counselors Training"/>
+    </record>
+    <record id="competency_106" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="Intensified Case Finding"/>
+    </record>
+    <record id="competency_107" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="Multi-Drug Resistant TB"/>
+    </record>
+    <record id="competency_108" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="Susceptible TB Training"/>
+    </record>
+    <record id="competency_109" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_20"/>
+      <field name="name" ref="Primary Eye Care"/>
+    </record>
+    <record id="competency_11" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="Environmental Impact Assessment"/>
+    </record>
+    <record id="competency_110" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_40"/>
+      <field name="name" ref="Leadership and Management Training (ZMLA)"/>
+    </record>
+    <record id="competency_112" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_41"/>
+      <field name="name" ref="Management of Childhood illness"/>
+    </record>
+    <record id="competency_115" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Administering Prophylaxis to exposed persons"/>
+    </record>
+    <record id="competency_116" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Enrolling ANC Clients who tested positive on ART"/>
+    </record>
+    <record id="competency_117" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_42"/>
+      <field name="name" ref="Budget Control and Monitoring"/>
+    </record>
+    <record id="competency_118" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Health Education"/>
+    </record>
+    <record id="competency_119" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Safety Adherence"/>
+    </record>
+    <record id="competency_12" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="Environmental Monitoring and Modelling"/>
+    </record>
+    <record id="competency_120" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_43"/>
+      <field name="name" ref="Vaccine Storage and Cold Chain Management"/>
+    </record>
+    <record id="competency_121" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Facilitating School Health Services"/>
+    </record>
+    <record id="competency_122" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Inspection of Trading Premises and Occupational facilities"/>
+    </record>
+    <record id="competency_123" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Food Inspections"/>
+    </record>
+    <record id="competency_124" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Food Handlers Testing"/>
+    </record>
+    <record id="competency_125" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_27"/>
+      <field name="name" ref="Indoor Residual Spraying"/>
+    </record>
+    <record id="competency_126" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_27"/>
+      <field name="name" ref="Vector Controlling"/>
+    </record>
+    <record id="competency_128" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Monitoring and Evaluation"/>
+    </record>
+    <record id="competency_13" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="Environmental Science"/>
+    </record>
+    <record id="competency_131" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="GRZ Competency Certificate (Driving)"/>
+    </record>
+    <record id="competency_132" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Project Management"/>
+    </record>
+    <record id="competency_133" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Labor Laws of Zambia"/>
+    </record>
+    <record id="competency_134" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_44"/>
+      <field name="name" ref="Automotive Mechanics Trade Test"/>
+    </record>
+    <record id="competency_135" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="Electrical Trade Test"/>
+    </record>
+    <record id="competency_136" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_44"/>
+      <field name="name" ref="Mechanical Trade Test"/>
+    </record>
+    <record id="competency_137" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Training Needs Analysis/Assessment"/>
+    </record>
+    <record id="competency_138" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_40"/>
+      <field name="name" ref="Leadership Development Programme"/>
+    </record>
+    <record id="competency_14" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="Environmental Health"/>
+    </record>
+    <record id="competency_140" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="iHRIS End User Training"/>
+    </record>
+    <record id="competency_141" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="PMEC End User Training"/>
+    </record>
+    <record id="competency_142" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="HIV/AIDS Psycho-Social Counselling"/>
+    </record>
+    <record id="competency_143" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Neonatal Resuscitation Program"/>
+    </record>
+    <record id="competency_144" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_40"/>
+      <field name="name" ref="Supervisory Management Skills"/>
+    </record>
+    <record id="competency_145" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_40"/>
+      <field name="name" ref="Grant Management"/>
+    </record>
+    <record id="competency_146" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Counselling for HIV/AIDS"/>
+    </record>
+    <record id="competency_148" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_25"/>
+      <field name="name" ref="Basic Principles of Fracture Management for Operating Room Personnel"/>
+    </record>
+    <record id="competency_149" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_30"/>
+      <field name="name" ref="Nutrition and Home Management"/>
+    </record>
+    <record id="competency_15" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Human Resource Development"/>
+    </record>
+    <record id="competency_150" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Management Development Programme for Executive Assistants II (Advanced)"/>
+    </record>
+    <record id="competency_151" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Information Technology Development for Secretaries"/>
+    </record>
+    <record id="competency_152" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Clinical Mentorship"/>
+    </record>
+    <record id="competency_153" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Blood Transfusion"/>
+    </record>
+    <record id="competency_154" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_21"/>
+      <field name="name" ref="Cancer in Men and Women "/>
+    </record>
+    <record id="competency_155" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_45"/>
+      <field name="name" ref="Records Management and Information Systems"/>
+    </record>
+    <record id="competency_156" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_46"/>
+      <field name="name" ref="Quality Development Management"/>
+    </record>
+    <record id="competency_157" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Pain assessment  and Management Training"/>
+    </record>
+    <record id="competency_158" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_40"/>
+      <field name="name" ref="Collective Bargaining and Negotiations Skills"/>
+    </record>
+    <record id="competency_159" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Disaster Management Training"/>
+    </record>
+    <record id="competency_16" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Human Resource Management"/>
+    </record>
+    <record id="competency_160" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Acute Diarrhoea Diseases"/>
+    </record>
+    <record id="competency_161" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Security Training"/>
+    </record>
+    <record id="competency_162" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Life Saving Skills"/>
+    </record>
+    <record id="competency_163" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_47"/>
+      <field name="name" ref="Research Methodology Workshop"/>
+    </record>
+    <record id="competency_164" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="PreP"/>
+    </record>
+    <record id="competency_165" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Index and Self Testing"/>
+    </record>
+    <record id="competency_166" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Paediatric ART"/>
+    </record>
+    <record id="competency_167" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Adult ART"/>
+    </record>
+    <record id="competency_168" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Elimination of Mother-To-Child Transmission (EMTCT)"/>
+    </record>
+    <record id="competency_17" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Human Resource Planning"/>
+    </record>
+    <record id="competency_170" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="TB-HIV Management"/>
+    </record>
+    <record id="competency_171" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_24"/>
+      <field name="name" ref="Basic Life Support"/>
+    </record>
+    <record id="competency_172" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_24"/>
+      <field name="name" ref="Advanced Life Support"/>
+    </record>
+    <record id="competency_173" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_24"/>
+      <field name="name" ref="Emergency Triage and Treatment (ETAT)"/>
+    </record>
+    <record id="competency_174" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Abridged Emergency and Obstetrics and Newborn Care (EmONC)"/>
+    </record>
+    <record id="competency_18" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="ICT in Business"/>
+    </record>
+    <record id="competency_19" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_9"/>
+      <field name="name" ref="Maternal death review"/>
+    </record>
+    <record id="competency_2" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Accountancy"/>
+    </record>
+    <record id="competency_21" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_30"/>
+      <field name="name" ref="Growth monitoring"/>
+    </record>
+    <record id="competency_22" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Antenatal Care"/>
+    </record>
+    <record id="competency_23" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_49"/>
+      <field name="name" ref="Health education"/>
+    </record>
+    <record id="competency_240" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="iHRIS Training"/>
+    </record>
+    <record id="competency_241" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB Childhood Training"/>
+    </record>
+    <record id="competency_242" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB/HIV Monitoring, Evaluation and Reporting Indicator"/>
+    </record>
+    <record id="competency_243" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB Susceptible and Drug Resistant Training"/>
+    </record>
+    <record id="competency_244" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Index Testing Training"/>
+    </record>
+    <record id="competency_245" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Self HIV Testing Training"/>
+    </record>
+    <record id="competency_246" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="HIV Testing In Risk Population Training"/>
+    </record>
+    <record id="competency_247" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="HIV Prevention Training"/>
+    </record>
+    <record id="competency_248" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Pediatric ART Training"/>
+    </record>
+    <record id="competency_249" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Infection Prevention and Control"/>
+    </record>
+    <record id="competency_25" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_9"/>
+      <field name="name" ref="Conducting clean and safe delivery"/>
+    </record>
+    <record id="competency_250" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Financial Internal Control, Audit and Computer Appreciation"/>
+    </record>
+    <record id="competency_251" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_41"/>
+      <field name="name" ref="Adolescent ART Training"/>
+    </record>
+    <record id="competency_252" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Management Accounting"/>
+    </record>
+    <record id="competency_253" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Financial Planning"/>
+    </record>
+    <record id="competency_254" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Navision - Financial Management and Control"/>
+    </record>
+    <record id="competency_255" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_42"/>
+      <field name="name" ref="Navision"/>
+    </record>
+    <record id="competency_256" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_17"/>
+      <field name="name" ref="Smartcare Essentials and Monitoring and Evaluation"/>
+    </record>
+    <record id="competency_257" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Zambia ARV Logistic System"/>
+    </record>
+    <record id="competency_258" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="ICCM Training for step B and D as facility supervisor"/>
+    </record>
+    <record id="competency_259" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_24"/>
+      <field name="name" ref="Comprehensive Abortion Care"/>
+    </record>
+    <record id="competency_26" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_15"/>
+      <field name="name" ref="Typing with 85 words per minute"/>
+    </record>
+    <record id="competency_260" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Health Management Information System"/>
+    </record>
+    <record id="competency_261" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Human Pupiloma Virus DNA Testing"/>
+    </record>
+    <record id="competency_262" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_51"/>
+      <field name="name" ref="Exapnded Programme on Child Immunisation (EPI)"/>
+    </record>
+    <record id="competency_263" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Computer Applications"/>
+    </record>
+    <record id="competency_264" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_51"/>
+      <field name="name" ref="Early Child Development"/>
+    </record>
+    <record id="competency_265" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Adolescent Health"/>
+    </record>
+    <record id="competency_266" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Child Health"/>
+    </record>
+    <record id="competency_267" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="CHAs and PHNS"/>
+    </record>
+    <record id="competency_268" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="Sanitation Champion"/>
+    </record>
+    <record id="competency_269" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Covid - 19"/>
+    </record>
+    <record id="competency_27" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="Management of MDR in TB patients"/>
+    </record>
+    <record id="competency_270" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Early Child Development"/>
+    </record>
+    <record id="competency_271" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Family Planning"/>
+    </record>
+    <record id="competency_272" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Gender Based Violence "/>
+    </record>
+    <record id="competency_273" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Health Promotion"/>
+    </record>
+    <record id="competency_274" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Health Education"/>
+    </record>
+    <record id="competency_275" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="HIV"/>
+    </record>
+    <record id="competency_276" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_54"/>
+      <field name="name" ref="Home Based Care"/>
+    </record>
+    <record id="competency_277" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="IMCI"/>
+    </record>
+    <record id="competency_278" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Lay Counselor"/>
+    </record>
+    <record id="competency_279" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Malaria"/>
+    </record>
+    <record id="competency_28" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB Data analysis and information interpretation"/>
+    </record>
+    <record id="competency_280" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Nutrition"/>
+    </record>
+    <record id="competency_281" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_41"/>
+      <field name="name" ref="Peer Educator"/>
+    </record>
+    <record id="competency_282" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Psychosocial Counseling"/>
+    </record>
+    <record id="competency_283" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Records Management"/>
+    </record>
+    <record id="competency_284" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="Safe Motherhood"/>
+    </record>
+    <record id="competency_285" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="TB"/>
+    </record>
+    <record id="competency_286" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_52"/>
+      <field name="name" ref="VMMC"/>
+    </record>
+    <record id="competency_287" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_16"/>
+      <field name="name" ref="WASH"/>
+    </record>
+    <record id="competency_288" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_51"/>
+      <field name="name" ref="Child Health Promotors"/>
+    </record>
+    <record id="competency_289" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_51"/>
+      <field name="name" ref="MYCIN"/>
+    </record>
+    <record id="competency_29" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Prevention of Mother to Child Transmission"/>
+    </record>
+    <record id="competency_290" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_27"/>
+      <field name="name" ref="Sprayer Operator"/>
+    </record>
+    <record id="competency_291" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_27"/>
+      <field name="name" ref="Malaria Champion"/>
+    </record>
+    <record id="competency_292" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_30"/>
+      <field name="name" ref="Nutrition Promotors"/>
+    </record>
+    <record id="competency_293" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Newborn Care"/>
+    </record>
+    <record id="competency_294" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_50"/>
+      <field name="name" ref="Community Based Distributors (CBDs)"/>
+    </record>
+    <record id="competency_295" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB Treatment Supporters"/>
+    </record>
+    <record id="competency_296" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB Adherence Supporters "/>
+    </record>
+    <record id="competency_297" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Safe Motherhood Actions Group (SMAG)"/>
+    </record>
+    <record id="competency_298" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Information and Communication Technology"/>
+    </record>
+    <record id="competency_3" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Accounting and Finance"/>
+    </record>
+    <record id="competency_30" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Elimination of Mother to Child Treatment"/>
+    </record>
+    <record id="competency_31" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_8"/>
+      <field name="name" ref="Conducting 'C' Section Delivery"/>
+    </record>
+    <record id="competency_32" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_32"/>
+      <field name="name" ref="Rapid diagnostic testing"/>
+    </record>
+    <record id="competency_33" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_29"/>
+      <field name="name" ref="Patient Screening"/>
+    </record>
+    <record id="competency_34" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_9"/>
+      <field name="name" ref="Palliative Care "/>
+    </record>
+    <record id="competency_35" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Counselling and testing"/>
+    </record>
+    <record id="competency_36" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Post-natal Care"/>
+    </record>
+    <record id="competency_37" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_18"/>
+      <field name="name" ref="Monitoring and Evaluation"/>
+    </record>
+    <record id="competency_38" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_15"/>
+      <field name="name" ref="Minute taking"/>
+    </record>
+    <record id="competency_39" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Report writing"/>
+    </record>
+    <record id="competency_4" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Business Administration"/>
+    </record>
+    <record id="competency_40" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Presentation skills"/>
+    </record>
+    <record id="competency_41" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Premises inspection skills"/>
+    </record>
+    <record id="competency_42" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Water sampling "/>
+    </record>
+    <record id="competency_43" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_32"/>
+      <field name="name" ref="Pathological sample collection"/>
+    </record>
+    <record id="competency_44" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_14"/>
+      <field name="name" ref="Surveillance skills"/>
+    </record>
+    <record id="competency_45" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_40"/>
+      <field name="name" ref="Supervisory skills"/>
+    </record>
+    <record id="competency_46" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Cash and bank reconciliation "/>
+    </record>
+    <record id="competency_47" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Financial reporting"/>
+    </record>
+    <record id="competency_48" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Payment audit"/>
+    </record>
+    <record id="competency_49" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_1"/>
+      <field name="name" ref="Payment voucher preparation"/>
+    </record>
+    <record id="competency_5" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Business Information Systems"/>
+    </record>
+    <record id="competency_50" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Vehicle servicing "/>
+    </record>
+    <record id="competency_51" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Driving "/>
+    </record>
+    <record id="competency_57" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_33"/>
+      <field name="name" ref="Payroll Data maintenance"/>
+    </record>
+    <record id="competency_58" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Planning "/>
+    </record>
+    <record id="competency_6" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Computer Engineering"/>
+    </record>
+    <record id="competency_60" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_30"/>
+      <field name="name" ref="Infant Young Child Feeding (IYCF)"/>
+    </record>
+    <record id="competency_61" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_45"/>
+      <field name="name" ref="Filing and record retrieval"/>
+    </record>
+    <record id="competency_62" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Meeting organisation"/>
+    </record>
+    <record id="competency_63" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Data entry"/>
+    </record>
+    <record id="competency_64" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_17"/>
+      <field name="name" ref="SmartCare"/>
+    </record>
+    <record id="competency_65" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_17"/>
+      <field name="name" ref="Health Information Literacy and Skills"/>
+    </record>
+    <record id="competency_66" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_17"/>
+      <field name="name" ref="Health Informatics Skills using an EHR"/>
+    </record>
+    <record id="competency_67" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Adult and Pediatrics HIV"/>
+    </record>
+    <record id="competency_68" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Option B+ (EMTCT)"/>
+    </record>
+    <record id="competency_69" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_30"/>
+      <field name="name" ref="Maternal Infant and Young Child Nutrition (MIYCN)"/>
+    </record>
+    <record id="competency_7" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_5"/>
+      <field name="name" ref="Computer Science"/>
+    </record>
+    <record id="competency_70" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_50"/>
+      <field name="name" ref="Long Acting Reversible Contraception (LARC)"/>
+    </record>
+    <record id="competency_71" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Focused Antenatal Care (FANC)"/>
+    </record>
+    <record id="competency_72" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_27"/>
+      <field name="name" ref="Integrated Community Management of Childhood Illnesses (ICMCI)"/>
+    </record>
+    <record id="competency_73" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_46"/>
+      <field name="name" ref="Quality Assurance/ Quality Improvement (QA/QI)"/>
+    </record>
+    <record id="competency_74" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_30"/>
+      <field name="name" ref="Integrated Management of Acute Malnutrition (IMAM)"/>
+    </record>
+    <record id="competency_75" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_51"/>
+      <field name="name" ref="Expanded programme on Immunization (EPI)"/>
+    </record>
+    <record id="competency_76" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_48"/>
+      <field name="name" ref="Emergency Obstetric and Newborn care (EmONC)"/>
+    </record>
+    <record id="competency_77" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_51"/>
+      <field name="name" ref="Growth Monitoring"/>
+    </record>
+    <record id="competency_78" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_39"/>
+      <field name="name" ref="Gender Based Violence (GBV)"/>
+    </record>
+    <record id="competency_79" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_41"/>
+      <field name="name" ref="Adolescent Health"/>
+    </record>
+    <record id="competency_8" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_2"/>
+      <field name="name" ref="Development Studies"/>
+    </record>
+    <record id="competency_80" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_8"/>
+      <field name="name" ref="Male Circumcision"/>
+    </record>
+    <record id="competency_81" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="HIV Logistics Management"/>
+    </record>
+    <record id="competency_82" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="EMLIP Logistics Management"/>
+    </record>
+    <record id="competency_83" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_20"/>
+      <field name="name" ref="Ophthalmology"/>
+    </record>
+    <record id="competency_84" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_7"/>
+      <field name="name" ref="Management and Supervisory Skills"/>
+    </record>
+    <record id="competency_85" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_21"/>
+      <field name="name" ref="Cervical Cancer Screening"/>
+    </record>
+    <record id="competency_86" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_22"/>
+      <field name="name" ref="Syndromic Management of STIs"/>
+    </record>
+    <record id="competency_87" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_23"/>
+      <field name="name" ref="Psychosocial Counselling"/>
+    </record>
+    <record id="competency_88" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_24"/>
+      <field name="name" ref="Emergency Trauma Management"/>
+    </record>
+    <record id="competency_89" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_25"/>
+      <field name="name" ref="Paediatrics Anaesthesia and Critical Care "/>
+    </record>
+    <record id="competency_9" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_7"/>
+      <field name="name" ref="Economics"/>
+    </record>
+    <record id="competency_90" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_26"/>
+      <field name="name" ref="TB Case Management"/>
+    </record>
+    <record id="competency_91" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_6"/>
+      <field name="name" ref="Essential Medicine and HIV Test Kits under the Zambia National Logistics System"/>
+    </record>
+    <record id="competency_92" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Zambia Consolidated 2013 Guidelines"/>
+    </record>
+    <record id="competency_93" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Zambia Consolidated 2016 Guidelines"/>
+    </record>
+    <record id="competency_94" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="ART and Opportunistic Infection Management"/>
+    </record>
+    <record id="competency_95" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_28"/>
+      <field name="name" ref="Management of HIV/AIDS with ART"/>
+    </record>
+    <record id="competency_96" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_38"/>
+      <field name="name" ref="Voluntary Male Medical Circumcision"/>
+    </record>
+    <record id="competency_97" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_38"/>
+      <field name="name" ref="Comprehensive Paediatric HIV/AIDS Care"/>
+    </record>
+    <record id="competency_98" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_17"/>
+      <field name="name" ref="ART SmartCare"/>
+    </record>
+    <record id="competency_99" model="hrms.competency">
+      <field name="competency_type_id" ref="competency_type_17"/>
+      <field name="name" ref="Integrated SMART CARE System"/>
+    </record>
+  </data>
+</odoo>
